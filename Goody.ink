@@ -39,7 +39,7 @@ Let’s talk about some good things you’ve experienced lately. Take a moment t
   + Need examples
         -> examplesMightInc
   + user input
-        -> userWriterGoodTh
+        -> userWritesGoodTh
 
 = noProblem
 No problem!
@@ -65,10 +65,6 @@ Hope this helps, do you want to see more? do you want to share?
         -> noProblem
   + user input
         -> userWritesGoodTh
-
-= userWriterGoodTh
-{goodThing}
-    -> super
 
 = nowTakeAMomentTo
 Now, take a moment to think about this good experience in as much detail as possible. You could think about where you were, what happened, or how you felt.
