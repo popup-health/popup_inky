@@ -2,8 +2,11 @@
 // Converted from original inklewriter URL:
 // https://www.inklewriter.com/stories/82329
 # title: Goody
-# author: A PopBot Intervention By Tchiki Davis - Transcribed by Pablo Paredes from: https://docs.google.com/document/d/1Pri4qNwcgCJJo5rUABCg2asD01xqDzT1LcwvQWKOE5M/edit
+# author: A PopBot Intervention By Tchiki Davis - Transcribed by Pablo Paredes 
+//original file: https://docs.google.com/document/d/1Pri4qNwcgCJJo5rUABCg2asD01xqDzT1LcwvQWKOE5M/edit
 // -----------------------------
+
+// David DD just made an edit - I added some language to make the intervention a bit more precise (using emotion, detailing the feelign tone of the experience remembered, adding in awareness of thought.  The purpose of this is to overlap some of the CBT skills we will be training in the other bots.  Also added a few more points as to how this exercise shifts cognitive bias and battles against a sense of helplessness in the user.
 
 VAR username = "Robert"
 VAR goodThing = "looking at the moon   " //PP: this goes into the DB of ideas for this user
@@ -24,18 +27,22 @@ VAR threeThings = "Morning rise, kids playing, staying up to see the moon" //PP:
         -> Third_session
 
 ==== First_session ====
+# IMAGE: ../goodyimage.jpeg
+
 Hi {username}, I’m Goody. I just love talking about all the good things that happen in life. So I’m super excited that you’ve decided to join me today!
     -> One_good_thing
 
-==== One_good_thing ====
-Let’s talk about some good things you’ve experienced lately. Take a moment to think of one thing that went well for you today. It doesn’t have to be a big thing. In fact, it can be a teeny tiny thing.
+==== One_good_thing ====  //DD - use the word experience instead of thing?  
+Let's talk about a pleasant experience you've had today.  It doesn't need to be the most fun thing you've ever done but something simple and small. In fact, it can be a teeny tiny thing.
   + Don't want to share
         -> noProblem
   + Can't think of any
         -> examplesMightInc
   + Need examples
         -> examplesMightInc
-  + user input
+  + "user enters their experience directly here" 
+  // DD this should say something more.  Something like: "Ok here's my experience:"
+  // PP: yes, this is just a placeholder for a quick selection 
         -> userWritesGoodTh
 
 = noProblem
@@ -49,7 +56,7 @@ Examples might include having a good time with friends, completing a project, or
         -> showGoodThings
   + Got it, but not sharing!
         -> noProblem
-  + user input
+  + "user enters their experience here"
         -> userWritesGoodTh
 
 = showGoodThings
@@ -60,20 +67,20 @@ Hope this helps, do you want to see more? do you want to share?
         //PP: Show the next 5 ideas. If end of list then change above text to: "That is all I have. Do you want to share?" 
   + Got it, but not sharing!
         -> noProblem
-  + user input
+  + "user enters their experience directly here"
         -> userWritesGoodTh
 
 
-= nowTakeAMomentTo
-Now, take a moment to think about this good experience in as much detail as possible. You could think about where you were, what happened, or how you felt.
+= nowTakeAMomentTo 
+Now, take a moment to think about this good experience in as much detail as possible. You could think about where you were, what happened, what thoughts were running through your mind, or what emotions (happy, excited, content, peaceful, etc.) you were feeling.  
   + Done
         -> nowTakeAMomentTo1
 
 = super
-{Super!|Great!|Nice!|Cool!}
+{Super!|Great!|Nice!|Cool!} //PP: Different language selected with a random coin
     -> nowTakeAMomentTo
 
-= userWritesGoodTh
+= userWritesGoodTh 
 {goodThing}
     -> super
 
@@ -97,8 +104,10 @@ So try to reflect on what action you took to bring about your good thing.
         -> greatJobItsNotAl
 
 ==== Summary ====
-Paying attention to the good things that happen to us is an easy and fast way to improve your mood.
-You can try it any time in your real life. Or, come back to chat with me and we can do it together. 🤤
+# IMAGE: ../goodyimage.jpeg
+Paying attention to good things as they are happening or remembering them after is an easy and fast way to improve your mood.  Noticing good things also helps remind us that we can take action to add more good things into our daily routine.  Keep trying to add good things into your daily life and then take notice and savour those small moments!  Or come back to chat with me and we can do it together. 🤤
+// DD good to emphasize awareness of good things as they happen and of the actions we take to make them happen
+
     -> GoToFarewellModu
 
 = GoToFarewellModu
@@ -129,7 +138,8 @@ This time, let’s chat about <strong>three</strong> good things that happened t
         -> sureThingExample
 
 = nowThinkAboutThe
-Now think about the details of these three good things. You could mentally retrace your steps, close your eyes and imagine you are there, or remember how you felt after having this experience.
+Now think about the details of these three good things. You could mentally retrace your steps, close your eyes and imagine you are there, or remember {how you|the emotions you} felt after having this experience.  
+    //PP: the {...|...} configuration is used to denote different language used at different runs of the bot this could be selected with a random coin
   + Done
         -> nextThinkAboutYo
 
@@ -155,20 +165,21 @@ Do you want to share one of the good things?
     -> nextThinkAboutYo
   + user input
     {goodThing}
-    {Great!|Super!|Nice!|Cool!}
+    {Great!|Super!|Nice!|Cool!} //PP:Language selected with random coin
     -> nextThinkAboutYo
   
     
 
 = nextThinkAboutYo
-Next, think about your role in making these experiences happen.
+Next, think about your role in these experiences.  What concrete actions did you take to help make these experiences happen?
 
   + Alright
         -> thatsAllYouCanDo
 
 = thatsAllYouCanDo
-That’s all there is to it. You can do this any time you’d like, as often as you’d like, to get even more benefits. It’s such a simple activity but it can make a big difference over time.
-    -> Summary.GoToFarewellModu
+# IMAGE: ../goodyimage.jpeg
+Sometimes we get into a habit of mostly noticing problems in life and not fully taking in the positive.  We can also sometimes discount the actions we can take to make positive experiences happen.  This is such a simple activity but it can really make a difference over time.  Making the good things happen and noticing them is a habit that we can train with just a small amount of effort!
+-> Summary.GoToFarewellModu
 
 ==== Third_session ====
 //system checks if prior session assessment was positive/neutral *or* negative
