@@ -9,7 +9,7 @@
 // -----------------------------
 // veamos
 VAR username = "Robert"
-VAR goodThing = "Looking at the moon" //PP: this goes into the DB of ideas for this user
+VAR goodThing = "looking at the moon   " //PP: this goes into the DB of ideas for this user
 VAR otherGoodThings = "MANY IDEAS FROM ALL USERS" //PP: this is a DB of ideas from all users
 VAR threeThings = "Morning rise, kids playing, staying up to see the moon" //PP: this goes into the DB of ideas for this user
 
@@ -60,11 +60,12 @@ Examples might include having a good time with friends, completing a project, or
 Hope this helps, do you want to see more? do you want to share?
   + See more
         -> showGoodThings  
-        //PP: Show the next 5 ideas. If end of list then change above text to: "That is all I have. Do you want to share?"
+        //PP: Show the next 5 ideas. If end of list then change above text to: "That is all I have. Do you want to share?" 
   + Got it, but not sharing!
         -> noProblem
   + user input
         -> userWritesGoodTh
+
 
 = nowTakeAMomentTo
 Now, take a moment to think about this good experience in as much detail as possible. You could think about where you were, what happened, or how you felt.
@@ -80,7 +81,7 @@ Now, take a moment to think about this good experience in as much detail as poss
     -> super
 
 = nowTakeAMomentTo1
-Now, take a moment to think about what caused the experience. Focus on what you did to bring about this good thing.
+The next thing to do is to take a moment to think about what caused the experience. Focus on what you did to bring about this good thing.
   + Got it
         -> greatJobItsNotAl
   + Don't know what to say
@@ -100,7 +101,7 @@ So try to reflect on what action you took to bring about your good thing.
 
 ==== Summary ====
 Paying attention to the good things that happen to us is an easy and fast way to improve your mood.
-You can try it any time in your real life. Or, come back to chat with me and we can do it together. :)
+You can try it any time in your real life. Or, come back to chat with me and we can do it together. 🤤
     -> GoToFarewellModu
 
 = GoToFarewellModu
@@ -123,7 +124,7 @@ Hey, I know that our last chat wasn’t as good as it could have been.
     -> Third_session.DoYouWantToTryOn
 
 ==== Three_good_things ====
-Last time we chatted, you explored something good that happened to you that day.
+Last time we chatted, you explored something good that happened to you recently.
 This time, let’s chat about <strong>three</strong> good things that happened to you in the last week. Can you think of <strong>three</strong> good things?
   + Got 'em
         -> nowThinkAboutThe
@@ -163,13 +164,13 @@ Do you want to share one of the good things?
     
 
 = nextThinkAboutYo
-Next, think about your role in making this experience happen.
-//PP: Tchiki - why do you say "this" experience, if you asked about three things? Shoudl it be an experience for one of them, or the roles in all experiences?
+Next, think about your role in making these experiences happen.
+
   + Alright
         -> thatsAllYouCanDo
 
 = thatsAllYouCanDo
-That’s all. You can do this any time you’d like, as often as you’d like, to get even more benefits. It’s such a simple activity that can make a big difference over time.
+That’s all there is to it. You can do this any time you’d like, as often as you’d like, to get even more benefits. It’s such a simple activity but it can make a big difference over time.
     -> Summary.GoToFarewellModu
 
 ==== Third_session ====
@@ -180,14 +181,14 @@ That’s all. You can do this any time you’d like, as often as you’d like, t
         -> DoYouWantToTryOn
 
 = hiUsernameItsGre
-Hi {username}. It’s great to see you. I’ve been looking forward to chatting with you.
+Hi {username}. It’s great to see you. I’ve been looking forward to chatting with you again.
     -> Refresher
 
 = DoYouWantToTryOn
  Do you want to try one more time, or talk to one of my buddies?
   + Try again
         -> great1
-  + Talk to a new bot
+  + Talk to one of your buddies
         -> sureIWillCallOne
 
 = great1
@@ -195,8 +196,8 @@ Great!
     -> Three_good_things
 
 = sureIWillCallOne
-Sure, I will call one of my colleagues now.
-// System selects a new bot at random //
+Sure, I will call one of them now.
+// System selects a new character at random //
     -> END
 
 ==== Refresher ====
