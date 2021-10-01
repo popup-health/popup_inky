@@ -1,13 +1,10 @@
-// This is Orianna's edit!
-// Orianna made another edit!
-
 // ---- Goody ----
 // Converted from original inklewriter URL:
 // https://www.inklewriter.com/stories/82329
 # title: Goody
 # author: A PopBot Intervention By Tchiki Davis - Transcribed by Pablo Paredes from: https://docs.google.com/document/d/1Pri4qNwcgCJJo5rUABCg2asD01xqDzT1LcwvQWKOE5M/edit
 // -----------------------------
-// veamos
+
 VAR username = "Robert"
 VAR goodThing = "looking at the moon   " //PP: this goes into the DB of ideas for this user
 VAR otherGoodThings = "MANY IDEAS FROM ALL USERS" //PP: this is a DB of ideas from all users
