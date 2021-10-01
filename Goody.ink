@@ -9,8 +9,9 @@
 // -----------------------------
 // veamos
 VAR username = "Robert"
-VAR goodThing = "Looking at the moon"
-VAR threeThings = "Morning rise, kids playing, staying up to see the moon"
+VAR goodThing = "Looking at the moon" //PP: this goes into the DB of ideas for this user
+VAR otherGoodThings = "MANY IDEAS FROM ALL USERS" //PP: this is a DB of ideas from all users
+VAR threeThings = "Morning rise, kids playing, staying up to see the moon" //PP: this goes into the DB of ideas for this user
 
 
 -> System_Check
@@ -45,8 +46,22 @@ No problem!
     -> nowTakeAMomentTo
 
 = examplesMightInc
-Examples might include having a good time with friends, completing a project, or making someone smile.  //PP: need a list or database we can use to show other examples. We can also show the past ideas that were collected from this and other users
-  + Go it, but not sharing!
+Examples might include having a good time with friends, completing a project, or making someone smile. Do you want to see what other users have shared with me in the past?
+    //PP: need to link to a list or database we can use to show other examples. We can also show the past ideas that were collected from this and other users
+  + Show me good things
+        -> showGoodThings
+  + Got it, but not sharing!
+        -> noProblem
+  + user input
+        -> userWritesGoodTh
+
+= showGoodThings
+{otherGoodThings} //PP: Show 5 most recent good ideas
+Hope this helps, do you want to see more? do you want to share?
+  + See more
+        -> showGoodThings  
+        //PP: Show the next 5 ideas. If end of list then change above text to: "That is all I have. Do you want to share?"
+  + Got it, but not sharing!
         -> noProblem
   + user input
         -> userWritesGoodTh
@@ -61,7 +76,7 @@ Now, take a moment to think about this good experience in as much detail as poss
         -> nowTakeAMomentTo1
 
 = super
-Super!
+{Super!|Great!|Nice!|Cool!}
     -> nowTakeAMomentTo
 
 = userWritesGoodTh
@@ -125,12 +140,35 @@ Now think about the details of these three good things. You could mentally retra
         -> nextThinkAboutYo
 
 = sureThingExample
-Sure thing. Examples might include doing an activity you enjoy, eating a really delicious meal, or meeting someone new.
+Sure thing. Examples might include doing an activity you enjoy, eating a really delicious meal, or meeting someone new. Are you done, or do you want to see examples of good things from others?
+  + Examples, please
+        -> showGoodThings2
   + Done
-        -> nextThinkAboutYo
+        -> share3Things
+
+= showGoodThings2
+{otherGoodThings} //PP: Show 5 most recent good ideas
+Hope this helps, do you want to see more? do you want to share?
+  + See more
+        -> showGoodThings2  
+        //PP: Show the next 5 ideas. If end of list then change above text to: "That is all I have. Do you want to share?"
+  + Done!
+        -> share3Things
+
+=share3Things
+Do you want to share one of the good things?
+  + Don't want to share
+    -> nextThinkAboutYo
+  + user input
+    {goodThing}
+    {Great!|Super!|Nice!|Cool!}
+    -> nextThinkAboutYo
+  
+    
 
 = nextThinkAboutYo
 Next, think about your role in making this experience happen.
+//PP: Tchiki - why do you say "this" experience, if you asked about three things? Shoudl it be an experience for one of them, or the roles in all experiences?
   + Alright
         -> thatsAllYouCanDo
 
