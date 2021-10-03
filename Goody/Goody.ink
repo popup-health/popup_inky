@@ -8,7 +8,7 @@
 
 // David DD just made an edit - I added some language to make the intervention a bit more precise (using emotion, detailing the feelign tone of the experience remembered, adding in awareness of thought.  The purpose of this is to overlap some of the CBT skills we will be training in the other bots.  Also added a few more points as to how this exercise shifts cognitive bias and battles against a sense of helplessness in the user.
 
-VAR username = "Robert"
+VAR username = "Bobby"
 VAR goodThing = "looking at the moon   " //PP: this goes into the DB of ideas for this user
 VAR otherGoodThings = "MANY IDEAS FROM ALL USERS" //PP: this is a DB of ideas from all users
 VAR threeThings = "Morning rise, kids playing, staying up to see the moon" //PP: this goes into the DB of ideas for this user
