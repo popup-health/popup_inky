@@ -5,6 +5,9 @@
 # author: Robert Gehorsam, original version by Tchiki Davis 
 //https://docs.google.com/document/d/1ZlmXvKHQX9f05CJ8L2wznhPsOfSKc3IZ9bhh37Z4FBg/edit
 // -----------------------------
+
+//PP: Good job Robert! First commit done!!
+
 VAR userName = "Robert"
 VAR goalExamples = "Getting a promotion, getting into college"
 VAR userInputGoal = "Getting into college!"
