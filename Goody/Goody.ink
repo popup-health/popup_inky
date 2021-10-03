@@ -27,7 +27,7 @@ VAR threeThings = "Morning rise, kids playing, staying up to see the moon" //PP:
         -> Third_session
 
 ==== First_session ====
-# IMAGE: ../goodyimage.jpeg
+# IMAGE: goodyimage.jpeg
 
 Hi {username}, I’m Goody. I just love talking about all the good things that happen in life. So I’m super excited that you’ve decided to join me today!
     -> One_good_thing
