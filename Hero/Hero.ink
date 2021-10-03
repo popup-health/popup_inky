@@ -25,7 +25,7 @@ VAR strengthUses = "one use, two uses"
 
 
 ==== First_Session ====
-Hi {userName}. I’m called Hero bot because I make an effort every day to capitalize on my strengths of courage, selflessness, and dedication to justice.&nbsp;
+Hi {userName}. My name is Hero because I make an effort every day to capitalize on my strengths of courage, selflessness, and dedication to justice.💪🏽
     -> First_Session_2.capitalizingOnOu
 
 ==== First_Session_2 ====
@@ -35,7 +35,7 @@ Okay, let’s do it.
 = capitalizingOnOu
 Capitalizing on our strengths helps us both reach our goals and feel better about ourselves. And even if you don't feel it at the moment, every single one of us has some strengths we can take advantage of.
 I can show you how to do it. Are you ready?
-  + I'm ready
+  + I'm ready 👍
         -> First_Session_2 
 
 ==== Identify_Strength ====
