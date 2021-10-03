@@ -5,6 +5,9 @@
 # author: by Pablo Paredes
 // -----------------------------
 
+VAR userName = "Pablo"
+VAR worstFear = "will not make deadline for paper"
+VAR fearSolution = "I can at least make a first pass"
 
 -> System_check
 
@@ -83,23 +86,23 @@ OK. Do you want to share solution in case you want me to remind you in the futur
   + Don't want to share
         -> noProblemRemembe 
   + User enters solution here
-        -> fearSolution 
+        -> enterFearSolution 
 
 = okGoAhead
 Ok, go ahead:
   + User enters fear here
-        -> worstFear 
+        -> enterWorstFear 
 
 = noProblemRemembe
 No problem. Remember...
     -> Reassurance
 
-= worstFear
+= enterWorstFear
 {worstFear}
     -> oKDoYouWantToSha
 
-= fearSolution
-"
+= enterFearSolution
+{fearSolution}
     -> Enter_solution.oKWhenDoYouWantM
 
 ==== Second_visit ====
@@ -229,6 +232,6 @@ Yes, please pick a date:
 
 ==== Reassurance ====
 Even though you cannot control everything, just remember that there is always a way to get back on your feet.
-Thanks for chatting with me, {user.name}. I hope this worst case scenario technique worked for you.
+Thanks for chatting with me, {userName}. I hope this worst case scenario technique worked for you.
 // go to Farewell module
     -> END
