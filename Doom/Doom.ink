@@ -21,109 +21,6 @@ VAR fearSolution = "I can at least make a first pass"
   + Third visit
         -> Third_visit 
 
-==== Third_visit ====
-//system checks past engagement
-  + past engagement was positive/neutral
-        -> youAreBecomingAn 
-  + past engagement was negative
-        -> lastTimeWasNotId 
-
-= youAreBecomingAn
-You are becoming an expert at eliminating catastrophes! Do you want me to guide you through the technique again, or do you feel you can do it by yourself?
-  + Guide me
-        -> sureHappyToOfCou 
-  + I can do it
-        -> User_does_technique_alone 
-
-= lastTimeWasNotId
-Last time was not idea, but believe me, we are making progress towards crushing catastrophes. I suggest we keep at it!
-    -> doYouWantToTryAg
-
-= sureHappyToOfCou
-{Sure!|Happy to!|Of course}
-    -> First_visit.whatDoYouThinkIs
-
-= doYouWantToTryAg
-Do you want to try again?
-  + No, give me another bot
-        -> Pick_another_bot 
-  + Ok
-        -> thisTimeBeforeWe 
-
-= thisTimeBeforeWe
-This time, before we assess your fear, tell me how far in the future would it occur?
-  + Later today
-        -> evenIfItIsImmine 
-  + Tomorrow
-        -> letsBeginByTryin 
-  + Later in the week/month
-        -> letsBeginByTryin 
-
-= evenIfItIsImmine
-Even if it is imminent, we can do something about it. 
-    -> letsBeginByTryin
-
-= letsBeginByTryin
-Let's begin by trying not to travel to that moment, and stay in the present. 
-Take a deep breath, and let's again assess your fear.
-    -> First_visit.whatDoYouThinkIs
-
-==== User_does_technique_alone ====
-Cool. Remember, stay in the present, evaluate the likelihood of the event, and try to find a simple solution you can do in the present.
-I will leave you to it. Let me know when you are done.
-  + Done
-        -> greatDoYouWantTo 
-
-= greatDoYouWantTo
-Great, do you want to share what was your fear?
-  + Nope
-        -> oKDoYouWantToSha 
-  + Yes
-        -> okGoAhead 
-
-= oKDoYouWantToSha
-OK. Do you want to share solution in case you want me to remind you in the future?
-  + Don't want to share
-        -> noProblemRemembe 
-  + User enters solution here
-        -> enterFearSolution 
-
-= okGoAhead
-Ok, go ahead:
-  + User enters fear here
-        -> enterWorstFear 
-
-= noProblemRemembe
-No problem. Remember...
-    -> Reassurance
-
-= enterWorstFear
-{worstFear}
-    -> oKDoYouWantToSha
-
-= enterFearSolution
-{fearSolution}
-    -> Enter_solution.oKWhenDoYouWantM
-
-==== Second_visit ====
-//system checks last engagement score
-  + past engagement positive/neutral
-        -> iAmGladWeAreConn 
-  + past engagement negative
-        -> evenThoughLastTi 
-
-= iAmGladWeAreConn
-I am glad we are connecting again. I hope last time you were able to use our powers of fear destruction!
-Let's practice them again!
-    -> First_visit.whatDoYouThinkIs
-
-= evenThoughLastTi
-Even though last time wasn't ideal, I am confident that I could help you reduce your fears. 
-    -> Third_visit.doYouWantToTryAg
-
-==== Pick_another_bot ====
-// select a new bot at random
-    -> END
 
 ==== First_visit ====
 Hi {userName}, my name is Doom Bot. I am an expert in using worst-case scenarios to help my friends realize that their situation may not as bad as they think...
@@ -235,3 +132,111 @@ Even though you cannot control everything, just remember that there is always a 
 Thanks for chatting with me, {userName}. I hope this worst case scenario technique worked for you.
 // go to Farewell module
     -> END
+    
+
+==== Second_visit ====
+//system checks last engagement score
+  + past engagement positive/neutral
+        -> iAmGladWeAreConn 
+  + past engagement negative
+        -> evenThoughLastTi 
+
+= iAmGladWeAreConn
+I am glad we are connecting again. I hope last time you were able to use our powers of fear destruction!
+Let's practice them again!
+    -> First_visit.whatDoYouThinkIs
+
+= evenThoughLastTi
+Even though last time wasn't ideal, I am confident that I could help you reduce your fears. 
+    -> Third_visit.doYouWantToTryAg
+
+==== Pick_another_bot ====
+// select a new bot at random
+    -> END
+
+
+
+==== Third_visit ====
+//system checks past engagement
+  + past engagement was positive/neutral
+        -> youAreBecomingAn 
+  + past engagement was negative
+        -> lastTimeWasNotId 
+
+= youAreBecomingAn
+You are becoming an expert at eliminating catastrophes! Do you want me to guide you through the technique again, or do you feel you can do it by yourself?
+  + Guide me
+        -> sureHappyToOfCou 
+  + I can do it
+        -> User_does_technique_alone 
+
+= lastTimeWasNotId
+Last time was not idea, but believe me, we are making progress towards crushing catastrophes. I suggest we keep at it!
+    -> doYouWantToTryAg
+
+= sureHappyToOfCou
+{Sure!|Happy to!|Of course}
+    -> First_visit.whatDoYouThinkIs
+
+= doYouWantToTryAg
+Do you want to try again?
+  + No, give me another bot
+        -> Pick_another_bot 
+  + Ok
+        -> thisTimeBeforeWe 
+
+= thisTimeBeforeWe
+This time, before we assess your fear, tell me how far in the future would it occur?
+  + Later today
+        -> evenIfItIsImmine 
+  + Tomorrow
+        -> letsBeginByTryin 
+  + Later in the week/month
+        -> letsBeginByTryin 
+
+= evenIfItIsImmine
+Even if it is imminent, we can do something about it. 
+    -> letsBeginByTryin
+
+= letsBeginByTryin
+Let's begin by trying not to travel to that moment, and stay in the present. 
+Take a deep breath, and let's again assess your fear.
+    -> First_visit.whatDoYouThinkIs
+
+==== User_does_technique_alone ====
+Cool. Remember, stay in the present, evaluate the likelihood of the event, and try to find a simple solution you can do in the present.
+I will leave you to it. Let me know when you are done.
+  + Done
+        -> greatDoYouWantTo 
+
+= greatDoYouWantTo
+Great, do you want to share what was your fear?
+  + Nope
+        -> oKDoYouWantToSha 
+  + Yes
+        -> okGoAhead 
+
+= oKDoYouWantToSha
+OK. Do you want to share solution in case you want me to remind you in the future?
+  + Don't want to share
+        -> noProblemRemembe 
+  + User enters solution here
+        -> enterFearSolution 
+
+= okGoAhead
+Ok, go ahead:
+  + User enters fear here
+        -> enterWorstFear 
+
+= noProblemRemembe
+No problem. Remember...
+    -> Reassurance
+
+= enterWorstFear
+{worstFear}
+    -> oKDoYouWantToSha
+
+= enterFearSolution
+{fearSolution}
+    -> Enter_solution.oKWhenDoYouWantM
+
