@@ -1,3 +1,5 @@
+//LOCKED by Pablo
+
 // ---- Goody ----
 // Converted from original inklewriter URL:
 // https://www.inklewriter.com/stories/82329
