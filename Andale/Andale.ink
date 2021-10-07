@@ -81,7 +81,7 @@ OK!  Now, take a minute to think of one step or action you took to reach this go
         -> First_goal.evenTinyStepsMov 
 
 ==== Goal_explanation ====
-A well-defined goal is //RR: need more content here, Tchiki
+A well-defined goal is one that reflects your values and is important to you.  It should also be measurable, able to be broken down into smaller pieces or sub-goals, and be something that you can put a timeframe on.  
   + OK, I have one.
         -> First_goal 
   + I can’t think of one
@@ -153,7 +153,7 @@ Next, see if you can identify one baby step you can take in the next few days to
         -> babySteps 
 
 = greatThatsItForT
-Great, that's it for today.  So just take a moment to give yourself a little pat on the back for doing this exercise. You've gotten started, and that's often the hardest part.
+Great, those are excellent baby steps you've taken today.  So just take a moment to give yourself a little pat on the back for doing this exercise. You've gotten started, and that's often the hardest part.
   + Done.
         -> niceJobIfYouCome 
 
@@ -162,12 +162,12 @@ Great, that's it for today.  So just take a moment to give yourself a little pat
     -> niceJobIfYouCome
 
 = niceJobIfYouCome
-Nice job! If you come back and see me, we’ll talk about how this baby step went. I hope to see you again soon.
+Nice job! If you come back and see me, we’ll talk about how this next baby step went. I hope to see you again soon.
   + Bye!
         -> endFirstSession 
 
 = endFirstSession
-_end first session
+//go to farewell
     -> END
     
 ==== Second_Session ====
@@ -175,7 +175,8 @@ _end first session
   + if positive or neutral
         -> SecondSessionPositiveOrNeutral.positiveOrNeutral
   + if negative
-        -> negativeSecondSession.sureIWillCallOne
+        -> negativeSecondSession
+        
         
 ==== SecondSessionPositiveOrNeutral ====
 
@@ -219,10 +220,10 @@ Reflect on the action you took and then decide what your next baby step will be.
         -> yesByText
         
 = yesByCalendar
-OK, tomorrow or next week? //initiate calendar entry process
+OK, tomorrow or next week? (initiate calendar entry process)
     -> secondSessionEndPositive.YoureOnTheRightPath
 = yesByText
-TO BE FILLED WITH TEXT INFO
+OK, tomorrow or next week? (initiate text entry process)
     -> secondSessionEndPositive.YoureOnTheRightPath
 
 
