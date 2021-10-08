@@ -62,7 +62,7 @@ Let's go see another of my colleagues.
 
 ==== Random_bot_selector ====
 {Of course|Sure|No problem}, I will call one of my {colleagues|friends|pals}.
-\\select bot at random
+//select bot at random
     -> END
 
 ==== Share_strength ====
@@ -117,9 +117,9 @@ Next, take a moment to reflect on one way you can use this strength in the futur
 
 = weCanIntentional
 We can intentionally use our strengths as we go about our day.
-For example, if your strength is assertiveness, you might stand up for yourself for yourself to get a raise. Or, if your strength is singing, you might join a choir so that you can use your strength more often. 
+For example, if your strength is assertiveness, you might stand up for yourself to get a raise. Or, if your strength is singing, you might join a choir so that you can use your strength more often. 
 //future idea for development: classify strengths based on topics, personality, skills, etc...? 
-//FV: for yourself is repeated 
+
   + Okay
         -> Scheduling_Reminder 
   + More examples, please
@@ -131,8 +131,8 @@ Sure, here are some examples of uses of strengths in the future: \\need list of 
         -> Scheduling_Reminder 
 
 ==== Scheduling_Reminder ====
-Finally, Let's schedule a reminder for the exact time that you’ll use this strength can really help you stay on track.
-//FV: Finally, Let's schedule a reminder for the exact time that you’ll use this strength. This can really help you stay on track.
+Finally, Let's schedule a reminder for the exact time that you’ll use this strength. This can really help you stay on track.
+
 Do you want me to help with that?
   + Enter in calendar
         -> Calendar_entry 
@@ -345,8 +345,8 @@ What aspects of capitalizing on your strengths would you like more help with?
         -> Issues_with_using_strengths 
 
 ==== Issues_with_using_strengths ====
-If we use our strengths regularly (and remind ourselves that they are strengths), we feel a bit more like we’re good at life—and that feels good.
-//FV: I would change this part: "we feel a bit more like we’re good at life—and that feels good" because it sort of assumes we are not feeling we are good at life. An option could be "we feel purpose and know we can add value" or "we feel more confidence and driven." 
+If we use our strengths regularly (and remind ourselves that they are strengths), we feel our life has purpose and know we can add value.
+//FV: I would change this part: "we feel a bit more like we’re good at life—and that feels good" because it sort of assumes we are not feeling we are good at life. An option could be "we feel purpose and know we can add value" or "we feel more confidence and driven." //PP: Done
 For example, if creativity is your strength, you might name your pet something cool, pick out unique clothes, or have a good imagination.
   + Understood
         -> thatsWhyEvenIfIt 
