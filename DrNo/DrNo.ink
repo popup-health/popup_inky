@@ -5,10 +5,10 @@
 
 
 VAR userName = "Robert"
-VAR boundaryTechniques = "tapping a piece of jewelry a few times or silently counting to ten"
-VAR userKnowsReasonWhy = " They really needed my help"
-VAR diplomaticAnswers = "It's just not for me now."
-VAR otherReason = "Liked the opportunity"
+VAR boundaryTechniques = "tapping a piece of jewelry a few times, silently counting to ten"
+VAR userKnowsReasonWhy = " They really needed my help, Didn't want to disappoint"
+VAR diplomaticAnswers = "It's just not for me now, I don't think I really have the time to do it well, I'm sorry but I'll have to pass"
+VAR otherReason = "Liked the opportunity, I felt I owed them a favor"
 
 
 -> Session_Check
@@ -42,7 +42,7 @@ So you can have great impulses...but sometimes they can create stress later that
         -> acknowledgeHardToAvoid
         
 = acknowledgeHardToAvoid
-Absolutely. It takes practice.  So let's start!
+Absolutely. It takes practice. So let's start!
     -> startPractice
 
 
@@ -61,9 +61,9 @@ So here we go! Recently have you found yourself voluntarily saying “Yes” to 
 //FV: same language as earlier explanation, may want to reword. RG: done
 Often the reasons are just below our awareness in the moment and very much about maintianing a positive relationship with someone. Sometimes we're so enthused about the idea or opportunity it just keeps us from thinking about anything else.
 
-In a word or two can you jot down why you said yes to the most recent thing you said yes to but now seems to be causing some regret or stress?
+In a word or two can you jot down why you said yes, but it now seems to be causing some regret or stress?
     + yes
-        -> gotoSecondQuestion
+        -> userReasonforSayingYes
         
     + Not now
         -> gotoSecondQuestion
@@ -107,7 +107,6 @@ Many people have that experience. It is a good impulse, and don't get me wrong, 
 OK!  Would you like to jot it down?
     + user enters other reason
         -> otherReasoninput
-    
     + Not now
         -> recap
     
@@ -136,7 +135,6 @@ You are definitely not alone!  The answer may come to you later, or it may stay 
 That's fine! Do you want some more time to think about it, or keep going?
     + Keep thinking
         -> moreTime
-        
     + Keep going
         -> gotoSecondQuestion
 
@@ -144,23 +142,21 @@ That's fine! Do you want some more time to think about it, or keep going?
 Let me know if you have an idea, or want to keep thinking about it.
     + A bit more time
         -> moreTime
-        
     + Keep going!
         -> gotoSecondQuestion
 
 = luckyYou
 So…..maybe talking with me isn’t the best use of your time, but that’s fine. Would you like to meet with another one of us now?
-
     + Sure
         -> Random_bot_selector
 
-
 = recap
- So: ☝️ Saying no is hard for all of us, and it can often feel “wrong” to do. 
+
+The first thing to realize is that saying no is hard for most of us, and it can often feel “wrong” to do. 
  
- ✌️Recognize when we might not be setting healthy boundaries.  
+But we should recognize when we might not be setting healthy boundaries.  
  
- and finally for now 👌:  Recognize it can be hard to say no in the moment. Saying “yes” comes from a good place in us but it can lead you to feel overwhelmed...and more. 
+Finally for now:  Recognize it can be hard to say no in the moment. Saying “yes” comes from a good place in us but it can lead you to feel overwhelmed...and more. 
  
  Next time, we can practice a few techniques to start getting to no. OK?
  
@@ -176,8 +172,6 @@ Go to Farewell module
 \\select bot at random
     -> END
 
-
-
 ==== Second_Session ====
 
 //System check for past engagement rating
@@ -188,10 +182,8 @@ Go to Farewell module
         
 = Second_Session_after_positive
 So good to see you again {userName}. I'm glad you found our last talk useful. Did you run into one of these situations since we last talked?
-
     + Yes.
         -> askAboutRecentBoundaryMoment
-
     + No.
         -> continue
 
@@ -234,6 +226,24 @@ Sometimes things need time before you realize the results of a decision. It's go
     + OK 
         -> Second_Session_recap
 
+=secondSessionPositive_HadIncidentSaidNo
+Did you feel like you wanted to say yes?  Or was it an easy decision?
+    +Wanted to say yes
+        ->wantedToSayYes
+    +It was easy
+        ->easyToSayNo
+
+= wantedToSayYes
+These are the moments we are looking for. And it seems like you succeeded in being aware that you needed to set a boundary. How did the other person respond?
+    + They understood
+        -> otherPersonResponseToNo1
+    + They seemed annoyed
+        -> otherPersonResponseToNo2
+        
+
+= easyToSayNo
+That's a good sign.  Maybe it wasn't such a complicated situation, but 
+    
 = Second_session_KnowsWhyNottheRightThing
 Good. Do you want to jot it down here?
     + User enters reason 
@@ -347,10 +357,12 @@ That's terrific. And the more you can do that in the moment, the better! You can
         -> thirdsession_Recap
 
 = beingInTheMoment
-Amazing! I think you will start to notice less stress, and 
+Amazing! I think you will start to notice less stress and more satisfaction with your choices.
+    -> thirdsession_Recap
 
 = reassure
 That's ok. It's a lifelong process. There are old habits to undo and new habits to learn.  Be kind to yourself.  
+    -> thirdsession_Recap
 
 = Third_Session_after_negative
 {userName}, the last time we met didn't seem to be helpful for you, so let's think about what's next.
@@ -374,9 +386,9 @@ Let's see if another one of my pals can help.
         -> farewell
         
 = thirdsession_Recap
-We have come a long way! Developing the ability to set boundaries in our lives has many benefits.  We can reduce our stress, and that let's us accomplish more and be happier. 
+We have come a long way! Developing the ability to set boundaries in our lives has many benefits.  We can reduce our stress, and that lets us accomplish more and be happier. 
 
-We've mostly talked about setting boundaries with other people 
+//RG: need more here
         
 = Random_bot_selector
 {Of course|Sure|No problem}, I will call one of my {colleagues|friends|pals}.
