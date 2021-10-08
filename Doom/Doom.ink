@@ -23,11 +23,14 @@ VAR fearSolution = "I can at least make a first pass"
 
 
 ==== First_visit ====
-Hi {userName}, my name is Doom Bot. I am an expert in using worst-case scenarios to help my friends realize that their situation may not as bad as they think...
+Hi {userName}, my name is Doom Bot. I am an expert in using worst-case scenarios to help my friends realize that their situation may not as bad as they think... ://FV: Hi {userName}, my name is Doom Bot. I'm an expert in using worst-case scenarios to help my friends realize that the situation they are worrying about may not be as bad as they think... 
     -> whatDoYouThinkIs
 
 = whatDoYouThinkIs
-What do you think is the worst-case scenario for what you’re going through? Feel free to share it or simply think about it.
+What do you think is the worst-case scenario for what you’re going through? Feel free to share it or simply think about it. 
+//FV: I would ask first: What is the situation that is worrying you? This first questions helps the user clarify their ideas and put into words what is worrying them. 
+//FV: Then would think about adding an option for empathizing: "I know that feeling of worrying, it sometimes feels like the worst things could happen..." 
+//FV: And then I would ask: "What do you think is the worst-case scenario...."
   + Don't want to share
         -> Rate_fear 
   + User enters worst case scenario (WCS) here
@@ -69,7 +72,7 @@ It's OK.
 = letsThinkAboutTh
 Let's think about this together: think of one tiny step you could take if your worst-case scenario happens. 
 Remember, there’s no right or wrong answer to this question. Any small action could lead you towards the right direction. 
-Feel free to share if you want me to remind you in the future about this idea.
+Feel free to share if you want me to remind you in the future about this idea. //FV: I would add this part of remind you in the future after they have answered about sharing. 
   + Don't want to share
         -> sometimesItsHelp 
   + User enters tiny solution here
@@ -77,6 +80,7 @@ Feel free to share if you want me to remind you in the future about this idea.
 
 = sometimesItsHelp
 Sometimes it’s helpful to realize that our worries aren’t always as likely as we think they are. 
+//FV: I would add one sentence about the importance of this work. Something like: "Our minds tend to catastrophize, but that only drains us and does not let us have new ideas and move forward." 
     -> Enter_solution.doYouWantMeToRem
 
 = fearSolution1
@@ -85,6 +89,9 @@ Sometimes it’s helpful to realize that our worries aren’t always as likely a
 
 ==== Fear_solution ====
 Alright, in the case that this happens, think what could you do to be in a better state. Again, feel free to share if you want. We can 
+//FV: I would make a pause here and acknowledge that worrying in this cases can be productive if we use it to prepare better for the situation. 
+//FV: Something like: "Ok, now that you know this worst-case scenario could happen, let's prepare for it ...." or "In cases like this we can use worrying as a signal that we need to prepare ourselves for what could come" 
+//FV: The idea of "what could you do to be in a better state" feels a little vague. Here we could provide examples or ask a more specific question like the one in "letsthinkaboutthis": think of one tiny step you could take if your worst-case scenario happens.... 
   + Don't want to share
         -> noProblem 
   + User enters solution here.
@@ -172,6 +179,7 @@ You are becoming an expert at eliminating catastrophes! Do you want me to guide 
 
 = lastTimeWasNotId
 Last time was not idea, but believe me, we are making progress towards crushing catastrophes. I suggest we keep at it!
+//FV: ideal 
     -> doYouWantToTryAg
 
 = sureHappyToOfCou
