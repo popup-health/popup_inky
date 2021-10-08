@@ -1,4 +1,3 @@
-//locked in by FV
 // ---- Doom ----
 // Converted from original inklewriter URL:
 // https://www.inklewriter.com/stories/84290
