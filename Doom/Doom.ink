@@ -1,4 +1,4 @@
-// Locke by Pablo
+// Locked by Pablo
 
 // ---- Doom ----
 // Converted from original inklewriter URL:
