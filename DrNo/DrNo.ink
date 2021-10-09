@@ -47,7 +47,7 @@ Absolutely. It takes practice. So let's start!
 
 
 = startPractice
-So here we go! Recently have you found yourself voluntarily saying “Yes” to a new commitment and then realized later you had some regret about doing that, but couldn’t back out?
+Recently have you found yourself voluntarily saying “Yes” to a new commitment and then realized later you had some regret about doing that, but couldn’t back out?
     + Yes
         -> recentCommitment
         
@@ -59,7 +59,9 @@ So here we go! Recently have you found yourself voluntarily saying “Yes” to 
         
 = recentCommitment
 //FV: same language as earlier explanation, may want to reword. RG: done
-Often the reasons are just below our awareness in the moment and very much about maintianing a positive relationship with someone. Sometimes we're so enthused about the idea or opportunity it just keeps us from thinking about anything else.
+Often the reasons are just below our awareness in that moment and very much about maintaining a positive relationship with someone. 
+
+And sometimes we're so enthused about the idea or opportunity it just keeps us from thinking about anything else.
 
 In a word or two can you jot down why you said yes, but it now seems to be causing some regret or stress?
     + yes
@@ -88,7 +90,7 @@ Well, that puts you ahead of the game! Can you elaborate?  //FV: Maybe the answe
         -> another_Reason
         
 = notDisappoint
-It's so hard to disappoint, it's one of the most human qualities of all. Perhaps ask yourself if it would have really disappointed that person in a big way if you'd said no in a gentle, explanatory way.
+Not wanting to disappoint is one of the most human qualities of all. Perhaps ask yourself if it would have really disappointed that person in a big way if you'd said no in a gentle, explanatory way.
 
 Many times our worries about this are far greater than the reality. You might consider asking the person about this directly.
 
@@ -105,7 +107,7 @@ Many people have that experience. It is a good impulse, and don't get me wrong, 
 
 =  another_Reason
 OK!  Would you like to jot it down?
-    + user enters other reason
+    + OK
         -> otherReasoninput
     + Not now
         -> recap
@@ -136,8 +138,15 @@ That's fine! Do you want some more time to think about it, or keep going?
     + Keep thinking
         -> moreTime
     + Keep going
-        -> gotoSecondQuestion
-
+        -> gotoSecondQuestion_resolve_NotSure
+        
+= gotoSecondQuestion_resolve_NotSure
+Since you know the reason, do you have an idea why it’s hard to say no in the moment
+    + I do
+        ->reasonforHardtoSayNoInMoment
+    + Not sure
+        -> notSureWhy
+        
 = moreTime
 Let me know if you have an idea, or want to keep thinking about it.
     + A bit more time
@@ -196,10 +205,10 @@ Interesting!  So, can you describe how it went?
         -> secondSessionPositive_HadIncidentSaidNo
     
     + Not now.
-        -> secondSessionPositive_HadIncidentNotNow
+        -> secondSessionPositive_HadIncidentSaidYes
         
 = secondSessionPositive_HadIncidentSaidYes
-    + OK...and did that feel like the right thing to do?
+OK...and did that feel like the right thing to do?
         + Yes
             -> yes_RightThing
         + I'm afraid not.
@@ -218,7 +227,7 @@ I'm sorry to hear that. Any sense of what might have prevented you from setting 
     + yes
         -> Second_session_KnowsWhyNottheRightThing
     + Not yet.
-        -> Second_Session_NotSureWhy
+        -> yes_NotSureYet 
 
 
 = yes_NotSureYet
@@ -239,10 +248,23 @@ These are the moments we are looking for. And it seems like you succeeded in bei
         -> otherPersonResponseToNo1
     + They seemed annoyed
         -> otherPersonResponseToNo2
-        
+
+= otherPersonResponseToNo1
+Great! Generally, if you are thoughtful and clear in your explanation, people understand. Good for you! I'm sure if you were in that person's shoes, you'd be the same way.
+    + I hope so!
+        -> Second_Session_recap
+
+= otherPersonResponseToNo2
+I'm sorry to hear it. That's not always in your control. But giving clear reasons why you're setting this boundary is in your control, and knowing you've done the best you can is...well...doing the best you can!
+
+The more you practice, the better you become at this.
+    + I know
+        -> Second_Session_recap
 
 = easyToSayNo
-That's a good sign.  Maybe it wasn't such a complicated situation, but 
+That's a good sign.  Maybe it wasn't such a complicated situation after all.  Or maybe our previous chat helped you out!
+    + Maybe!
+        -> Second_Session_recap
     
 = Second_session_KnowsWhyNottheRightThing
 Good. Do you want to jot it down here?
@@ -275,7 +297,7 @@ Sometimes a reason you want to set a boundary is just too sensitive to share. As
 It seems that our last chat wasn't as rewarding as you might have liked. Anything in particular?
     + Tried ideas but didn't work
         -> needForPractice
-    + Something elusive
+    + Something else
         -> inputReasonforNegativeAssessment
     + Just not for me
         -> Random_bot_selector
@@ -284,7 +306,12 @@ It seems that our last chat wasn't as rewarding as you might have liked. Anythin
 I understand.  It is often something that requires real practice.  Sometimes it helps to look at it from a different perspective.
     + Like what?
         -> tell_A_Friend1
-        
+
+=   inputReasonforNegativeAssessment  
+user types in a brief reason
+    -> acknowledgeNegativeReason
+    
+
 = tell_A_Friend1
 Have you often found that the advice you give a friend is something that is hard for you to do for yourself?
     + of course
@@ -296,9 +323,21 @@ Have you often found that the advice you give a friend is something that is hard
 So imagine that you are your own best friend, giving yourself the very best advice about this that you would give to them.
 
 Sometimes the first experience simply surfaces your internal arguments and doesn't change your actions.  But keep going, in time, you'll see the value of being your own best friend. It will even help you help others better!
-    + I'll trying
+    + I'll keep trying
         -> Second_Session_recap
 
+= acknowledgeNegativeReason
+Thank you. It's helpful to hear this and my Inklings and I will learn from it. We can continue, or if you'd like to talk with a pal, we can do that.
+    + Let's continue
+    -> needForPractice
+    
+    + Talk to someone else
+        -> Random_bot_selector
+        
+    + Done for now
+        -> Second_Session_recap
+        
+    
 
 = continue
 Ok! Perhaps you'd like to talk with one of my pals.
@@ -321,6 +360,7 @@ Keep at it!  You are developing some skills that will help you feel less stresse
 = farewell
 Bye!
 //go to Farewell module
+-> DONE
 
 
 ==== Third_Session ====
@@ -334,7 +374,7 @@ Bye!
 //FV:  third session integrates first two, including asking user if they used any of the tips and how it turned out.  Especially: recommendation to take time comes in handy here.
 
 = Third_Session_after_positive
-Hi, {userName}I can see that this has been helpful so far. Do you feel more confident about setting boundaries?
+Hi, {userName}, I can see that this has been helpful so far. Do you feel more confident about setting boundaries?
     + yes
         -> probeConfidence
     + Getting there
@@ -342,7 +382,7 @@ Hi, {userName}I can see that this has been helpful so far. Do you feel more conf
     + Not yet
         -> reassure
         
-= ProbeConfidence
+= probeConfidence 
 Nice!  Anything specific?
     + Identifying problems
         -> identifyingProblems
@@ -352,7 +392,7 @@ Nice!  Anything specific?
         -> reassure
         
 = identifyingProblems
-That's terrific. And the more you can do that in the moment, the better! You can even anticipate them in the future!
+That's terrific. And the more you can do that in the moment, the better it will get. You can even anticipate them in the future!
     + Great.
         -> thirdsession_Recap
 
@@ -371,7 +411,7 @@ That's ok. It's a lifelong process. There are old habits to undo and new habits 
     + Let's try again.
         -> Refresher
         
-= refresher
+= Refresher
 That never hurts. So we can start at the beginning!
     + OK 
         -> First_Session.startPractice
@@ -387,10 +427,12 @@ Let's see if another one of my pals can help.
         
 = thirdsession_Recap
 We have come a long way! Developing the ability to set boundaries in our lives has many benefits.  We can reduce our stress, and that lets us accomplish more and be happier. 
+    -> farewell
+    
 
 //RG: need more here
         
-= Random_bot_selector
+// Random_bot_selector
 {Of course|Sure|No problem}, I will call one of my {colleagues|friends|pals}.
 \\select bot at random
     -> END
