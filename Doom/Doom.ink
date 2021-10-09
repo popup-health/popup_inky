@@ -25,7 +25,7 @@ VAR fearSolution = "I can at least make a first pass"
 
 
 ==== First_visit ====
-Hi {userName}, my name is Doom Bot. I am an expert in using worst-case scenarios to help my friends realize that their situation may not as bad as they think... ://FV: Hi {userName}, my name is Doom Bot. I'm an expert in using worst-case scenarios to help my friends realize that the situation they are worrying about may not be as bad as they think... 
+Hi {userName}, my name is Doom. I am an expert in using worst-case scenarios to help my friends realize that their situation may not as bad as they think... ://FV: Hi {userName}, my name is Doom Bot. I'm an expert in using worst-case scenarios to help my friends realize that the situation they are worrying about may not be as bad as they think... 
     -> whatDoYouThinkIs
 
 = whatDoYouThinkIs
