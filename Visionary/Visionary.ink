@@ -22,87 +22,10 @@ VAR stressLevel = "0 to 10"
   + Third visit
         -> Third_visit 
 
-==== Third_visit ====
-//system checks for past engagement
-  + positive/neutral
-        -> Third_visit_positive 
-  + negative
-        -> humIKnowLastTime 
-
-= humIKnowLastTime
-Hum... I know last time was not optimal. Imagery exposure can be powerful to help habituation to stressful situations, but I agree that sometimes it can be hard to handle.
-    -> Second_visit_negative.doYouWantToTryAg
-
-==== Third_visit_positive ====
-Glad to see you again! We are getting quite good at imagining, habituating, and ultimately defeating your fears!
-    -> Second_visit_positive_guide.doYouWantMeToGui
-
-==== Second_visit_positive_guide ====
-Of course! 
-Do you want to use the simple version you leaned the first time we met, or the more complex one with multiple questions to improve the vividness of the image? 
-  + Simple
-        -> sure 
-  + Multiple questions
-        -> certainly 
-
-= doYouWantMeToGui
-Do you want me to guide you, or do you feel you can do it by yourself?
-  + Guide me
-        -> Second_visit_positive_guide 
-  + I can do it
-        -> Second_visit_positive_by_yourself 
-
-= sure
-Sure
-    -> Imagery
-
-= certainly
-Certainly.
-    -> Questions_for_vividness
-
-==== Second_visit ====
-\\system check for engagement
-  + positive/neutral
-        -> Second_visit_positive 
-  + negative
-        -> Second_visit_negative 
-
-==== Second_visit_negative ====
-Perhaps last time it was not easy to imagine future fears vividly, or to control them afterwards.
-    -> doYouWantToTryAg
-
-= doYouWantToTryAg
-Do you want to try again?
-  + Ok ok
-        -> alright 
-  + No, another bot
-        -> New_bot 
-
-= alright
-Alright.
-    -> Second_visit_positive_guide_2
-
-==== Second_visit_positive ====
-Great to see you again! Let's keep facing our fears as vividly as possible.
-    -> Second_visit_positive_guide.doYouWantMeToGui
-
-==== Second_visit_positive_guide_2 ====
-Remember, the idea is to raise your stress first, to then learn to conquer it.
-    -> closeYourEyesFor
-
-= closeYourEyesFor
-Close your eyes for a few seconds to begin framing  your stressful situation. Let me know when done.
-  + Done
-        -> Questions_for_vividness 
-
-==== Second_visit_positive_by_yourself ====
-Sounds good. Take your time, and don't forget to imagine your event vividly and then breathe slowly for a few times.
-Let me know when you are done.
-  + Done
-        -> Calmness_evaluation 
+//******************************************//
 
 ==== First_visit ====
-\\image of bot here
+//image of bot here
 {userName}, my name is Visionary. I like using imagery exposure techniques to help people find relief in their worries and fears. 
 To make this technique work, you must first raise your stress, by "living" your stressor, and then learn how to control it by breathing, and considering alternatives. 
 The underlying principle is to help you "habituate" to a stressful situation, to reduce its power on you.
@@ -221,7 +144,7 @@ No problem. I will call a friend.  Just remember, I know it is hard to face our 
     -> END
 
 ==== Relaxation_technique ====
-\\GIF of Visionary breathing slowl
+//GIF of Visionary breathing slowl
 Let’s take 5 deep breaths or more, follow the above image rhythm or do it at your own pace. Make yourself comfortable, sitting, or standing, whatever you like.&nbsp;
   + Ok, done
         -> Calmness_evaluation 
@@ -259,5 +182,91 @@ Good to hear.
 ==== Final_Nugget ====
 Imagery exercises can help reduce the upcoming stress by "habituating" to it if you make the effort to do them as vividly as possible.
 Try to practice imagery exposure a couple of times a day, especially as a way to reduce the fear of a potentially future stressful situation.
-\\go to farewell module
+//go to farewell module
     -> END
+    
+//*******************************//
+    
+==== Second_visit ====
+//system check for engagement
+  + positive/neutral
+        -> Second_visit_positive 
+  + negative
+        -> Second_visit_negative 
+
+==== Second_visit_negative ====
+Perhaps last time it was not easy to imagine future fears vividly, or to control them afterwards.
+    -> doYouWantToTryAg
+
+= doYouWantToTryAg
+Do you want to try again?
+  + Ok ok
+        -> alright 
+  + No, another bot
+        -> New_bot 
+
+= alright
+Alright.
+    -> Second_visit_positive_guide_2
+
+==== Second_visit_positive ====
+Great to see you again! Let's keep facing our fears as vividly as possible.
+    -> Second_visit_positive_guide.doYouWantMeToGui
+
+==== Second_visit_positive_guide_2 ====
+Remember, the idea is to raise your stress first, to then learn to conquer it.
+    -> closeYourEyesFor
+
+= closeYourEyesFor
+Close your eyes for a few seconds to begin framing  your stressful situation. Let me know when done.
+  + Done
+        -> Questions_for_vividness 
+
+==== Second_visit_positive_by_yourself ====
+Sounds good. Take your time, and don't forget to imagine your event vividly and then breathe slowly for a few times.
+Let me know when you are done.
+  + Done
+        -> Calmness_evaluation 
+
+
+//*******************************//
+    
+    
+==== Third_visit ====
+//system checks for past engagement
+  + positive/neutral
+        -> Third_visit_positive 
+  + negative
+        -> humIKnowLastTime 
+
+= humIKnowLastTime
+Hum... I know last time was not optimal. Imagery exposure can be powerful to help habituation to stressful situations, but I agree that sometimes it can be hard to handle.
+    -> Second_visit_negative.doYouWantToTryAg
+
+==== Third_visit_positive ====
+Glad to see you again! We are getting quite good at imagining, habituating, and ultimately defeating your fears!
+    -> Second_visit_positive_guide.doYouWantMeToGui
+
+==== Second_visit_positive_guide ====
+Of course! 
+Do you want to use the simple version you leaned the first time we met, or the more complex one with multiple questions to improve the vividness of the image? 
+  + Simple
+        -> sure 
+  + Multiple questions
+        -> certainly 
+
+= doYouWantMeToGui
+Do you want me to guide you, or do you feel you can do it by yourself?
+  + Guide me
+        -> Second_visit_positive_guide 
+  + I can do it
+        -> Second_visit_positive_by_yourself 
+
+= sure
+Sure
+    -> Imagery
+
+= certainly
+Certainly.
+    -> Questions_for_vividness
+
