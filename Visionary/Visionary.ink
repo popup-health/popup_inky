@@ -1,4 +1,3 @@
-//LOCKED by Robert Gehorsam 10/10 2pm PDT
 
 // ---- Visionary ----
 // Converted from original inklewriter URL:
