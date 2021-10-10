@@ -8,7 +8,7 @@
 // -----------------------------
 
 VAR userName = "Pablo"
-VAR stressor = "am running late on many deadlines"
+VAR stressor = "am running late on many deadlines" //taken from greeting module
 //these two variables below belong to a list of positiveIdeas by the user:
 VAR positiveIdea1 = "we are creating a cool product"
 VAR positiveIdea2 = "we are leading the creation of novel media for stress management"
@@ -58,8 +58,7 @@ Feel free to share if you want.
 
 ==== Help_finding_positive_aspect ====
 That's ok. Let's take an extra minute to reflect a bit more. Even during the most stressful moments, we can find almost always find a positive path forward. 
-//I'd reverse the presentation of "spin" and stressor. "For example, another person was stressed about <stressor> and discovered this positive aspect to their situation...
-For example, another person had this positive spin: "{listSpins_spin}" to mitigate this stressor: "{listSpins_stressor}" //PP: pick a stressor and spin from another user that belongs to the SAME CATEGORY determined in the stress_detection module (work, family issues, etc.)
+For example, another person was stressed about "{stressor}" and discovered this positive aspect to their situation: "{listSpins_stressor}" //pick a stressor and spin from another user that belongs to the SAME CATEGORY determined in the stress_detection module (work, family issues, etc.)
 When you're ready, think about one positive aspect of your situation. If you share it with me, I could remind you in the future when you feel you're in a similar situation.
   + Don't want to share
         -> Second_positive_aspect 

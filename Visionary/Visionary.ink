@@ -6,7 +6,7 @@
 // -----------------------------
 
 VAR userName = "Pablo"
-VAR stressor = "Not getting enough funding"
+VAR stressor = "Not getting enough funding" // taken from greeting module
 VAR vividChoice = "0 to 10"
 VAR stressLevel = "0 to 10"
 
