@@ -1,3 +1,4 @@
+//LOCKED BY MIRANDA
 // ---- Doom ----
 // Converted from original inklewriter URL:
 // https://www.inklewriter.com/stories/84290
