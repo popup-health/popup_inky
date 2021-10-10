@@ -47,7 +47,6 @@ How vividly did you imagine this situation? - Use zero for not vivid at all, and
         -> Low_stress 
 
 ==== Imagery ====
-//RG:  using the stressor variable here feels out of sequence.  how does the system know this is the user's stressor?  
 Close your eyes, imagine the worst possible event could happen related to "{stressor}" as clearly as possible for 10 to 30 seconds. 
     -> Vividness_evaluation
 
@@ -173,8 +172,8 @@ To increase the vividness of the image, I will ask you a few questions to guide 
         -> BasedOnFactsAndL 
 
 = BasedOnFactsAndL
-//RG:  I think it may be hard for some users to access "facts and logic" in their situation, and it could cause a sense of innate inability which we don't want to cause.  Is there a different way to phrase this?  Maybe "Based on the perspective that can come from the relaxation techniques, how likely...." Not perfect, but something.
-4. Based on facts and logic, how likely is this imagined event to happen?
+
+4. Based on what you know so far, how likely is this imagined event to happen?
   + Done
         -> Stress_evaluation 
 
@@ -222,7 +221,7 @@ Remember, the idea is to use mental imagery that raises your stress first, then 
     -> closeYourEyesFor
 
 = closeYourEyesFor
-//RG: Just for clarity, I suggest -- and inserted text for -- telling the user to open their eyes, otherwise they will never be able to follow along going forward. 
+ 
 Close your eyes for a few seconds to begin framing  your stressful situation. When you have it, open your eyes, and select Done below.
   + Done
         -> Questions_for_vividness 
