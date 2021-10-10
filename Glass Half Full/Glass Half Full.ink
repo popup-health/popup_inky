@@ -1,4 +1,4 @@
-//LOCKED by Robert Gehorsam 10-10-2021 3pm PDT
+
 //Ready for editing
 // ---- Glass Half Full ----
 // Converted from original inklewriter URL:
@@ -34,11 +34,11 @@ VAR listSpins_spin = "I am making progress in my career"
 
 
 ==== First_visit ====
-{userName}, my name is Glass Half Full. I like using positive-thinking techniques to help my friends find relief in stressful moments.
+{userName}, my name is Glass Half Full. I can help you use positive-thinking techniques to help my friends find ways to manage stressful moments.
     -> First_positive_aspect
 
 ==== First_positive_aspect ====
-To start, I want you to reflect and think just one positive aspect, big or small, about your situation: "{stressor}". 
+To start, I want you to reflect on one positive aspect, big or small, about your situation: "{stressor}". 
 Feel free to share if you want.
   + Don't want to share
         -> noProblemLetsKee 
@@ -57,9 +57,10 @@ Feel free to share if you want.
     -> Second_positive_aspect
 
 ==== Help_finding_positive_aspect ====
-Let's take an extra minute to reflect a bit more. Even during the darkest of times, we can find some light. 
-For example, another user had this positive spin: "{listSpins_spin}" to mitigate this stressor: "{listSpins_stressor}" //PP: pick a stressor and spin from another user that belongs to the SAME CATEGORY determined in the stress_detection module (work, family issues, etc.)
-When you're ready, think what could be one positive aspect about your situation. If you share with me, I could remind you when you feel down in the future.
+That's ok. Let's take an extra minute to reflect a bit more. Even during the most stressful moments, we can find almost always find a positive path forward. 
+//I'd reverse the presentation of "spin" and stressor. "For example, another person was stressed about <stressor> and discovered this positive aspect to their situation...
+For example, another person had this positive spin: "{listSpins_spin}" to mitigate this stressor: "{listSpins_stressor}" //PP: pick a stressor and spin from another user that belongs to the SAME CATEGORY determined in the stress_detection module (work, family issues, etc.)
+When you're ready, think about one positive aspect of your situation. If you share it with me, I could remind you in the future when you feel you're in a similar situation.
   + Don't want to share
         -> Second_positive_aspect 
   + User enters positive aspect:
@@ -67,11 +68,11 @@ When you're ready, think what could be one positive aspect about your situation.
 
 
 ==== Second_positive_aspect ====
-Trying to find even one positive aspect is a great start. 
+Trying to find even one positive aspect of your stressful situation is a great start. 
     -> letsSeeIfWeCanTh
 
 = letsSeeIfWeCanTh
-Let's see if we can think of one more! Think of another positive element. Share with me if you desire.
+Let's see if we can think of one more! Think of another positive element. You can share it with me if you'd like.
   + Don't want to share
         -> itCanBeGoodToRem 
   + I don't know
@@ -90,11 +91,11 @@ It can be good to remember that you can usually find something positive even whe
 
 ==== Assurance_for_later ====
 Even if you are having a hard time finding a positive aspect right now, it's possible you may find yourself thinking of one later.
-Have you ever told a friend to look for the bright side of something? Try to pretend you are that friend to yourself!
+Have you ever told a friend to look on the bright side of some problem? Try to pretend you are that friend to yourself!
     -> Final_reassurance
 
 ==== Final_reassurance ====
-{Positive thinking and seeing the glass half full can be a good way to destress, making it easier to face challenges.|When you're feeling down about a situation, trying to find the positives can make it easier to handle.}
+{Positive thinking and seeing the glass as half-full can be a good way to de-stress, making it easier to face challenges.|When you're feeling down about a situation, trying to find the positives can make it easier to handle.}
 Thanks for chatting with me, {userName}. I hope this positive-thinking technique worked for you.
 //go to farewell module
     -> END
@@ -119,7 +120,7 @@ Thanks for chatting with me, {userName}. I hope this positive-thinking technique
         -> Second_visit_positive_with_idea 
 
 ==== Second_visit_positive_with_idea ====
-Glad to see you back! Finding positive spins to negative issues seems to {suite you well!|work for you!} 
+Glad to see you again! Finding positive aspects of challenging or stressful issues seems to {suit you well!|work for you!} 
 Last time you said that "{positiveIdea1}" can help with "{stressor}"
 //stressor is taken from Greeting module (if it exists). Add "to {stressor} only if there is a stressor.
     -> letsKeepPractici
@@ -138,21 +139,21 @@ Sure!
 
 
 = fantasticIWillSt
-Fantastic. I will stand-by while you think of a positive aspect about your current situation. Let me know when you are done.
+Fantastic. I will stand by while you think of a positive aspect about your current situation. Let me know when you are done.
   + Done
         -> great 
 
 = great
 Great!
-If you want, please share your positive spin, to keep track of your progress!
+If you want, you can share this positive element to keep track of your progress!
   + Not now
         -> Final_reassurance
-  + User enter positive spin here
+  + User enter positive element here
         -> Second_positive_aspect.positiveAspectAp
 
 
 ==== Second_visit_positive_no_idea ====
-Glad to see you back! Finding positive spins to negative issues is certainly an art that improves with practice.
+It's good to see you back! Finding positive elements even in negative issues is certainly an art that improves with practice.
     -> soLetsGetToIt
 
 = soLetsGetToIt
@@ -183,7 +184,7 @@ It's fine.
     -> Second_visit_positive_with_idea.letsKeepPractici
 
 ==== Second_visit_negative_no_idea ====
-I know last time was not particularly easy to find a positive aspect.
+I know last time we talked, it was not particularly easy to find a positive aspect to your situation.
 Do you want to try again?
   + No, change character
         -> Change_bot 
@@ -195,8 +196,8 @@ Do you want to try again?
     -> Second_visit_positive_no_idea.soLetsGetToIt
 
 ==== Change_bot ====
-Sure, will call one of my friends. 
-Just remember if you ever find yourself in a situation try to look a situation as a glass half full! :)
+Sure, I will call one of my friends. 
+Just remember that if you ever find yourself in a situation, it can be very helpful to try to look a situation as a glass that's half full, not half empty! :)
 //system gives the user a new bot
     -> END
 
@@ -235,7 +236,7 @@ Good to hear!
     -> ifWePracticeMore
 
 = itsOkAsLongAsYou
-It's ok... as long as you have had some improvement, that means you are progressing towards a more optimistic view of the future.
+It's ok... as long as you have had some improvement, that means you are progressing towards a more optimistic view of the future, and developing a skill that will help you throughout life.
     -> ifWePracticeMore
 
 = humSorryToHearTh
@@ -247,7 +248,7 @@ If we practice more, you will get better at this.
     -> Third_positive_no_past_idea.doYouWantMeToGui
 
 ==== Third_positive_no_past_idea ====
-Hi, welcome back! The more we practice our powers of optimistic realistic thinking, the better we get.
+Hi, welcome back! The more we practice our powers of optimistic but realistic thinking, the better we get at better managing many stressful situations.
     -> doYouWantMeToGui
 
 = doYouWantMeToGui
