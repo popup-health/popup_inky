@@ -1,5 +1,3 @@
-//Locked by Pablo
-
 // ---- Visionary ----
 // Converted from original inklewriter URL:
 // https://www.inklewriter.com/stories/85537
@@ -29,8 +27,8 @@ VAR stressLevel = "0 to 10"
 ==== First_visit ====
 //image of bot here
 {userName}, my name is Visionary. I can teach you imagery exposure techniques to help you find relief from worries and fears. 
-To make this technique work, you must first raise your stress by "living" your stressor, then learn how to control it by breathing, and then considering alternatives.  //RG: alternatives to what? 
-The idea is that by helping you "habituate" to a stressful situation, it reduce its power over you. //RG: Suggested addition would be to point out that "habituating" doesn't mean the issue goes away, only that you can be more effective dealing with it.  I would only worry that a user thinks habituation means ignoring it, or "devaluing" it.
+To make this technique work, you must first raise your stress by "living" your stressor, then learn how to control it by breathing.
+The idea is that by helping you "habituate" to a stressful situation. This doesn't mean the issue will disappear, but you can be more effective on dealing with it.
 I know it sounds a bit counter-intuitive, but experience shows that it works if you commit to do it well. Are you ready to do it?
   + Ok! let's start
         -> Imagery 
@@ -156,7 +154,6 @@ Ok...
     -> Second_visit_positive_guide_2.closeYourEyesFor
 
 ==== Questions_for_vividness ====
-//RG: I got to this from a divert which first asked you to close your eyes. You can't ask someone to close their eyes and then read this section. I have suggested a language change in the previous stitch to address that.
 To increase the vividness of the image, I will ask you a few questions to guide your imagination. Answer them in your head and let me know when done.
 1. Do you think just because you imagined this event, it might happen? 
   + Done
@@ -202,12 +199,14 @@ Perhaps last time it was not easy to imagine future fears vividly, or to control
     -> doYouWantToTryAg
 
 = doYouWantToTryAg
-//RG:  Suggestion for "No, another bot"  First, remove bot.  I would actually just have two choices here that said OK, and No.  Then have no go to a knot that says something like:   "I understand. This can be intense.  Would you like to just stop for now or talk to one of my friends?"  And then Stop goes to farewell, and Talk to one of my friends goes to new bot.
 Do you want to try again?
   + Ok 
         -> alright 
-  + No, another bot
-        -> New_bot 
+  + No, another inkling
+        -> frustration
+        
+= frustration
+    -> New_bot 
 
 = alright
 Alright.
