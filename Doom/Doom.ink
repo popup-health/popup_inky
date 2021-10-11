@@ -1,6 +1,3 @@
-//Locked by Pablo
-
-//MV changed catastrophes generally to "worst case scenarios" in converstion to stay consistent with the technique
 // ---- Doom ----
 // Converted from original inklewriter URL:
 // https://www.inklewriter.com/stories/84290
@@ -10,7 +7,7 @@
 
 VAR userName = "Pablo"
 VAR stressor1 = "I am stressed about a paper I am writing" //this is the stressor recorded for the first session in the greeting module
-VAR stressor2 = "Not finding enough funding for my company" //this is the stressor recorded for the first session in the greeting module
+VAR stressor2 = "Not finding enough funding for my company" //this is the stressor recorded for the second session in the greeting module
 VAR worstFear = "will not make deadline for the paper, and will have to wait one more year to submit it"
 VAR fearSolution = "I can at least make a first pass at the paper"
 VAR likelihoodFearVar = "2"
@@ -224,7 +221,6 @@ Do you want me to guide you through the technique again, or do you feel you can 
 
 = lastTimeWasNotId
 So you're last visit was maybe not ideal, but we are making progress towards controlling worst case scenarios. I'd say we keep at it!
-//FV: ideal 
     -> doYouWantToTryAg
 
 = sureHappyToOfCou
