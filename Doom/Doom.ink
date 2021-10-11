@@ -127,7 +127,9 @@ I use them to help people realize that what they worry about may not be as bad a
         + I'll try
         - -> letsThinkAboutTh
 
-    = Reassurance
+//*******************************************************//
+
+==== Reassurance ====
     {You cannot control everything|Not everything is under your control}, but remember: worries are just things that "may happen".
     You can use them to prepare and be ready to deal with upcoming challenges.
     Thanks for chatting with me, {userName}. I hope this worst case scenario technique helped a little.
@@ -236,5 +238,5 @@ I use them to help people realize that what they worry about may not be as bad a
       + User enters solution here
         ~ fearSolution = "prepare a strong pitch presentation"
         "{fearSolution}"
-        - -> First_visit.Reassurance
+        - -> Reassurance
         
