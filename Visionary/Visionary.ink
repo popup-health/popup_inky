@@ -1,3 +1,5 @@
+// Locked by Pablo
+
 // ---- Visionary ----
 // Converted from original inklewriter URL:
 // https://www.inklewriter.com/stories/85537
@@ -7,8 +9,8 @@
 
 VAR userName = "Pablo"
 VAR stressor = "Not getting enough funding" // taken from greeting module
-VAR vividChoice = "0 to 10"
-VAR stressLevel = "0 to 10"
+VAR vividLevel = "5"
+VAR stressLevel = "5"
 
 -> System_check_for_visit
 
@@ -24,11 +26,16 @@ VAR stressLevel = "0 to 10"
 
 //******************************************//
 
+//FV: I feel we should handle this intervention with more care, because for some users imagining the stressful sitaution as vividly as possible by themselves can be just too much. We could explore going up in increments, imagining a stressful situation up to a level 3 and then breath, calm yourself. Return to it and try it more vividly each time but with the sfatey that you know how to return to your breath and to center. Another option is to use the "questions for vividness" earlier, since they are helping untangle the stressful situation and lessen it by the questions of how probable it could actually happen and what could you do to handle it. 
+
 ==== First_visit ====
 //image of bot here
 {userName}, my name is Visionary. I can teach you imagery exposure techniques to help you find relief from worries and fears. 
+//FV: "imagery exposure techniques" feels like a big word, could we try to explain it in more plain language? 
 To make this technique work, you must first raise your stress by "living" your stressor, then learn how to control it by breathing.
-The idea is that by helping you "habituate" to a stressful situation. This doesn't mean the issue will disappear, but you can be more effective on dealing with it.
+//FV: I would say "imagining" not living it. 
+The idea is to help you "habituate" to a stressful situation. This doesn't mean the issue will disappear, but you can be more effective in dealing with it.
+//Fv: I would add "and have tools at hand to manage it if it comes back..." so the user feels they will get something more than just learning to habituate to the stress. 
 I know it sounds a bit counter-intuitive, but experience shows that it works if you commit to do it well. Are you ready to do it?
   + Ok! let's start
         -> Imagery 
@@ -41,105 +48,120 @@ Ok. Take a minute to imagine the possible consequences of this stressful situati
         -> howVividlyDidYou 
 
 = howVividlyDidYou
-How vividly did you imagine this situation? - Use zero for not vivid at all, and 10 for extremely vivid
-  + user picks number from 0 to 10
-        -> Low_stress 
+How vividly did you imagine this situation? - Use 0 for not vivid at all, and 10 for extremely vivid
+        -> Imagery.selector
 
 ==== Imagery ====
-Close your eyes, imagine the worst possible event could happen related to "{stressor}" as clearly as possible for 10 to 30 seconds. 
-    -> Vividness_evaluation
-
-==== Vividness_evaluation ====
-Let me know how vivid the image was, 0 meaning not vivid at all and 10 meaning extremely vivid. 
-  + show multiple choice from 0 to 10
-        -> Vividness 
-
-==== Vividness ====
-//select vivid choice from 0 to 10
-{vividChoice}
-    -> Stress_evaluation
+Close your eyes, imagine the worst possible event could happen related to "{stressor}" as clearly as possible for 10 to 30 seconds.
+  + Done
+    Let me know how vivid the image was, 0 meaning not vivid at all and 10 meaning extremely vivid. 
+    -> selector
+    
+=selector
+    + 0
+    ~ vividLevel = 0
+    + 1
+    ~ vividLevel = 1
+    + 2
+    ~ vividLevel = 2
+    + 3
+    ~ vividLevel = 3
+    + 4
+    ~ vividLevel = 4
+    + 5
+    ~ vividLevel = 5
+    + 6
+    ~ vividLevel = 6
+    + 7
+    ~ vividLevel = 7
+    + 8
+    ~ vividLevel = 8
+    + 9
+    ~ vividLevel = 9
+    + 10
+    ~ vividLevel = 10
+    - -> Stress_evaluation
 
 ==== Stress_evaluation ====
 As you pictured the issue, how stressed were you feeling? Zero means not stressed at all and 10 means extremely stressed. 
-  + show multiple choice from 0 to 10
-        -> selectStressLeve 
+    -> selector
+=selector
+    + 0
+    ~ stressLevel = 0
+    + 1
+    ~ stressLevel = 1
+    + 2
+    ~ stressLevel = 2
+    + 3
+    ~ stressLevel = 3
+    + 4
+    ~ stressLevel = 4
+    + 5
+    ~ stressLevel = 5
+    + 6
+    ~ stressLevel = 6
+    + 7
+    ~ stressLevel = 7
+    + 8
+    ~ stressLevel = 8
+    + 9
+    ~ stressLevel = 9
+    + 10
+    ~ stressLevel = 10
+    - -> selectStressLeve 
 
 = selectStressLeve
-//select stress level
-{stressLevel}
-  + {stressLevel} <= 2
-        -> Low_stress 
-  + {stressLevel} > 2
-        -> High_stress 
+  + {stressLevel <= 2}
+    -> Low_stress 
+  + {stressLevel > 2} 
+    -> High_stress 
 
 ==== Low_stress ====
 The more vividly you are experiencing your fear, the more helpful this exercise can be.
 Remember that raising your stress and later learning to control it and relax helps you "habituate" with the stressful situation, and ultimately control your fear.
 If you don’t find the image stressful enough, consider other images until you find the most distressing one. 
   + Repeat
-        -> alrightLetsMakeA 
+    Alright, let's make an effort to first raise your level of stress, so later we can learn to control it.
+        -> Imagery
   + Next step
         -> High_stress 
 
-= alrightLetsMakeA
-Alright, let's make an effort to first raise your level of stress, so later we can learn to control it.
-    -> Imagery
-
 ==== High_stress ====
 Next, use all of your senses to really experience the image for a minute. It might feel scary for a moment, but it will pass! 
-    -> Relaxation.wellRelaxTogethe
-
-==== Relaxation ====
-OK! Let's relax for a little bit.
-    -> Relaxation_technique
-
-= wellRelaxTogethe
-We'll relax together when you're done. //is this an over-personification?
+I will help you relax when you're done.
   + Done
-        -> Relaxation 
+    OK! Let's relax for a little bit.
+        -> Relaxation_technique
 
 ==== Calmness_evaluation ====
 How are you feeling right now? 
   + Calmer
-        -> Calmer 
+    {Great.|Good.|Ok}  That's what we hope to have happen.
+    -> Final_Nugget
   + The same
-        -> Same_stress 
   + More stressed
-        -> More_stressed 
+    - -> More_stress 
 
-==== More_stressed ====
+==== More_stress ====
 //system evaluates number of passes through this point
   + first pass
-        -> More_stressed_first_pass 
-  + second pass
-        -> Second_pass 
-
-==== More_stressed_first_pass ====
-Ok, let's do the relaxation technique again
-    -> Relaxation_technique
-
-==== Same_stress ====
-//system evaluates number of passed through this point
-  + first pass
-        -> Same_stress_first_pass 
+    Ok, let's do the relaxation technique again
+        -> Relaxation_technique
   + second pass
         -> Second_pass 
 
 ==== Second_pass ====
-Ok, we can stop here.
-Try to breathe slowly some more.
+Ok, we can stop here. Try to keep breathing slowly.
 Do you want to try another relaxation technique guided by one of my friends?
   + Yes, please
         -> New_bot 
   + No, let's just finish
-        -> Failed_intervention 
-
-==== Failed_intervention ====
-Sorry it has not worked out today.
-    -> Final_Nugget
+    Sorry it has not worked out today.
+        -> Final_Nugget
 
 ==== New_bot ====
-No problem. I will call a friend.  Just remember, I know it is hard to face our fears, but combining vivid imagery with some powerful relaxation could help in the future.
+No problem. I will call a friend.  
+Just remember, I know it is hard to face our fears, but combining vivid imagery with some powerful relaxation could help in the future.
 //select new bot at random
     -> END
 
@@ -149,9 +171,6 @@ Let’s take 5 deep breaths or more. You can follow the pace of the image here, 
   + Ok, done
         -> Calmness_evaluation 
 
-==== Same_stress_first_pass ====
-Ok... 
-    -> Second_visit_positive_guide_2.closeYourEyesFor
 
 ==== Questions_for_vividness ====
 To increase the vividness of the image, I will ask you a few questions to guide your imagination. Answer them in your head and let me know when done.
@@ -175,9 +194,6 @@ To increase the vividness of the image, I will ask you a few questions to guide 
   + Done
         -> Stress_evaluation 
 
-==== Calmer ====
-{Great.|Good.|Ok}  That's what we hope to have happen.
-    -> Final_Nugget
 
 ==== Final_Nugget ====
 Imagery exercises can help reduce the upcoming stress by "habituating" to it if you are able to do them as vividly as possible.
@@ -190,87 +206,76 @@ Try to practice imagery exposure a couple of times a day, especially as a way to
 ==== Second_visit ====
 //system check for engagement
   + positive/neutral
-        -> Second_visit_positive 
+    Great to see you again! Let's practice again making imagery as vivid as possible.
+        -> doYouWantMeToGui
   + negative
-        -> Second_visit_negative 
+    Perhaps last time it was not easy to imagine future fears vividly, or to control them afterwards.
+        -> doYouWantToTryAg
 
-==== Second_visit_negative ====
-Perhaps last time it was not easy to imagine future fears vividly, or to control them afterwards.
-    -> doYouWantToTryAg
+= doYouWantMeToGui
+Do you want me to guide you, or do you feel you can do it by yourself?
+  + Guide me
+    Of course! 
+        -> Second_visit_positive_guide 
+  + I can do it
+  Sounds good. 
+        -> Second_visit_positive_by_yourself 
 
 = doYouWantToTryAg
-Do you want to try again?
+Do you want to try imagery exposure again?
   + Ok 
-        -> alright 
-  + No, another inkling
-        -> frustration
-        
-= frustration
-    -> New_bot 
-
-= alright
-Alright.
-    -> Second_visit_positive_guide_2
-
-==== Second_visit_positive ====
-Great to see you again! Let's practice again making imagery as vivid as possible.
-    -> Second_visit_positive_guide.doYouWantMeToGui
-
-==== Second_visit_positive_guide_2 ====
-Remember, the idea is to use mental imagery that raises your stress first, then relax, and then learn to conquer it.
-    -> closeYourEyesFor
-
-= closeYourEyesFor
- 
-Close your eyes for a few seconds to begin framing  your stressful situation. When you have it, open your eyes, and select Done below.
-  + Done
+    Alright.
+    Remember, the idea is to use mental imagery that raises your stress first, then relax, and then learn to conquer it.
         -> Questions_for_vividness 
+  + No, another technique
+        -> New_bot 
+
+==== Second_visit_positive_guide ====
+Do you want to use the simple version you learned the first time we met, or do you want a more detailed version with multiple questions to increase the vividness of the image? 
+  + Simple
+    Sure
+        -> Imagery
+  + Multiple questions
+    Certainly.
+        -> Questions_for_vividness
 
 ==== Second_visit_positive_by_yourself ====
-Sounds good. Take your time, and don't forget to imagine your event vividly and then breathe slowly for a few times.
+Take your time, and don't forget to imagine your event vividly and then breathe slowly for a few times.
 Let me know when you are done.
   + Done
-        -> Calmness_evaluation 
+        -> byMyself
+//        -> Calmness_evaluation 
 
+==== byMyself ====
+Did you get stressed before calming down?
+  + Yes
+    Great
+    -> Final_Nugget
+  + No
+        -> Failure
 
+= Failure
+Could I help you with some elements of the imagery technique?
+  + Yes, vividness
+  Sure.
+        -> Second_visit_positive_guide
+  + Yes, calming down
+  OK
+        -> Relaxation_technique
+  + It's OK
+    Alright. I hope it worked at least a little bit.
+        -> Final_Nugget
+        
 //*******************************//
     
     
 ==== Third_visit ====
 //system checks for past engagement
   + positive/neutral
-        -> Third_visit_positive 
+    Glad to see you again! You are getting quite good at imagining, habituating to, and ultimately defeating your fears!
+        -> Second_visit.doYouWantMeToGui
   + negative
-        -> humIKnowLastTime 
+    Hmmm... I know last time was not optimal. Imagery exposure can be a powerful way to help habituate yourrself to stressful situations, but I agree that sometimes it can be hard to handle.
+        -> Second_visit.doYouWantToTryAg
 
-= humIKnowLastTime
-Hmmm... I know last time was not optimal. Imagery exposure can be a powerful way to help habituate yourrself to stressful situations, but I agree that sometimes it can be hard to handle.
-    -> Second_visit_negative.doYouWantToTryAg
-
-==== Third_visit_positive ====
-Glad to see you again! You are getting quite good at imagining, habituating to, and ultimately defeating your fears!
-    -> Second_visit_positive_guide.doYouWantMeToGui
-
-==== Second_visit_positive_guide ====
-Of course! 
-Do you want to use the simple version you learned the first time we met, or the more detailed one with multiple questions to improve the vividness of the image? 
-  + Simple
-        -> sure 
-  + Multiple questions
-        -> certainly 
-
-= doYouWantMeToGui
-Do you want me to guide you, or do you feel you can do it by yourself?
-  + Guide me
-        -> Second_visit_positive_guide 
-  + I can do it
-        -> Second_visit_positive_by_yourself 
-
-= sure
-Sure
-    -> Imagery
-
-= certainly
-Certainly.
-    -> Questions_for_vividness
 
