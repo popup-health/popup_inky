@@ -1,4 +1,3 @@
-//locked in by FV 
 // ---- Glass Half Full ----
 // Converted from original inklewriter URL:
 // https://www.inklewriter.com/stories/84359
