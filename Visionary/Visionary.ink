@@ -1,3 +1,5 @@
+//Locked by Pablo
+
 // ---- Visionary ----
 // Converted from original inklewriter URL:
 // https://www.inklewriter.com/stories/85537
