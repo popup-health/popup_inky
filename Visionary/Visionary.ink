@@ -1,3 +1,4 @@
+//locked in by FV 
 // ---- Visionary ----
 // Converted from original inklewriter URL:
 // https://www.inklewriter.com/stories/85537
@@ -24,11 +25,16 @@ VAR stressLevel = "5"
 
 //******************************************//
 
+//FV: I feel we should handle this intervention with more care, because for some users imagining the stressful sitaution as vividly as possible by themselves can be just too much. We could explore going up in increments, imagining a stressful situation up to a level 3 and then breath, calm yourself. Return to it and try it more vividly each time but with the sfatey that you know how to return to your breath and to center. Another option is to use the "questions for vividness" earlier, since they are helping untangle the stressful situation and lessen it by the questions of how probable it could actually happen and what could you do to handle it. 
+
 ==== First_visit ====
 //image of bot here
 {userName}, my name is Visionary. I can teach you imagery exposure techniques to help you find relief from worries and fears. 
+//FV: "imagery exposure techniques" feels like a big word, could we try to explain it in more plain language? 
 To make this technique work, you must first raise your stress by "living" your stressor, then learn how to control it by breathing.
-The idea is that by helping you "habituate" to a stressful situation. This doesn't mean the issue will disappear, but you can be more effective on dealing with it.
+//FV: I would say "imagining" not living it. 
+The idea is to help you "habituate" to a stressful situation. This doesn't mean the issue will disappear, but you can be more effective in dealing with it.
+//Fv: I would add "and have tools at hand to manage it if it comes back..." so the user feels they will get something more than just learning to habituate to the stress. 
 I know it sounds a bit counter-intuitive, but experience shows that it works if you commit to do it well. Are you ready to do it?
   + Ok! let's start
         -> Imagery 
