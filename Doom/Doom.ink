@@ -1,4 +1,5 @@
-//LOCKED BY MIRANDA
+//Locked by Pablo
+
 //MV changed catastrophes generally to "worst case scenarios" in converstion to stay consistent with the technique
 // ---- Doom ----
 // Converted from original inklewriter URL:
