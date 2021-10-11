@@ -51,20 +51,20 @@ It certainly takes practice. So let's start!
 
 
 = startPractice
-So, recently, have you voluntarily said “Yes” to a new commitment, and then realized later that you somehow regretted making that commitment?
+So, recently, did you find yourself saying “Yes” to a new commitment, and then realized later that you somehow regretted making that commitment?
     + Yes
         -> recentCommitment
         
     + Not recently
         -> recentCommitment
         
-    + Nope
+    + Never happens
         -> luckyYou
         
 = recentCommitment
 //FV: same language as earlier explanation, may want to reword. RG: done
-//MV: Changed first sentences slightly as it felt a bit disjointed to the choice it came from.
-Let's look at the reasons why this happened. 
+//MV: Changed first sentences slightly as it felt a bit disjointed to the choice it came from. RG: accepted
+Let's look at the reasons why this might have happened. 
 Sometimes we want to maintain a positive relationship with someone.  
 Or we're so enthused about the idea or opportunity that it just keeps us from thinking about anything that might dampen that enthusiasm. 
     ->recentCommitmentReason
@@ -139,7 +139,8 @@ You are definitely not alone!  The answer may come to you later, or it may stay 
 = userReasonforSayingYes
 //MV - Adapted to a little wider acknowledgement than Okay
 {userKnowsReasonWhy}
-    + Thank you for sharing. Formulating the reason is a tiny step.
+    + Thanks for sharing. 
+    Formulating the reason is a tiny step.
         -> recap
     
 
@@ -175,7 +176,7 @@ I'll make the call.  You are already on your way to setting healthy boundaries. 
         -> Random_bot_selector
 
 = recap
-//MV broke this up with a non-choice in the middle, it felt a bit repetitive so rewrote. Also, added a small change talking about acceptance as a tiny first step, to make them have more of a feeling that they have "done" something in this first pass with the Dr No bot. Currently it felt like "so what"? Leave to specialists to see if this works for them.
+//MV broke this up with a non-choice in the middle, it felt a bit repetitive so rewrote. Also, added a small change talking about acceptance as a tiny first step, to make them have more of a feeling that they have "done" something in this first pass with the Dr No bot. Currently it felt like "so what"? Leave to specialists to see if this works for them. RG: Great improvement, thanks!
 
 The first thing to realize is that saying no is hard for most of us. It can often feel “wrong” to do.  
  
@@ -210,12 +211,12 @@ Go to Farewell module
         
 = Second_Session_after_positive
 So good to see you again {userName}. I'm glad you found our last talk about setting boundaries for yourself useful. 
-//MV: What we would like to do here is vary the text depending on choices made in the first session. 
+//MV: To DEV TEAM: What we would like to do here is vary the text depending on choices made in the first session. 
 //If they indicated =reasonforHardtoSayNoInMoment.notDisappoint
-I remember that last time we talked, you made a commitmentment because you did't want to disappoint the people who asked.
-//if user chose =reasonforHardtoSayNoInMoment.Interesting
+I remember that last time we talked, you made a commitment because you did't want to disappoint the people who asked.
+//OR if user chose =reasonforHardtoSayNoInMoment.Interesting
 I remember that last time we talked you made a commitmentment because it was an interesting opportunity.
-//MV: if user chose neither
+//MV: OR if user chose neither
 Sometimes we make commitments because we don't want disappoint people, or because we are very enthusiastic about an opportunity.
 + Yes I did
 //MV: now same text for all
@@ -264,8 +265,25 @@ I'm sorry to hear that. Any sense of what might have prevented you from setting 
 
 = yes_NotSureYet
 //MV: this feels like slightly disappointing result - no steps forward - of the conversation? 
-Sometimes things need time before you realize the results of a decision. It's good to just pay attention to your feelings as things go along. Next time we chat perhaps you'll have a clearer picture! I hope it works out!
-    + OK 
+Sometimes things need time before you realize the results of a decision. It's good to just pay attention to your feelings as things go along.
+    + What can I do?
+    Great question.
+        -> takingTime
+        
+= takingTime
+For many people, keeping a journal of events, thoughts, and feelings can be helpful. Keep it simple.  Think of it as a way to remind yourself of issues that can otherwise get lost in the day-to-day.
+
+The act of writing often helps us think more clearly.
+    + Anything else?
+You bet!
+    -> askAFriend
+    
+= askAFriend
+These kinds of boundary-setting moments are something everyone has experience with.  So if you have a good friend you can talk with about it, perhaps a conversation with them would surface these hidden issues.  
+
+Don't be bashful!  I'm sure you'd do the same for a friend if they asked you.
+    + Absolutely!
+    See?  Sometimes we have more resources than we realize when it comes to tricky problems. I look forward to hearing what happens!
         -> Second_Session_recap
 
 =secondSessionPositive_HadIncidentNoDecision
@@ -353,19 +371,28 @@ user types in a brief reason
     
 
 = tell_A_Friend1
-//MV - what if user wants to say no
-Have you ever seen a friend struggle with boundaries and given them advice about how to say no?  But the same advice is hard for you to do for yourself?
+//MV - what if user wants to say no?  RG: I debated that.  I don't know what I'd say to someone who replied to no to this!  
+Have you ever seen a friend struggle with boundaries -- well, any problem, really -- and given them advice about how to say no?  But the same advice is hard for you to do for yourself?
     + Of course
         -> tell_A_Friend2
     + Sometimes
         -> tell_A_Friend2
+    + I never do that.
+        -> tell_A_Friend3
         
 = tell_A_Friend2
 So imagine that you are your own best friend, giving yourself the very best advice about this that you would give to them.
 
-Sometimes the first experience simply surfaces your internal arguments and doesn't change your actions.  But keep going, in time, you'll see the value of being your own best friend. It will even help you help others better!
+Sometimes the first experience simply surfaces your internal arguments and doesn't change your actions.  But keep going and in time you'll see the value of being your own best friend. It will even help you help others better!
     + I'll keep trying
         -> Second_Session_recap
+
+= tell_A_Friend3
+Even if you don't, try to imagine or remember a fictional character in this kind of situation, and think of what you might say to them.  
+    + Okay
+Sometimes the first experience simply surfaces your internal arguments and doesn't change your actions.  But keep going and in time you'll see the value of being your own best friend. It will even help you help others better!
+    -> Second_Session_recap
+    
 
 = acknowledgeNegativeReason
 Thank you. It's helpful to hear this. My fellow Inklings and I will learn from it. 
