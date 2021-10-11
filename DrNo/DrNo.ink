@@ -1,4 +1,3 @@
-//locked in by FV
 //PopBot DoctorNo - setting boundaries
 # title: Hero
 # author: Author: Robert Gehorsam
