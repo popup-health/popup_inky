@@ -1,5 +1,3 @@
-//Locked by Pablo
-
 // ---- Doom ----
 // Converted from original inklewriter URL:
 // https://www.inklewriter.com/stories/84290
@@ -62,14 +60,38 @@ Feel free to share it or simply think about it.
 
 ==== Rate_fear ====
 Now, on a scale of 1 (impossible) to 10 (certain), how likely is that worst-case scenario?
-  + multiple quick choice options from 1 to 10
-        -> likelihoodFear 
+        -> selector 
 
-    = likelihoodFear
-    {likelihoodFearVar}
-      + IF likelihoodFear <= 5
+=selector
+    + 0
+    ~ likelihoodFearVar = 0
+    + 1
+    ~ likelihoodFearVar = 1
+    + 2
+    ~ likelihoodFearVar = 2
+    + 3
+    ~ likelihoodFearVar = 3
+    + 4
+    ~ likelihoodFearVar = 4
+    + 5
+    ~ likelihoodFearVar = 5
+    + 6
+    ~ likelihoodFearVar = 6
+    + 7
+    ~ likelihoodFearVar = 7
+    + 8
+    ~ likelihoodFearVar = 8
+    + 9
+    ~ likelihoodFearVar = 9
+    + 10
+    ~ likelihoodFearVar = 10
+    - -> likelihoodFear
+
+
+= likelihoodFear
+    + {likelihoodFearVar <= 5}
             -> soWouldYouAgreeT 
-      + IF likelihoodFear >5
+    + {likelihoodFearVar >5}
             -> Fear_solution 
     
     = soWouldYouAgreeT
