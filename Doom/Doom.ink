@@ -1,4 +1,5 @@
 //LOCKED BY MIRANDA
+//MV changed catastrophes generally to "worst case scenarios" in converstion to stay consistent with the technique
 // ---- Doom ----
 // Converted from original inklewriter URL:
 // https://www.inklewriter.com/stories/84290
@@ -30,20 +31,29 @@ VAR likelihoodFearVar = "2"
 
 
 ==== First_visit ====
-Hi {userName}, my name is Doom. I like using worst-case scenarios to help my friends realize that their situation they are worrying about may not as bad as they think
-    -> whatDoYouThinkIs
+Hi {userName}, my name is Doom. Let me tell you a bit about myself.
+My favourite thing? Worst-case scenarios! 
+I use them to help people realize that what they worry about may not be as bad as they think.
++ Interesting!
++ Sounds intriguing
+    - -> whatDoYouThinkIs
 
 = whatDoYouThinkIs
-I heard that you told my colleagues about this stressful situation: "{stressor1}" //stressor is taken from the Greeting module
-I know that feeling of worrying, it sometimes feels like the worst things could happen...
-    -> worstCase
+Some of the others told me about something you're stressed about. You said: "{stressor1}" //stressor is taken from the Greeting module
+Very recognizable. Sometimes it feels like the worst thing could happen...
+    +Yes, it does
+    +Can you help?
+        - Let's try out my technique.
+         -> worstCase
 
 =worstCase
-What do you think is the worst-case scenario for the situation you are going through? 
+What do you think is the worst thing that could happen in your situation? 
 Feel free to share it or simply think about it. 
   + Don't want to share
+    That's OK.
         -> Rate_fear 
   + User enters worst case scenario here
+    Thank you for sharing. 
         -> Enter_fear 
 
 ==== Enter_fear ====
@@ -51,61 +61,70 @@ Feel free to share it or simply think about it.
     -> Rate_fear
 
 ==== Rate_fear ====
-Ok, on a scale of 1 (impossible) to 10 (certain), how likely is that worst-case scenario?
+Now, on a scale of 1 (impossible) to 10 (certain), how likely is that worst-case scenario?
   + multiple quick choice options from 1 to 10
         -> likelihoodFear 
 
-= likelihoodFear
-{likelihoodFearVar}
-  + IF likelihoodFear <= 5
-        -> soWouldYouAgreeT 
-  + IF likelihoodFear >5
-        -> Fear_solution 
-
-= soWouldYouAgreeT
-So would you agree that this scenario is unlikely?
-  + Yes
-        -> oK 
-  + Not sure
-        -> itsOK 
-
-= oK
-OK.
-    -> sometimesItsHelp
-
-= itsOK
-It's OK. I just asked because you had rated your fear with a {likelihoodFearVar}/10, which is below the middle point of that scale.
-    -> letsThinkAboutTh
-
-= letsThinkAboutTh
-Let's think about this together: think of one tiny step you could take if your worst-case scenario happens. 
-Remember, there’s no right or wrong answer to this question. Any small action could lead you towards the right direction. 
-Feel free to share if you want.
-  + Don't want to share
-        -> sometimesItsHelp 
-  + User enters tiny solution here
-        -> fearSolution1
-
-= sometimesItsHelp
-Sometimes it’s helpful to realize that our worries aren’t always as likely as we think they are. 
-Our minds tend to catastrophize, but that only drains us and does not let us have new ideas and move forward.
-    -> Reassurance
-
-= fearSolution1
-{fearSolution}
-    -> sometimesItsHelp
+    = likelihoodFear
+    {likelihoodFearVar}
+      + IF likelihoodFear <= 5
+            -> soWouldYouAgreeT 
+      + IF likelihoodFear >5
+            -> Fear_solution 
+    
+    = soWouldYouAgreeT
+    You rated your worst case situation at {likelihoodFearVar}. Think about that. 
+    Would you agree that this scenario is unlikely?
+      + Yes
+        OK. ->sometimesItsHelp
+    
+      + Not sure
+        That's fine.
+            -> itsOK 
+    
+    
+    = itsOK
+    I asked because you rated your worst case fear at {likelihoodFearVar}/10. This is reasonably low.
+        -> letsThinkAboutTh
+    
+    = letsThinkAboutTh
+    
+    Think of one tiny step you could take if your worst-case scenario happens.
+    Any small action that could lead you forward. Remember, there’s no right or wrong answer to this question. 
+    Feel free to share if you want.
+      + Don't want to share
+        No problem.
+            -> sometimesItsHelp 
+      + User enters tiny solution here
+        A good thought.
+            -> fearSolution1
+    
+    = sometimesItsHelp
+    Sometimes it’s helpful to realize that our worst fears aren’t always as likely to happen as we think they are. 
+    Our minds tend to catastrophize. That just drains us and blocks new ideas to move forward.
+     +I see
+     +Tell me more
+        - -> Reassurance
+    
+    = fearSolution1
+    {fearSolution}
+        -> sometimesItsHelp
 
 ==== Fear_solution ====
-In cases like this we can use worrying as a signal that we need to prepare ourselves for what could come. 
-    -> Rate_fear.letsThinkAboutTh
+In cases like this worrying, is a signal that we need to prepare ourselves for what could come.
+Let's look at it together and try something out.
+    + Great
+    + I'll try
+    - -> Rate_fear.letsThinkAboutTh
 
 ==== Enter_solution ====
 {fearSolution}
     -> Reassurance 
 
 ==== Reassurance ====
-Even though you cannot control everything, just remember that worries are just probabilities, and that they can be used to be prepared to deal with upcoming challenges.
-Thanks for chatting with me, {userName}. I hope this worst case scenario technique worked for you.
+You cannot control everything, but remember: worries are just things that "may happen".
+You can use them to prepare and be ready to deal with upcoming challenges.
+Thanks for chatting with me, {userName}. I hope this worst case scenario technique helped a little.
 // go to Farewell module
     -> END
 
@@ -120,68 +139,68 @@ Thanks for chatting with me, {userName}. I hope this worst case scenario techniq
   + past engagement negative
         -> evenThoughLastTi 
 
-= iAmGladWeAreConn
-I am glad we are connecting again. I hope last time you were able to use our powers of fear reduction!
-Let's practice them again!
-    -> checkPastSolution
-    
-= checkPastSolution
-//system checks if there was a past {fearSolution}
-  + past fear solution
-        -> past_fearSolution
-  + no past fear solution
-        -> no_past_fearSolution
+    = iAmGladWeAreConn
+    Good to see you again. I hope you were able to use our powers of fear reduction last time!
+    Let's practice this again!
+        -> checkPastSolution
         
-= past_fearSolution
-But before that, how did your idea of "{fearSolution}" work out to reduce your worries related to "{stressor1}"?
-  + Worked well
-    -> worked_well
-  + Didn't work that well
-    -> didnt_work
-
-= worked_well    
-Great to hear! Let's keep up the good work then!
-    -> newStressor
-
-= didnt_work
-Sorry to hear that. Comfronting our fears can be scary.
-    -> newStressor
-= no_past_fearSolution
-    -> newStressor
-
-= newStressor
-This time, before we assess your fear related to "{stressor2}", tell me how far in the future would this occur?
-  + Today
-        -> evenIfItIsImmine 
-  + Tomorrow
-        -> tomorrow 
-  + Next week/month
-        -> nextMonth
-
-= evenIfItIsImmine
-Even if it is imminent, we can do something about it. 
-    -> letsBeginByTryin
-
-= tomorrow
-Assessing the worries of a future event is harder.
-    -> letsBeginByTryin
-
-= nextMonth
-The farther in the future an event is, the harder it is for us to assess our emotions about it.
-    -> letsBeginByTryin
-
-= letsBeginByTryin
-Let's begin by trying not to travel to that moment, and stay in the present. 
-Take a deep breath, and let's again assess your fear.
-    -> First_visit.worstCase
-
-= evenThoughLastTi
-Even though last time wasn't ideal, I am confident that I could help you reduce your fears. 
-    -> Third_visit.doYouWantToTryAg
-
-==== Pick_another_bot ====
-// select a new bot at random
-    -> END
+    = checkPastSolution
+    //system checks if there was a past {fearSolution}
+      + past fear solution
+            -> past_fearSolution
+      + no past fear solution
+            -> no_past_fearSolution
+            
+    = past_fearSolution
+    Before we start, how did your idea of "{fearSolution}" work out to reduce your worries abou "{stressor1}"?
+      + It worked well
+        -> worked_well
+      + Didn't work that well
+        -> didnt_work
+    
+    = worked_well    
+    Great to hear! Let's keep up the good work!
+        -> newStressor
+    
+    = didnt_work
+    Sorry to hear that. Confronting our fears can be really hard.
+        -> newStressor
+    = no_past_fearSolution
+        -> newStressor
+    
+    = newStressor
+    Before we talk about your fear related to "{stressor2}", can you tell me how far in the future it would occur?
+      + Today
+            -> evenIfItIsImmine 
+      + Tomorrow
+            -> tomorrow 
+      + Next week/month
+            -> nextMonth
+    
+    = evenIfItIsImmine
+    Even if it is really close, we can do something about it. 
+        -> letsBeginByTryin
+    
+    = tomorrow
+    Assessing the worries of a future event is harder.
+        -> letsBeginByTryin
+    
+    = nextMonth
+    If an event is far in the future, it becomes harder for us to assess our emotions about it.
+        -> letsBeginByTryin
+    
+    = letsBeginByTryin
+    Let's try for now not to travel to that moment, and stay in the present. 
+    Take a deep breath, and let's assess your fear again.
+        -> First_visit.worstCase
+    
+    = evenThoughLastTi
+    Even though last time wasn't ideal, I am confident that I can help you reduce your fears. 
+        -> Third_visit.doYouWantToTryAg
+    
+    ==== Pick_another_bot ====
+    // select a new bot at random
+        -> END
 
 
 //*******************************************************//
@@ -195,14 +214,15 @@ Even though last time wasn't ideal, I am confident that I could help you reduce 
         -> lastTimeWasNotId 
 
 = youAreBecomingAn
-You are becoming an expert at eliminating catastrophes! Do you want me to guide you through the technique again, or do you feel you can do it by yourself?
+You are becoming an expert at eliminating worst case scenarios! 
+Do you want me to guide you through the technique again, or do you feel you can do it by yourself?
   + Guide me
         -> sureHappyToOfCou 
   + I can do it
         -> User_does_technique_alone 
 
 = lastTimeWasNotId
-Last time was not ideal, but we are making progress towards controlling catastrophes. I suggest we keep at it!
+So you're last visit was maybe not ideal, but we are making progress towards controlling worst case scenarios. I'd say we keep at it!
 //FV: ideal 
     -> doYouWantToTryAg
 
@@ -212,9 +232,9 @@ Last time was not ideal, but we are making progress towards controlling catastro
 
 = doYouWantToTryAg
 Do you want to try again?
-  + No, give me another bot
+  + No, talk to other bot
         -> Pick_another_bot 
-  + Ok
+  + All right
         -> thisTimeBeforeWe 
 
 = thisTimeBeforeWe
