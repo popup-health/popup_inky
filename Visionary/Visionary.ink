@@ -1,4 +1,3 @@
-//locked in by FV 
 // ---- Visionary ----
 // Converted from original inklewriter URL:
 // https://www.inklewriter.com/stories/85537
