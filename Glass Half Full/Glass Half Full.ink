@@ -33,11 +33,14 @@ VAR listSpins_spin = "I am making progress in my career"
 
 ==== First_visit ====
 {userName}, my name is Glass Half Full. I can help you use positive-thinking techniques to help my friends find ways to manage stressful moments.
+//FV: {userName}, my name is Glass Half Full. I'm great at finding the silver lining of experiences and situations. I can show you how I do it using my positive-thinking techniques. They are great tools for managing stressful moments.
     -> First_positive_aspect
 
 ==== First_positive_aspect ====
 {To start|To begin|First}, I want you to reflect on one positive aspect, big or small, about your situation: "{stressor}". 
+//Fv: I would ask the user first to think of a stressful situation or moment. And then guide them to reflect on a positive aspect of it. 
 Feel free to share if you want.
+//FV: before giving the option to write these down, I would ask if they need examples on finding positive aspects. If they do need them, I would guide them to the "help finding positive aspects". I would provide the option for that information first, not wait for "I am not sure" since even those who have ideas could benefit and expand on it more with examples. 
   + Don't want to share
     {No problem|Let's keep moving}
         -> Second_positive_aspect
@@ -53,7 +56,7 @@ Feel free to share if you want.
     -> Second_positive_aspect
 
 ==== Help_finding_positive_aspect ====
-That's ok. Let's take an extra minute to reflect a bit more. Even during the most stressful moments, we can find almost always find a positive path forward. 
+That's ok. Let's take an extra minute to reflect a bit more. Even during the most stressful moments, with the right tools at hand, we can almost always find a positive path forward. 
 For example, another person was stressed about "{stressor}" and discovered this positive aspect to their situation: "{listSpins_stressor}" //pick a stressor and spin from another user that belongs to the SAME CATEGORY determined in the stress_detection module (work, family issues, etc.)
 When you're ready, think about one positive aspect of your situation. If you share it with me, I could remind you in the future when you feel you're in a similar situation.
   + Don't want to share
@@ -83,7 +86,7 @@ Let's see if we can think of one more! Think of another positive element. You ca
     -> itCanBeGoodToRem
 
 = itCanBeGoodToRem
-It can be good to remember that you can usually find something positive even when in the most negative of situations!
+It can be good to remember that you can usually find something positive even in the most negative of situations!
     -> Final_reassurance
 
 ==== Final_reassurance ====
@@ -132,6 +135,7 @@ Fantastic. I will stand by while you think of a positive aspect about your curre
   + Done
   - Great!
     If you want, you can share this positive element to keep track of your progress!
+    //FV: I would add "and I can remind them to you in the future" to incentivize the user to share it. 
     + Not now
         -> Final_reassurance
     + User enter positive element here
