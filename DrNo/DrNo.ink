@@ -1,3 +1,4 @@
+//MIRANDA BLOCKED
 //PopBot DoctorNo - setting boundaries
 # title: Hero
 # author: Author: Robert Gehorsam
@@ -24,7 +25,8 @@ VAR otherReason = "Liked the opportunity, I felt I owed them a favor"
         -> Third_Session 
         
 ==== First_Session ====
-Hello {userName}. I’m No. No kidding! That might sound kind of negative, but really, what I would love to share with you are ways to set boundaries in your life to reduce feelings of stress and being overwhelmed. It’s not always easy to do, so we’ll work on it bit by bit. Sound good?
+Hello {userName}. I’m No. 
+No kidding! That might sound kind of negative, but really, what I would love to share with you are ways to set boundaries in your life to reduce feelings of stress and being overwhelmed. It’s not always easy to do, so we’ll work on it bit by bit. Sound good?
     + Sounds like a plan!
         -> startPractice
         
