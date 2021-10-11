@@ -1,4 +1,3 @@
-//MIRANDA BLOCKED
 //PopBot DoctorNo - setting boundaries
 # title: Hero
 # author: Author: Robert Gehorsam
@@ -26,7 +25,8 @@ VAR otherReason = "Liked the opportunity, I felt I owed them a favor"
         
 ==== First_Session ====
 Hello {userName}. I’m No. 
-No kidding! That might sound kind of negative, but really, what I would love to share with you are ways to set boundaries in your life to reduce feelings of stress and being overwhelmed. It’s not always easy to do, so we’ll work on it bit by bit. Sound good?
+No kidding! I realise it sounds kind of negative, but I'd love to share some ways to set boundaries in your life. It really helps reduce feelings of stress and being overwhelmed. 
+It’s not always easy to do, so we’ll work on it bit by bit. Sound good?
     + Sounds like a plan!
         -> startPractice
         
@@ -49,7 +49,7 @@ It certainly takes practice. So let's start!
 
 
 = startPractice
-Recently have you found yourself voluntarily saying “Yes” to a new commitment, and then realized later you had some regret about making that commitment?
+So, recently, have you voluntarily said “Yes” to a new commitment, and then realized later that you somehow regretted making that commitment?
     + Yes
         -> recentCommitment
         
@@ -61,30 +61,36 @@ Recently have you found yourself voluntarily saying “Yes” to a new commitmen
         
 = recentCommitment
 //FV: same language as earlier explanation, may want to reword. RG: done
-Often the reasons are just below our level of awareness in that moment.  They are also often about maintaining a positive relationship with someone. 
+//MV: Changed first sentences slightly as it felt a bit disjointed to the choice it came from.
+Let's look at the reasons why this happened. 
+Sometimes we want to maintain a positive relationship with someone.  
+Or we're so enthused about the idea or opportunity that it just keeps us from thinking about anything that might dampen that enthusiasm. 
+    ->recentCommitmentReason
+    
 
-And sometimes we're so enthused about the idea or opportunity it just keeps us from thinking about anything that might dampen that enthusiasm.
-
-In a word or two can you jot down why you said yes to the committment, but it now seems to be causing some regret or stress?
-    + yes
+=recentCommitmentReason
+//MV - suggest rerouting the flow a bit. If you choose to write it, you get way less info currently. Idea: rerouting through the same flow as people not writing it down, but changing the wording a bit so it's not too obvious that the machine can not interpret what they have written.
+Can you write here in a few words why you said yes to the committment? Also add why it now seems to be causing some regret or stress.
+    + Yes
         -> userReasonforSayingYes
         
-    + Not now
+    + Maybe later
         -> gotoSecondQuestion
         
-    + Not sure
+    + Not sure of reason
         -> gotoSecondQuestionNotSure
         
 = gotoSecondQuestion
-Good.  And now, since you know the reason why you said "yes" even with some doubhts, do you know why it also felt also hard to say no in that moment?
+That's fine.  Now since you know the reason why you said "yes", even with some doubts, do you know why it felt hard to say no in that moment?
     + I do
         ->reasonforHardtoSayNoInMoment
     + Not sure
         -> notSureWhy
 
 =reasonforHardtoSayNoInMoment
-Well, knowing why it was hard to say no puts you ahead of the game! Can you elaborate?  //FV: Maybe the answer is that it makes them nervous.  or maybe you're not taking the time.
-    +Didn't want to disappoint
+//MV: changed first choice as over 20 chars
+Well, knowing why it was hard to say no puts you ahead of the game! Tell me more?  //FV: Maybe the answer is that it makes them nervous.  or maybe you're not taking the time.
+    +Not disappoint someone
         ->notDisappoint
     +It was interesting
         -> interesting
@@ -92,22 +98,17 @@ Well, knowing why it was hard to say no puts you ahead of the game! Can you elab
         -> another_Reason
         
 = notDisappoint
-Not wanting to disappoint others -- or yourself -- is one of the most human qualities of all. Many times we are also afraid of how we will be perceived. 
-
-Perhaps ask yourself if it would have really disappointed that person in a big way if you'd said no in a gentle, explanatory way.
-
-Many times our worries about this are far greater than the reality. You might consider asking the person about this directly.
+Not wanting to disappoint others - or yourself - is a very human quality. In many cases we are also afraid of others will view us. 
+Ask yourself if it would have really disappointed the asker in a big way if you'd said no in a gentle and explanatory way. Often we worry much more about this than necessary. Maybe you could even ask the person about this directly?
 
     + I can do that!
         -> recap
         
-    + uhhhh....
+    + Uhm...
         -> hardtonotDisappoint
         
 = interesting
-Many people have that experience. It is a good impulse, and don't get me wrong, many times it all turns out great! But sometimes there's a little voice in our heads that's trying to say "Are you sure?" 
-
-It can be good to take a few seconds before answering to see if you can identify if there's that little voice saying, wait a second! Like mine, in a way!
+That is very common. It is a good impulse, don't get me wrong, in many cases it all turns out great! But sometimes there's something just below the surface that's trying to say "Wait! Are you sure?" It can be good to take a few seconds before you answer to listen to that little voice saying"Wait a second"!
     + I'll work on that!
         -> recap
 
@@ -124,7 +125,7 @@ OK!  Would you like to jot it down?
         -> recap
 
 = hardtonotDisappoint
-I understand. Give it some thought. Maybe it’s not for every occasion, but taking the initiative will give you a positive boost.
+I understand. Give it some thought. Maybe it doesn't work for everything, but taking the initiative will give you a positive boost.
     + Okay
         -> recap
 
@@ -134,8 +135,9 @@ You are definitely not alone!  The answer may come to you later, or it may stay 
         -> recap
 
 = userReasonforSayingYes
+//MV - Adapted to a little wider acknowledgement than Okay
 {userKnowsReasonWhy}
-    + Okay
+    + Thank you for sharing. Formulating the reason is a tiny step.
         -> recap
     
 
@@ -161,7 +163,7 @@ Let me know if you have an idea, or want to keep thinking about it.
         -> gotoSecondQuestion
 
 = luckyYou
-So…..maybe talking with me isn’t the best use of your time, but that’s fine. Would you like to meet with another one of us now?
+So…..maybe talking with me isn’t the best use of your time, but that’s fine. Would you like to meet with another one of us now? FEELS A BIT PETTY?
     + Sure
         -> pre_Random_bot_selector
 
@@ -171,18 +173,20 @@ I'll make the call.  You are already on your way to setting healthy boundaries. 
         -> Random_bot_selector
 
 = recap
+//MV broke this up with a non-choice in the middle, it felt a bit repetitive so rewrote. Also, added a small change talking about acceptance as a tiny first step, to make them have more of a feeling that they have "done" something in this first pass with the Dr No bot. Currently it felt like "so what"? Leave to specialists to see if this works for them.
 
-The first thing to realize is that saying no is hard for most of us, and it can often feel “wrong” to do. 
+The first thing to realize is that saying no is hard for most of us. It can often feel “wrong” to do.  
  
-But we should recognize when we might not be setting healthy boundaries.  
- 
-Finally for now:  Recognize it can be hard to say no in the moment. Saying “yes” comes from a good place in us but it can lead you to feel overwhelmed...and more.
+The first step is to recognize when we might not be setting healthy boundaries for ourselves.
 
-The sooner we are able to establish healthy boundaries, the more we can manage unnecessary stress.
++ How does this help?
+ 
+Saying “yes” comes from a good place in us, but it can lead you to feel overwhelmed...and more. When you accept that it can be hard to say no in the moment, that is a second step. 
+The sooner you are able to establish healthy boundaries, the more you can manage unnecessary stress.
  
  Next time, we can practice a few techniques to start getting to no. OK?
  
- + Great!
+    ++ Great!
     -> farewell
 
 = farewell
@@ -190,7 +194,7 @@ Go to Farewell module
     ->END
     
 ==== Random_bot_selector ====
-{Of course|Sure|No problem}, I will call one of my {colleagues|friends|pals}.
+{Of course|Sure|No problem}, I will call one of my {friends|pals} for you.
 \\select bot at random
     -> END
 
@@ -203,59 +207,67 @@ Go to Farewell module
         -> Second_Session_after_negative
         
 = Second_Session_after_positive
-So good to see you again {userName}. I'm glad you found our last talk about setting boundaries for yourself to be useful. 
-
-You recognized that setting healthy boundaries can be hard to do. We often make commitments because we don't want to disappoint people, or are overly enthusiastic about an opportunity.  
-
-It's sometimes hard to realize that later we will feel overwhelmed.  And then it's harder to change the situation.  So anticipating the impact of a decision before we commit is helpful.
+So good to see you again {userName}. I'm glad you found our last talk about setting boundaries for yourself useful. 
+//MV: What we would like to do here is vary the text depending on choices made in the first session. 
+//If they indicated =reasonforHardtoSayNoInMoment.notDisappoint
+I remember that last time we talked, you made a commitmentment because you did't want to disappoint the people who asked.
+//if user chose =reasonforHardtoSayNoInMoment.Interesting
+I remember that last time we talked you made a commitmentment because it was an interesting opportunity.
+//MV: if user chose neither
+Sometimes we make commitments because we don't want disappoint people, or because we are very enthusiastic about an opportunity.
++ Yes I did
+//MV: now same text for all
+We don't always realise the we might feel overwhelmed later. And then it's harder to change the situation.  
+So anticipating the impact of a decision before we commit is helpful.
 
 Did you run into one of these setting-boundary situations since we last talked?
-    + Yes.
+    ++ Yes
         -> askAboutRecentBoundaryMoment
-    + No.
+    ++ No
         -> continue
 
 =askAboutRecentBoundaryMoment
 Interesting! Can you describe what you did?
-    + I said yes.
+    + I said yes
         -> secondSessionPositive_HadIncidentSaidYes
     
-    + I said no.
+    + I said no
         -> secondSessionPositive_HadIncidentSaidNo
     
-    + No decision.
+    + No decision
         -> secondSessionPositive_HadIncidentNoDecision
         
 = secondSessionPositive_HadIncidentSaidYes
 OK...and did that feel like the right thing to do?
         + Yes
             -> yes_RightThing
-        + I'm afraid not.
+        + I'm afraid not
             -> yes_NOT_RightThing
-        + Not sure yet.
+        + Not sure yet
             -> yes_NotSureYet
             
 
 = yes_RightThing
-Excellent! Whether it was easy to figure out or took some work, I bet it felt great.
-    + Yes.
+Excellent! Whether it was easy to figure out or took some work, I bet it felt great afterwards.
+    + It did
         -> Second_Session_recap
 
 = yes_NOT_RightThing
 I'm sorry to hear that. Any sense of what might have prevented you from setting that boundary? //FV: replace some practical tips on how to say no
-    + yes
+    + Yes
         -> Second_session_KnowsWhyNottheRightThing
     + Not yet.
         -> yes_NotSureYet 
 
 
 = yes_NotSureYet
+//MV: this feels like slightly disappointing result - no steps forward - of the conversation? 
 Sometimes things need time before you realize the results of a decision. It's good to just pay attention to your feelings as things go along. Next time we chat perhaps you'll have a clearer picture! I hope it works out!
     + OK 
         -> Second_Session_recap
 
 =secondSessionPositive_HadIncidentNoDecision
-It's often wise to take time before committing yourself to a new thing. You can think about the pros and cons and how you want to convey your decision to the other person. Just be sure to give yourself a time limit so you don't ruminate too much.
+It can be good to take time before committing yourself to a new thing. Weigh up the pros and cons and how you want to present your decision to the other person. Just set a time limit for yourself so you don't overthink it.
     + I understand.
         -> Second_Session_recap
 
@@ -300,26 +312,26 @@ Good. Do you want to jot it down here?
         
 = userReasonforSayingYes
 {userKnowsReasonWhy}
-    + let's continue
+    + Let's continue
         -> practiceWaiting
 
 = practiceWaiting
 Again, you are not alone! But once you can identify something, it is often easier to take an action that could feel uncomfortable...because now you know why. 
 
 Some people like to just pause -- silently count to five, tap a ring a few times -- just to get mental space before expressing that reason.
-    + More?
+    + Tell me more
         -> otherResponses
     + Okay
         -> Second_Session_recap
         
 = otherResponses
-Sometimes a reason you want to set a boundary is just too sensitive to share. As long as you know your reason, being vague or diplomatic is completely acceptable.  Examples of that might include just saying "It's not the right thing for me now" or "Thanks for the opportunity, but I 
+Sometimes a reason you want to set a boundary is just too sensitive to share. As long as you know your reason, being vague or diplomatic is completely acceptable.  Examples of that are just saying "It's not the right thing for me now" or "Thanks for the opportunity, but I ..." 
     + Thanks.
         -> Second_Session_recap
 
 = Second_Session_after_negative
 // FV: interogate user about what didn't work last time.  also add tips.  and pursue the "what would you tell a friend"
-It seems that our last chat wasn't as rewarding as you might have liked for helping you develop a skill for setting healthy boundaries. Was there anything in particular that didn't work for you?
+It seems that our last chat didn't work as well as you might have liked to help you set healthy boundaries. Was there anything in particular that didn't work for you?
     + Tried but didn't work
         -> needForPractice
     + Something else
@@ -339,10 +351,11 @@ user types in a brief reason
     
 
 = tell_A_Friend1
+//MV - what if user wants to say no
 Have you ever seen a friend struggle with boundaries and given them advice about how to say no?  But the same advice is hard for you to do for yourself?
-    + of course
+    + Of course
         -> tell_A_Friend2
-    + sometimes
+    + Sometimes
         -> tell_A_Friend2
         
 = tell_A_Friend2
@@ -378,9 +391,12 @@ Ok! Perhaps you'd like to talk with one of my pals.
 // include tips on how to say no
 It's good to see you becoming aware of some of the important aspects about setting boundaries, whether it involves work, relationships, or something else.  
 
-It's also good to acknowledge that awareness is just one step, but learning how to take actions that sometimes feel difficult takes practice.  One thing that can help in the moment is giving yourself a bit of space and time before committing. Little techniques like counting to five or ten before answering can have a big impact.
+It's also good to acknowledge that awareness is just one step. Learning how to take actions that sometimes feel difficult takes practice.  
 
-Keep at it!  You are developing some skills that will help you feel less stressed and even create healthy relationships in work and your personal life.  See you soon!
+One thing that can help in the moment is giving yourself a bit of space and time before committing. Little techniques like counting to five or ten before answering can have a big impact.
+
+Keep at it!  You are developing skills that will help you feel less stressed and even create healthy relationships in work and your personal life.  
+See you soon!
 
     + Thanks
         -> farewell
@@ -403,7 +419,7 @@ Bye!
 
 = Third_Session_after_positive
 Hi, {userName}, I can see that this has been helpful so far. Do you feel more confident about setting boundaries?
-    + yes
+    + Yes
         -> probeConfidence
     + Getting there
         -> probeConfidence
@@ -458,7 +474,7 @@ Amazing! I think you will start to notice less stress and more satisfaction with
     -> thirdsession_Recap
 
 = clearResponse
-That's a big step and a great skill to master! Keep practicing it and I bet you'll see changes over time in your 
+That's a big step and a great skill to master! Keep practicing it and I bet you'll see changes over time in your life. 
     -> thirdsession_Recap
 
 = Third_Session_after_negative
@@ -483,7 +499,7 @@ Let's see if another one of my pals can help.
         -> farewell
         
 = thirdsession_Recap
-We have come a long way! Developing the ability to set boundaries in our lives has many benefits.  We can reduce our stress, and that lets us accomplish more and be happier. 
+We have come a long way! Learning to set boundaries in your life has many benefits.  It can reduce our stress, and that lets us accomplish more and be happier. 
 
 Even beyond our chat, there are great resources.  One article I find helpful is this one:
 
