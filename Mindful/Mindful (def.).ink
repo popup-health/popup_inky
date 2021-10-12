@@ -24,19 +24,18 @@ VAR stressCategory = "work"
 
 ==== First_visit ====
 ~ stressor = "I need to edit too many bots"
-Hi {userName}. I’m the Mindful bot. I have the superpower of maintaining a moment-by-moment awareness, I don’t worry about the past or the future, I only live in the now. 
-It all starts by learning how to let go of repetitive thoughts through a gentle, nurturing lens, and focusing on the present moment. 
-I can show you how to do it. The more awareness we can bring to our day, the greater calm, clarity, and contentment we’ll feel. 
-Do you want to use this technique to reduce your stress about: "{stressor}"  // engineering - this line only appears if the stressor is available
-Wanna try? 
+Hi {userName}. I’m the Mindful bot. I have the superpower of maintaining a moment-by-moment awareness and not worry about the past or the future. 
+It all starts by learning how to let go of repetitive thoughts through a gentle, nurturing lens, and returning to the present moment. 
+I can show you how to do it. 
+Do you want to use this technique to reduce your repetitive thoughts about: "{stressor}"  // engineering - this line only appears if the stressor is available. If not just ask "Do you want to try it out?"
   + Yeah! 
   + Alright, why not!
   - Okay, let’s do it. We will start today with a naming technique. 
       + Let's try it out. 
             -> leaves 
       + Explain to me what it is.
-        Naming thoughts is recognizing when the mind has wandered. You do not need to catch every single thought and feeling, that can become tiring. Only note it when you realize you have been lost in thought. 
-        Having noted thoughts there is a sense of having dealt with them. This makes it easier to let go of the distraction and gently return to your breath or to this moment. 
+        Naming thoughts is recognizing when the mind has wandered. You do not need to catch every single thought and feeling. Only note them when you realize you've been lost in thought. 
+        You'll get a sense of having dealt with them. This makes it easier to let go of them and gently return to your breath or to this moment. 
         Remember, it's a very gentle acknowledgment, not fighting or resisting, just naming and noticing. 
         Do you want to try it out? 
           - + Yes, I'm ready.
@@ -45,10 +44,10 @@ Wanna try? 
 
     = leaves
     Sit comfortably and start by taking 3 big deep breaths. In through the nose, out through the mouth. 
-    As you breathe in, notice how the body expands; as you breathe out, watch the body soften. 
+    As you breathe in, notice how the body expands; as you breathe out, watch the body soften.   // engineering - can we add an image of the bot breathing? Or a visual queu of breatinhg in and out. 
       + Done.
-        - Now let's practice naming our thoughts.
-          When thoughts come simply name them: “thinking”, “feeling”, “planning”.... And imagine as if they were leaves passing by in a river. 
+        - Now we'll practice naming our thoughts.
+          When thoughts come simply name them: “thinking”, “feeling”, “planning”.... And imagine as if they were leaves passing by in a river 🍃🏞.  
             + Let's name them. 
                 - Take 6 deep breaths and notice the sensation of the breath on your body. 
                   Gently place your hand in your stomach. Follow that rising and falling sensation. 
@@ -71,20 +70,21 @@ Wanna try? 
   + If negative.
     Hi {userName}, thoughts about the past or worries about the future constantly come flying into our minds. Trying to only focus on the present moment can be hard sometimes. 
     Let’s try a technique that makes it much easier. One key component is not to fight with what appears in our minds, and instead focus on gently letting go. 
-    - Want to try it to deal with: "{stressor}"?&nbsp;
-      + Yes, let’s give it a try.
+    - Want to try it?
+      + Yes, let’s try it.
         OK! Let’s do it. 
                 -> Feather 
 
 ==== Feather ====
 Begin by sitting comfortably. 
+Read this explanation first and then begin. 
 Take deep breaths and bring your attention to the motion of your breath as it enters and leaves your nostrils. 
 Note the full passage of each in-breath and out-breath from beginning to end. 
-When thoughts come, do not fight or engage with them, just note them and imagine you are touching them with a gentle feather. 
-“Thinking”, touch it gently with your imaginary feather and watch it leave. 
-“Planning” touch it gently with your imaginary feather and observe it disappear. 
+When thoughts come just note them and imagine you are touching them with a gentle feather 🪶 
+“Thinking”, touch it gently with your imaginary feather 🪶 and watch it leave. 
+“Planning” touch it gently with your imaginary feather 🪶 and observe it disappear. 
 Remember, it is a gentle touch, no fighting or engaging, just letting them go. 
-Practice this for 6 deep breaths.&nbsp;
+Practice this for 6 deep breaths.&nbsp; // engineering - can we add an image of the bot breathing? Or a visual queu of breatinhg in and out for 6 long breathes?
   + Done
     - Wonderful! The great thing about these exercises is that the more time we spend sitting with our minds, the more at ease we feel within ourselves. 
       Hope to see you again soon.&nbsp;
@@ -116,13 +116,12 @@ Practice this for 6 deep breaths.&nbsp;
 
     = explanation_and_tips
     Naming and noting our thoughts can feel hard at times. Thoughts come so fast and at such a fast pace! 
-    But as we practice these techniques we teach our minds how to let go of repetitive thoughts and actually be in the present moment. 
-    The more awareness we can bring to our day, the greater calm, clarity, and contentment we’ll feel. 
+    But as we practice these techniques we teach our minds how to let go of repetitive thoughts and master being in the present moment. 
     Here are some tips that can help you:
-    We just want to recognize when the mind has wandered. You do not need to catch every single thought and feeling, that can become tiring. Only note it when you realize you have been lost in thought. 
+    The focus of this exercise is to recognize when the mind has wandered. You do not need to catch every single thought and feeling, that can become tiring. Only note it when you realize you have been lost in thought. 
     It’s normal to have the same thoughts return again and again, simply apply the same approach, gently noting the nature of the distraction. 
     Having noted thoughts there is a sense of having dealt with them. This makes it easier to let go of the distraction and gently return to your breath or to this moment. 
-    Want to try how my naming techniques work now with these tips in mind? 
+    Want to try how my naming techniques now with these tips in mind? 
       + Yeah, let's give it a try
             -> two_techniques 
       +  Thank you, but no. 
@@ -140,6 +139,6 @@ Practice this for 6 deep breaths.&nbsp;
 ==== Send_to_other_bot ====
 //PP: I took the liberty to add this here, as we are using this way to switch to another bot, with a simple reminder that this technique may be doable and useful later
 Sure, I will call a colleague. 
-Just remember, you can be mindful even by paying close attention to small things in daily life, such as eating or walking.
+Just remember, the more awareness we can bring to our day, the greater calm, clarity, and contentment we’ll feel. Come back and visit me some other time, we can practice together.
 //Send to other bot. 
     -> END
