@@ -1,8 +1,10 @@
+VAR username= "Miranda"
+
 ->Welcome
 
 ===Welcome
 
-Bot1: Welcome to the Pop-Up world!
+Bot1: Welcome to the Pop-Up world, {username}!
 Bot2: Nice to meet you.
 Bot3: Looking forward to chat.
 
@@ -24,7 +26,7 @@ Bot3: Looking forward to chat.
     Bot2: You'll meet more of us later.
     *There's more of you?
         Bot 3: You bet! A whole tribe.
-    *Lots of cute bots!
+    *All cute creatures?
         Bot 3: Don't make me blush!
         
     - Bot2: We're here for short and simple chats with you, each time you need a bit of help with day-to-day challenges.
@@ -39,9 +41,9 @@ Bot3: Looking forward to chat.
    
    ===ExplainMore
    {ThreeBots.what_challenges: Bot1: Not serious stuff. Let us explain a bit more.}
-   Bot 2: We are all specialised in a technique to help you with every day stress.
-   Bot 1: We kind of discuss between us who'll be most suited to help you.
-   Bot 3: And then you have a one-on-one with them!
+   Bot 2: We are all specialised in a specific technique to help you with every day stress.
+   Bot 1: We kind of discuss between us who'll be most suited to help you. Only us, mind you, no one else. Total privacy.
+   Bot 3: And then we introduce you and you have a one-on-one with them!
    
    *That sounds great!
    
@@ -62,7 +64,7 @@ Bot 1: Do you work, or go to school?
 *(schoolWork)Both
     Bot 3: Impressed!
 *Neither
-- Bot 1: Thanks. We really want to get to know you 
+- Bot 1: Thanks. We really want to get to know you so we can help in the best way possible.
 ->Warning
 
 
