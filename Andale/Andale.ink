@@ -1,4 +1,4 @@
-// locked by ROBERT 101021 430pm PDT
+
 
 // ---- PopBot: BABY .. was ANdale  Reflecting on Progress VERSION 2 ----
 // Converted from original inklewriter URL:
@@ -32,7 +32,7 @@ VAR nextBabySteps = "Keeping my grades up"
 
 
 ==== First_Session ====
-Hi, {userName}, I’m Andale. I’m an expert on setting goals and making progress on those goals. 
+Hi, {userName}, I’m Baby, but I'm not called that because I'm an infant. I’m an expert on setting goals and making progress on those goals...and that means taking baby steps. 
 But sometimes it can be a bit tricky to set a goal that is easy to work on and it helps to understand some basic principles. Would you like to know more?
   + Please share!
   Happy to!
@@ -116,7 +116,7 @@ OK, keep it in mind as you think of one step or action you took to reach this go
 = seeIfYouCanThink
 Actually, did you know that even just identifying your goal -- like we did just now -- has been shown to help us more easily achieve it?
     + Like a baby step!
-    Exactly!
+    Exactly! Identifying a goal is a baby step.
     -> pastBabyStep
 
 =pastBabyStep
@@ -173,8 +173,11 @@ Great, those are excellent baby steps you've taken today.  So just take a moment
     -> niceJobIfYouCome
 
 = niceJobIfYouCome
-Nice job! If you come back and see me, we’ll talk about how this next baby step went. I hope to see you again soon.
+Nice job! That's your second baby step just in this little chat!  So let's pause and reflect on this progress.
+
+If you come back and see me, we’ll talk about how this next baby step went. I am interested in hearing how things go!
   + Bye!
+  See you!
         -> endFirstSession 
 
 = endFirstSession
@@ -249,7 +252,7 @@ OK, tomorrow or next week? (initiate text entry process)
     OK, no worries.  Busy schedules and full brains can make it tough to do all the things we want to do.
     
     Take a minute to think about how you'll make sure you take that one baby step. We can explore it next time we chat.
-        +OK, I have one.
+        +OK, I am ready.
             -> okImReady
             
         +Some examples please?
@@ -310,6 +313,18 @@ Sure, I will call one of them now.
   + if positive or neutral
         -> positiveOrNeutral3
   + if negative
+    -> thirdSessionNegative
+    
+= thirdSessionNegative
+I know this has not moved forward the way you might have hoped. Would you like to start again, continue with today's topics, or talk to one of my pals?
+
+    + Start again
+        -> First_goal_setting_practice
+    
+    + Continue
+        -> thirdSessionLesson
+        
+    + Talk to a pal
         -> negativeSecondSession.sureIWillCallOne
         
         
@@ -330,14 +345,97 @@ Great. Have you had a chance to practice more baby steps for your goal?
         -> thirdSession_Goal_Review
     
     + Not lately
+Not a problem. 
+        -> didNotPractice
+        
+= didNotPractice
+Let me guess:  you didn't practice because you achieved your goal!
+    + Well, not quite.
+Not a problem. I'm sure you are keeping the idea of baby steps in mind. So I have one more thing to talk to you about today.
+    -> start_Reflection
+
+    + I did!
+    Bravo!
+        -> thirdSession_Goal_Review
 
 =thirdSession_Goal_Review
-And are you finding that these baby steps help you make progress towards your goal?
+And you found that these baby steps helped you make progress towards your goal?
     + I do.
 The good news keeps coming ✨
     -> start_Reflection
     
 = start_Reflection
-Even though our chats have talked about the importance of baby steps, 
+Even though our chats have talked about the importance of baby steps, it's good to think of all those baby steps as part of that big effort to achieve your goal.
+
+That process of reflection really helps you see where you have come from. 
+    + How so?
+It comes in two ways.
+    -> twoReflectionPaths
+    
+= twoReflectionPaths
+You've already been reflecting on each of your baby steps and how they might help you achieve your goals.
+
+But that's not the only way to reflect on your goals. 
+    + Really?
+That's right. 
+    -> longTermReflection1
+    
+= longTermReflection1
+We can also reflect over longer timeframes to see if we've missed any chances to see patterns about how we've approached the whole process of setting goals.  
+
+Having some distance from experiences lets us reflect on them without emotions that could otherwise cloud a person's judgement.
+    + How do I do this?
+        -> longTermReflection2
+        
+=longTermReflection2
+You might like to have a little structure for this.  Decide if you want to reflect on the previous day, or week, or longer.  Then you can do a couple of things.
+    -> longTermReflection3
+    
+= longTermReflection3
+Ask yourself questions like "What were my biggest challenges and highlights over this past period of time?"   Perhaps you can connect some of your baby steps to these challenges and highlights.
+    + I see. Any other tips?
+You had to ask? 🤣
+    -> longTermReflection4
+    
+= longTermReflection4
+You can be more detailed about specific topics. For example, you could reflect on situations where your efforts helped other people, and they responded kindly to that.  Or a moment where you really had to use some analytical skills to solve a problem you hadn't encountered before.  
+    + thanks
+        -> thirdSessionRecap1
+        
+= thirdSessionRecap1
+Now it's a good time to reflect on our chats!  Looking back, we talked about understanding what makes for a good goal.
+
+A well-defined goal is one that reflects your values and is important to you.  It should also be measurable, able to be broken down into smaller pieces or sub-goals, and be something that you can put a timeframe on.
+
+And you were able to define one for yourself!
+    + I did!
+    -> thirdSessionRecap2
+    
+= thirdSessionRecap2
+Then we talked about turning those smaller pieces into sub-goals and making them your baby steps.
+
+And finally, here we are, putting it all together with the process of reflection.  
+    + Anything else?
+        -> thirdSessionRecap3
+    
+= thirdSessionRecap3
+Like many of my other pals say, this is a lifelong process of practice and learning. There will always be new situations, but these techniques can help you figure out how to achieve any goal, big or small.  
+
+Last but not least, let me leave you with an article that can also give you some more details on all of this. INSERT HYPERLINK IN THE COMMENTS HERE, BUT THE TEXT SHOULD READ "Goals, Objectives, and Reflective Habits" // insert link to https://www.ed.ac.uk/reflection/reflectors-toolkit/goals-objectives-habits
+     + Thanks.
+The pleasure is mine.  Well...I'm not really a person, so maybe pleasure isn't the right word, but my sole purpose is to help people achieve their goals, and I know from humans, that helping others is satisfying to them.
+    -> thirdSessionfinalRecap
+    
+= thirdSessionfinalRecap
+I think you have made great progress.  And that means, of course, you will achieve your goals!  Good luck!
+    + See you!
+You will, I'm sure!
+    -> END
+
+
+
+
+    
+
 
     -> END
