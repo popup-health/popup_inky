@@ -53,7 +53,7 @@ VAR visit = "first"
 
 ==== VisualizeTypicalResponse ====
 
-    Now that we know you are feeling 'X' I want you to spend a minute or two thinking about how you typically respond to yourself when you feel this way.  
+    Now that you have an idea of what emotion you are feeling I want you to spend a minute or two thinking about how you typically react when you feel this way.  
 
     It can be good to write this down on a piece of paper if you have time.  What are the thoughts that you think about yourself?  What is the tone or emotion behind those thoughts?
 
@@ -87,7 +87,7 @@ VAR visit = "first"
 
 ==== HelpIdentifyEmotions ====
 
-    Are you struggling with know what emotion you are feeling or are you not feeling any strong emotions at all?
+    Are you struggling with knowing what emotion you are feeling or are you not feeling any strong emotions at all?
     
     +No emotions
         ->NoEmotion
@@ -137,6 +137,10 @@ VAR visit = "first"
 ==== FindNewBot ====
 
     No problem at all.  Sometimes it's a bit tricky to figure out which of us bots is going to be most helpful.  Let me see if we can find someone who can help you right now!
+    
+    Can you give a short bit of feedback to me so I can improve first?
+    
+    FEEDBACK __________
     
     [Find a new bot for user.]
 
@@ -320,7 +324,7 @@ This likely means that you already tend to more kindness towards yourself which 
     
     One small suggestion is to keep a journal every day of when you do this and note down if it helps you to feel better or not or any other insight that comes from it.
     
-    You can also consider using some of the skills that my freinds(other bots) teach as a way of coping with the strong emotion.  Puffy knows a few cool tricks with breathing for example that you can use in addition to saying the phrase you came up with.
+    You can also consider using some of the skills that my friends (other bots) teach as a way of coping with the strong emotion.  Puffy knows a few cool tricks with breathing for example that you can use in addition to saying the phrase you came up with.
     
     Best of luck and I can't wait to hear how it goes next time we talk.
     
