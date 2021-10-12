@@ -1,4 +1,4 @@
-//locked by tchiki
+
 
 first assertion //we are teaching: assertive listening
 What would you say?
