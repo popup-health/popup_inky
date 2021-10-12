@@ -11,21 +11,23 @@ Flecter: All in good time, Tianco.
 
 +What do you do?
     Flecter: Essentially we at Pop-up are all here to help you.  
-    **All? There's more?
+    ++All? More creatures?
 +Interesting names...
     Flecter: Thank you. We've all got names that kind of reflect why we are here. iF you're a bit of a puzzle person it can be fun to make them out.
-    ++All. More creatures? 
+    ++All? More creatures? 
     ++Intriguing!
-- Tianco: Can I talk about the others now Flecter? Please?
+- Tianco: Can I tell more about the others, Flecter? Please?
     
 - ->WeAreABotWorld
 
 ===WeAreABotWorld
 Flecter: Oh well. Go ahead then, young one.
-+ I'm ready
++ Very curious!
 Tianco: There's many of us and we all want to make you feel better about stressy stuff.
 Flecter: (sigh) What he means is that we're created and trained to help you cope with everyday challenges. Each of us is specialised in a technique to help you feel better in your own head.
-Tianco: Isn't that what I said?
+    
+Tianco: Isn't that what I said? but in easy words?
+Flecter: Kind of. We support you in reflecting on every day challenges and in taking actions to iron them out.
 
     ++You solve my problems?
     ++What techniques?
@@ -36,10 +38,11 @@ Tianco: Isn't that what I said?
 ===warning
 Flecter: Before we continue, let's me clarify a very important thing. 
 We're not trained to get you through serious mental health challenges or situations.
+    +Got that
     Tianco: And for emergencies, call 911.
     Flecter: Exactly, Tianco, well said.These situations are ... let's call it "above our paygrade"
     Tianco: And we don't even get paid! But in all your everyday challenges, we are right here.
-    +Got that
+    ++I understand
     -- Thyros: Great. Now...
     ->ChoosingBots
     
