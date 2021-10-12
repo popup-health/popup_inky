@@ -59,6 +59,7 @@ I can show you how to do it. Are you ready?
       + Naw
       + User enters strength here
         ~ userStrengthVar = "I am stoic"
+        <en>"{userStrengthVar}"
         - -> Strength_used_in_the_past
 
     = Strength_used_in_the_past
