@@ -32,8 +32,11 @@ VAR nextBabySteps = "Keeping my grades up"
 
 
 ==== First_Session ====
-Hi, {userName}, I’m Baby, but I'm not called that because I'm an infant. I’m an expert on setting goals and making progress on those goals...and that means taking baby steps. 
-But sometimes it can be a bit tricky to set a goal that is easy to work on and it helps to understand some basic principles. Would you like to know more?
+//MV - changed the infant sentence, though it sounded bit strange
+//MV - adapted last sentence to lead better into choice
+Hi, {userName}, I’m called Baby. Why, you ask? Well, because I’m an expert on setting goals and making progress on those goals... and that means taking baby steps! 
+Sometimes it can be a bit tricky to set a goal that is easy to work on. It helps to understand some basic principles. 
+Would you like to know more or go ahead and try?
   + Please share!
   Happy to!
         -> Goal_explanation 
@@ -45,11 +48,12 @@ But sometimes it can be a bit tricky to set a goal that is easy to work on and i
 Start by thinking of one goal that matters to you.
   + I've got one.
         -> First_goal 
-  + I can't think of goal.
+  + I can't think of one.
         -> thereAreLotsOfDi 
 
 = thereAreLotsOfDi
-There are lots of different types of goals. Your goals might include something related to your career, your relationship, your family, your community, or yourself. All goals count: things like keeping to a workout regimen, studying for an exam, or simply spending more time with friends.
+//MV - shortened slightly, replaced "regimen"
+There are lots of different types of goals. Your goals could be related to your career, your relationship, your family, your community, or yourself. All goals count: things like keeping to a workout schedule, studying for an exam, or simply spending more time with friends.
   + OK, thought of a goal.
         -> greatDoYouWantTo 
   + More examples, please.
@@ -58,7 +62,8 @@ There are lots of different types of goals. Your goals might include something r
         -> dontWorryAboutIt 
 
 = greatDoYouWantTo
-Great! Do you want to share it?
+//MV - replaced "it" by "your goal" to lead better into choices
+Great! Do you want to share your goal now?
   + User enters input here
         -> userInput 
   + Not right now
@@ -85,7 +90,8 @@ OK!  Now, take a minute to think of one step or action you took to reach this go
         -> First_goal.evenTinyStepsMov 
 
 ==== Goal_explanation ====
-A well-defined goal is one that reflects your values and is important to you.  It should also be measurable, able to be broken down into smaller pieces or sub-goals, and be something that you can put a timeframe on.  
+//MV shortened slightly
+A well-defined goal reflects your values and is important to you.  It should be measurable, able to be broken down into smaller pieces or sub-goals, and be something that you can put a timeframe on.  
   + OK, I have one.
         -> First_goal 
   + I can’t think of one
@@ -114,7 +120,8 @@ OK, keep it in mind as you think of one step or action you took to reach this go
     -> seeIfYouCanThink
 
 = seeIfYouCanThink
-Actually, did you know that even just identifying your goal -- like we did just now -- has been shown to help us more easily achieve it?
+//rephrased to make more active and reduce the "has been shown to" research angle.
+Actually, did you know that even just identifying your goal -- like we did just now -- can help us to achieve it more easily?
     + Like a baby step!
     Exactly! Identifying a goal is a baby step.
     -> pastBabyStep
@@ -128,7 +135,7 @@ So now see if you can think of one tiny thing you've already done to reach your 
         -> insertFirstBabyS 
 
 = nextSeeIfYouCanI
-Next, going forward, see if you can identify one baby step you can take in the next few days to get even slightly closer to your goal.
+Next, going forward, try to identify one baby step you can take in the next few days to get even slightly closer to your goal.
   + Got it!
         -> Next_steps.greatThatsItForT 
   + Examples, please?
@@ -153,18 +160,19 @@ _ insert variable BabyStepsExample
         -> dontWorryAboutIt1 
 
 = dontWorryAboutIt1
+//MV - seems to end a bit abruptly. Should we lead into talking to another bot, or coming back?
 Don't worry about it.  It could pop up in your mind later.
     -> END
 
 ==== Next_steps ====
-Next, looking forward, see if you can identify one baby step you can take in the next few days to get even slightly closer to your goal.
-  + Got it.
+Looking forward, can you identify one baby step you can take in the next few days to get even slightly closer to your goal?
+  + Yes, got it.
         -> greatThatsItForT 
   + Such as...?
         -> babySteps 
 
 = greatThatsItForT
-Great, those are excellent baby steps you've taken today.  So just take a moment to give yourself a little pat on the back for doing this exercise. You've gotten started, and that's often the hardest part.
+Great, those are excellent baby steps you've taken today.  So just take a moment to give yourself a little pat on the back for doing this exercise. You've started, and that's often the hardest part.
   + Done.
         -> niceJobIfYouCome 
 
@@ -174,8 +182,8 @@ Great, those are excellent baby steps you've taken today.  So just take a moment
 
 = niceJobIfYouCome
 Nice job! That's your second baby step just in this little chat!  So let's pause and reflect on this progress.
-
-If you come back and see me, we’ll talk about how this next baby step went. I am interested in hearing how things go!
+//MV - should we say "when" instead of "if"? Like we expect them to come back?
+when you come back and see me, we’ll talk about how this next baby step went. Really interested to hear how things will go!
   + Bye!
   See you!
         -> endFirstSession 
@@ -215,16 +223,17 @@ Excellent. So, what did it feel like to take this baby step?
         -> itFeltOk
 
 = itFeltOk 
-Next, ask yourself, is there anything you can learn from having taken this action?
+//MV - shortened choice to 20 chars
+Now, ask yourself, is there anything you can learn from having taken this action?
 Would you do something differently next time?  Or maybe this action has prepared you for the next step?
-
 Reflect on the action you took and then decide what your next baby step will be.
     + OK, I'm ready.
         -> okImReady
-    + I need examples, please.
+    + Examples, please.
         -> findnextBabySteps
         
 = findnextBabySteps
+//MV - I am unsure how this will work? Do we just provide them with random examples that may have nothing to do with the goal they entered? 
 {nextBabySteps}
     +OK that helped.
         -> okImReady        
@@ -285,7 +294,8 @@ Bye! //gotoFarewellModule
     -> END
 
 ====negativeSecondSession====
-Hi {userName}, thanks for coming back. Let's try this again to see if we can find some useful reflections.
+//MV - added a bit of text to acknowledge negative feedback
+Hi {userName}, thanks for coming back. I'm sorry our previous chat did not completely work out for you. Let's try this again to see if we can find some useful reflections.
  Do you want to try one more time, or talk to one of my pals?
     + Try again
         -> great2
@@ -293,6 +303,7 @@ Hi {userName}, thanks for coming back. Let's try this again to see if we can fin
         -> sureIWillCallOne
 
 = great2
+//MV - actually this could also not have happened in one of the flow options (if they consistently answer they don't know what to say) 
 Last time we talked you decided to take one baby step towards your goal.
 Did you take that baby step?
 Were you able to do that?
@@ -332,14 +343,15 @@ I know this has not moved forward the way you might have hoped. Would you like t
 Hi there {userName}.  I'm glad you're back.  I'm looking forward to doing more reflections with you.
 
 Do you want a refresher to reflect on your progress?
-    + sure
+    + Sure
         -> First_goal_setting_practice.thereAreLotsOfDi 
     + Not now
     OK, let's talk more about goals and baby steps!
         -> thirdSessionLesson
         
 =thirdSessionLesson
-Great. Have you had a chance to practice more baby steps for your goal?
+//MV - removed 'great' as did not it after previous text
+Have you had a chance to practice more baby steps for your goal?
     + Yes!
     That's the way to do it!
         -> thirdSession_Goal_Review
@@ -381,7 +393,8 @@ That's right.
     -> longTermReflection1
     
 = longTermReflection1
-We can also reflect over longer timeframes to see if we've missed any chances to see patterns about how we've approached the whole process of setting goals.  
+//MV - complex sentence, had to read a few times.
+We can also reflect over longer timeframes. For example, we can see if there are patterns about how we've approached the whole process of setting goals.  
 
 Having some distance from experiences lets us reflect on them without emotions that could otherwise cloud a person's judgement.
     + How do I do this?
@@ -399,7 +412,7 @@ You had to ask? 🤣
     
 = longTermReflection4
 You can be more detailed about specific topics. For example, you could reflect on situations where your efforts helped other people, and they responded kindly to that.  Or a moment where you really had to use some analytical skills to solve a problem you hadn't encountered before.  
-    + thanks
+    + Thanks
         -> thirdSessionRecap1
         
 = thirdSessionRecap1
@@ -423,7 +436,7 @@ Like many of my other pals say, this is a lifelong process of practice and learn
 
 Last but not least, let me leave you with an article that can also give you some more details on all of this. INSERT HYPERLINK IN THE COMMENTS HERE, BUT THE TEXT SHOULD READ "Goals, Objectives, and Reflective Habits" // insert link to https://www.ed.ac.uk/reflection/reflectors-toolkit/goals-objectives-habits
      + Thanks.
-The pleasure is mine.  Well...I'm not really a person, so maybe pleasure isn't the right word, but my sole purpose is to help people achieve their goals, and I know from humans, that helping others is satisfying to them.
+The pleasure is mine.  Well...I'm not really a person, so maybe pleasure isn't the right word. Since my sole purpose is to help people achieve their goals, and I know from humans that helping others is satisfying to them.
     -> thirdSessionfinalRecap
     
 = thirdSessionfinalRecap
