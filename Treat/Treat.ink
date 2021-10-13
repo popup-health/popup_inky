@@ -2,7 +2,7 @@
 // DD 10/11/2021 Finished first draft of Treat with 3 different sessions and small edits
 
 // Lock Status
-// Unlocked
+// Locked by David for incorporating Marco's notes
 //
 
 // ---- Treat ----
@@ -393,7 +393,7 @@ This likely means that you already tend to more kindness towards yourself which 
 
 === FeltWorseFromSession2 ===
 
-    I'm sorry to hear this.  Like I said learning this kind of skill needs us to look at our experience a bit more closely which sometimes can make us feel worse.  The good news is the more we do it the easier it gets.
+    I'm sorry to hear this.  Like I said learning this kind of skill needs us to look at our experience a bit more closely which sometimes can make us feel worse.  The good news is the more we practice the easier it gets.  Knowing that sometimes we feel a little worse before we start to feel much better from practice can be really helpful to keep trying.
     
     Would you like to try the last exercise we did with this idea in mind?
     
