@@ -1,3 +1,4 @@
+//MIRANDA LOCKED
 VAR username = "Miranda"
 
 +Hi
@@ -6,11 +7,11 @@ VAR username = "Miranda"
 ===Start
 
 <strong>Flecter: Hey {username}! My name is Flecter. Welcome to Pop-up!
-Tianco: And I'm Tianco. Can't wait to tell you more about us and what we do! Did you know...
+Tianco: And I'm Tianco. Can't wait to tell you everything about us. Did you know...
 <strong>Flecter: All in good time, Tianco.
 
-+What do you do?
-    <strong>Flecter: Essentially we at Pop-up are all here to help you learn to deal with stress.  
++Just tell me
+    <strong>Flecter: Essentially, we at Pop-up are all here to help you learn to deal with stress.  
     ++All? More creatures?
 +Interesting names...
     <strong>Flecter: Thank you. We've all got names that kind of reflect why we are here. iF you're a bit of a puzzle person it can be fun to make them out.
