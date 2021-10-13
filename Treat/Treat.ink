@@ -1,8 +1,9 @@
 // Edits Summary
+// DD 10/13/2021 Incorporated Marco's review suggestions
 // DD 10/11/2021 Finished first draft of Treat with 3 different sessions and small edits
 
 // Lock Status
-// Locked by David for incorporating Marco's notes
+// Unlocked
 //
 
 // ---- Treat ----
