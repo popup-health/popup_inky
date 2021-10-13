@@ -1,5 +1,4 @@
 
-//LOCKED by Robert Gehorsam to work on revisions after SME comments 1139am PDT 10132021
 //PopBot DoctorNo - setting boundaries
 # title: NO
 # author: Author: Robert Gehorsam
