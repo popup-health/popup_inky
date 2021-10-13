@@ -258,9 +258,9 @@ This likely means that you already tend to more kindness towards yourself which 
 
 === FeltWorse ===
 
-    I'm sorry to hear this.  Like I said learning this kind of skill needs us to look at our experience a bit more closely which sometimes can make us feel worse.  The good news is the more we do it the easier it gets.
+    I'm sorry to hear this.  Like I said learning this kind of skill needs us to look at our experience a bit more closely which sometimes can make us feel worse.  The good news is the more we practice the easier it gets.  A very common experience when learning a new skill like this is for things to feel a bit extra stressful at first and then quickly improve as you keep going.
     
-    Would you like to try again with this idea in mind?
+    Would you like to try the exercise from last session again with this idea in mind?
     
     +Yes
         ->IdentifyEmotion
@@ -409,7 +409,7 @@ This likely means that you already tend to more kindness towards yourself which 
 
 === Session3 ===
 
-    This next part is fun because it revolved around bringing in some of my friends to help out.  
+    This next part is fun because it revolves around bringing in some of my friends to help out.  
     
     So far we've worked on learning how to take a different more friendly perspective towards ourselves as well as to identify triggers and practice talking to ourselves as we would a friend.
     
@@ -426,7 +426,7 @@ This likely means that you already tend to more kindness towards yourself which 
 
 === PickABot ===
 
-    For the next week what I want you to try is to learn a new skills from one of my friends and use it whenever a difficult emotion or stressor shows up.  You have a lot of options and it depends a bit on who you think would teach the most useful skill.
+    For the next week what I want you to try is to learn a new skill from one of my friends and use it whenever a difficult emotion or stressor shows up.  You have a lot of options and it depends a bit on who you think would teach the most useful skill.
     
     If you have a hard time keeping strong boundaries and saying no when you are stressed or feel a strong emotion you can talk to Nope.
     
@@ -439,5 +439,15 @@ This likely means that you already tend to more kindness towards yourself which 
     Once you learn the skill the final step is to integrate it with the process we've been through together of noticing strong emotions and stress through a cue, speaking to yourself as a friend, and then using the new skills that you learn from the other bots.
     
     +Enter next bot here:
+    
+    -> EndSessionThree
+
+->END
+
+=== EndSessionThree ===
+
+    Great choice!  X is a good friend and really compliments the skills you started learning with me.  If you ever want to come back for a refresher don't hesitate to start a new session with me.
+    
+    Good luck!
 
 ->END
