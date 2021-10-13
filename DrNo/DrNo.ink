@@ -4,7 +4,7 @@
 # title: NO
 # author: Author: Robert Gehorsam
 
-// LOCKED by DD
+// Unlocked.  Edits by David on 10/12/2021
 
 
 VAR userName = "Robert"
@@ -53,6 +53,8 @@ It certainly takes practice. So let's start!
 
 = startPractice
 So, recently, did you find yourself saying “Yes” to a new commitment, and then realized later that you somehow regretted making that commitment?
+//DD - Here I would avoid a yes or no question.  Rather its better to just ask them to remember a situation and use very general priming language when bring it up and avoid specifics such as having said "yes" or feeling a specific emotion such as regret which may inadvertently lead the user to say no when they actually do have a situation in mind they could use to keep going.  Below is alternative language that can be used.
+//DD - Can you bring to mind a situation where you ended up doing something or going along when you didn't want to?  You might have realized it wasn't right for you off the start or looking back you regret doing it.  Have you got the situation in mind?  +Yes -> recentCommitment  +No recent situation its okay to use a less recent scenario ->recentCommitment  +NEver happens -> luckyYou
     + Yes
         -> recentCommitment
         
@@ -68,6 +70,7 @@ So, recently, did you find yourself saying “Yes” to a new commitment, and th
 Let's look at the reasons why this might have happened. 
 Sometimes we want to maintain a positive relationship with someone.  
 Or we're so enthused about the idea or opportunity that it just keeps us from thinking about anything that might dampen that enthusiasm. 
+//  Or it might be something else altogether.
     ->recentCommitmentReason
     
 
@@ -101,7 +104,8 @@ Well, knowing why it was hard to say no puts you ahead of the game! Tell me more
         -> another_Reason
         
 = notDisappoint
-Not wanting to disappoint others - or yourself - is a very human quality. In many cases we are also afraid of others will view us. 
+// DD small typo edit, added how
+Not wanting to disappoint others - or yourself - is a very human quality. In many cases we are also afraid of how others will view us. 
 Ask yourself if it would have really disappointed the asker in a big way if you'd said no in a gentle and explanatory way. Often we worry much more about this than necessary. Maybe you could even ask the person about this directly?
 
     + I can do that!
@@ -120,6 +124,8 @@ OK!  Would you like to jot it down?
     + OK
         -> otherReasoninput
     + Not now
+        //DD should add some reassurance here
+        // That's no problem.  As long as you have it in mind!
         -> recap
     
 = otherReasoninput
@@ -128,11 +134,15 @@ OK!  Would you like to jot it down?
         -> recap
 
 = hardtonotDisappoint
+//DD - alternative text suggestion
+//Often getting started with saying no is most difficult at first.  It can bring up a lot of concern or nervousness at first but the more you practice the easier it gets.  Give it a shot and maybe start with a small 'no' and see how it goes!
 I understand. Give it some thought. Maybe it doesn't work for everything, but taking the initiative will give you a positive boost.
     + Okay
         -> recap
 
 = notSureWhy
+//The answer will likely become clear as you experiment with saying no more often.  A good way of starting is to notice moments where you have an opportunity to say no and set a boundary and see if in those moments you can figure out why it is hard.  You don't have to say no for now as we can work on that later.  The sooner we can identify...
+//DD - text modification suggestion.  The answer usually gets clear with practice and you want to be confident and encouraging with less ambiguity here.
 You are definitely not alone!  The answer may come to you later, or it may stay elusive. Sometimes writing down ideas or possibilities can help. The sooner we can identify these reasons, the more likely we are to avoid these stressful situations.
     + Got it!
         -> recap
@@ -221,7 +231,8 @@ I remember that last time we talked you made a commitmentment because it was an 
 Sometimes we make commitments because we don't want disappoint people, or because we are very enthusiastic about an opportunity.
 + Yes I did
 //MV: now same text for all
-We don't always realise the we might feel overwhelmed later. And then it's harder to change the situation.  
+//DD changed the to that
+We don't always realise that we might feel overwhelmed later. And then it's harder to change the situation.  
 So anticipating the impact of a decision before we commit is helpful.
 
 Did you run into one of these setting-boundary situations since we last talked?
@@ -267,6 +278,7 @@ I'm sorry to hear that. Any sense of what might have prevented you from setting 
 = yes_NotSureYet
 //MV: this feels like slightly disappointing result - no steps forward - of the conversation? 
 Sometimes things need time before you realize the results of a decision. It's good to just pay attention to your feelings as things go along.
+
     + What can I do?
     Great question.
         -> takingTime
@@ -294,7 +306,7 @@ It can be good to take time before committing yourself to a new thing. Weigh up 
 
 
 =secondSessionPositive_HadIncidentSaidNo
-Well, then.... even though you did say No, did you also feel a kind of tug in yourself as if part of you wanted to say Yes?  Or was it an easy decision?
+Well, then... even though you did say No, did you also feel a kind of tug in yourself as if part of you wanted to say Yes?  Or was it an easy decision?
     + I felt that tug
         ->wantedToSayYes
     +It was easy
@@ -302,6 +314,7 @@ Well, then.... even though you did say No, did you also feel a kind of tug in yo
 
 = wantedToSayYes
 These are the moments we are looking for. And it seems like you succeeded in being aware that you needed to set a boundary. How did the other person respond?
+// DD could have a block here asking why there was a tug to say yes.  Especially if they didn't know why they find it hard to say no during session 1.
     + They understood
         -> otherPersonResponseToNo1
     + They seemed annoyed
@@ -313,6 +326,13 @@ Great! Generally, if you are thoughtful and clear in your explanation, people un
         -> Second_Session_recap
 
 = otherPersonResponseToNo2
+// DD I would take a different tact here
+// DD Sometimes the reason it is hard to say no is we are avoiding having to feel another person's negativity so I am not surprised this happened.  Despite the other person responding in this way does it feel to you that it was the right decision?  
+
+//  Yes - Okay great.  Sometimes we have to teach others new ways of treating us by setting boundaries.  Usually the people in our lives adjust to the boundary and everything improves.  Good job and keep on praciticing as it will get easier for you and for the people on the other side of the boundary the more consistent you are!
+
+//  No - Well sometimes we get it wrong by setting a boundary.  It is important though to remember that even if you feel it wasn't quite right just the fact that you said no when it was hard to do so is strengthening a very important muscle.  In the end the more you practice the easier it is to discern when saying no is the right thing to do so this is valuable experience!
+
 I'm sorry to hear it. That's not always in your control. But giving clear reasons why you're setting this boundary is in your control, and knowing you've done the best you can is...well...doing the best you can!
 
 The more you practice, the better you become at this.
@@ -469,7 +489,7 @@ The second is recognizing in the moment that you might not be setting a healthy 
         -> oneMoreThing
         
 = oneMoreThing
-Oh, and one more thing. We sometimes are hesitant to say no because we worry that the other person will be angry with us. Explaining your decision to say No in a clear and calm way can be very helpful.
+Oh, and one more thing. We sometimes are hesitant to say no because we worry that the other person will be angry with us. Explaining your decision to say No in a clear and calm way can be very helpful. //DD But also understanding that sometimes saying no no matter how calm we are the other person may get angry.  Over time it is important to learn that its still okay to say no even if it bothers the other person
 
 So, with that in mind, is there anything specific boosting your confidence?
 
