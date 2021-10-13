@@ -1,5 +1,4 @@
 
-
 //PopBot DoctorNo - setting boundaries
 # title: NO
 # author: Author: Robert Gehorsam
@@ -53,13 +52,14 @@ It certainly takes practice. So let's start!
 
 
 = startPractice
-So, recently, did you find yourself saying “Yes” to a new commitment, and then realized later that you somehow regretted making that commitment?
-//DD - Here I would avoid a yes or no question.  Rather its better to just ask them to remember a situation and use very general priming language when bring it up and avoid specifics such as having said "yes" or feeling a specific emotion such as regret which may inadvertently lead the user to say no when they actually do have a situation in mind they could use to keep going.  Below is alternative language that can be used.
-//DD - Can you bring to mind a situation where you ended up doing something or going along when you didn't want to?  You might have realized it wasn't right for you off the start or looking back you regret doing it.  Have you got the situation in mind?  +Yes -> recentCommitment  +No recent situation its okay to use a less recent scenario ->recentCommitment  +NEver happens -> luckyYou
+Can you bring to mind a situation where you ended up doing something or going along when you didn't want to?  You might have realized it wasn't right for you off the start or looking back you regret doing it.  Have you got the situation in mind?
+//DD - Here I would avoid a yes or no question.  Rather its better to just ask them to remember a situation and use very general priming language when bring it up and avoid specifics such as having said "yes" or feeling a specific emotion such as regret which may inadvertently lead the user to say no when they actually do have a situation in mind they could use to keep going.  Below is alternative language that can be used. //RG done
+//DD - Can you bring to mind a situation where you ended up doing something or going along when you didn't want to?  You might have realized it wasn't right for you off the start or looking back you regret doing it.  Have you got the situation in mind?  +Yes -> recentCommitment  +No recent situation its okay to use a less recent scenario ->recentCommitment  +NEver happens -> luckyYou //RG used. thanks.
     + Yes
         -> recentCommitment
         
-    + Not recently
+    + No
+    It's ok to use a less recent situation.
         -> recentCommitment
         
     + Never happens
@@ -71,7 +71,7 @@ So, recently, did you find yourself saying “Yes” to a new commitment, and th
 Let's look at the reasons why this might have happened. 
 Sometimes we want to maintain a positive relationship with someone.  
 Or we're so enthused about the idea or opportunity that it just keeps us from thinking about anything that might dampen that enthusiasm. 
-//  Or it might be something else altogether.
+Or it might be something else altogether.
     ->recentCommitmentReason
     
 
@@ -125,8 +125,9 @@ OK!  Would you like to jot it down?
     + OK
         -> otherReasoninput
     + Not now
+That's no problem.  As long as you have it in mind!
         //DD should add some reassurance here
-        // That's no problem.  As long as you have it in mind!
+        // That's no problem.  As long as you have it in mind! RG: used
         -> recap
     
 = otherReasoninput
@@ -135,17 +136,17 @@ OK!  Would you like to jot it down?
         -> recap
 
 = hardtonotDisappoint
-//DD - alternative text suggestion
-//Often getting started with saying no is most difficult at first.  It can bring up a lot of concern or nervousness at first but the more you practice the easier it gets.  Give it a shot and maybe start with a small 'no' and see how it goes!
-I understand. Give it some thought. Maybe it doesn't work for everything, but taking the initiative will give you a positive boost.
+//DD - alternative text suggestion RG: used
+Often getting started with saying no is most difficult at first.  It can bring up a lot of concern or nervousness at first but the more you practice the easier it gets.  Give it a shot and maybe start with a small 'no' and see how it goes!
     + Okay
         -> recap
 
 = notSureWhy
-//The answer will likely become clear as you experiment with saying no more often.  A good way of starting is to notice moments where you have an opportunity to say no and set a boundary and see if in those moments you can figure out why it is hard.  You don't have to say no for now as we can work on that later.  The sooner we can identify...
-//DD - text modification suggestion.  The answer usually gets clear with practice and you want to be confident and encouraging with less ambiguity here.
-You are definitely not alone!  The answer may come to you later, or it may stay elusive. Sometimes writing down ideas or possibilities can help. The sooner we can identify these reasons, the more likely we are to avoid these stressful situations.
+//The answer will likely become clear as you experiment with saying no more often.  A good way of starting is to notice moments where you have an opportunity to say no and set a boundary and see if in those moments you can figure out why it is hard.  You don't have to say no for now as we can work on that later.  The sooner we can identify... RG: DONE
+//DD - text modification suggestion.  The answer usually gets clear with practice and you want to be confident and encouraging with less ambiguity here. RG DONE
+The answer will likely become clear as you experiment with saying no more often.  A good way of starting is to notice moments where you have an opportunity to say no and set a boundary and see if in those moments you can figure out why it is hard.  You don't have to say no for now as we can work on that later.  
     + Got it!
+    The sooner we can identify these reasons, the more likely we are to avoid these stressful situations.
         -> recap
 
 = userReasonforSayingYes
@@ -329,15 +330,27 @@ Great! Generally, if you are thoughtful and clear in your explanation, people un
 
 = otherPersonResponseToNo2
 // DD I would take a different tact here
-// DD Sometimes the reason it is hard to say no is we are avoiding having to feel another person's negativity so I am not surprised this happened.  Despite the other person responding in this way does it feel to you that it was the right decision?  
+Sometimes the reason it is hard to say no is we are avoiding having to feel another person's negativity so I am not surprised this happened.  Despite the other person responding in this way does it feel to you that it was the right decision?
+    + yes
+    Okay, Great!
+        -> teachingOthers
 
-//  Yes - Okay great.  Sometimes we have to teach others new ways of treating us by setting boundaries.  Usually the people in our lives adjust to the boundary and everything improves.  Good job and keep on praciticing as it will get easier for you and for the people on the other side of the boundary the more consistent you are!
+=teachingOthers
+Sometimes we have to teach others new ways of treating us by setting boundaries.  Usually the people in our lives adjust to the boundary and everything improves.  
 
-//  No - Well sometimes we get it wrong by setting a boundary.  It is important though to remember that even if you feel it wasn't quite right just the fact that you said no when it was hard to do so is strengthening a very important muscle.  In the end the more you practice the easier it is to discern when saying no is the right thing to do so this is valuable experience!
+So...good job and keep on praciticing as it will get easier for you and for the people on the other side of the boundary the more consistent you are!
+        -> Second_Session_recap
 
-I'm sorry to hear it. That's not always in your control. But giving clear reasons why you're setting this boundary is in your control, and knowing you've done the best you can is...well...doing the best you can!
+//  Yes - Okay great.  Sometimes we have to teach others new ways of treating us by setting boundaries.  Usually the people in our lives adjust to the boundary and everything improves.  Good job and keep on praciticing as it will get easier for you and for the people on the other side of the boundary the more consistent you are! RG: used
 
-The more you practice, the better you become at this.
+    + No
+Well sometimes we get it wrong by setting a boundary.
+    -> wrongBoundarySetting
+    
+= wrongBoundarySetting
+It is important though to remember that even if you feel it wasn't quite right just the fact that you said no when it was hard to do so is strengthening a very important muscle.  In the end the more you practice the easier it is to discern when saying no is the right thing to do so, this is valuable experience!
+
+//  No - Well sometimes we get it wrong by setting a boundary.  It is important though to remember that even if you feel it wasn't quite right just the fact that you said no when it was hard to do so is strengthening a very important muscle.  In the end the more you practice the easier it is to discern when saying no is the right thing to do so this is valuable experience! RG: used
     + I know
         -> Second_Session_recap
 
@@ -491,7 +504,9 @@ The second is recognizing in the moment that you might not be setting a healthy 
         -> oneMoreThing
         
 = oneMoreThing
-Oh, and one more thing. We sometimes are hesitant to say no because we worry that the other person will be angry with us. Explaining your decision to say No in a clear and calm way can be very helpful. //DD But also understanding that the other person may be angry no matter how calm we are that its still okay to say no.
+Oh, and one more thing. We sometimes are hesitant to say no because we worry that the other person will be angry with us. Explaining your decision to say No in a clear and calm way can be very helpful. 
+
+Even though possible that the other person may be angry no matter how calm we are that it's still okay to say no when you feel that's the right decision for yourself.
 
 So, with that in mind, is there anything specific boosting your confidence?
 
