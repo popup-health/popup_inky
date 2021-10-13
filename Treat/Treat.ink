@@ -1,8 +1,11 @@
+//LOCKED for functional and copy edits Robert Gehorsam 1:45PM 10132021
+
 // Edits Summary
+// DD 10/13/2021 Incorporated Marco's review suggestions
 // DD 10/11/2021 Finished first draft of Treat with 3 different sessions and small edits
 
 // Lock Status
-// Locked by David for incorporating Marco's notes
+// Unlocked
 //
 
 // ---- Treat ----
@@ -30,7 +33,7 @@ VAR visit = "first"
 -> END
 
 ==== First_session ====
-    Hi {username}, I’m Treat. I love talking about how to best respond to ourselves when having difficult feelings that cause us stress.  I'm excited to see if I can be helpful to you!
+Hi {username}, I’m Treat. I help people learn how to best respond when they have difficult feelings that cause stress.  I'm excited to see if I can be helpful to you!
 
 
     -> IdentifyEmotion
@@ -45,9 +48,9 @@ VAR visit = "first"
         Great - it is actually quite difficult sometimes to know what emotion you're feeling so good job! 
         ->VisualizeTypicalResponse
     + I'd rather not say
-        No problem - this process can still be helpful without sharing the details.  What is important is that you know what emotion you are feeling.
+        No problem - this process can still be helpful without sharing the details.  What's important is that you know what emotion you are feeling.
         ->VisualizeTypicalResponse
-    + I need help figuring this out
+    + I need help 
         ->HelpIdentifyEmotions
 
 
@@ -59,14 +62,16 @@ VAR visit = "first"
 
     This part can be a bit tough but it really helps in the end!
 
-    Let me know when your ready to move to the next step.
-
+    Let me know when you're ready to move to the next step.
+//RG: this feels longer to go through than it might seem.  I would try to break it up with a few simple user responses.  Maybe:
+//It can be good to write this down on a piece of paper if you have time.  What are the thoughts that you think about yourself?  What is the tone or emotion behind those thoughts? + That's alot     It can be good to write down your thoughts about yourself and the tone or emotion of those thoughts. + I see   This part can be a bit tough but it really helps in the end.....  
     +I'm ready
         ->VisualizeFriendResponse
     +I'm stuck
         ->HelpWithVisualization
     +This isn't the right exercise for me
         ->FindNewBot
+        //RG:  per my comments about HelpIdentifyEmotions I would eliminate this third response and if need be, get to it from the I'm stuck choice.
 
 
 ==== NoEmotion ====
@@ -87,15 +92,16 @@ VAR visit = "first"
 
 ==== HelpIdentifyEmotions ====
 
-    Are you struggling with knowing what emotion you are feeling or are you not feeling any strong emotions at all?
+    Are you struggling with identifying what emotion you are feeling or are you not feeling any strong emotions at all?
     
     +No emotions
         ->NoEmotion
     +Not sure which emotion
-        Connect user to Bot that helps identifying emotions
+        Connect user to Bot that helps identifying emotions //RG: or if not available, just a random one.
         ->END
     +This isn't the right exercise
         ->FindNewBot
+        //RG: I would eliminate this third menu choice, since it's effectively covered in the second choice, I think.
 
 -> END
 
@@ -113,18 +119,22 @@ VAR visit = "first"
         ->HelpWithFriendVisualization
     + This isn't the right exercise for me
         ->FindNewBot
+    //RG: same comment as in HelpIdentifyingEmotions
 
 -> END
 
 ==== HelpWithVisualization ====
-
-    If you are struggling with visualizing your own situation and the emotions or the thoughts (or both!) you are not alone.  This is a very tricky thing to do.  Sometimes our minds are going so fast, or the emotions are so strong it's hard to stay focused enough to really be aware of it all.  It's kind of like holding onto the wheel of a ship in the middle of a big storm - it's really hard!
+//RG: this is too long to be one content flow.
+  If you are struggling with visualizing your own situation, emotions or thoughts, you are not alone.   Sometimes our minds are going so fast, or the emotions are so strong it's hard to focus enough to really be aware of it all.  It's like holding onto the wheel of a ship in the middle of a big storm - it's really hard!
     
-    But what's great is that this is a skill like any other that gets better with practice.  And as with any skill there are a few tricks that can help.
+    But this is a skill like any other: it gets better with practice.  And there are a few tricks that can help.
     
-    One thing to try is to start by bringing your mind to the beginning of the difficult situation and remember the things facts of the situation.  Facts such as 'I was sitting at home' or 'I was on a call with someone'.
+//RG: I'd put a user break here before going to the next.  Maybe, + Like what? then go to One thing....
     
-    Once you have brought to mind the situation see if you can remember the thoughts that ran through your mind.  Usually when a situation bothers us we have an immediate reaction that shows up as a thought in our minds and that thought has a strong charge to it.  This charge gives us a hint as to the emotion we were feeling.
+    One thing to try is to start by bringing your mind to the beginning of the difficult situation and remember the things facts of the situation.  Facts such as 'I was sitting at home' or 'I was on a call with someone'.  Take a second til you have one or more in mind.
+//RG: I'd put another break here, like "OK, ready" and then go to Once you have brought....
+    
+    Once you have brought to mind the situation see if you can remember the thoughts that ran through your mind.  Usually when a situation bothers us we have an immediate reaction that shows up as a thought in our minds and that thought has a strong emotional charge to it.  This charge gives us a hint as to the emotion we were feeling.
     
     So with the situation in mind notice the thoughts and then the emotions.
     
@@ -136,22 +146,22 @@ VAR visit = "first"
 
 ==== FindNewBot ====
 
-    No problem at all.  Sometimes it's a bit tricky to figure out which of us bots is going to be most helpful.  Let me see if we can find someone who can help you right now!
+No problem at all.  Sometimes it's a bit tricky to figure out who among my pals and I is going to be most helpful.  Let me see if I can find someone who can help you right now!
     
-    Can you give a short bit of feedback to me so I can improve first?
+Can you give a short bit of feedback to me so I can improve first?
     
-    FEEDBACK __________
+FEEDBACK __________
     
-    [Find a new bot for user.]
+[Find a new bot for user.]
 
 -> END
 
 ==== CompareAndLearn ====
     Now the final step is to look at how you would typically respond to yourself and compare it to how you would respond to a good friend.
 
-    Is there a difference?
+    Is there a difference?  
 
-        + Yes I'm much harder on myself
+        + I'm harder on myself
             Nice job noticing that difference! It can be helpful to think about why that might be.  We often hold ourselves to higher standards than we do others.  
             
             ->EndSessionOne
@@ -165,22 +175,26 @@ VAR visit = "first"
 -> END
 
 ==== HelpWithFriendVisualization ====
+//RG too long without breaks.
+Let me see if I can help with this step.  There are a few ways people get tripped up doing this. 
+    
+One common experience is that people have a hard time being as kind or generous towards themselves as they would to a friend. 
+    
+If this is true for you then remember this is a skill that takes time to develop.  Do your best to stretch yourself to bring a slightly more kind view of your situation and feelings.
+    
+//RG: I'd insert a user response like + Wow, it's hard. then go to "Indeed..." (I changed that wording a bit to make the flow work in this case)
+    
+Indeed... it can be hard if you right now you don't have any close friends in your life.  One way to get around this is to imagine responding to a friend you were close to in the past, or how you would respond to a friend if you were close to them.
+    
+I hope this helps!
+    
+So now, let's try again.
+    
+Remember the exercise is to imagine a good friend in the same situation, who feels the way you do right now. What would you say to them?  What would the tone be?
 
-    Let me see if I can help with this step.  There are a few ways people get tripped up doing this. 
-    
-    One common experience is that people have a hard time being kind or generous towards themselves and even though I'm encouraging you to imagine what you would say to a friend it's still hard to imagine a different way of responding.  If this is true for you then remember this is a skill that takes time to develop.  Do your best to stretch yourself to bring a slightly more kind view of your situation and feelings.
-    
-    Sometimes it can be hard if you don't have any close friends right now in your life.  One way to get around this is to imagine responding to a friend you were close to in the past, or how you would respond to a friend if you were close to them.
-    
-    I hope this helps!
-    
-    Lets try again.
-    
-    Remember the exercise is to imagine a good friend is in the same situation and feeling the way you are right now.  How would you respond to your friend?  What would you say to them?  What would the tone be?
+Spend a minute jotting down the things you would say and the tone.
 
-    Spend a minute jotting down the things you would say and the tone.
-
-    Let me know when you're ready.
+Let me know when you're ready.
     
     + I'm ready.
         ->CompareAndLearn
@@ -207,7 +221,7 @@ This likely means that you already tend to more kindness towards yourself which 
 
 === EndSessionOne ===
 
-    What a great start!  It is really good to continue to practice being a bit kinder to ourselves and next time we work together we can talk more about how to do that.
+What a great start!  It is really good to continue to practice being a bit kinder to ourselves. Next time we work together we can talk more about how to do that.
     
     I hope to see you again soon!
 
@@ -219,7 +233,7 @@ This likely means that you already tend to more kindness towards yourself which 
 ==== Second_session ====
 //system checks if first session engagement were positive/neutral *or* negative
 
-    If you remember our first session together we looked at how you typically respond to yourself when you are feeling stressed and compared that response to how you might respond to a good friend in a similar situation.
+If you remember our first session together we looked at how you typically respond to yourself when you are feeling stressed and then compared that response to how you might respond to a good friend in a similar situation.
 
   + if positive or neutral
         -> SecondSessionPositive
@@ -229,7 +243,7 @@ This likely means that you already tend to more kindness towards yourself which 
 
 === SecondSessionPositive ===
 
-    I'm glad that you found that first session helpful.  Let's jump into a helpful next step to build on that success.
+I'm glad that you found that first session helpful.  Let's jump into a helpful next step to build on that success.
     
     ->IdentifyTrigger
     
@@ -238,19 +252,19 @@ This likely means that you already tend to more kindness towards yourself which 
 
 === SecondSessionNegative ===
 
-    I'm sorry to hear that the first session was negative.  Looking at difficult emotions and stress can be very hard and sometimes when we first learn a new skill we can feel a bit worse from it.
+I'm sorry to hear that the first session was not helpful enough.  Facing difficult emotions and stress can be very hard. And, sometimes when we first learn a new skill we can feel a bit worse from it.
     
-    Can you let me know what went wrong?
+Can you let me know what went wrong?
     
-    +Exercise made me feel worse
+    +Made me feel worse
         ->FeltWorse
-    +Exercise wasn't what I needed
+    +Wasn't what I needed
         I'm sorry to hear that.  The good news is I have something new to teach today that hopefully will help this time!
         ->IdentifyTrigger
     +Other reason
         User INPUT
-        Okay - thanks for the feedback.  Some of my humans will take a look so I can learn from this!
-        Lets jump into a new exercise now.
+        Okay - thanks for the feedback.  Some of my human friends will take a look so I can learn from this!
+        Let's jump into a new exercise now.
         ->IdentifyTrigger
     -> END
 
@@ -258,75 +272,79 @@ This likely means that you already tend to more kindness towards yourself which 
 
 === FeltWorse ===
 
-    I'm sorry to hear this.  Like I said learning this kind of skill needs us to look at our experience a bit more closely which sometimes can make us feel worse.  The good news is the more we do it the easier it gets.
+I'm sorry to hear this.  Like I said learning this kind of skill needs us to look at uncomfortable experiences a bit more closely, and that sometimes can make us feel worse.  
     
-    Would you like to try again with this idea in mind?
+The good news is the more we practice the easier it gets.  A very common experience when learning a new skill like this is for things to feel a bit extra stressful at first and then quickly improve as you keep going.
+    
+Would you like to try the exercise from last session again with this idea in mind?
     
     +Yes
         ->IdentifyEmotion
-    +No show me new exercise
-        Okay no problem.  Let's jump into another step
+    +Show me new exercise
+        Okay no problem.  Let's jump into another step.
         ->IdentifyTrigger
     +Different bot 
         ->FindNewBot
-
+//RG: I'd make the third choice +something else and then ask them if they'd like to talk to one of their pals (please eliminate "bot" from the whole script).  Just give them a "yes" choice and then go to find new bot.
 ->END
 
 === IdentifyTrigger ===
 
-    For this short session I want to help you identify triggers for the most common difficult emotions that come up for you.
+For this short session I want to help you identify triggers for the most common difficult emotions that come up for you.
     
-    To start take a minute to reflect on the most common stress or difficult emotion that comes up for you.  It might be the same stress or emotion that came up in our first session together.
+To start, take a minute to reflect on a common stress or difficult emotion that comes up for you.  It might be the same stress or emotion that came up in our first session together.
     
-    When you have an emotion or stress in mind let me know.
+When you have an emotion or stress in mind let me know.
     
     +Got one - ready.
         ->TriggerForEmotion
     +Different bot 
         ->FindNewBot
+//RG: I find the different bot choice too abrupt for here.  I'd eliminate it.  I'm not even sure you need another choice.  But if the user did input sonething in the first session, I would replay that back to them if to see if it's the same.  So it could be:   "Was it the same as the last time time we talked, which you said was {retrieve input}?  + yes then continue.... + no, a new one then continue, or + I can't think of one   and then ask if they need help/refresher or just ant another character (let's call them "pals" not bots.
     
 
 ->END
 
 === TriggerForEmotion ===
 
-    Now I want you to spend a minute reflecting on what a common aspect of the experience of this stress or emotion is.  It might be a physical feeling like a knot in your stomach when you are nervous, or tension in your jaw when your angry.  It could also be a behavioral cue like raising your voice, or going quiet, or biting your nails.
+Now spend a minute reflecting on what a common aspect of the experience of this stress or emotion is.  It might be a physical feeling like a knot in your stomach when you are nervous, or tension in your jaw when your angry.  It could also be a behavioral cue like raising your voice, or going quiet, or biting your nails.
     
-    Once you have an idea of a consistent behavior or feeling that is a clue to the emotion or stress you feel let me know and we can continue.
+Once you have an idea of a consistent behavior or feeling that is a clue to the emotion or stress you feel let me know and we can continue.
     
-    +I'm ready to keep going.
+    + Ready to continue.
         ->SelfTalkForCue
     +Different bot 
         ->FindNewBot
-    
+//RG same issue as identifyTrigger in terms of bailing out too soon.  
 
 ->END
 
 === SelfTalkForCue ===
 
-    The final step is to come up with a small behavior you can take when you become aware you are feeling the stress or emotion.
+The final step is to come up with a small behavior you can take when you become aware you are feeling the stress or emotion.
     
-    A good place to start is to think of a sentence you can say to yourself.  This sentence can come from the work you did in our first session.  What would you say to a good friend who was feeling this way to help reassure them and give them a bit of confidence that they can handle it?
+A good place to start is to think of a sentence you can say to yourself.  This sentence can come from the work you did in our first session.  What would you say to a good friend who was feeling this way that would help reassure them and give them a bit of confidence that they can handle it?
     
-    Once you have an idea of the short sentence or phrase let me know.
+Once you have an idea of the short sentence or phrase let me know.
     
     +Got it - I'm ready.
         ->FinalPlanForTrigger
     +Different bot 
         ->FindNewBot
-    
+//RG: add third option to input the phrase?
+//RG: also, same issue here with the new bot choice.
 
 ->END
 
 === EndSessionTwo ===
 
-    Great good luck with this.  
+Great good luck with this.  
     
-    One small suggestion is to keep a journal every day of when you do this and note down if it helps you to feel better or not or any other insight that comes from it.
+One small suggestion is to keep a journal every day of when you do this and note if it helps you feel better or not.... or any other insight that comes from this process.
     
-    You can also consider using some of the skills that my friends (other bots) teach as a way of coping with the strong emotion.  Puffy knows a few cool tricks with breathing for example that you can use in addition to saying the phrase you came up with.
+You can also consider using some of the skills that my pals teach as a way of coping with strong emotion.  For example, Puffy knows a few cool tricks with breathing that you can use in addition to saying the phrase you came up with.
     
-    Best of luck and I can't wait to hear how it goes next time we talk.
+Best of luck and I can't wait to hear how it goes next time we talk.
     
     
 
@@ -334,19 +352,20 @@ This likely means that you already tend to more kindness towards yourself which 
 
 === FinalPlanForTrigger ===
 
-    Great job.  Now the next part is simple but can be a bit tricky.  For the next week or until the next time we talk try to say this sentence/phrase to yourself in your mind when you notice the emotion or stress is present for you.  
+Great job.  Now the next part seems simple but can be a bit tricky.  For the next week or until the next time we talk try to say this sentence/phrase to yourself in your mind when you notice the emotion or stress is present for you.  
     
-    The first task is to first become aware of the emotion which is why you identified the clue.
+The first task is to become aware of the emotion which is why you identified the clue.
+//RG: I'm not sure I understand this sentence, particular the "clue" aspect.  What is the clue?
     
     The second part is to say softly to yourself - in the tone that you would speak to a friend with - the phrase you just came up with.
     
     Do you think you want to give this a try?
     
-    +Yes - sounds like a plan!
+    +Sounds like a plan!
         ->EndSessionTwo
     +Different bot 
         ->FindNewBot
-    
+//RG:  at this point of the session, I'm not sure you need an option to bail.  Perhaps that last sentence/question can be rephrased as "Give it a try!" 
 
 ->END
 
@@ -363,8 +382,7 @@ This likely means that you already tend to more kindness towards yourself which 
 
 
 === ThirdSessionPositive ===
-
-    I'm glad that you found that your last session was helpful.  Let's jump into a helpful next step to build on that success.
+I'm glad that you found that your last session was helpful.  Let's jump into a helpful next step to build on that success.
     
     ->Session3
     
@@ -373,18 +391,18 @@ This likely means that you already tend to more kindness towards yourself which 
 
 === ThirdSessionNegative ===
 
-    I'm sorry to hear that the last session was negative.  Looking at difficult emotions and stress can be very hard and sometimes when we first learn a new skill we can feel a bit worse from it.
+I'm sorry to hear that the last session was wasn't helpful enough.  Looking at difficult emotions and stress can be very hard and sometimes when we first learn a new skill we can feel a bit worse from it.
     
-    Can you let me know what went wrong?
+Can you let me know what went wrong?
     
-    +Exercise made me feel worse
+    +Made me feel worse
         ->FeltWorseFromSession2
-    +Exercise wasn't what I needed
+    +Wasn't what I needed
         I'm sorry to hear that.  The good news is I have something new to teach today that hopefully will help this time!
         ->Session3
     +Other reason
         User INPUT
-        Okay - thanks for the feedback.  Some of my humans will take a look so I can learn from this!
+        Okay - thanks for the feedback.  Some of my human friends will take a look so I can learn from this!
         Lets jump into a new exercise now.
         ->Session3
     -> END
@@ -393,14 +411,16 @@ This likely means that you already tend to more kindness towards yourself which 
 
 === FeltWorseFromSession2 ===
 
-    I'm sorry to hear this.  Like I said learning this kind of skill needs us to look at our experience a bit more closely which sometimes can make us feel worse.  The good news is the more we practice the easier it gets.  Knowing that sometimes we feel a little worse before we start to feel much better from practice can be really helpful to keep trying.
+I'm sorry to hear this. As I said earlier, learning this kind of skill needs us to look at our experience a bit more closely and that sometimes can make us feel worse.  
+
+But the good news is the more we practice the easier it gets!  Knowing that sometimes we might feel a little worse before we start to feel much better from practice can be really helpful to keep us moving forward.
     
-    Would you like to try the last exercise we did with this idea in mind?
+    With this in mind, would you like to try the previous exercise? 
     
     +Yes
         ->IdentifyTrigger
-    +No show me something new
-        Okay no problem.  Let's get started
+    +No, something new
+        Okay no problem.  Let's get started.
         ->Session3
     +Different bot 
         ->FindNewBot
@@ -409,35 +429,46 @@ This likely means that you already tend to more kindness towards yourself which 
 
 === Session3 ===
 
-    This next part is fun because it revolved around bringing in some of my friends to help out.  
+This next part can be fun because it revolves around bringing in some ideas from some of my friends to help out.  
     
-    So far we've worked on learning how to take a different more friendly perspective towards ourselves as well as to identify triggers and practice talking to ourselves as we would a friend.
+So far we've worked on learning how to take a different more friendly perspective towards ourselves as well as to identify triggers and practice talking to ourselves as we would a friend.
     
-    This next part is to bring in some skills from the other bots to help you feel less stressed when a strong emotion shows up.
+We'll bring in some skills from some of my pals to help you feel less stressed when a strong emotion shows up.
     
-    Are you ready to keep going?
+Are you ready to keep going?
     
     +Yes
         ->PickABot
     +Different bot 
         ->FindNewBot
-
+//RG: Here, the different bot choice seems odd because you've just implied you're going to bring in the ideas from other characters.  So again -- and especially because you're already on a positive path -- just saying "Let's keep going" and have one menu choice.
 ->END
 
 === PickABot ===
+//RG: oh boy.  I don't know that we have the ability to do this. I love the idea, but in order to be effective at learning, our algorithms need to be able to do the selection right now, not let the user choose.  I don't immediately have an alternate approach but I ask you to think about a simple to implement alternative.  One element of a solution might be to provide connections to external resources, but I do not think that can be the only thing.
 
-    For the next week what I want you to try is to learn a new skills from one of my friends and use it whenever a difficult emotion or stressor shows up.  You have a lot of options and it depends a bit on who you think would teach the most useful skill.
+For the next week what I want you to try is to learn a new skill from one of my friends and use it whenever a difficult emotion or stressor shows up.  You have a lot of options and it depends a bit on who you think would teach the most useful skill.
     
-    If you have a hard time keeping strong boundaries and saying no when you are stressed or feel a strong emotion you can talk to Nope.
+If you have a hard time keeping strong boundaries and saying no when you are stressed or feel a strong emotion you can talk to Nope.
     
-    If you have a hard time staying calm in your body you can learn some cool breathing techniques from Puffy
+If you have a hard time staying calm in your body you can learn some cool breathing techniques from Puffy
     
-    If you find that difficult thoughts stay stuck in your mind I suggest you have a chat with my friend Let Go 
+If you find that difficult thoughts stay stuck in your mind I suggest you have a chat with my friend Let Go 
     
-    And another option would be to talk to HalfFull if you notice you tend to think about the negatives more than the positives of a situation.
+And another option would be to talk to HalfFull if you notice you tend to think about the negatives more than the positives of a situation.
     
-    Once you learn the skill the final step is to integrate it with the process we've been through together of noticing strong emotions and stress through a cue, speaking to yourself as a friend, and then using the new skills that you learn from the other bots.
+Once you learn the skill the final step is to integrate it with the process we've been through together of noticing strong emotions and stress through a cue, speaking to yourself as a friend, and then using the new skills that you learn from the other bots.
     
     +Enter next bot here:
+    
+    -> EndSessionThree
+
+->END
+
+=== EndSessionThree ===
+
+    Great choice!  X is a good friend and really complements the skills you started learning with me.  If you ever want to come back for a refresher don't hesitate to start a new session with me.
+    
+    Good luck!
 
 ->END
