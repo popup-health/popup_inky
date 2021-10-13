@@ -4,7 +4,7 @@
 # title: NO
 # author: Author: Robert Gehorsam
 
-// Locked for editing by David on 10/13/2021
+// Edits by David on 10/13/2021
 // Edits by David on 10/12/2021
 
 
@@ -316,6 +316,7 @@ Well, then... even though you did say No, did you also feel a kind of tug in you
 = wantedToSayYes
 These are the moments we are looking for. And it seems like you succeeded in being aware that you needed to set a boundary. How did the other person respond?
 // DD could have a block here asking why there was a tug to say yes.  Especially if they didn't know why they find it hard to say no during session 1.
+// IF SessionOneDidntKnow then Last session you mentioned not being sure why it was hard to say no.  Did this recent experience give you any clues?  Take a minute to think about what was motivating that tug to say yes.
     + They understood
         -> otherPersonResponseToNo1
     + They seemed annoyed
@@ -490,7 +491,7 @@ The second is recognizing in the moment that you might not be setting a healthy 
         -> oneMoreThing
         
 = oneMoreThing
-Oh, and one more thing. We sometimes are hesitant to say no because we worry that the other person will be angry with us. Explaining your decision to say No in a clear and calm way can be very helpful. //DD But also understanding that sometimes saying no no matter how calm we are the other person may get angry.  Over time it is important to learn that its still okay to say no even if it bothers the other person
+Oh, and one more thing. We sometimes are hesitant to say no because we worry that the other person will be angry with us. Explaining your decision to say No in a clear and calm way can be very helpful. //DD But also understanding that the other person may be angry no matter how calm we are that its still okay to say no.
 
 So, with that in mind, is there anything specific boosting your confidence?
 
