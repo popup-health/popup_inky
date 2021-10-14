@@ -5,6 +5,8 @@
 # author: Federica Vegas
 // -----------------------------
 
+// DD - Locked for edit 10/14/2021
+
 VAR userName = "Pablo"
 VAR stressor = "I have to edit a lot"
 VAR stressCategory = "work"
