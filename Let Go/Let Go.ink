@@ -6,6 +6,9 @@
 // -----------------------------
 
 // DD - Locked for edit 10/14/2021
+// General comment - we might want to add some trouble shooting for the second and third session.  People have a variety of obstacles with mindfulness practice including:
+// believing they shouldn't be thinking, trying to achieve a special outcome such as relaxation which isn't always possible, difficulty focusing on specific body sensations or the breath, strong negative thoughts that are overwhelming, heightened anxiety that worsens due to a focus on the breath, boredom
+//  We could have a response for the most common challenges
 
 VAR userName = "Pablo"
 VAR stressor = "I have to edit a lot"
@@ -168,6 +171,20 @@ Ok, practice this for 4 to 6 deep breaths. I'll wait for you here. // engineerin
             -> First_visit.leaves
       + Feathers
             -> Feather 
+
+//  DD - this could work as a third technique for session 3
+//=== breathingSpace ===
+//  The focus of this technique is to start by taking some deep breaths and bringing your full focus on the breath for 3-5 breaths
+//+ Okay next step
+//Now allow the sticky repetitive thoughts that have been bothering you come to mind but instead of focusing on them see if you can notice the emotion that comes with them.  Name the emotion softly in your mind, noting it like a leaf on the river.  Stress is here, anxiety is here, anger is here, whatever the emotion is.
+//+I know the emotion
+//And now see if you can allow the emotion and the thoughts to fade into the background of your awareness and instead give your full attention and focus to any feeling of tension in your body.  Usually strong emotions show up as uncomfortable body sensations so see if you notice anything.
+//+Strong sensations are here!
+//Good job.  Now the final step is to begin some nice deep abdominal breathing while focussing on the body sensations.  You can say softly to yourself "Its okay for me to feel this.  I can handle this" as you breathe deeply in and out.
+//+Got it
+//Nice job.  This exercise is meant to help you explore difficult thoughts through body awareness and the breath.  I hope it helped!
+
+// reference for the practice:  https://www.mindful.org/3-minute-mindfulness-practice-ground-moment/
 
 ==== Send_to_other_bot ====
 Sure, I will call a pal of mine. 
