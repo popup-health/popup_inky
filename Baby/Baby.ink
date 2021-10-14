@@ -6,7 +6,13 @@
 //https://docs.google.com/document/d/1ZlmXvKHQX9f05CJ8L2wznhPsOfSKc3IZ9bhh37Z4FBg/edit
 // -----------------------------
 
-// Locked by DD for review
+// DD 10/14/2021 - Review notes throughout.  Added general ideas at the top of the document.
+
+//DD - General ideas for this bot:  
+//  Motivation follows action and not the other way.  Often we wait to feel motivated before taking a step and we need to learn and notice that our motivation increases after we get started.  Working in this educational piece throughout would be good.
+//  When someone struggles taking action towards a goal it can really help to make sure the goal is properly broken down into the SMART system.  Having a manageable, very specific, time limited goal that is scheduled helps a lot.  It then can also help to recruit friends/family and share with them the plan to take this step so you are less likely to procrastinate.  I think we can give more concrete examples from beginning to end of goal setting and breaking down into baby steps.
+//  If someone is approaching a goal it is good to understand that some parts of the goal will be easy and some will be harder.  In sessions 2 and 3 what might cause a user to report negativity is the fact that they haven't made significant progress on the goal because the haven't really tackled the more essential/difficult parts of the goal.  I might take 10 small steps towards a goal in a week but still feel bad abotu my progress because I'm avoiding the important step that needs to happen.  I might have session 3 focus on this concept rather than the longterm reflection idea
+//  
 //PP: Good job Robert! First commit done!!
 
 VAR userName = "Robert"
@@ -90,6 +96,8 @@ OK!  Now, take a minute to think of one step or action you took to reach this go
 
 ==== Goal_explanation ====
 //MV shortened slightly
+//DD I think it can really help to give examples of each aspect of SMART, also should add specific to this.  
+//  A goal should be specific so instead of saying 'I want to be healthy' you might say 'I want to workout 4 days a week'
 A well-defined goal reflects your values and is important to you.  It should be measurable, able to be broken down into smaller pieces or sub-goals, and be something that you can put a timeframe on.  
   + OK, I have one.
         -> First_goal 
@@ -167,7 +175,8 @@ Don't worry about it.  It could pop up in your mind later.
 Looking forward, can you identify one baby step you can take in the next few days to get even slightly closer to your goal?
   + Yes, got it.
         -> greatThatsItForT 
-  + Such as...?
+  + Such as...?  
+  //DD this part of the flow doesn't make sense to me.  It goes into showing 'taking the SAT' and then goes to nice job...  
         -> babySteps 
 
 = greatThatsItForT
@@ -216,6 +225,7 @@ Excellent. So, what did it feel like to take this baby step?
     + It felt OK
         -> itFeltOk
     + It was hard
+    //add some reassurance here and in not sure yet before jumping to itfeltok
         -> itFeltOk
     + Not sure yet.
     Sometimes it takes time.
@@ -223,6 +233,7 @@ Excellent. So, what did it feel like to take this baby step?
 
 = itFeltOk 
 //MV - shortened choice to 20 chars
+//DD Think back to any hesitation or avoidance you had about the overall goal.  Was this small step as difficult as you anticipated?  When we break down a larger goal into baby steps it's a lot easier to progress forward.
 Now, ask yourself, is there anything you can learn from having taken this action?
 Would you do something differently next time?  Or maybe this action has prepared you for the next step?
 Reflect on the action you took and then decide what your next baby step will be.
@@ -233,6 +244,7 @@ Reflect on the action you took and then decide what your next baby step will be.
         
 = findnextBabySteps
 //MV - I am unsure how this will work? Do we just provide them with random examples that may have nothing to do with the goal they entered? 
+//DD Similar comment to MV.  We could give examples from beginning to end.  So start with a goal, reframe the goal so it follows SMART, and then break it down into baby steps.  If we this for each of the main domains (relationship, work, etc) and the user can select based on domain I think that would be a helpful branch to have available.
 {nextBabySteps}
     +OK that helped.
         -> okImReady        
@@ -247,6 +259,7 @@ Reflect on the action you took and then decide what your next baby step will be.
         
 = yesByCalendar
 OK, tomorrow or next week? (initiate calendar entry process)
+// DD- OK, how about tomorrow?  If you can schedule the step in as soon as possible it is a lot easier to build momentum and minimize avoidance!
     -> secondSessionEndPositive.YoureOnTheRightPath
 = yesByText
 OK, tomorrow or next week? (initiate text entry process)
@@ -260,6 +273,7 @@ OK, tomorrow or next week? (initiate text entry process)
     OK, no worries.  Busy schedules and full brains can make it tough to do all the things we want to do.
     
     Take a minute to think about how you'll make sure you take that one baby step. We can explore it next time we chat.
+    //When we don't take the step we intended to it is really important to reflect on what got in the way.  Did you forget about it?  Then this time lets get the action into our calendar.  Did you decide not to do it when the time came because it felt too stressful?  Then maybe talk to my friend puffy about learning some breathing tricks to help ease that stress as you approach the step.  Maybe you have another insight into what got in the way.  Whatever happened think about some small actions you can take to help yourself solve the obstacle and take this small step!  In doing this you are actually taking a very important baby step towards achieving your goal.  Sometimes you have to clear away the brush on a trail before you can start your walk.
         +OK, I am ready.
             -> okImReady
             
@@ -326,6 +340,7 @@ Sure, I will call one of them now.
     -> thirdSessionNegative
     
 = thirdSessionNegative
+//DD should we ask for user input on what was negative?
 I know this has not moved forward the way you might have hoped. Would you like to start again, continue with today's topics, or talk to one of my pals?
 
     + Start again
@@ -339,6 +354,7 @@ I know this has not moved forward the way you might have hoped. Would you like t
         
         
 = positiveOrNeutral3
+// DD we shoudl summarize what has been done so far, setting a goal, identifying a baby step, taking the step
 Hi there {userName}.  I'm glad you're back.  I'm looking forward to doing more reflections with you.
 
 Do you want a refresher to reflect on your progress?
