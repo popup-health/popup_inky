@@ -1,4 +1,4 @@
-
+//locked by tchiki
 
 VAR userName = "Pablo"
 
@@ -75,3 +75,36 @@ Thank you! And don't worry, I'll give you some hints on how listen actively and 
                                 + You're welcome
 -> END
 
+//Session 2
+
+# IMAGE 
+
+Last time we chatted, you practiced ative listening as I explained a challenge I was giong through. Are you explored something good that happened to you recently.
+
+
+.
+Hi {userName}, my name is Earful. I help people become active listeners. We're going to practice active listening through a role play activity. 
+I'll tell you about a challenge I'm having and you're job will be to listen activley. 
+    + Okay
+    - Before we get started, ask yourself, are you ready to listen deeply? Or, are you focused on your own thoughts and need time to process them before activly listening to someone else?
+        + I'm ready to listen
+            -> continue_1
+        + Not ready right now
+            -> exit
+
+= exit
+Okay, no worries. Do you want to chat to one of my friends?
+    + Okay
+    Sure, I will call one now. 
+    Don't forget that learning to listen to others not only improves your social skills, but it could be a good resource to calm your own worries.
+        //call a bot now
+        -> END
+    + No
+    No problem. I'd still love you to come back when you in a differnt headspace. Bye!
+        -> END
+
+= continue_1
+Thank you! And don't worry, I'll give you some hints on how listen actively and respond.
+    + Got it
+    - Let’s start! 
+    "{userName}, I have been trying to figure out a way to tell my family that I want to quit medical school. I would really like to go to law school, but I am worried about crushing my parents dreams of me becoming the first doctor in the family." 
