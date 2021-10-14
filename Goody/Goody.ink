@@ -232,7 +232,7 @@ Keep trying to add good things into your daily life and then take notice and sav
 ==== Third_session ====
 //system checks if prior session assessment was positive/neutral *or* negative
   + if positive/neutral
-    # IMAGE: ../goodyimage.jpeg
+    # IMAGE: Goody.png
     . //this dot just helps display the image command above the text
     Hi {userName}. It’s great to see you. I’ve been looking forward to chatting with you again.
         -> Refresher
