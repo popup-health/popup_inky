@@ -5,7 +5,7 @@
 # author: Federica Vegas
 // -----------------------------
 
-// DD - Locked for edit 10/14/2021
+// DD - Finished edit on 10/14/2021
 // General comment - we might want to add some trouble shooting for the second and third session.  People have a variety of obstacles with mindfulness practice including:
 // believing they shouldn't be thinking, trying to achieve a special outcome such as relaxation which isn't always possible, difficulty focusing on specific body sensations or the breath, strong negative thoughts that are overwhelming, heightened anxiety that worsens due to a focus on the breath, boredom
 //  We could have a response for the most common challenges
