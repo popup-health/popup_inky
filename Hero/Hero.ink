@@ -28,6 +28,7 @@ VAR strengthUses = " used when MVP didn't work, found great production manager, 
 
 
 ==== First_Session ====
+# IMAGE: Hero.png
 Hi {userName}. My name is Hero because I make an effort every day to capitalize on my strengths of courage, selflessness, and dedication to justice.💪🏽
 Capitalizing on our strengths helps us both reach our goals and feel better about ourselves. And even if you don't feel it at the moment, every single one of us has some strengths we can take advantage of.
 I can show you how to do it. Are you ready?
@@ -120,6 +121,7 @@ I can show you how to do it. Are you ready?
             -> reaffirmation 
     
     = reaffirmation
+    # IMAGE: Hero.png
     Keep in mind that the more you use your strengths, the better you are likely to feel.
       + Thanks!
         //go to farewell module
@@ -150,12 +152,14 @@ Just remember that with some practice, capitalizing on your strengths could beco
 ==== Second_Session ====
 //System check for past engagement rating
   + Past session positive or neutral
+  # IMAGE: Hero.png
     Hey champ, good to see you. Let’s build on what we did last time.
         -> Second_strength
   + Past session negative
         -> Second_Session_after_negative 
 
     = Second_Session_after_negative
+    # IMAGE: Hero.png
     Hi there. Figuring out our strengths can be hard sometimes.
     Do you want to try again with a different approach?
       + Sure, let's try again
@@ -261,6 +265,7 @@ Just remember that with some practice, capitalizing on your strengths could beco
         -> Third_Session_after_negative 
 
     = Third_Session_after_negative
+    # IMAGE: Hero.png
     Hi again. We might not have made as much progress as you would like, but you still came back. 
     That’s impressive. So let’s add persistence and stick-to-it-iveness to your list of strengths and give this another go.
       + Sounds good!
@@ -293,6 +298,7 @@ Just remember that with some practice, capitalizing on your strengths could beco
             -> Second_Session.itsOkayMaybeItll
     
     = Third_Session_after_positive
+    # IMAGE: Hero.png
     You’re back! That’s impressive. To start, let’s add stick-to-it-iveness to your list of strengths ;)
     //system checks if last time user didn't find a strength 
       + IF findStrength == TRUE
