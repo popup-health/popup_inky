@@ -1,11 +1,12 @@
 //LOCKED for functional and copy edits Robert Gehorsam 1:45PM 10132021
 
 // Edits Summary
+// DD 10/14/2021 Incorporated Robert's review suggestions
 // DD 10/13/2021 Incorporated Marco's review suggestions
 // DD 10/11/2021 Finished first draft of Treat with 3 different sessions and small edits
 
 // Lock Status
-// Unlocked
+// unlocked
 //
 
 // ---- Treat ----
@@ -56,22 +57,20 @@ Hi {username}, I’m Treat. I help people learn how to best respond when they ha
 
 ==== VisualizeTypicalResponse ====
 
-    Now that you have an idea of what emotion you are feeling I want you to spend a minute or two thinking about how you typically react when you feel this way.  
+    Now that you have an idea of what emotion you are feeling I want you to spend a minute or two thinking about how you typically react when you feel this way.
 
-    It can be good to write this down on a piece of paper if you have time.  What are the thoughts that you think about yourself?  What is the tone or emotion behind those thoughts?
-
-    This part can be a bit tough but it really helps in the end!
-
-    Let me know when you're ready to move to the next step.
-//RG: this feels longer to go through than it might seem.  I would try to break it up with a few simple user responses.  Maybe:
-//It can be good to write this down on a piece of paper if you have time.  What are the thoughts that you think about yourself?  What is the tone or emotion behind those thoughts? + That's alot     It can be good to write down your thoughts about yourself and the tone or emotion of those thoughts. + I see   This part can be a bit tough but it really helps in the end.....  
+    It can be good to write this down on a piece of paper if you have time.  What are the thoughts that you think about yourself?  What is the tone or emotion behind those thoughts? 
+    
+    +That's alot     
+        It is so it can help to write down your thoughts about yourself and the tone or emotion of those thoughts. 
+    -
+    + I see   
+        This part can be a bit tough but it really helps in the end. 
+    -
     +I'm ready
         ->VisualizeFriendResponse
     +I'm stuck
         ->HelpWithVisualization
-    +This isn't the right exercise for me
-        ->FindNewBot
-        //RG:  per my comments about HelpIdentifyEmotions I would eliminate this third response and if need be, get to it from the I'm stuck choice.
 
 
 ==== NoEmotion ====
@@ -97,11 +96,8 @@ Hi {username}, I’m Treat. I help people learn how to best respond when they ha
     +No emotions
         ->NoEmotion
     +Not sure which emotion
-        Connect user to Bot that helps identifying emotions //RG: or if not available, just a random one.
+        Connect user to an inkling that helps identifying emotions //RG: or if not available, just a random one.
         ->END
-    +This isn't the right exercise
-        ->FindNewBot
-        //RG: I would eliminate this third menu choice, since it's effectively covered in the second choice, I think.
 
 -> END
 
@@ -117,26 +113,26 @@ Hi {username}, I’m Treat. I help people learn how to best respond when they ha
         ->CompareAndLearn
     + I'm stuck
         ->HelpWithFriendVisualization
-    + This isn't the right exercise for me
-        ->FindNewBot
-    //RG: same comment as in HelpIdentifyingEmotions
 
 -> END
 
 ==== HelpWithVisualization ====
-//RG: this is too long to be one content flow.
   If you are struggling with visualizing your own situation, emotions or thoughts, you are not alone.   Sometimes our minds are going so fast, or the emotions are so strong it's hard to focus enough to really be aware of it all.  It's like holding onto the wheel of a ship in the middle of a big storm - it's really hard!
     
     But this is a skill like any other: it gets better with practice.  And there are a few tricks that can help.
     
-//RG: I'd put a user break here before going to the next.  Maybe, + Like what? then go to One thing....
+    + Like what? 
     
     One thing to try is to start by bringing your mind to the beginning of the difficult situation and remember the things facts of the situation.  Facts such as 'I was sitting at home' or 'I was on a call with someone'.  Take a second til you have one or more in mind.
-//RG: I'd put another break here, like "OK, ready" and then go to Once you have brought....
+    -
+
+    + OK, ready
     
     Once you have brought to mind the situation see if you can remember the thoughts that ran through your mind.  Usually when a situation bothers us we have an immediate reaction that shows up as a thought in our minds and that thought has a strong emotional charge to it.  This charge gives us a hint as to the emotion we were feeling.
     
     So with the situation in mind notice the thoughts and then the emotions.
+    
+    -
     
     Did that help?
         +Yes - I'm ready to continue
@@ -152,7 +148,7 @@ Can you give a short bit of feedback to me so I can improve first?
     
 FEEDBACK __________
     
-[Find a new bot for user.]
+[Find a new inky for user.]
 
 -> END
 
@@ -175,26 +171,28 @@ FEEDBACK __________
 -> END
 
 ==== HelpWithFriendVisualization ====
-//RG too long without breaks.
-Let me see if I can help with this step.  There are a few ways people get tripped up doing this. 
-    
-One common experience is that people have a hard time being as kind or generous towards themselves as they would to a friend. 
-    
-If this is true for you then remember this is a skill that takes time to develop.  Do your best to stretch yourself to bring a slightly more kind view of your situation and feelings.
-    
-//RG: I'd insert a user response like + Wow, it's hard. then go to "Indeed..." (I changed that wording a bit to make the flow work in this case)
-    
-Indeed... it can be hard if you right now you don't have any close friends in your life.  One way to get around this is to imagine responding to a friend you were close to in the past, or how you would respond to a friend if you were close to them.
-    
-I hope this helps!
-    
-So now, let's try again.
-    
-Remember the exercise is to imagine a good friend in the same situation, who feels the way you do right now. What would you say to them?  What would the tone be?
 
-Spend a minute jotting down the things you would say and the tone.
+    Let me see if I can help with this step.  There are a few ways people get tripped up doing this. 
+    
+    One common experience is that people have a hard time being as kind or generous towards themselves as they would to a friend. 
+    
+    If this is true for you then remember this is a skill that takes time to develop.  Do your best to stretch yourself to bring a slightly more kind view of your situation and feelings.
+    
+    
+    + Wow, it's hard.
+    
+        Indeed... it can be hard if right now you don't have any close friends in your life.  One way to get around this is to imagine responding to a friend you were close to in the past, or how you would respond to a friend if you were close to them now.
+    -
+    
+    I hope this helps!
+    
+    So now, let's try again.
+    
+    Remember the exercise is to imagine a good friend in the same situation, who feels the way you do right now. What would you say to them?  What would the tone be?
 
-Let me know when you're ready.
+    Spend a minute jotting down the things you would say and the tone.
+
+    Let me know when you're ready.
     
     + I'm ready.
         ->CompareAndLearn
@@ -283,9 +281,8 @@ Would you like to try the exercise from last session again with this idea in min
     +Show me new exercise
         Okay no problem.  Let's jump into another step.
         ->IdentifyTrigger
-    +Different bot 
+    +Something else
         ->FindNewBot
-//RG: I'd make the third choice +something else and then ask them if they'd like to talk to one of their pals (please eliminate "bot" from the whole script).  Just give them a "yes" choice and then go to find new bot.
 ->END
 
 === IdentifyTrigger ===
@@ -298,10 +295,6 @@ When you have an emotion or stress in mind let me know.
     
     +Got one - ready.
         ->TriggerForEmotion
-    +Different bot 
-        ->FindNewBot
-//RG: I find the different bot choice too abrupt for here.  I'd eliminate it.  I'm not even sure you need another choice.  But if the user did input sonething in the first session, I would replay that back to them if to see if it's the same.  So it could be:   "Was it the same as the last time time we talked, which you said was {retrieve input}?  + yes then continue.... + no, a new one then continue, or + I can't think of one   and then ask if they need help/refresher or just ant another character (let's call them "pals" not bots.
-    
 
 ->END
 
@@ -309,13 +302,10 @@ When you have an emotion or stress in mind let me know.
 
 Now spend a minute reflecting on what a common aspect of the experience of this stress or emotion is.  It might be a physical feeling like a knot in your stomach when you are nervous, or tension in your jaw when your angry.  It could also be a behavioral cue like raising your voice, or going quiet, or biting your nails.
     
-Once you have an idea of a consistent behavior or feeling that is a clue to the emotion or stress you feel let me know and we can continue.
+Once you have an idea of a consistent behavior or feeling this will be your *clue*. This clue will help you to be aware of the emotion or stress you feel so you can take a helpful next step.
     
     + Ready to continue.
         ->SelfTalkForCue
-    +Different bot 
-        ->FindNewBot
-//RG same issue as identifyTrigger in terms of bailing out too soon.  
 
 ->END
 
@@ -325,14 +315,12 @@ The final step is to come up with a small behavior you can take when you become 
     
 A good place to start is to think of a sentence you can say to yourself.  This sentence can come from the work you did in our first session.  What would you say to a good friend who was feeling this way that would help reassure them and give them a bit of confidence that they can handle it?
     
-Once you have an idea of the short sentence or phrase let me know.
+Once you have an idea of the short sentence or phrase let me know what it is if you're willing.
     
     +Got it - I'm ready.
         ->FinalPlanForTrigger
-    +Different bot 
-        ->FindNewBot
-//RG: add third option to input the phrase?
-//RG: also, same issue here with the new bot choice.
+    +Got but no sharing
+        ->FinalPlanForTrigger
 
 ->END
 
@@ -354,18 +342,16 @@ Best of luck and I can't wait to hear how it goes next time we talk.
 
 Great job.  Now the next part seems simple but can be a bit tricky.  For the next week or until the next time we talk try to say this sentence/phrase to yourself in your mind when you notice the emotion or stress is present for you.  
     
-The first task is to become aware of the emotion which is why you identified the clue.
-//RG: I'm not sure I understand this sentence, particular the "clue" aspect.  What is the clue?
+The first task is to become aware of the emotion which is why you identified the clue to the stress or emotion you feel earlier in this session.
     
     The second part is to say softly to yourself - in the tone that you would speak to a friend with - the phrase you just came up with.
     
-    Do you think you want to give this a try?
+    Give it a try!
     
     +Sounds like a plan!
         ->EndSessionTwo
-    +Different bot 
+    +Something else
         ->FindNewBot
-//RG:  at this point of the session, I'm not sure you need an option to bail.  Perhaps that last sentence/question can be rephrased as "Give it a try!" 
 
 ->END
 
@@ -422,7 +408,7 @@ But the good news is the more we practice the easier it gets!  Knowing that some
     +No, something new
         Okay no problem.  Let's get started.
         ->Session3
-    +Different bot 
+    +Something else
         ->FindNewBot
 
 ->END
@@ -435,13 +421,8 @@ So far we've worked on learning how to take a different more friendly perspectiv
     
 We'll bring in some skills from some of my pals to help you feel less stressed when a strong emotion shows up.
     
-Are you ready to keep going?
-    
-    +Yes
+    Let's keep going! 
         ->PickABot
-    +Different bot 
-        ->FindNewBot
-//RG: Here, the different bot choice seems odd because you've just implied you're going to bring in the ideas from other characters.  So again -- and especially because you're already on a positive path -- just saying "Let's keep going" and have one menu choice.
 ->END
 
 === PickABot ===
@@ -457,9 +438,9 @@ If you find that difficult thoughts stay stuck in your mind I suggest you have a
     
 And another option would be to talk to HalfFull if you notice you tend to think about the negatives more than the positives of a situation.
     
-Once you learn the skill the final step is to integrate it with the process we've been through together of noticing strong emotions and stress through a cue, speaking to yourself as a friend, and then using the new skills that you learn from the other bots.
+Once you learn the skill the final step is to integrate it with the process we've been through together of noticing strong emotions and stress through a cue, speaking to yourself as a friend, and then using the new skills that you learn from my friends.
     
-    +Enter next bot here:
+    +Enter next Inky here:
     
     -> EndSessionThree
 
