@@ -40,15 +40,15 @@ VAR nextBabySteps = "Keeping my grades up"
 
 
 ==== First_Session ====
-//MV - changed the infant sentence, though it sounded bit strange
-//MV - adapted last sentence to lead better into choice
+//MV - changed the infant sentence, though it sounded bit strange RG: THX.
+//MV - adapted last sentence to lead better into choice RG: THX
 Hi, {userName}, I’m called Baby. Why, you ask? Well, because I’m an expert on setting goals and making progress on those goals... and that means taking baby steps! 
 Sometimes it can be a bit tricky to set a goal that is easy to work on. It helps to understand some basic principles. 
 Would you like to know more or go ahead and try?
   + Please share!
   Happy to!
         -> Goal_explanation 
-  + No, I'm ready to try.
+  + I'm ready to try.
   Let's do it! <>
         -> First_goal_setting_practice 
 
@@ -101,7 +101,11 @@ OK!  Now, take a minute to think of one step or action you took to reach this go
 //MV shortened slightly
 //DD I think it can really help to give examples of each aspect of SMART, also should add specific to this.  
 //  A goal should be specific so instead of saying 'I want to be healthy' you might say 'I want to workout 4 days a week'
-A well-defined goal reflects your values and is important to you.  It should be measurable, able to be broken down into smaller pieces or sub-goals, and be something that you can put a timeframe on.  
+A well-defined goal reflects your values and is important to you. Actually, there's a term called SMART which really captures it.
+
+
+
+It should be measurable, able to be broken down into smaller pieces or sub-goals, and be something that you can put a timeframe on.  
   + OK, I have one.
         -> First_goal 
   + I can’t think of one
