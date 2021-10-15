@@ -1,3 +1,5 @@
+//locked by tchiki
+
 // ---- Earful ----
 # title: Earful
 # authors: Tchiki Davis & Pablo Paredes
