@@ -30,6 +30,7 @@ VAR listSpins_spin = "I am making progress in my career"
 
 
 ==== First_visit ====
+# IMAGE: Glass Half Full.png
 {userName}, my name is Glass Half Full. 
 I'm great at helping people find the silver lining of experiences and situations. I can show you how I do it using my positive-thinking techniques. They are great tools for managing stressful moments. Ready?
     + Ready!
@@ -132,12 +133,14 @@ Thanks for chatting with me, {userName}. I hope this technique worked for you.
     = negative
     //system checks if user was able to find a positive aspect
       + NO past positive aspect found
+            # IMAGE: Glass Half Full.png
             I know last time we talked, it was not particularly easy to find a positive aspect to your situation.
             -> tryAgain
       + Past positive aspect found
             -> negative_with_idea 
 
     = positive_with_idea
+# IMAGE: Glass Half Full.png
     Glad to see you again! Finding positive aspects of challenging or stressful issues seems to {suit you well!|work for you!} 
     ~ stressor = "am running late on many deadlines"
     Last time you said that "<em>{positiveIdea}</em>" was a silver lining of "<em>{stressor}</em>"
@@ -168,12 +171,14 @@ Thanks for chatting with me, {userName}. I hope this technique worked for you.
           - -> Final_reassurance
 
     = positive_no_idea
+# IMAGE: Glass Half Full.png
     It's good to see you back! Finding positive elements even in negative issues is certainly an art that improves with practice.
     So, let's get to it.
         -> First_visit.First_positive_aspect
 
     = negative_with_idea
     ~ stressor = "am running late on many deadlines"
+# IMAGE: Glass Half Full.png
     It may have felt a bit awkward last time, but you did find this positive aspect: <em>"{positiveIdea}"</em> as a silver lining to <em>"{stressor}"</em>
     ~ stressor = "too many lose pieces in the production process"
     Did you think about it a bit more after we chatted?
@@ -210,10 +215,12 @@ Thanks for chatting with me, {userName}. I hope this technique worked for you.
     = positive
     //system checks for past positive idea
       + NO past idea
+# IMAGE: Glass Half Full.png
         Hi, welcome back! The more we practice our powers of optimistic but realistic thinking, the better we get at better managing many stressful situations.
             -> doYouWantMeToGui
       + Past idea
           ~ stressor = "too many lose pieces in the production process"  // this is used here just to emulate the dialogue we normally take this stressor from greeting module
+        # IMAGE: Glass Half Full.png
         - Last time you reframed this situation: <em>"{stressor}"</em> with this positive thought: <em>"{positiveIdea}"</em>
           ~ stressor = "I am overwhelmed with the upcoming demo for HT"  // this is used here just to emulate the dialogue we normally take this stressor from greeting module
             Did it help you reduce your worry?

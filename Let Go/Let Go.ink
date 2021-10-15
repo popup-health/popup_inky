@@ -5,10 +5,6 @@
 # author: Federica Vegas
 // -----------------------------
 
-// DD - Finished edit on 10/14/2021
-// General comment - we might want to add some trouble shooting for the second and third session.  People have a variety of obstacles with mindfulness practice including:
-// believing they shouldn't be thinking, trying to achieve a special outcome such as relaxation which isn't always possible, difficulty focusing on specific body sensations or the breath, strong negative thoughts that are overwhelming, heightened anxiety that worsens due to a focus on the breath, boredom
-//  We could have a response for the most common challenges
 
 VAR userName = "Pablo"
 VAR stressor = "I have to edit a lot"
@@ -65,19 +61,38 @@ Do you want to use this technique to reduce your repetitive thoughts about: "{st
                   + Yes!
                   + Excited to try it!
                   - Great, go ahead and practice. I'll wait for you here. 
-            
+            // add a gif of breathing 
                     + Done
+                    + Thoughts overwhelmed me.
+                       -> overwhelmingthoughts  
                     - Great practice! 
                     Remeber you can use this naming technique anytime you feel burdened by repetitive thoughts about the past or future. With practice you'll strengthen your mindfulness muscles 💪🧠. 
                       Next time we meet I'll show you another technique for letting thoughts go. 
                         + Thanks!
                             -> END
     
+ 
+ =overwhelmingthoughts
+Sometimes these naming techniques can feel overwhelming. Specially when strong negative thoughts come. 
 
+When this happens you can redirect your attention to external sensations. 
+
+You can also practice the exercise with your eyes open rather than closed.  
+
+Or you can say to yourself “I am safe where I am right now.”  Saying words like this will remind your brain that it is okay to relax and watch thoughts as they go. 
+
+And remember, as we continue to practice, we learn to witness our thoughts without getting caught up in them, allowing us to feel more centered and grounded.
+
++ Thanks.
+
+Hope to see you again soon.
+
+    -> END
 //**********************************************//    
 //**********************************************//    
     
-    
+
+
 ==== Second_visit ====
 
   + If positive or neutral.
@@ -104,15 +119,16 @@ When thoughts come just note them and imagine you are touching them with a gentl
 Name the thought: “Thinking”, touch it gently with your imaginary feather 🪶 and watch it leave. 
 Name the thought: “Planning” touch it gently with your imaginary feather 🪶 and observe it disappear. 
 Remember, it is a gentle touch. There's no fighting or engaging with the thoughts. Just let them go with each touch of the feather. 
- - + Ready
+ - 
  + Let's practice
 Ok, practice this for 4 to 6 deep breaths. I'll wait for you here. // engineering - can we add an image of the bot breathing? Or a visual queu of breathing in and out for 4 to 6 long breathes?
   - + Done
+ //engineering: I'm trying to add here another menu option that goes with done, saying +"Thoughts overwhelmed me" that could lead to -> overwhelmingthoughts. It's not allowing me do it. If you could please add it. 
     - Wonderful! The great thing about these mindfulness exercises is that the more time we spend sitting with our minds, the more at ease we feel within ourselves. 
-    Would you like me to help you set a reminder for daily practice? 
+    Would you like me to help you set a reminder for practicing? 
     - + Yes
     Great, will set it up now. 
-      //engineering: can we add here an option to set a daily reminder in their calendars called "Let Go exercise" descripction of: taking deep breaths, naming thoughts, touching them with a feather and letting them go as leaves in a river". 
+      //engineering: can we add here an option to set a daily reminder in their calendars called "Let Go exercise" descripction of: taking deep breaths, naming thoughts, touching them with a feather and letting them go as leaves in a river".  Give them the option to decide date in the calendar for reminder. 
     + No, thanks.
       Hope to see you again soon.&nbsp;
         - + Thanks!
@@ -171,20 +187,6 @@ Ok, practice this for 4 to 6 deep breaths. I'll wait for you here. // engineerin
             -> First_visit.leaves
       + Feathers
             -> Feather 
-
-//  DD - this could work as a third technique for session 3
-//=== breathingSpace ===
-//  The focus of this technique is to start by taking some deep breaths and bringing your full focus on the breath for 3-5 breaths
-//+ Okay next step
-//Now allow the sticky repetitive thoughts that have been bothering you come to mind but instead of focusing on them see if you can notice the emotion that comes with them.  Name the emotion softly in your mind, noting it like a leaf on the river.  Stress is here, anxiety is here, anger is here, whatever the emotion is.
-//+I know the emotion
-//And now see if you can allow the emotion and the thoughts to fade into the background of your awareness and instead give your full attention and focus to any feeling of tension in your body.  Usually strong emotions show up as uncomfortable body sensations so see if you notice anything.
-//+Strong sensations are here!
-//Good job.  Now the final step is to begin some nice deep abdominal breathing while focussing on the body sensations.  You can say softly to yourself "Its okay for me to feel this.  I can handle this" as you breathe deeply in and out.
-//+Got it
-//Nice job.  This exercise is meant to help you explore difficult thoughts through body awareness and the breath.  I hope it helped!
-
-// reference for the practice:  https://www.mindful.org/3-minute-mindfulness-practice-ground-moment/
 
 ==== Send_to_other_bot ====
 Sure, I will call a pal of mine. 
