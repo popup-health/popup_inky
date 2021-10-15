@@ -1,4 +1,3 @@
-//locked by Pablo
 
 // ---- Earful ----
 # title: Earful
@@ -8,6 +7,7 @@
 
 VAR userName = "Pablo"
 VAR stressCategory = "Work"
+VAR visit = 1
 
 -> System_Check
 
@@ -24,30 +24,102 @@ VAR stressCategory = "Work"
 ==== First_visit ====
 //we are teaching: active listening
 # IMAGE 
-.
+~ visit = 1
 Hi {userName}, my name is Earful. I help people become active listeners. We're going to practice active listening through a role play activity. 
 I'll tell you about a challenge I'm having and you're job will be to listen activley. 
     + Okay
     - Before we get started, ask yourself, are you ready to listen deeply? Or, are you focused on your own thoughts and need time to process them before activly listening to someone else?
+      -> listening
+      
+//****************************************************//
+
+==== Second_visit ====
+//Session 2
+
+# IMAGE 
+~ visit = 2
+Hi {userName}, last time we chatted, you practiced active listening as I explained a challenge I was going through. Are you in a mental space to be able to listen some more?
+-> listening
+
+//****************************************************//
+
+==== Third_visit ====
+//Session 3
+
+# IMAGE 
+~ visit = 3
+Hi {userName}. It’s great to see you. I’ve been looking forward to chatting with you. Are you up for some active listening today?
+-> listening
+
+//****************************************************//
+
+==== Fourth_visit ====
+//Session 4
+
+# IMAGE 
+~ visit = 4
+Hi {userName}. It’s lovely seeing you again. I’ve got some stuff I'd love to share with you. Are you in a good mental space to for listening today?
+-> listening
+
+//****************************************************//
+
+==== listening ====
         + I'm ready to listen
+            Thank you! And don't worry, I'll give you some hints on how listen actively and respond.
             -> topicMatch
         + Not ready right now
             -> exit
 
 ==== topicMatch ====
-//system check if the topic of the main stressor (from Stress_Detect) is either: Work, Health, School, Family, other
-+ work
-  -> work
-+ health
+//system check if the topic of the main stressor (from Stress_Detect) is either: Work, Health, School, Family, other.
+//this category is kept in a log, and next time the system shows the user a differnt category, until it completes all of them.
+
++ stress category was work
+  ~ stressCategory = "work"
+  {visit == 1} 
+    Since your stressor was related to work or fiancial issues, we will start with an example related to that. In the future we will revise other scenarios related to family/relationships, school, or health.
+  {visit > 1}
+//    This time we will revise a case realted to work.
+    -> work
++ stress category was health
+  ~ stressCategory = "health"
+    This time we will revise a case realted to health.
+//  Since your stressor was related to health, fatigue, or physical pain, we will start with an example related to that. In the future we will revise other scenarios related to work, school, or family/relationships.
   -> health
-+school
++stress category was school
+  ~ stressCategory = "school"
+    This time we will revise a case realted to school.
+//  Since your stressor was related to school, we will start with an example related to that. In the future we will revise other scenarios related to work, faimly/relationships, or health.
   -> school
-+family
++stress category was family
+  ~ stressCategory = "family"
+    This time we will revise a case realted to family.
+//  Since your stressor was related to family or social relationships or fiannce we will start with an example related to that. In the future we will revise other scenarios related to work, school, or health.
   -> family
++ stress category was other
+  ~ stressCategory = "work"  // pick a category at random
+  We will start with an example related to "{stressCategory}". In the future we will revise other scenarios such as family, school, or health.
+  // pick any topic at random, but keep track of which one was picked (random picking without replacement)
+  -> work
+
+//****************************************************//
+//****************************************************//
+  
+==== exit ===
+Okay, no worries. Do you want to chat to one of my friends?
+    + Okay
+    Sure, I will call one now. 
+    Don't forget that learning to listen to others not only improves your social skills, but it could be a good resource to calm your own worries.
+        //call a bot now
+        -> END
+    + No
+    No problem. I'd still love you to come back when you in a differnt headspace. Bye!
+        -> END
+
+//****************************************************//
+//****************************************************//
 
 ==== work ====
-= continue
-Thank you! And don't worry, I'll give you some hints on how listen actively and respond.
     + Got it
     - Let’s start! 
     "{userName}, I have been trying to figure out a way to tell my family that I want to quit medical school. I would really like to go to law school, but I am worried about crushing my parents dreams of me becoming the first doctor in the family." 
@@ -98,33 +170,8 @@ Thank you! And don't worry, I'll give you some hints on how listen actively and 
                                 //go to Farewell module
                                 -> END
 
-==== exit ===
-Okay, no worries. Do you want to chat to one of my friends?
-    + Okay
-    Sure, I will call one now. 
-    Don't forget that learning to listen to others not only improves your social skills, but it could be a good resource to calm your own worries.
-        //call a bot now
-        -> END
-    + No
-    No problem. I'd still love you to come back when you in a differnt headspace. Bye!
-        -> END
-
-
 //****************************************************//
 //****************************************************//
-
-
-==== Second_visit ====
-//Session 2
-
-# IMAGE 
-
-Hi {userName}, last time we chatted, you practiced active listening as I explained a challenge I was going through. Are you in a mental space to be able to listen some more?
-
-        + I'm ready to listen
-            -> topicMatch
-        + I'm not ready right now
-            -> exit
 
 ==== family ====
 That's great news. I have a predicament that I'd really like to talk about.
@@ -183,22 +230,8 @@ That's great news. I have a predicament that I'd really like to talk about.
                                 // go to farewell module
                                     -> END
 
-
 //****************************************************//
 //****************************************************//
-
-
-==== Third_visit ====
-//Session 3
-
-# IMAGE 
-
-Hi {userName}. It’s great to see you. I’ve been looking forward to chatting with you. Are you up for some active listening today?
-
-        + I'm ready to listen
-            -> topicMatch
-        + I'm not ready right now
-            -> exit
 
 ==== health ====
 Thanks {userName}. Today I'm struggling with an issue and I could really benefit from having someone to talk to.
@@ -244,7 +277,7 @@ Thanks {userName}. Today I'm struggling with an issue and I could really benefit
                         "I guess I just have to keep moving forward. I'll probably be pretty stressed and sitracted until I figure this out." 
                         
                         + Next
-                        How would you respond?
+                        - How would you respond?
                         1) That makes sense. Know that you can always talk to me.
                         2) Just be positive. Only good vibes.
                         3) Ugh. I'm just not sure how much more of your complaining I can handle.
@@ -261,23 +294,8 @@ Thanks {userName}. Today I'm struggling with an issue and I could really benefit
                                     // go to Farewell module
                                     -> END
     
-
-
 //****************************************************//
 //****************************************************//
-
-
-==== Fourth_visit ====
-//Session 4
-
-# IMAGE 
-
-Hi {userName}. It’s lovely seeing you again. I’ve got some stuff I'd love to share with you. Are you in a good mental space to for listening today?
-
-        + I'm ready to listen
-            -> topicMatch
-        + I'm not ready right now
-            -> exit
 
 ==== school ====
 Thanks for being willing to listen {userName}. Listening is not always easy, so I appreciate you taking the time and energy to support me.
@@ -323,7 +341,7 @@ Thanks for being willing to listen {userName}. Listening is not always easy, so 
                         "I better go. I think the only way I'll overcome this anxiety is to get started on the assignment." 
                         
                         + Next
-                        How would you respond?
+                        - How would you respond?
                         1) No, hang out with me.
                         2) Okay.
                         3) Understood. I'll be sending you positive vibes.
