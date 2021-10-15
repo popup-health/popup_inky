@@ -32,8 +32,9 @@ VAR counter = 1
 
 
 ==== First_session ====
-# IMAGE: ../goodyimage.jpeg
-    . //this dot just helps display the image command above the text
+
+# IMAGE: Goody.png
+//this dot just helps display the image command above the text
     Hi {userName}, I’m Goody. I just love talking about all the good experiences that happen in life. So I’m super excited that you’ve decided to join me today!
     Let's talk about a pleasant experience you've had today.  It doesn't need to be the most fun thing you've ever done but something simple and small. In fact, it can be a teeny tiny thing.
       + Don't want to share
@@ -123,7 +124,7 @@ Keep trying to add good things into your daily life and then take notice and sav
 
 ==== Second_session ====
 //system checks if first session engagement were positive/neutral *or* negative
-# IMAGE: ../goodyimage.jpeg
+# IMAGE: Goody.png
     . //this dot just helps display the image command above the text
       + if positive or neutral
         Hey you! I’m so glad you’ve come back to visit with me.
@@ -212,6 +213,7 @@ Keep trying to add good things into your daily life and then take notice and sav
       -> Second_session.Three_good_things
 
 ==== Try_again_escape ====
+    # IMAGE: Goody.png
     Hey, I know that our last chat wasn’t as good as it could have been.
      Do you want to try one more time, or talk to one of my buddies?
       + Try again
@@ -230,7 +232,7 @@ Keep trying to add good things into your daily life and then take notice and sav
 ==== Third_session ====
 //system checks if prior session assessment was positive/neutral *or* negative
   + if positive/neutral
-    # IMAGE: ../goodyimage.jpeg
+    # IMAGE: Goody.png
     . //this dot just helps display the image command above the text
     Hi {userName}. It’s great to see you. I’ve been looking forward to chatting with you again.
         -> Refresher

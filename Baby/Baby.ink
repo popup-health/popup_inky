@@ -1,3 +1,6 @@
+
+LOCKED by RobertG at 5:50pm PDT on 10142021
+
 // ---- PopBot: BABY .. was ANdale  Reflecting on Progress VERSION 2 ----
 // Converted from original inklewriter URL:
 // https://www.inklewriter.com/stories/84200
@@ -57,7 +60,7 @@ Start by thinking of one goal that matters to you.
         -> thereAreLotsOfDi 
 
 = thereAreLotsOfDi
-//MV - shortened slightly, replaced "regimen"
+//MV - shortened slightly, replaced "regimen" RG: DONE
 There are lots of different types of goals. Your goals could be related to your career, your relationship, your family, your community, or yourself. All goals count: things like keeping to a workout schedule, studying for an exam, or simply spending more time with friends.
   + OK, thought of a goal.
         -> greatDoYouWantTo 
@@ -67,7 +70,7 @@ There are lots of different types of goals. Your goals could be related to your 
         -> dontWorryAboutIt 
 
 = greatDoYouWantTo
-//MV - replaced "it" by "your goal" to lead better into choices
+//MV - replaced "it" by "your goal" to lead better into choices RG: DONE
 Great! Do you want to share your goal now?
   + User enters input here
         -> userInput 
@@ -234,9 +237,7 @@ Excellent. So, what did it feel like to take this baby step?
 = itFeltOk 
 //MV - shortened choice to 20 chars
 //DD Think back to any hesitation or avoidance you had about the overall goal.  Was this small step as difficult as you anticipated?  When we break down a larger goal into baby steps it's a lot easier to progress forward.
-Now, ask yourself, is there anything you can learn from having taken this action?
-Would you do something differently next time?  Or maybe this action has prepared you for the next step?
-Reflect on the action you took and then decide what your next baby step will be.
+Think back to any hesitation or avoidance you had about the overall goal.  Was this small step as difficult as you anticipated?  When we break down a larger goal into baby steps it's a lot easier to progress forward.
     + OK, I'm ready.
         -> okImReady
     + Examples, please.

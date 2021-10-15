@@ -5,6 +5,7 @@
 # author: Federica Vegas
 // -----------------------------
 
+
 VAR userName = "Pablo"
 VAR stressor = "I have to edit a lot"
 VAR stressCategory = "work"
@@ -62,17 +63,36 @@ Do you want to use this technique to reduce your repetitive thoughts about: "{st
                   - Great, go ahead and practice. I'll wait for you here. 
             
                     + Done
+                    + Thoughts overwhelmed me.
+                       -> overwhelmingthoughts  
                     - Great practice! 
                     Remeber you can use this naming technique anytime you feel burdened by repetitive thoughts about the past or future. With practice you'll strengthen your mindfulness muscles 💪🧠. 
                       Next time we meet I'll show you another technique for letting thoughts go. 
                         + Thanks!
                             -> END
     
+ 
+ =overwhelmingthoughts
+Sometimes these naming techniques can feel overwhelming. Specially when strong negative thoughts come. 
 
+When this happens you can redirect your attention to external sensations. 
+
+You can also practice the exercise with your eyes open rather than closed.  
+
+Or you can say to yourself “I am safe where I am right now.”  Saying words like this will remind your brain that it is okay to relax and watch thoughts as they go. 
+
+And remember, as we continue to practice, we learn to witness our thoughts without getting caught up in them, allowing us to feel more centered and grounded.
+
++ Thanks.
+
+Hope to see you again soon.
+
+    -> END
 //**********************************************//    
 //**********************************************//    
     
-    
+
+
 ==== Second_visit ====
 
   + If positive or neutral.
@@ -99,10 +119,11 @@ When thoughts come just note them and imagine you are touching them with a gentl
 Name the thought: “Thinking”, touch it gently with your imaginary feather 🪶 and watch it leave. 
 Name the thought: “Planning” touch it gently with your imaginary feather 🪶 and observe it disappear. 
 Remember, it is a gentle touch. There's no fighting or engaging with the thoughts. Just let them go with each touch of the feather. 
- - + Ready
+ - 
  + Let's practice
 Ok, practice this for 4 to 6 deep breaths. I'll wait for you here. // engineering - can we add an image of the bot breathing? Or a visual queu of breathing in and out for 4 to 6 long breathes?
   - + Done
+ //engineering: I'm trying to add here another menu option that goes with done, saying +"Thoughts overwhelmed me" that could lead to -> overwhelmingthoughts. It's not allowing me do it. If you could please add it. 
     - Wonderful! The great thing about these mindfulness exercises is that the more time we spend sitting with our minds, the more at ease we feel within ourselves. 
     Would you like me to help you set a reminder for daily practice? 
     - + Yes

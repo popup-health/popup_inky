@@ -1,7 +1,21 @@
+// ---- Earful ----
+# title: Earful
+# authors: Tchiki Davis & Pablo Paredes
+// -----------------------------
 
 
 VAR userName = "Pablo"
+VAR stressCategory = "Work"
 
+-> System_Check
+
+==== System_Check ====
++ First visit
+    -> First_visit
++ Second visit
+    -> Second_visit
+
+==== First_visit ====
 //we are teaching: active listening
 # IMAGE 
 .
@@ -78,7 +92,7 @@ Thank you! And don't worry, I'll give you some hints on how listen actively and 
 -> END
 
 
-
+==== Second_visit ====
 //Session 2
 
 # IMAGE 
