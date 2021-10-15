@@ -1,4 +1,4 @@
-
+//locked by Pablo
 
 // ---- Earful ----
 # title: Earful
@@ -30,22 +30,23 @@ I'll tell you about a challenge I'm having and you're job will be to listen acti
     + Okay
     - Before we get started, ask yourself, are you ready to listen deeply? Or, are you focused on your own thoughts and need time to process them before activly listening to someone else?
         + I'm ready to listen
-            -> continue_1
+            -> topicMatch
         + Not ready right now
-            -> exit_1
+            -> exit
 
-= exit_1
-Okay, no worries. Do you want to chat to one of my friends?
-    + Okay
-    Sure, I will call one now. 
-    Don't forget that learning to listen to others not only improves your social skills, but it could be a good resource to calm your own worries.
-        //call a bot now
-        -> END
-    + No
-    No problem. I'd still love you to come back when you in a differnt headspace. Bye!
-        -> END
+==== topicMatch ====
+//system check if the topic of the main stressor (from Stress_Detect) is either: Work, Health, School, Family, other
++ work
+  -> work
++ health
+  -> health
++school
+  -> school
++family
+  -> family
 
-= continue_1
+==== work ====
+= continue
 Thank you! And don't worry, I'll give you some hints on how listen actively and respond.
     + Got it
     - Let’s start! 
@@ -93,9 +94,24 @@ Thank you! And don't worry, I'll give you some hints on how listen actively and 
                             This response helps me feel confident in my ability to do what's best for me.
                             -   + Sure thing!
                                 - Thank you for listening and helping me think through this challenge. I really felt heard and understood.
-                                + You're welcome
-                                
--> END
+                                - + You're welcome
+                                //go to Farewell module
+                                -> END
+
+==== exit ===
+Okay, no worries. Do you want to chat to one of my friends?
+    + Okay
+    Sure, I will call one now. 
+    Don't forget that learning to listen to others not only improves your social skills, but it could be a good resource to calm your own worries.
+        //call a bot now
+        -> END
+    + No
+    No problem. I'd still love you to come back when you in a differnt headspace. Bye!
+        -> END
+
+
+//****************************************************//
+//****************************************************//
 
 
 ==== Second_visit ====
@@ -106,22 +122,11 @@ Thank you! And don't worry, I'll give you some hints on how listen actively and 
 Hi {userName}, last time we chatted, you practiced active listening as I explained a challenge I was going through. Are you in a mental space to be able to listen some more?
 
         + I'm ready to listen
-            -> continue_2
+            -> topicMatch
         + I'm not ready right now
-            -> exit_2
+            -> exit
 
-= exit_2
-Okay, no worries. Do you want to chat to one of my friends?
-    + Okay
-    Great, I'll call one now. 
-    Before you go, just keep in mind that active listening is a good way to form stronger and more enjoyable connections with others. 
-        //call a bot now
-        -> END
-    + No
-    No problem. Feel free to come back and see me anytime. Bye!
-        -> END
-
-= continue_2
+==== family ====
 That's great news. I have a predicament that I'd really like to talk about.
     + Okay
     - "My partner and I have been fighting a lot lately. We just can't seem to agree on anything—chores, money, or how we spend our time." 
@@ -174,9 +179,13 @@ That's great news. I have a predicament that I'd really like to talk about.
                             Try to transition smoothly to talking about other things, possibly by asking, "Do you feel like you got what you needed from this conversation?"
                             -   + Got it.
                                 - I really appreciate you listening. It's great to have such a good listener to help me figure out how I want to deal with challenges.
-                                + Sure thing!
--> END
+                                - + Sure thing!
+                                // go to farewell module
+                                    -> END
 
+
+//****************************************************//
+//****************************************************//
 
 
 ==== Third_visit ====
@@ -184,25 +193,15 @@ That's great news. I have a predicament that I'd really like to talk about.
 
 # IMAGE 
 
-Hi {username}. It’s great to see you. I’ve been looking forward to chatting with you. Are you up for some active listening today?
+Hi {userName}. It’s great to see you. I’ve been looking forward to chatting with you. Are you up for some active listening today?
 
         + I'm ready to listen
-            -> continue_3
+            -> topicMatch
         + I'm not ready right now
-            -> exit_3
+            -> exit
 
-= exit_3
-Thanks for letting me know. Do you want to chat with one of my bot friends?
-    + Okay
-    Super. I'll coordinate that. Feel free to come back and visit me anytime.
-        //call a bot now
-        -> END
-    + No
-    No problem. Feel free to come back and visit me anytime. :)
-        -> END
-
-= continue_3
-Thanks {username}. Today I'm struggling with an issue and I could really benefit from having someone to talk to.
+==== health ====
+Thanks {userName}. Today I'm struggling with an issue and I could really benefit from having someone to talk to.
     + Sure thing.
     - "I've been dealing with some health issues lately, and it's really stressful not to know what's going to happen." 
     
@@ -258,8 +257,14 @@ Thanks {username}. Today I'm struggling with an issue and I could really benefit
                             This would really hurt my feelings. If you feel this way, a better way to tell me is to say that you won't always be in the right headspace to be a good listener.
                             -   + Got it.
                                 - Thanks for listening to me. You have been super helpful.
-                                + No problem!
+                                - + No problem!
+                                    // go to Farewell module
+                                    -> END
     
+
+
+//****************************************************//
+//****************************************************//
 
 
 ==== Fourth_visit ====
@@ -267,25 +272,15 @@ Thanks {username}. Today I'm struggling with an issue and I could really benefit
 
 # IMAGE 
 
-Hi {username}. It’s lovely seeing you again. I’ve got some stuff I'd love to share with you. Are you in a good mental space to for listening today?
+Hi {userName}. It’s lovely seeing you again. I’ve got some stuff I'd love to share with you. Are you in a good mental space to for listening today?
 
         + I'm ready to listen
-            -> continue_4
+            -> topicMatch
         + I'm not ready right now
-            -> exit_4
+            -> exit
 
-= exit_4
-Understood. Do you want to chat with one of my bot friends?
-    + Okay
-    I can arrange that. Please do come back sometime when you're in a different mental space.
-        //call a bot now
-        -> END
-    + No
-    No problem. I'm always here if you want to come back later.
-        -> END
-
-= continue_4
-Thanks for being willing to listen {username}. Listening is not always easy, so I appreciate you taking the time and energy to support me.
+==== school ====
+Thanks for being willing to listen {userName}. Listening is not always easy, so I appreciate you taking the time and energy to support me.
     + Sure thing.
     - "At the moment, I'm freaking out about an upcoming assignment I have to do. The subject matter is really hard for me and I'm afraid I'm going to mess it up." 
     
@@ -341,7 +336,9 @@ Thanks for being willing to listen {username}. Listening is not always easy, so 
                             Great job. You've let me know that you care. 
                             -   + Got it.
                                 - Your listening has really helped. Thank you!
-                                + Happy to help!
+                                - + Happy to help!
+                                // go to Farewell module
+                                -> END
     
     
 
