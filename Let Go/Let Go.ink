@@ -61,7 +61,7 @@ Do you want to use this technique to reduce your repetitive thoughts about: "{st
                   + Yes!
                   + Excited to try it!
                   - Great, go ahead and practice. I'll wait for you here. 
-            // otra visual de respiración. 
+            // add a gif of breathing 
                     + Done
                     + Thoughts overwhelmed me.
                        -> overwhelmingthoughts  
