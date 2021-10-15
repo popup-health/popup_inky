@@ -1,3 +1,5 @@
+//locked by Pablo
+
 // ---- Earful ----
 # title: Earful
 # authors: Tchiki Davis & Pablo Paredes
@@ -14,6 +16,10 @@ VAR stressCategory = "Work"
     -> First_visit
 + Second visit
     -> Second_visit
++ Third visit
+    -> Third_visit
++ Fourth visit
+    -> Fourth_visit
 
 ==== First_visit ====
 //we are teaching: active listening
@@ -24,22 +30,23 @@ I'll tell you about a challenge I'm having and you're job will be to listen acti
     + Okay
     - Before we get started, ask yourself, are you ready to listen deeply? Or, are you focused on your own thoughts and need time to process them before activly listening to someone else?
         + I'm ready to listen
-            -> continue_1
+            -> topicMatch
         + Not ready right now
-            -> exit_1
+            -> exit
 
-= exit_1
-Okay, no worries. Do you want to chat to one of my friends?
-    + Okay
-    Sure, I will call one now. 
-    Don't forget that learning to listen to others not only improves your social skills, but it could be a good resource to calm your own worries.
-        //call a bot now
-        -> END
-    + No
-    No problem. I'd still love you to come back when you in a differnt headspace. Bye!
-        -> END
+==== topicMatch ====
+//system check if the topic of the main stressor (from Stress_Detect) is either: Work, Health, School, Family, other
++ work
+  -> work
++ health
+  -> health
++school
+  -> school
++family
+  -> family
 
-= continue_1
+==== work ====
+= continue
 Thank you! And don't worry, I'll give you some hints on how listen actively and respond.
     + Got it
     - Let’s start! 
@@ -87,9 +94,24 @@ Thank you! And don't worry, I'll give you some hints on how listen actively and 
                             This response helps me feel confident in my ability to do what's best for me.
                             -   + Sure thing!
                                 - Thank you for listening and helping me think through this challenge. I really felt heard and understood.
-                                + You're welcome
-                                
--> END
+                                - + You're welcome
+                                //go to Farewell module
+                                -> END
+
+==== exit ===
+Okay, no worries. Do you want to chat to one of my friends?
+    + Okay
+    Sure, I will call one now. 
+    Don't forget that learning to listen to others not only improves your social skills, but it could be a good resource to calm your own worries.
+        //call a bot now
+        -> END
+    + No
+    No problem. I'd still love you to come back when you in a differnt headspace. Bye!
+        -> END
+
+
+//****************************************************//
+//****************************************************//
 
 
 ==== Second_visit ====
@@ -100,22 +122,11 @@ Thank you! And don't worry, I'll give you some hints on how listen actively and 
 Hi {userName}, last time we chatted, you practiced active listening as I explained a challenge I was going through. Are you in a mental space to be able to listen some more?
 
         + I'm ready to listen
-            -> continue_2
+            -> topicMatch
         + I'm not ready right now
-            -> exit_2
+            -> exit
 
-= exit_2
-Okay, no worries. Do you want to chat to one of my friends?
-    + Okay
-    Great, I'll call one now. 
-    Before you go, just keep in mind that active listening is a good way to form stronger and more enjoyable connections with others. 
-        //call a bot now
-        -> END
-    + No
-    No problem. Feel free to come back and see me anytime. Bye!
-        -> END
-
-= continue_2
+==== family ====
 That's great news. I have a predicament that I'd really like to talk about.
     + Okay
     - "My partner and I have been fighting a lot lately. We just can't seem to agree on anything—chores, money, or how we spend our time." 
@@ -168,8 +179,167 @@ That's great news. I have a predicament that I'd really like to talk about.
                             Try to transition smoothly to talking about other things, possibly by asking, "Do you feel like you got what you needed from this conversation?"
                             -   + Got it.
                                 - I really appreciate you listening. It's great to have such a good listener to help me figure out how I want to deal with challenges.
-                                + Sure thing!
--> END
+                                - + Sure thing!
+                                // go to farewell module
+                                    -> END
 
+
+//****************************************************//
+//****************************************************//
+
+
+==== Third_visit ====
+//Session 3
+
+# IMAGE 
+
+Hi {userName}. It’s great to see you. I’ve been looking forward to chatting with you. Are you up for some active listening today?
+
+        + I'm ready to listen
+            -> topicMatch
+        + I'm not ready right now
+            -> exit
+
+==== health ====
+Thanks {userName}. Today I'm struggling with an issue and I could really benefit from having someone to talk to.
+    + Sure thing.
+    - "I've been dealing with some health issues lately, and it's really stressful not to know what's going to happen." 
     
+    + Next
+        - What would your response be?
+        1) I'm sorry you're going through this. How are you feeling about it?
+        2) I'm sure you'll be fine.
+        3) I heard that juice cleanses are good for health. You should do a juice cleanse.
+          + 1
+            
+             Good choice! You've shown me that you care about me and my feelings.
+             
+          + 2
+          Even if you do think I'll be fine, it's important not to ignore the reality that I'm feeling anxious. If you choose to reassure me that everything will be okay make sure you tell me first that you understand why I'm feeling anxious.
+        
+           + 3
+              Be careful not to immediatly jump to giving advice. When in doubt, start by showing compassion, and only give advice when it's asked for.
+        -  + Got it
+        -
+            Let’s continue. 
+            
+            "It's so frustrating. I have done all sorts of tests and the doctors still don't know what's wrong with me. I feel hopeless sometimes."
+            
+                + Next
+                - What would you say?️ //we are teaching
+                1) Don't feel hopeless. I believe that there is always hope.  
+                2) Wow, that's terrible. I can see why you're feeling anxious and frustrated. Is there anything I can do to help?
+                3) I totally understand. My health is a big puzzle too.
+                    + 1
+                        Make sure you don't tell others not to have thier emotions. All emotions are valid and suppressing them is actually bad for health. But it's good that you're trying to help me think positive during this difficult time.
+                    + 2
+                         Fantastic response! In addition to showing me that you understand me, I appreciate your offer to help me further.
+                    + 3
+                        This is a good start. You're helping me see that my situation is something that you've experienced too. Just be sure to show me empathy by ackowledgin my emotions.
+                    -   + I see
+                        - Good listeners let the speaker experience thier negative emotions without trying to quash them. Ackowledging and working through those negative emotions is key to resolving them. 
+                        // we are teaching:
+                        + That makes sense
+                        - Let’s continue. 
+                        "I guess I just have to keep moving forward. I'll probably be pretty stressed and sitracted until I figure this out." 
+                        
+                        + Next
+                        How would you respond?
+                        1) That makes sense. Know that you can always talk to me.
+                        2) Just be positive. Only good vibes.
+                        3) Ugh. I'm just not sure how much more of your complaining I can handle.
+                            + 1
+                            Great job. You've assured me that you're here to support me. 
+                            
+                            + 2
+                            Telling me to be positive or only have good vibes is actually a form of toxic positivity. It can lead to supressed negative feelings, which is bad for health in the longer run. If you want to add something postive, you could say something about your own positve feelings like, "I'll be thinking positive thoughts about your recovery."
+                            + 3
+                            This would really hurt my feelings. If you feel this way, a better way to tell me is to say that you won't always be in the right headspace to be a good listener.
+                            -   + Got it.
+                                - Thanks for listening to me. You have been super helpful.
+                                - + No problem!
+                                    // go to Farewell module
+                                    -> END
+    
+
+
+//****************************************************//
+//****************************************************//
+
+
+==== Fourth_visit ====
+//Session 4
+
+# IMAGE 
+
+Hi {userName}. It’s lovely seeing you again. I’ve got some stuff I'd love to share with you. Are you in a good mental space to for listening today?
+
+        + I'm ready to listen
+            -> topicMatch
+        + I'm not ready right now
+            -> exit
+
+==== school ====
+Thanks for being willing to listen {userName}. Listening is not always easy, so I appreciate you taking the time and energy to support me.
+    + Sure thing.
+    - "At the moment, I'm freaking out about an upcoming assignment I have to do. The subject matter is really hard for me and I'm afraid I'm going to mess it up." 
+    
+    + Next
+        - What would your response be?
+        1) I'm sure you'll do fine. 
+        2) That's tough. Can you say more about how I can support you?
+        3) Whatever. One assignment doesn't matter.
+          + 1
+            
+             Even if you do think I'll do fine, it's important not to ignore my feelings. It's best to start by acknowledging my feelings before sharing you're point of view.
+             
+          + 2
+          Good job! You've shown me that you understand my feelings and want to help me move past them.
+             
+           + 3
+              Be careful not to dismiss my feelings. You may have a good point, but be sure that you empathize with my experience.
+        -  + Got it
+        -
+            Let’s continue. 
+            
+            "I feel kind of stuck. I keep procrastinating. I just can't get started on the assignment because I'm afriad I'll do it badly."
+            
+                + Next
+                - What would you say?️ //we are teaching
+                1) That's understandable. I bet it's hard to get started.   
+                2) Just do it. It'll get done faster.
+                3) I know. That assignment is the worst.
+                    + 1
+                        Good job. You're letting me know you get how I feel and have heard what I said.
+                    + 2
+                         This may indeed be good advice. Just be careful to acknowledge the fact that I'm having a hard time getting started before giving advice.
+                    + 3
+                        It can sometimes be helpful to comiserate as a way of showing you understand. Just be sure not to get too negative.
+                    -   + I see
+                        - Good listeners paraphrase what the other person has said in thier own words as a way of making sure they've understood correctly. 
+                        // we are teaching:
+                        + That makes sense
+                        - Let’s continue. 
+                        "I better go. I think the only way I'll overcome this anxiety is to get started on the assignment." 
+                        
+                        + Next
+                        How would you respond?
+                        1) No, hang out with me.
+                        2) Okay.
+                        3) Understood. I'll be sending you positive vibes.
+                            + 1
+                            Although this shows that you like me, it suggests you haven't heard me. You might instead say, "I'd love to hang out with you more, but I understand you need to get this off your mind."
+                            
+                            + 2
+                            This is a good start. See if you can add something else that shows you've heard me and care about me.
+                            + 3
+                            Great job. You've let me know that you care. 
+                            -   + Got it.
+                                - Your listening has really helped. Thank you!
+                                - + Happy to help!
+                                // go to Farewell module
+                                -> END
+    
+    
+
     
