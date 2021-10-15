@@ -61,7 +61,7 @@ Do you want to use this technique to reduce your repetitive thoughts about: "{st
                   + Yes!
                   + Excited to try it!
                   - Great, go ahead and practice. I'll wait for you here. 
-            
+            // otra visual de respiración. 
                     + Done
                     + Thoughts overwhelmed me.
                        -> overwhelmingthoughts  
@@ -125,10 +125,10 @@ Ok, practice this for 4 to 6 deep breaths. I'll wait for you here. // engineerin
   - + Done
  //engineering: I'm trying to add here another menu option that goes with done, saying +"Thoughts overwhelmed me" that could lead to -> overwhelmingthoughts. It's not allowing me do it. If you could please add it. 
     - Wonderful! The great thing about these mindfulness exercises is that the more time we spend sitting with our minds, the more at ease we feel within ourselves. 
-    Would you like me to help you set a reminder for daily practice? 
+    Would you like me to help you set a reminder for practicing? 
     - + Yes
     Great, will set it up now. 
-      //engineering: can we add here an option to set a daily reminder in their calendars called "Let Go exercise" descripction of: taking deep breaths, naming thoughts, touching them with a feather and letting them go as leaves in a river". 
+      //engineering: can we add here an option to set a daily reminder in their calendars called "Let Go exercise" descripction of: taking deep breaths, naming thoughts, touching them with a feather and letting them go as leaves in a river".  Give them the option to decide date in the calendar for reminder. 
     + No, thanks.
       Hope to see you again soon.&nbsp;
         - + Thanks!
