@@ -1,5 +1,4 @@
 
-LOCKED by RobertG at 5:50pm PDT on 10142021
 
 // ---- PopBot: BABY .. was ANdale  Reflecting on Progress VERSION 2 ----
 // Converted from original inklewriter URL:
@@ -264,9 +263,7 @@ When you come back and see me, we’ll talk about how this next baby step went. 
   See you!
         -> endFirstSession 
 
-= endFirstSession
-//go to farewell
-    -> END
+
     
 ==== Second_Session ====
 //system checks if first session engagement were positive/neutral *or* negative
