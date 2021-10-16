@@ -96,7 +96,7 @@ Hi {userName}. It’s lovely seeing you again. You are now an expert at listenin
   ~ stressCategory = "school"
   -> school
 +stress category was relationships
-  ~ stressCategory = "family"
+  ~ stressCategory = "relationships"
   -> relationships
 + stress category was other
   ~ stressCategory = "other"  // pick a category at random
@@ -143,7 +143,7 @@ Okay, no worries. Do you want to chat to one of my friends?
         2) Just tell them.
         3) That's a difficult situation. Can you tell me more?
           + 1
-             This is a great start. You've showed me that you understand my feelings. To show that you are eager to understand me even better, you could ask me a follow up question like "Why don't you like medical school anymore?" or "Why do you want to go to law school?"
+            This is a great start. You've showed me that you understand my feelings. To show that you are eager to understand me even better, you could ask me a follow up question like "Why don't you like medical school anymore?" or "Why do you want to go to law school?"
           + 2
              It's best not to give advice unless it's explicitly asked for. Your goal here is to make me feel heard and understood. You could say, "I hear you." or "That's got to be hard for you."
            + 3
@@ -201,7 +201,6 @@ Okay, no worries. Do you want to chat to one of my friends?
 
 = continue
     + Got it
-    + Okay
     - "My partner and I have been fighting a lot lately. We just can't seem to agree on anything—chores, money, or how we spend our time." 
     
     + Next
@@ -241,7 +240,7 @@ Okay, no worries. Do you want to chat to one of my friends?
                         "I think I'll make a list of all our chores, bills, and activities so that my partner and I can split them 50-50." 
                         How would you respond?
                         1) What a great idea! Let me know how it goes.
-                        2) Your partner will probably just ignore your list.
+                        2) Your partner might not like that.
                         3) Can we talk about me yet?
                             + 1
                             This response makes me feel good about my decision and happy that you care so much about me that you want to hear more later.
@@ -345,7 +344,7 @@ Okay, no worries. Do you want to chat to one of my friends?
     Since your stressor was related to {stressCategory}, we will start with an example related to that. In the future we will revise other scenarios related to relationships, family, or health. // these words need to be populated base on the remaining categories from (work, relationships, family, health, school)
     -> continue
 = otherTimes    
-    This time we will revise a case realted to health.
+    This time we will revise a case related to {stressCategory}.
     -> continue
 
 = continue
