@@ -1,6 +1,7 @@
 
 
 // Edits Summary
+// DD 10/15/2021 Incorporated Federica's review
 // DD 10/14/2021 Incorporated Robert's review suggestions
 // DD 10/13/2021 Incorporated Marco's review suggestions
 // DD 10/11/2021 Finished first draft of Treat with 3 different sessions and small edits
@@ -60,32 +61,18 @@ Hi {username}, I’m Treat. I help people learn how to best respond when they ha
     Now that you have an idea of what emotion you are feeling I want you to spend a minute or two thinking about how you typically react when you feel this way.
 
     It can be good to write this down on a piece of paper if you have time.  What are the thoughts that you think about yourself?  What is the tone or emotion behind those thoughts? 
-    
-    //FV: I would put the "I'm ready" button first for those who are following the exercise smoothly. Then as a second option I would give the "That's a lot" option for those who might be overwhelmed with the questions.
-    // Then, for those who pressed "That's a lot", after your explanation, I would provide two options: "I'm ready" and "I'm stuck". 
-    // It would be something like this:
-        // +I'm ready
-        //         ->VisualizeFriendResponse
-        //  +That's a lot     
-                //   It can really help to write down your thoughts about yourself and the tone or emotion of those thoughts. We will work with this in next steps. 
-                // -
-            // + I see   
-                    // This part can feel a bit tough but it really helps in the end. 
-        // +I'm ready
-                // ->VisualizeFriendResponse
-        //I'm stuck 
-                // ->HelpWithVisualization
-  
-    
-    +That's a lot     
-        It is so it can help to write down your thoughts about yourself and the tone or emotion of those thoughts. 
-        // FV: It can really help to write down your thoughts about yourself and the tone or emotion of those thoughts. We will work with this in next steps. 
-    -
-    + I see   
-        This part can be a bit tough but it really helps in the end. 
-    -
+
     +I'm ready
         ->VisualizeFriendResponse
+    +That's a lot     
+        It can really help to write down your thoughts about yourself and the tone or emotion of those thoughts. We will work with this in next steps.  
+        
+        This part can be a bit tough but it really helps in the end. 
+        
+    -
+    + Keep going.
+        
+            ->VisualizeFriendResponse
     +I'm stuck
         ->HelpWithVisualization
 
@@ -113,9 +100,7 @@ Hi {username}, I’m Treat. I help people learn how to best respond when they ha
     +No emotions
         ->NoEmotion
     +Not sure which emotion
-        Connect user to an inkling that helps identifying emotions 
-           // RG: or if not available, just a random one.
-           //FV: Emoti bot will be focused on helping identify what you are feeling, so this would be a good connection. 
+        Connect user to an inkling that helps identifying emotions (Emoti) 
      
         ->END
 
@@ -123,9 +108,7 @@ Hi {username}, I’m Treat. I help people learn how to best respond when they ha
 
 
 ==== VisualizeFriendResponse ====
-    Okay great job.  The next step is to do the same thing but imagine a good friend is in the same situation and feeling the way you are right now.  How would you respond to your friend?  What would you say to them?  What would the tone be? 
-    // FV: do the "same thing" might confuse...more so if they get here through the path of "helpwithvisualization". 
-    // An option could be: Okay great job.  The next step is imagine a good friend is in the same situation and feeling the way you are right now.  How would you respond to your friend?  What would you say to them?  What would the tone be? 
+    Okay great job.  The next step is imagine a good friend is in the same situation and feeling the way you are right now.  How would you respond to your friend?  What would you say to them?  What would the tone be?
 
     Spend a minute jotting down the things you would say and the tone.
 
@@ -182,8 +165,10 @@ FEEDBACK __________
         + I'm harder on myself
             Nice job noticing that difference! It can be helpful to think about why that might be.  We often hold ourselves to higher standards than we do others.  
             
-            //FV: I think closing with this might leave the user thinking "yeah, I hold myself to higher standards... and what do I do with that?"
-            // An option could be: Nice job noticing that difference! We tend to be too hard on ourselves. Now you can practice telling yourself those same things you would tell your friend. We can learn to treat ourselves more kindly and with more comprehension. 
+        -
+        
+        + Okay - now what?
+            Good question.  It isn't always easy but you can now practice telling yourself those same things you would tell your friend. We can learn to treat ourselves more kindly and with more comprehension. 
             
             ->EndSessionOne
             
@@ -199,15 +184,14 @@ FEEDBACK __________
 
     Let me see if I can help with this step.  There are a few ways people get tripped up doing this. 
 
-    One common experience is that people have a hard time being as kind or generous towards themselves as they would to a friend. 
+    One common experience is that people have a hard time being as kind or generous towards themselves as they would to a friend and so even though I'm asking to imagine what you would say to a friend you might still be stuck thinking of yourself in the situation. 
+    + Yes that's right
+        This is pretty common.  Just remember this is a skill that takes time to develop.  Do your best to stretch yourself to bring a slightly more kind view of your situation and feelings.  This part is meant to be a bit challenging because were growing a new more generous perspective of ourselves.
+        
+    + Hard for another reason
     
-    If this is true for you then remember this is a skill that takes time to develop.  Do your best to stretch yourself to bring a slightly more kind view of your situation and feelings.
     
-      //FV: people who get here are getting stuck in the exercise of imagining what they would say to a friend in this situation. We haven't yet given them the instruction to apply it to themselves. I would focus here more in the part below of "if you dont have any close friends" or giving them ideas to step away fruther from the situation and imagine someone else there. Maybe: "you can practice telling the story with different names and giving your role to someone you love"... 
-    
-    + Wow, it's hard.
-    
-        Indeed... it can be hard if right now you don't have any close friends in your life.  One way to get around this is to imagine responding to a friend you were close to in the past, or how you would respond to a friend if you were close to them now.
+        Another way people struggle is if right now you don't have any close friends in your life.  One way to get around this is to imagine responding to a friend you were close to in the past, or how you would respond to a friend if you were close to them now.
     -
     
     I hope this helps!
@@ -290,7 +274,8 @@ Can you let me know what went wrong?
         Okay - thanks for the feedback.  Some of my human friends will take a look so I can learn from this!
         Let's jump into a new exercise now.
         ->IdentifyTrigger
-    //FV: I would add here an option to move to another bot. 
+    +Something else
+        ->FindNewBot
     -> END
 
 ->END
@@ -314,8 +299,7 @@ Would you like to try the exercise from last session again with this idea in min
 
 === IdentifyTrigger ===
 
-For this short session I want to help you identify triggers for the most common difficult emotions that come up for you.
-    //FV: instead of triggers, could we start to call them clues from here? 
+For this short session I want to help you identify clues for the most common difficult emotions that come up for you.
     
 To start, take a minute to reflect on a common stress or difficult emotion that comes up for you.  It might be the same stress or emotion that came up in our first session together.
     
@@ -339,9 +323,7 @@ Once you have an idea of a consistent behavior or feeling this will be your *clu
 
 === SelfTalkForCue ===
 
-The final step is to come up with a small behavior you can take when you become aware you are feeling the stress or emotion.
-//Fv: Would mention the clue here as well. 
-//It would look something like this: The final step is to come up with a small behavior you can take when you become aware your clue has comes up, which means you are feeling the stress or emotion. 
+The final step is to come up with a small behavior you can take when you become aware your clue has comes up, which means you are feeling the stress or emotion.
     
 A good place to start is to think of a sentence you can say to yourself.  This sentence can come from the work you did in our first session.  What would you say to a good friend who was feeling this way that would help reassure them and give them a bit of confidence that they can handle it?
     
@@ -370,31 +352,21 @@ Best of luck and I can't wait to hear how it goes next time we talk.
 
 === FinalPlanForTrigger ===
 
-Great job.  Now the next part seems simple but can be a bit tricky.  For the next week or until the next time we talk, try to say this sentence/phrase to yourself in your mind when you notice the emotion or stress is present for you.  
-//FV: can we use the word clue here again? 
+Great job.  Now the next part seems simple but can be a bit tricky.  For the next week or until the next time we talk, try to say this sentence/phrase to yourself in your mind when you notice the clue. 
 
-//Fv: Great job.  Now the next part seems simple but can be a bit tricky.  For the next week or until the next time we talk, try to say this sentence/phrase to yourself in your mind when you notice the clue. 
+
++Sounds good    
+
+    So, remeber the 1st step is to become aware of the clue you discovered, which signals the emotion or stress is here.
+
+    The 2nd step is to say softly to yourself - in the tone that you would speak to a friend with - the phrase you just came up with.
     
-//add a button here: "Sounds good"
+-
 
-    // and next you can resume it in steps. 
-
-    // So, remeber the 1st step is to become aware of the clue you discovered, whic signals the emotion or stress are here.
-
-    // The 2nd step is to say softly to yourself - in the tone that you would speak to a friend with - the phrase you just came up with.
-    
-
-The first task is to become aware of the emotion which is why you identified the clue to the stress or emotion you feel earlier in this session.
-    
-    The second part is to say softly to yourself - in the tone that you would speak to a friend with - the phrase you just came up with.
-
-    
-    Give it a try!
+Give it a try this week!
     
     +Sounds like a plan!
         ->EndSessionTwo
-    +Something else
-        ->FindNewBot
 
 ->END
 
@@ -434,7 +406,8 @@ Can you let me know what went wrong?
         Okay - thanks for the feedback.  Some of my human friends will take a look so I can learn from this!
         Lets jump into a new exercise now.
         ->Session3
-    //FV: I would add here an option to move to another bot. 
+    +Something else
+        ->FindNewBot
     -> END
 
 ->END
