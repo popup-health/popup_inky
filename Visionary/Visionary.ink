@@ -38,7 +38,7 @@ I know it sounds a bit counter-intuitive, but it can really work if you commit t
     Remember - we will start slow, aiming for imagining just enough details to just raise your stress above your current level.
         ~ vividThreshold = 3
         -> Imagery 
-  + Already very stressed
+  + Already too stressed
     - Ok. Take a minute to recount or imagine the possible consequences of this stressful situation with as enough detail. Let me know when you are done.
     + Done
         - How vividly did you imagine this situation? - Use 0 for not vivid at all, and 10 for extremely vivid
@@ -162,7 +162,7 @@ Let’s take 5 deep breaths or more. You can follow the pace of the image here, 
               Do you want to try another relaxation technique guided by one of my friends?
                   + Yes, please
                         -> New_bot 
-                  + No, let's just finish
+                  + Let’s just finish
                     Sorry it has not worked out today.
                         -> Final_Nugget
 
@@ -210,7 +210,7 @@ Try to practice imagery exposure a couple of times a day, especially as a way to
         Alright.
         Remember, the idea is to use mental imagery to first raise your stress, to then learn to relax, and ultimately conquer it.
             -> pickLevel 
-      + No, another technique
+      + No, a new technique
             -> New_bot 
 
     =pickLevel
@@ -283,7 +283,7 @@ To increase the vividness of the image, I will ask you a few questions to guide 
         -> Second_visit.Guide
   + negative
 # IMAGE: Visionary_start.png
-    Hmmm... I know last time was not optimal. Imagery exposure can be a powerful way to help habituate yourrself to stressful situations, but I agree that sometimes it can be hard to handle.
+    Hmmm... I know last time was not optimal. Imagery exposure can be a powerful way to help habituate yourself to stressful situations, but I agree that sometimes it can be hard to handle.
     Do you want to aim for a low or high level of vividness?
         -> pickLevel
     

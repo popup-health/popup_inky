@@ -76,7 +76,7 @@ I can show you how to do it. Are you ready?
       + Okay, I'm done
         {Good|Cool|Nice}
             -> Strength_used_in_the_future
-      + Need a few more examples
+      + I need more samples 
             -> theseAreSomeSamp 
 
     = theseAreSomeSamp
@@ -231,7 +231,7 @@ Just remember that with some practice, capitalizing on your strengths could beco
             -> First_Session.Scheduling_Reminder
       + Can't think about it now
             -> itsOkayMaybeItll 
-      + More examples, please
+      + More samples, please
             -> sureHereAreSomeM 
     
     = itsOkayMaybeItll
@@ -270,7 +270,7 @@ Just remember that with some practice, capitalizing on your strengths could beco
     That’s impressive. So let’s add persistence and stick-to-it-iveness to your list of strengths and give this another go.
       + Sounds good!
             -> whatAspectsOfCap 
-      + No, another technique
+      + No, a new technique
             -> Random_bot_selector 
 
     = whatAspectsOfCap
@@ -299,7 +299,7 @@ Just remember that with some practice, capitalizing on your strengths could beco
     
     = Third_Session_after_positive
     # IMAGE: Hero.png
-    You’re back! That’s impressive. To start, let’s add stick-to-it-iveness to your list of strengths ;)
+    You’re back! That’s impressive. Obviously we should add stick-to-it-iveness to your list of strengths ;)
     //system checks if last time user didn't find a strength 
       + IF findStrength == TRUE
             -> doYouWantARefres 
@@ -337,7 +337,7 @@ Just remember that with some practice, capitalizing on your strengths could beco
 
     = ifYouWantYouCanS
     If you want, you can share your strength so I can remind you in the future.
-      + I don't want to share
+      + Don't want to share
         No problem, perhaps you can come back to chatting with me about strengths in the future.
       + User enters new strength here
         ~ userStrengthVar = "I am a visionary"

@@ -47,7 +47,7 @@ I'm great at helping people find the silver lining of experiences and situations
         <em>"I don't like how my boss treats me" >> "At least I have a stable job during this pandemic"
     + No, I'm fine.
         {Great!|Good!}
-      - Once you thiink of a positive aspect, feel free to share if you want.
+      - Once you think of a positive aspect, feel free to share if you want.
       + Don't want to share
         {No problem|That is fine} I am glad you found a positive aspect. Let's keep moving.
             -> Second_positive_aspect
@@ -167,7 +167,7 @@ Thanks for chatting with me, {userName}. I hope this technique worked for you.
         + User enter positive aspect here:
           ~ positiveIdea = "we have a very nice team of collaborators" //append to list of positive aspect with timestamp
           <em>{positiveIdea}
-          {Great|Good|Glad} to seee that you are getting better at finding a positive spin for your stressful situations!
+          {Great|Good|Glad} to see that you are getting better at finding a positive spin for your stressful situations!
           - -> Final_reassurance
 
     = positive_no_idea
