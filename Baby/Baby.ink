@@ -1,5 +1,4 @@
 
-LOCKED by RobertG at 5:50pm PDT on 10142021
 
 // ---- PopBot: BABY .. was ANdale  Reflecting on Progress VERSION 2 ----
 // Converted from original inklewriter URL:
@@ -40,15 +39,15 @@ VAR nextBabySteps = "Keeping my grades up"
 
 
 ==== First_Session ====
-//MV - changed the infant sentence, though it sounded bit strange
-//MV - adapted last sentence to lead better into choice
+//MV - changed the infant sentence, though it sounded bit strange RG: THX.
+//MV - adapted last sentence to lead better into choice RG: THX
 Hi, {userName}, I’m called Baby. Why, you ask? Well, because I’m an expert on setting goals and making progress on those goals... and that means taking baby steps! 
 Sometimes it can be a bit tricky to set a goal that is easy to work on. It helps to understand some basic principles. 
 Would you like to know more or go ahead and try?
   + Please share!
   Happy to!
         -> Goal_explanation 
-  + No, I'm ready to try.
+  + I'm ready to try.
   Let's do it! <>
         -> First_goal_setting_practice 
 
@@ -100,12 +99,48 @@ OK!  Now, take a minute to think of one step or action you took to reach this go
 ==== Goal_explanation ====
 //MV shortened slightly
 //DD I think it can really help to give examples of each aspect of SMART, also should add specific to this.  
-//  A goal should be specific so instead of saying 'I want to be healthy' you might say 'I want to workout 4 days a week'
-A well-defined goal reflects your values and is important to you.  It should be measurable, able to be broken down into smaller pieces or sub-goals, and be something that you can put a timeframe on.  
+//  A goal should be specific so instead of saying 'I want to be healthy' you might say 'I want to workout 4 days a week' RG: DONE, THX, This really makes a difference
+A well-defined goal reflects your values and is important to you. Actually, there's a term called SMART which really captures it.  I will break it down...into baby steps!  
+
+S = specific
+M = measurable
+A = attainable
+R = relevant
+T = time-bound
+
+    + Tell me more
+    -> smartDefinitions1
+
   + OK, I have one.
         -> First_goal 
   + I can’t think of one
         -> First_goal_setting_practice.thereAreLotsOfDi 
+
+= smartDefinitions1
+Specific means that instead of saying, "I want to be healthy" you could say, "I want to workout 4 days a week."
+
+Measurable means that instead of saying "I want to lose weight" you could say, "I want to lose 10 pounds."
+
+Attainable means that you have a good sense of how you will do it.  So for losing 10 pounds, you have to know that the ways you'll do it are things you can do.
+    + Got it. and R and T?
+        -> smartDefinitions2
+        
+= smartDefinitions2
+Of course.
+
+Relevant goals (or relevant steps) support your bigger dreams or goals.  So a relevant step for being healthy is losing weight, but it's likely that going for a daily pleasure drive is not a relevant step for either losing weight or being healthy.
+
+Finally, being Time-bound is critical. Set a goal or a baby step that has a reasonable time-limit.  So beyond just saying "I want to lose 10 pounds" you might say "I want to lose 10 pounds in two months."  
+    
+    +Smart!
+    Exactly! 
+        -> doYouHaveFirst_goal
+
+=doYouHaveFirst_goal
+So, now do you think you have a first goal?
+    +Yes
+        -> First_goal_setting_practice.greatDoYouWantTo
+
 
 ==== Random_bot_selection ====
 random selection of another bot
@@ -130,7 +165,7 @@ OK, keep it in mind as you think of one step or action you took to reach this go
     -> seeIfYouCanThink
 
 = seeIfYouCanThink
-//rephrased to make more active and reduce the "has been shown to" research angle.
+//rephrased to make more active and reduce the "has been shown to" research angle. RG: thx
 Actually, did you know that even just identifying your goal -- like we did just now -- can help us to achieve it more easily?
     + Like a baby step!
     Exactly! Identifying a goal is a baby step.
@@ -166,21 +201,44 @@ _ insert variable BabyStepsExample
 {firstBabySteps}
   + Got it
         -> nextSeeIfYouCanI 
-  + I can't think of anything
+  + Can't think of one
         -> dontWorryAboutIt1 
 
 = dontWorryAboutIt1
 //MV - seems to end a bit abruptly. Should we lead into talking to another bot, or coming back?
-Don't worry about it.  It could pop up in your mind later.
+Don't worry about it.  It could pop up in your mind later. It can be helpful to jot down possibilities and come back to them later.
     -> END
 
 ==== Next_steps ====
 Looking forward, can you identify one baby step you can take in the next few days to get even slightly closer to your goal?
   + Yes, got it.
         -> greatThatsItForT 
-  + Such as...?  
-  //DD this part of the flow doesn't make sense to me.  It goes into showing 'taking the SAT' and then goes to nice job...  
-        -> babySteps 
+  + Not yet.  
+  //DD this part of the flow doesn't make sense to me.  It goes into showing 'taking the SAT' and then goes to nice job...  RG:  the SAT comes from a VAR as the next one they might take for "getting into college".  I added more details in the nice job stitch (or knot)  I intend to personlize it more in the next revision so it isn't as un-personalized in the reflection, but right now don't know how to do that in the deadline.
+        -> noNextBabyStep
+        
+= noNextBabyStep
+That's really ok, sometimes we need to have some time to reflect on the best course of action.  But no matter what, you are now on your way.
+    -> noNextBabySteprecap
+    
+= noNextBabySteprecap
+So let's pause and reflect on this progress.
+
+1. You learned about setting SMART goals.
+2. You explored your own goals and baby steps you may have taken.
+3. You considered the next baby steps.
+
+Even though you didn't necessarily get all the answers you wanted now, I hope this is a framework you can use for yourself.
+//MV - should we say "when" instead of "if"? Like we expect them to come back? RG: DONE
+When you come back and see me, we’ll talk about how this next baby step went. Really interested to hear how things will go!
+  + Bye!
+  See you!
+        -> endFirstSession 
+
+= endFirstSession
+//go to farewell
+    -> END
+    
 
 = greatThatsItForT
 Great, those are excellent baby steps you've taken today.  So just take a moment to give yourself a little pat on the back for doing this exercise. You've started, and that's often the hardest part.
@@ -193,15 +251,19 @@ Great, those are excellent baby steps you've taken today.  So just take a moment
 
 = niceJobIfYouCome
 Nice job! That's your second baby step just in this little chat!  So let's pause and reflect on this progress.
-//MV - should we say "when" instead of "if"? Like we expect them to come back?
-when you come back and see me, we’ll talk about how this next baby step went. Really interested to hear how things will go!
+
+1. You learned about setting SMART goals.
+2. You explored your own goals and baby steps you may have taken.
+3. You considered the next baby steps.
+
+Even if you didn't quite get all the answers, I hope this is a framework you can use for yourself.
+//MV - should we say "when" instead of "if"? Like we expect them to come back? RG: DONE
+When you come back and see me, we’ll talk about how this next baby step went. Really interested to hear how things will go!
   + Bye!
   See you!
         -> endFirstSession 
 
-= endFirstSession
-//go to farewell
-    -> END
+
     
 ==== Second_Session ====
 //system checks if first session engagement were positive/neutral *or* negative
@@ -228,16 +290,18 @@ Excellent. So, what did it feel like to take this baby step?
     + It felt OK
         -> itFeltOk
     + It was hard
-    //add some reassurance here and in not sure yet before jumping to itfeltok
+    //add some reassurance here and in not sure yet before jumping to itfeltok  RG got it.
         -> itFeltOk
     + Not sure yet.
-    Sometimes it takes time.
+    Sometimes it takes a little time to know.
         -> itFeltOk
 
 = itFeltOk 
 //MV - shortened choice to 20 chars
-//DD Think back to any hesitation or avoidance you had about the overall goal.  Was this small step as difficult as you anticipated?  When we break down a larger goal into baby steps it's a lot easier to progress forward.
-Think back to any hesitation or avoidance you had about the overall goal.  Was this small step as difficult as you anticipated?  When we break down a larger goal into baby steps it's a lot easier to progress forward.
+//DD Think back to any hesitation or avoidance you had about the overall goal.  Was this small step as difficult as you anticipated?  When we break down a larger goal into baby steps it's a lot easier to progress forward. RG: DONE
+Think back to any hesitation or avoidance you had about the overall goal.  Was this small step as difficult as you anticipated?  Did it meet the SMART framework?
+
+When we break down a larger goal into baby steps it's a lot easier to move forward.
     + OK, I'm ready.
         -> okImReady
     + Examples, please.
@@ -245,7 +309,7 @@ Think back to any hesitation or avoidance you had about the overall goal.  Was t
         
 = findnextBabySteps
 //MV - I am unsure how this will work? Do we just provide them with random examples that may have nothing to do with the goal they entered? 
-//DD Similar comment to MV.  We could give examples from beginning to end.  So start with a goal, reframe the goal so it follows SMART, and then break it down into baby steps.  If we this for each of the main domains (relationship, work, etc) and the user can select based on domain I think that would be a helpful branch to have available.
+//DD Similar comment to MV.  We could give examples from beginning to end.  So start with a goal, reframe the goal so it follows SMART, and then break it down into baby steps.  If we this for each of the main domains (relationship, work, etc) and the user can select based on domain I think that would be a helpful branch to have available.  RG: this is a great idea but that might be too much for now. I also am concerned about sections that are too long/wordy. but perhaps loop back to SMART definitions. will try that first.
 {nextBabySteps}
     +OK that helped.
         -> okImReady        
@@ -271,10 +335,18 @@ OK, tomorrow or next week? (initiate text entry process)
 ====SecondSessionReflectingonNoAction====
 
 = reflectingOnNoAction
-    OK, no worries.  Busy schedules and full brains can make it tough to do all the things we want to do.
+OK, no worries.  Busy schedules and full brains can make it tough to do all the things we want to do.
     
-    Take a minute to think about how you'll make sure you take that one baby step. We can explore it next time we chat.
-    //When we don't take the step we intended to it is really important to reflect on what got in the way.  Did you forget about it?  Then this time lets get the action into our calendar.  Did you decide not to do it when the time came because it felt too stressful?  Then maybe talk to my friend puffy about learning some breathing tricks to help ease that stress as you approach the step.  Maybe you have another insight into what got in the way.  Whatever happened think about some small actions you can take to help yourself solve the obstacle and take this small step!  In doing this you are actually taking a very important baby step towards achieving your goal.  Sometimes you have to clear away the brush on a trail before you can start your walk.
+When we don't take the step we intended to it is really important to reflect on what got in the way.  
+
+Did you forget about it?  Then this time lets get the action into our calendar.  
+
+Did you decide not to do it when the time came because it felt too stressful?
+
+Something else?
+    
+Take a minute to think about how you'll make sure you take that one baby step. We can explore it next time we chat.
+    //When we don't take the step we intended to it is really important to reflect on what got in the way.  Did you forget about it?  Then this time lets get the action into our calendar.  Did you decide not to do it when the time came because it felt too stressful?  Then maybe talk to my friend puffy about learning some breathing tricks to help ease that stress as you approach the step.  Maybe you have another insight into what got in the way.  Whatever happened think about some small actions you can take to help yourself solve the obstacle and take this small step!  In doing this you are actually taking a very important baby step towards achieving your goal.  Sometimes you have to clear away the brush on a trail before you can start your walk.  RG: used some of this.
         +OK, I am ready.
             -> okImReady
             
@@ -410,7 +482,7 @@ That's right.
     
 = longTermReflection1
 //MV - complex sentence, had to read a few times.
-We can also reflect over longer timeframes. For example, we can see if there are patterns about how we've approached the whole process of setting goals.  
+We can also reflect over longer timeframes. 
 
 Having some distance from experiences lets us reflect on them without emotions that could otherwise cloud a person's judgement.
     + How do I do this?

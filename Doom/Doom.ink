@@ -33,6 +33,7 @@ VAR fearSolutionPast = "I can at least make a first pass at the paper"
 
 
 ==== First_visit ====
+# IMAGE: Doom.png
 Hi {userName}, my name is Doom. Let me tell you a bit about myself.
 My favourite thing? Worst-case scenarios! 
 I use them to help people realize that what they worry about may not be as bad as they think.
@@ -130,6 +131,7 @@ I use them to help people realize that what they worry about may not be as bad a
 //*******************************************************//
 
 ==== Reassurance ====
+# IMAGE: Doom.png    
     {You cannot control everything|Not everything is under your control}, but remember: worries are just things that "may happen".
     You can use them to prepare and be ready to deal with upcoming challenges.
     Thanks for chatting with me, {userName}. I hope this worst case scenario technique helped a little.
@@ -148,10 +150,12 @@ I use them to help people realize that what they worry about may not be as bad a
   ~ fearSolutionPast = "I can at least make a first pass at the paper"
   
   + past engagement positive/neutral
+# IMAGE: Doom.png
     Good to see you again. I hope you were able to use our powers of fear reduction last time!
     Let's practice this again!
         -> checkPastSolution
   + past engagement negative
+# IMAGE: Doom.png    
     Even though last time wasn't ideal, I am confident that I can help you reduce your fears. 
         -> doYouWantToTryAg
 
@@ -203,13 +207,15 @@ I use them to help people realize that what they worry about may not be as bad a
   ~ stressor = "fail find good talent"
   ~ stressorPast = "Not finding enough funding for my company"
 
-  + past engagement was positive/neutral
+  + past engagement positive/neutral
         -> youAreBecomingAn 
-  + past engagement was negative
+  + past engagement negative
+# IMAGE: Doom.png
     So you're last visit was maybe not ideal, but we are making progress towards controlling worst case scenarios. I'd say we keep at it!
         -> Second_visit.doYouWantToTryAg
 
     = youAreBecomingAn
+# IMAGE: Doom.png
     You are becoming an expert at eliminating worst case scenarios! 
     Do you want me to guide you through the technique again, or do you feel you can do it by yourself?
       + Guide me

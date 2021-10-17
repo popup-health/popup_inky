@@ -28,10 +28,8 @@ VAR vividThreshold = 3
 //**************************************************//
 
 
-//FV: I feel we should handle this intervention with more care, because for some users imagining the stressful sitaution as vividly as possible by themselves can be just too much. We could explore going up in increments, imagining a stressful situation up to a level 3 and then breath, calm yourself. Return to it and try it more vividly each time but with the sfatey that you know how to return to your breath and to center. Another option is to use the "questions for vividness" earlier, since they are helping untangle the stressful situation and lessen it by the questions of how probable it could actually happen and what could you do to handle it. 
-
 ==== First_visit ====
-//image of bot here
+# IMAGE: Visionary_start.png
 {userName}, my name is Visionary. I can teach you techniques to face your fears and help you find relief from them. 
 To make this technique work, you must first raise your stress by "imagining" your stressor, then learn how to control it by breathing.
 The idea is to help you "habituate" to a stressful situation. This doesn't mean the issue will disappear, but you can be more effective in dealing with it, and have tools at hand to manage it if it comes back.
@@ -175,6 +173,7 @@ Just remember, I know it is hard to face our fears, but combining vivid imagery 
     -> END
 
 ==== Final_Nugget ====
+#IMAGE: Visionary_end.png
 Imagery exercises can help reduce the upcoming stress by "habituating" to it if you are able to do them as vividly as possible.
 Try to practice imagery exposure a couple of times a day, especially as a way to reduce the fear of a potentially future stressful situation.
 //go to farewell module
@@ -188,9 +187,11 @@ Try to practice imagery exposure a couple of times a day, especially as a way to
 ==== Second_visit ====
 //system check for engagement
   + positive/neutral
+# IMAGE: Visionary_start.png
     Great to see you again! Let's practice again making imagery as vivid as possible.
         -> Guide
   + negative
+# IMAGE: Visionary_start.png
     Perhaps last time it was not easy to imagine future fears vividly, or to control them afterwards.
         -> Imagining
     
@@ -276,10 +277,12 @@ To increase the vividness of the image, I will ask you a few questions to guide 
 ==== Third_visit ====
 //system checks for past engagement
   + positive/neutral
+# IMAGE: Visionary_start.png
     Glad to see you again! You are getting quite good at imagining, habituating to, and ultimately defeating your fears!
         ~ vividThreshold = 6
         -> Second_visit.Guide
   + negative
+# IMAGE: Visionary_start.png
     Hmmm... I know last time was not optimal. Imagery exposure can be a powerful way to help habituate yourrself to stressful situations, but I agree that sometimes it can be hard to handle.
     Do you want to aim for a low or high level of vividness?
         -> pickLevel
