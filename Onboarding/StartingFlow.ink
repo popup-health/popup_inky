@@ -2,7 +2,7 @@ INCLUDE onboardingv4.ink
 INCLUDE StressID
 INCLUDE farewell.ink
 
-
+//BLOCKED MIRANDA
 
 VAR username = "Miranda"
 VAR stressLevel = 0
