@@ -27,7 +27,7 @@ VAR visit = 1
 ~ visit = 1
 .
 Hi {userName}, my name is Earful. I help people become active listeners. We're going to practice active listening through a role play activity. 
-Active listening is a great tool that helps both parties, the person speaking feels understood and cared for, while the person listening and providing empathetic feedback feels more relaxed and content.
+Active listening is a great tool that helps both parties, the person speaking feels understood and cared for, while the person listening and providing empathetic feedback feels more relaxed and content. //PP: Tchiki - can we say why people listening get more relaxed?, is there some science behind it?
     + Alright.
 - I'll tell you about a challenge I'm having and you're job will be to listen activley. Through the exercise you will learn about the three parts of active listening: 
 1) getting yourself ready to listen, 
@@ -48,8 +48,19 @@ Active listening is a great tool that helps both parties, the person speaking fe
 Hi {userName}, last time we chatted, you practiced active listening as I explained a challenge I was going through, and we practice the three steps: 
 1) being ready to listen, 
 2) listen and clarify, 
-3) acknowlegement of the person's feelings and abilities to deal with the issue. Are you in a mental space to be able to listen some more?
--> listening
+3) acknowlegement of the person's feelings and abilities to deal with the issue
+//PP: Tchiki check this section below, edit as you see fit.
++ Sounds good 
+  - But before we move on, can you share if you had the chance to practice what you learned last session in real life?
+    + I didn't practice
+      No problem, you will have time to practice now with me.
+    + Didn't have a chance
+      No problem, you will have a chance to practice again with me.
+    + I practiced a lot
+      Great, practice makes perfect!. let's try a new scenario today.
+      - + Ok
+         So, are you in a mental space to be able to listen some more?
+        -> listening
 
 //****************************************************//
 
@@ -130,7 +141,7 @@ Okay, no worries. Do you want to chat to one of my friends?
     Since your stressor was related to {stressCategory}, we will start with an example related to that. In the future we will revise other scenarios related to relationships, work, school, or health. // these words need to be populated base on the remaining categories from (work, relationships, family, health, school)
     -> continue
 = otherTimes    
-    This time we will revise a case realted to {stressCategory}.
+    This time we will revise a case related to {stressCategory}.
     -> continue
 
 = continue
@@ -157,29 +168,30 @@ Okay, no worries. Do you want to chat to one of my friends?
                 2) Can you say more about what is confusing and how I can support you?   
                 3) I don’t get why this is so hard for you. It's your life so do what you want.
                     + 1
-                        A common mistake when listening is to downplay the other person's experience or talk about ourselves. A better way to make the other person feel heard is to acknowledge and accept thier feelings.
+                        A common mistake when listening is to downplay the other person's experience or talk about ourselves. A better way to make the other person feel heard is to acknowledge and accept their feelings.
                     + 2
                         What a helpful response! You're making me feel very comfortable talking to you. You clearly show a desire to listen and clarify.
                     + 3
-                        It's not always easy to understand where the other person is coming from. But when we dismiss thier emotions we can hurt our relationship with them. Even if it's difficult, try to see the situation from thier point of view and listen compassionately.
+                        It's not always easy to understand where the other person is coming from. But when we dismiss their emotions we can hurt our relationship with them. Even if it's difficult, try to see the situation from their point of view and listen compassionately.
                     -   + I see
-                        - When listening actively, it's key to give your full attention to the other person and really show that you care about thier feelings and point of view. // we are teaching: acknowledgement
+                        - When listening actively, it's key to give your full attention to the other person and really show that you care about their feelings and point of view. // we are teaching: acknowledgement
                         + That makes sense
                         - Let’s continue. 
                         "I'm going to talk the my family this week. What do you think I should say?" 
                         How would you respond?
                         1) Tell them you're quiting medical school and there is nothing they can do about it.
-                        2) I don't know what to say.
-                        3) If you tell them how you feel and why this is important to you, they'll have to accept it in time.
+                        2) If you tell them how you feel and why this is important to you, they'll have to accept it in time.
+                        3) I don't know what to say.
                             + 1
                             This might be good advice for one person and not for another. So rather than giving advice, it's usually best to help the speaker think through which actions that are best for them.
                             + 2
-                            You might not know, and that's fine. But you can still show me that you care by telling me you're confident in my ability to do what's best for me.
+                             Great. You nailed the third step: acknowledging my position. This response helps me feel confident in my ability to do what's best for me.  
                             + 3
-                            Great. You nailed the third step: acknowledging my position. This response helps me feel confident in my ability to do what's best for me.  
+                            You might not know, and that's fine. But you can still show me that you care by telling me you're confident in my ability to do what's best for me.
                             -   + Sure thing!
-                                - Thank you for listening and helping me think through this challenge. I really felt heard and understood.
+                                - Thank you for listening and helping me think through this challenge. I really felt heard and understood. //PP: Tchiki, we need different endings for all the different scenarios I mentioned in my note on slack: 1) great job, 2) one miss, 3) two or more misses. Don't worry about the logic, just mark them, and I will write the logic later.
                                 - + You're welcome
+                                    Finally, think how you would use this in your life, practice what you learned with others throughout the day.//PP: Tchiki, see if this goes well here, or perhaps blended with the last sentence.
                                 //go to Farewell module
                                 -> END
 
@@ -196,7 +208,7 @@ Okay, no worries. Do you want to chat to one of my friends?
     Since your stressor was related to {stressCategory} or relationship issues, we will start with an example related to that. In the future we will revise converesations in other settings such as family, work, school, or health. // these words need to be populated base on the remaining categories from (work, relationships, family, health, school)
     -> continue
 = otherTimes    
-    This time we will revise a case realted to {stressCategory}.
+    This time we will revise a case related to {stressCategory}.
     -> continue
 
 = continue
@@ -232,16 +244,16 @@ Okay, no worries. Do you want to chat to one of my friends?
                     + 2
                          I've just been vulnerable by sharing something difficult with you and this response can make me feel like you're not on my side. So be careful not to tell me that my thoughts, emotions, or actions are bad.
                     + 3
-                        Be careful not to give advice, espessially advice that goes against what I've already decided is right for me. This can make me feel like you're not listening or don't care about my point of view.
+                        Be careful not to give advice, especially advice that goes against what I've already decided is right for me. This can make me feel like you're not listening or don't care about my point of view.
                     -   + I see
-                        - Effective listening invovles helping the other person make thier own decisions rather than giving them advice. You can do this by asking questions and helping them self-reflect.   // we are teaching:
+                        - Effective listening invovles helping the other person make their own decisions rather than giving them advice. You can do this by asking questions and helping them self-reflect.   // we are teaching:
                         + That makes sense
                         - Let’s continue. 
                         "I think I'll make a list of all our chores, bills, and activities so that my partner and I can split them 50-50." 
                         How would you respond?
                         1) What a great idea! Let me know how it goes.
                         2) Your partner might not like that.
-                        3) Can we talk about me yet?
+                        3) Can we talk about me yet? //PP: Tchiki let's make this more subtle, so people think more about it.
                             + 1
                             This response makes me feel good about my decision and happy that you care so much about me that you want to hear more later.
                             
@@ -268,7 +280,7 @@ Okay, no worries. Do you want to chat to one of my friends?
     Since your stressor was related to health, fatigue or physical pain issues, we will start with an example related to that. In the future we will revise conversations related to work, relationships, school, or family issues. // these words need to be populated base on the remaining categories from (work, relationships, family, health, school)
     -> continue
 = otherTimes    
-    This time we will revise a case realted to health.
+    This time we will revise a case related to health.
     -> continue
 
 = continue
@@ -298,16 +310,16 @@ Okay, no worries. Do you want to chat to one of my friends?
                 + Next
                 - What would you say?️ //we are teaching
                 1) Don't feel hopeless. I believe that there is always hope.  
-                2) Wow, that's terrible. I can see why you're feeling anxious and frustrated. Is there anything I can do to help?
+                2) I can see why you're feeling anxious and frustrated. Is there anything I can do to help?
                 3) I totally understand. My health is a big puzzle too.
                     + 1
-                        Make sure you don't tell others not to have thier emotions. All emotions are valid and suppressing them is actually bad for health. But it's good that you're trying to help me think positive during this difficult time.
+                        Make sure you don't tell others not to have their emotions. All emotions are valid and suppressing them is actually bad for health. But it's good that you're trying to help me think positive during this difficult time.
                     + 2
                          Fantastic response! In addition to showing me that you understand me, I appreciate your offer to help me further and learn more about my problem.
                     + 3
                         This is a good start. You're helping me see that my situation is something that you've experienced too. Just be sure to show me empathy by ackowledgin my emotions.
                     -   + I see
-                        - Good listeners let the speaker experience thier negative emotions without trying to quash them. Ackowledging and working through those negative emotions is key to resolving them. 
+                        - Good listeners let the speaker experience their negative emotions without trying to quash them. Ackowledging and working through those negative emotions is key to resolving them. 
                         // we are teaching:
                         + That makes sense
                         - Let’s continue. 
@@ -383,7 +395,7 @@ Okay, no worries. Do you want to chat to one of my friends?
                     + 3
                         It can sometimes be helpful to comiserate as a way of showing you understand. Just be sure not to get too negative.
                     -   + I see
-                        - Good listeners paraphrase what the other person has said in thier own words as a way of making sure they've understood correctly. 
+                        - Good listeners paraphrase what the other person has said in their own words as a way of making sure they've understood correctly. 
                         // we are teaching:
                         + That makes sense
                         - Let’s continue. 
@@ -420,5 +432,5 @@ Okay, no worries. Do you want to chat to one of my friends?
   -> family.continue //this is just an exmple, we need to redirect to the topic selecte at random   
 = otherTimes    
 ~ stressCategory = "family" // this value is picked at random from (family, work, relationships, school, health)     
-This time we will revise a case realted to {stressCategory}. In the future we will revise other scenarios such as relationships, work, school, or health. // these words need to be populated base on the remaining categories from (work, relationships, family, health, school)
+This time we will revise a case related to {stressCategory}. In the future we will revise other scenarios such as relationships, work, school, or health. // these words need to be populated base on the remaining categories from (work, relationships, family, health, school)
     -> family.continue //this is just an exmple, we need to redirect to the topic selecte at random   
