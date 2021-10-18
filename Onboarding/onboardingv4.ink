@@ -1,5 +1,5 @@
 ===StartOnboarding
-+What do you do?
++Tell me about you
     <strong>Flecta: My friends and I are quite special virtual creatures. We are here to help you cope with stressful moments.
     Tianco: Can I talk about the others now, Flecta? Please?
     <strong>Flecta: Forgive my young friend here. Very eager to introduce us to you.
@@ -7,7 +7,7 @@
     ++Just explain please
         <strong>Flecta: We are <>->WhatweDo
 
-    ++Keen to hear him out
+    ++The others?
         <strong>Flecta: Oh well. Go ahead then, Tianco. But try to be clear!
         ->WeAreABotWorld
 
@@ -15,13 +15,13 @@
     <strong>Flecta: Oh yes... We've got names that kind of reflect why we are here.
     Tianco: If you're a bit of a puzzle person it can be fun to make them out!
     ++Please just explain
-        <strong>Flecta: Of course. Tianco, I'll continue alone.
-        <strong>In the Pop-up! world, we are <> ->WhatweDo
+        <strong>Flecta: Of course. Tianco, I'll take it from here.
+        <strong>In a nutshell, we are <> ->WhatweDo
     ++Very intriguing!
         ->WeAreABotWorld
 
 ===WeAreABotWorld
-Tianco: There's many of us and we all want to make you feel better about stressy stuff.
+Tianco: It's going to be such fun helping you. There's many of us and we all want to make you feel better about stressy stuff.
 <strong>Flecta: (sigh) What he means is that we're <>->WhatweDo
 
 ===WhatweDo
@@ -41,16 +41,17 @@ specialised in techniques to help humans like you cope with different kinds of s
 
 
 ===ReflectAndAct
-   <strong>Flecta: We help you reflect on every day challenges and take actions to sort them out.
+   
     + Stress? Challenges?
         <strong>Flecta: Things like work or school deadlines, feeling overwhelmed, worries about relations for example.
         ++How can you help?
-            <strong>Flecta: Our work has given us some insights in the human mind. There are ways to help you think about what is going on that help you to feel better. 
+            <strong>Flecta: Our history of interacting with humans has given us some insights in your minds. There are ways to help you think about what is going on that help you to feel better. 
             ->warning
     + How can you help?
-            Our work has given us some insights in the human mind. There may be ways to help you think about what is going on that help you feel better. 
+            Our history of interacting with humans has given us some insights in your minds. There are ways to help you think about what is going on that help you to feel better. 
 
-    - ->warning
+    - <strong>Flecta: Tianco and I are here to explain everything to you and listen to what's happening in your life . Then, we introduce you to a friend who will help you reflect on every day challenges and take actions to sort them out. 
+    ->warning
 
 
 ===warning
