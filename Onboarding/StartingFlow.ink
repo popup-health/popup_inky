@@ -25,9 +25,18 @@ VAR userStressInput = "I have started too late on my assignment and I'm scared I
 
 
 ===greeting1
-<strong>Flecta: Welcome! Great to meet you. My name is Flecta.
-Tianco: And I'm Tianco. Can't wait to tell you all about us!
-<strong>Flecta: All in good time, Tianco. I'm sure our visitor wants to ask some questions.
+<strong>Flecta: Hi! Great to meet you. My name is Flecta. Part of the welcoming committee. How's your day been so far?
+ +Good, thanks. You?
+    <strong>Flecta: Couldn't be better! Now, let me introduce Tianco to you.
+ +Kind of OK, I guess
+    <strong>Flecta: Ow, that doesn't sound convincing. Let's chat about it later. First, let me introduce Tianco to you.
+ +Don't get me started
+    <strong>Flecta: Sorry to hear that. Let's talk about it, yeah? First, I'll introduce Tianco to you.
+- ->TiancoIntro    
+
+==TiancoIntro
+Tianco: Hi. I'm so happy to meet you. Can't wait to tell you all about us!
+<strong>Flecta: All in good time, Tianco. I'm sure our visitor has questions for us.
 ->StartOnboarding
 
 
