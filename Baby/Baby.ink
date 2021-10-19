@@ -64,8 +64,8 @@ Start by thinking of one goal that matters to you.
 There are lots of different types of goals. Your goals could be related to your career, your relationship, your family, your community, or yourself. All goals count: things like keeping to a workout schedule, studying for an exam, or simply spending more time with friends.
   + OK, thought of a goal.
         -> greatDoYouWantTo 
-  + More examples, please.
-        -> listOfGoalExampl 
+ // + More examples, please.
+        //-> listOfGoalExampl 
   + This isn't working for me.
         -> dontWorryAboutIt 
 
@@ -77,14 +77,17 @@ Great! Do you want to share your goal now?
   + Not right now
         -> oKNowTakeAMinute 
 
-= listOfGoalExampl
-{goalExamples}
-  + Got it
-        -> greatDoYouWantTo 
+//= listOfGoalExampl
+//{goalExamples}
+ // + Got it
+        //-> greatDoYouWantTo 
 
 = dontWorryAboutIt
-Don’t worry about it. If we’re feeling stressed it can be hard to focus on exercises like this. For now, maybe a visit with one of my friends will help. 
-    -> Random_bot_selection
+Don’t worry about it. If we’re feeling stressed it can be hard to focus on exercises like this. Do you want some more information about goals?  Or...maybe a visit with one of my friends will help. 
+    + Visit a pal
+        -> Random_bot_selection
+    + More details.
+        -> Goal_explanation
 
 = userInput
 {userInputGoal}
@@ -148,7 +151,7 @@ random selection of another bot
     -> END
 
 ==== First_goal ====
-{Great!|Super!|Nice!} Do you want to share it?
+{Great!|Super!|Nice!} Do you want to share your goal?
   + Not right now.
         -> oKKeepItInMindAs 
   + user enters input here
@@ -199,7 +202,14 @@ _ insert variable BabyStepsExample
         -> dontWorryAboutIt1 
 
 = insertFirstBabyS
-{firstBabySteps}
+In general (not necessarily about {goalExamples}), here are some ideas:
+
+If your goal is to buy a house, perhaps a first baby step might be to decide what you can afford.  A next baby step might be deciding where you want to buy the house, followed by researching what kinds of houses are available.
+
+Or if your goal is to lose ten pounds, perhaps your first baby step is to research the role of diet in doing that. Then you might decide what kind of diet would be suitable for you and planning your shopping and meals to support that.
+
+Does this help?
+
   + Got it
         -> nextSeeIfYouCanI 
   + Can't think of one
@@ -208,7 +218,16 @@ _ insert variable BabyStepsExample
 = dontWorryAboutIt1
 //MV - seems to end a bit abruptly. Should we lead into talking to another bot, or coming back?
 Don't worry about it.  It could pop up in your mind later. It can be helpful to jot down possibilities and come back to them later.
+
+But let's do a quick recap so it's in your mind.
+
+If you want to deal with the stress of setting and managing your goals, the SMART framework is really helpful.  You can learn more at 
+
+Taking baby steps is powerful.  You don't have to do everything at once.  In fact, you shouldn't! The SMART idea is good for thinking about each baby step as well as the overall goal.
+    + Got it.
+Let's leave off here.  I hope to see you soon!
     -> END
+
 
 ==== Next_steps ====
 Looking forward, can you identify one baby step you can take in the next few days to get even slightly closer to your goal?
