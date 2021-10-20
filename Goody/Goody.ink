@@ -61,7 +61,7 @@ VAR counter = 1
       + More examples
         Of course, here are more:
             -> showGoodThings
-      + Got it, but not sharing!
+      + Ok, but not sharing!
         No problem!
             -> nowTakeAMomentTo
       + user enters their experience here:
@@ -101,7 +101,7 @@ VAR counter = 1
           + Got it
             Great job! It’s not always easy to find the good things, but it’s the effort that matters most.
                 -> Reaffirmation
-          + Don't know what to say
+          + I don't know
           + I need some tips
             - We play an important role in creating our own good experiences. For example, we might make plans to see friends, do something kind for someone else, or tell a joke. These positive actions can help us bring about more good things.
             So try to reflect on what action you took to bring about your good thing.
@@ -219,9 +219,9 @@ Keep trying to add good things into your daily life and then take notice and sav
       + Try again
         Great!
             -> pastThingShared
-      + Talk to one of your buddies
+      + Talk to another bot
         Sure, I will call one of them now.
-        Keep trying to remember positive experiences, even if very small. I am sure it will eventuallly help reduce stress.
+        Keep trying to remember positive experiences, even if very small. I am sure it will eventually help reduce stress.
         // System selects a new character at random //
             -> END    
     
