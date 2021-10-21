@@ -63,10 +63,11 @@ Do you want to use this technique to reduce your repetitive thoughts about: "{st
                   - Great, go ahead and practice. I'll wait for you here. 
             // add a gif of breathing 
                     + Done
-                    + Thoughts overwhelmed me.
+                    + Thoughts overwhelmed me. 
+                    // Warning this sentence exceeds 20 characters (DM)
                        -> first_visit_overwhelmingthoughts 
                     - Great practice! 
-                    Remeber you can use this naming technique anytime you feel burdened by repetitive thoughts about the past or future. With practice you'll strengthen your mindfulness muscles 💪🧠. 
+                    Remember you can use this naming technique anytime you feel burdened by repetitive thoughts about the past or future. With practice you'll strengthen your mindfulness muscles 💪🧠. 
                       Next time we meet I'll show you another technique for letting thoughts go. 
                         + Thanks!
                             -> END
@@ -124,6 +125,7 @@ Remember, it is a gentle touch. There's no fighting or engaging with the thought
 Ok, practice this for 4 to 6 deep breaths. I'll wait for you here. // engineering - can we add an image of the bot breathing? Or a visual queu of breathing in and out for 4 to 6 long breathes?
   - + Done
   + Thoughts overwhelmed me
+  // Warning this sentence exceeds 20 characters (DM)
    -> second_visit_overwhelmingthoughts 
     - Wonderful! The great thing about these mindfulness exercises is that the more time we spend sitting with our minds, the more at ease we feel within ourselves. 
     Would you like me to help you set a reminder for practicing? 
