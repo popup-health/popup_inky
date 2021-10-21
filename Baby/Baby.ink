@@ -1,6 +1,4 @@
 
-//LOCKED FOR FURTHER REVISIONS POST-ENG REVIEW by RobertG 10-18-2021 1pm PDT
-//FOR THIS REVISION I AM REMOVING SOME VARIABLE CALLS, INSERTING AN INPUT THAT CAN LATER BE CALLED BY ONE OF THE REMAINING VAR (baby steps), FIXING ILLOGICAL FLOWS AT SOME END POINTS, AND WRITING "EXAMPLES" TEXT RATHER THAN REFERRING TO A DATABASE THAT WILL NOT IN FACT EXIST FOR AWHILE.
 // ---- PopBot: BABY .. was ANdale  Reflecting on Progress VERSION 2 ----
 // Converted from original inklewriter URL:
 // https://www.inklewriter.com/stories/84200
@@ -178,28 +176,39 @@ Actually, did you know that even just identifying your goal -- like we did just 
 =pastBabyStep
 So now see if you can think of one tiny thing you've already done to reach your goal of {goalExamples}. 
   + OK, I remember one.
-  Excellent.
-        -> Next_steps 
-  + I need examples.
-        -> insertFirstBabyS 
+  Excellent. Do you want to write it down?
+    -> responsetoPastBabyStep
+    
+=responsetoPastBabyStep
+    + userInput
+        Great!
+        -> nextSeeIfYouCanI
+    + Not now
+    Ok.  But keep it in mind as you think about making progress on your goal.
+        ->nextSeeIfYouCanI
+    
+    
+        //-> Next_steps 
+ // RG: this now doesn't seem to make sense, to ask for generic examples in the context of a personalized user sitaution  + I need examples.
+       // -> insertFirstBabyS 
 
 = nextSeeIfYouCanI
 Next, going forward, try to identify one baby step you can take in the next few days to get even slightly closer to your goal.
   + Got it!
         -> Next_steps.greatThatsItForT 
-  + Examples, please?
-        -> InsertVariableBa 
+  + Can't think of one.
+        -> insertFirstBabyS
 
 = evenTinyStepsMov
 Even tiny steps move you towards your goal. If your goal was to go to the gym, maybe you bought a pair of sneakers, or looked up nearby gyms to go to. 
     -> seeIfYouCanThink
 
-= InsertVariableBa
-_ insert variable BabyStepsExample
+
   + I got it
         -> Next_steps.greatThatsItForT 
-  + I can't think of anything
-        -> dontWorryAboutIt1 
+  + I can't think of one.
+    Again, <> -> dontWorryAboutIt1
+        //-> dontWorryAboutIt1 
 
 = insertFirstBabyS
 In general (not necessarily about {goalExamples}), here are some ideas:
@@ -225,7 +234,7 @@ If you want to deal with the stress of setting and managing your goals, the SMAR
 
 Taking baby steps is powerful.  You don't have to do everything at once.  In fact, you shouldn't! The SMART idea is good for thinking about each baby step as well as the overall goal.
     + Got it.
-Let's leave off here.  I hope to see you soon!
+This is like a good place to pause. I hope you can take some time to reflect on goals and baby steps and put these ideas to good use for you.  I look forward to seeing you soon!
     -> END
 
 
@@ -308,8 +317,10 @@ Last time we chatted you decided to take one baby step towards your goal. Were y
 = reflectingOnAnAction
 Excellent. So, what did it feel like to take this baby step?
     + It felt OK
+        Good for you!
         -> itFeltOk
     + It was hard
+    That's ok, and not unusual.  With practice, you will find it get's easier.
     //add some reassurance here and in not sure yet before jumping to itfeltok  RG got it.
         -> itFeltOk
     + Not sure yet.
@@ -322,10 +333,11 @@ Excellent. So, what did it feel like to take this baby step?
 Think back to any hesitation or avoidance you had about the overall goal.  Was this small step as difficult as you anticipated?  Did it meet the SMART framework?
 
 When we break down a larger goal into baby steps it's a lot easier to move forward.
-    + OK, I'm ready.
+    + I see that.
         -> okImReady
-    + Examples, please.
-        -> findnextBabySteps
+    + A refresher, please.
+OK!
+        -> First_goal.insertFirstBabyS
         
 = findnextBabySteps
 //MV - I am unsure how this will work? Do we just provide them with random examples that may have nothing to do with the goal they entered? 
@@ -335,22 +347,58 @@ When we break down a larger goal into baby steps it's a lot easier to move forwa
         -> okImReady        
 
 = okImReady
-{Good!|OK!|Nice!|} Would you like a reminder to help you out?
-    + Yes, by calendar
-        -> yesByCalendar
+{Good!|OK!|Nice!|} Do you have a next baby step?
+    + Yes
+        -> SecondSessionNext_steps
         
-    + Yes, by text message
-        -> yesByText
+    + Still working on last one
+        -> stillWorkingonLastOne
         
-= yesByCalendar
-OK, tomorrow or next week? (initiate calendar entry process)
+= SecondSessionNext_steps
+Little by little those baby steps become a big giant step towards your goal!
+Do you want to share it here?
+    + Yes 
+        -> SecondSessionInputBabyStep
+        
+    
+    + Not now
+        -> BabyStep_SmartCheck
+        
+        
+= SecondSessionInputBabyStep
+user inputs baby steps
+    -> secondSessionEndPositive
+
+    
+    
+
+=stillWorkingonLastOne
+Persistence is an excellent trait.  Next time we check in let's talk about how it has gone.
+    -> secondSessionEndPositive
+
+//= yesByCalendar
+//OK, tomorrow or next week? (initiate calendar entry process)
 // DD- OK, how about tomorrow?  If you can schedule the step in as soon as possible it is a lot easier to build momentum and minimize avoidance!
     -> secondSessionEndPositive.YoureOnTheRightPath
-= yesByText
-OK, tomorrow or next week? (initiate text entry process)
+//= yesByText
+//OK, tomorrow or next week? (initiate text entry process)
     -> secondSessionEndPositive.YoureOnTheRightPath
 
+= BabyStep_SmartCheck
+Now that you have this new baby step, do you think it meets the SMART gaols we've talked about earlier?
+    + Yes
+        ->secondSessionEndPositive
+    
+    + Not sure
+        -> notSMART
+        
+= notSMART
+Take some time to reflect on the SMART elements and whether your baby step addresses them.  If it does, then great!  And if you think it might not, ask yourself what could change in that baby step to make it SMART, or whether a different baby step might be helpful.
 
+-> secondSessionEndPositive.YoureOnTheRightPath
+
+        
+        
 
 ====SecondSessionReflectingonNoAction====
 
@@ -380,9 +428,28 @@ Take a minute to think about how you'll make sure you take that one baby step. W
 
 
 =findnextBabySteps
-{nextBabySteps}
+In general (not necessarily about {goalExamples}), here are some ideas:
+
+If your goal is to buy a house, perhaps a first baby step might be to decide what you can afford.  A next baby step might be deciding where you want to buy the house, followed by researching what kinds of houses are available.
+
+Or if your goal is to lose ten pounds, perhaps your first baby step is to research the role of diet in doing that. Then you might decide what kind of diet would be suitable for you and planning your shopping and meals to support that.
+
+Does this help?
     +OK that helps.
-        -> okImReady        
+        -> okImReady  
+        
+    +Not really
+No worries...and don't be hard on yourself if you can't think of something right away.  Great ideas often need to marinate.
+    -> noActionrecap
+    
+= noActionrecap
+Even if you don't yet have your next baby step, you're on the right path. You have a way to think about goals and baby steps, and you have the SMART framework to guide you. 
+
+I hope we check in soon. 
+ + Bye for now!
+  -> END
+  
+
 
             
         
