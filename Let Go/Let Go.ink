@@ -63,16 +63,17 @@ Do you want to use this technique to reduce your repetitive thoughts about: "{st
                   - Great, go ahead and practice. I'll wait for you here. 
             // add a gif of breathing 
                     + Done
-                    + Thoughts overwhelmed me.
-                       -> overwhelmingthoughts  
+                    + Thoughts overwhelmed me. 
+                    // Warning this sentence exceeds 20 characters (DM)
+                       -> first_visit_overwhelmingthoughts 
                     - Great practice! 
-                    Remeber you can use this naming technique anytime you feel burdened by repetitive thoughts about the past or future. With practice you'll strengthen your mindfulness muscles 💪🧠. 
+                    Remember you can use this naming technique anytime you feel burdened by repetitive thoughts about the past or future. With practice you'll strengthen your mindfulness muscles 💪🧠. 
                       Next time we meet I'll show you another technique for letting thoughts go. 
                         + Thanks!
                             -> END
     
  
- =overwhelmingthoughts
+ =first_visit_overwhelmingthoughts
 Sometimes these naming techniques can feel overwhelming. Specially when strong negative thoughts come. 
 
 When this happens you can redirect your attention to external sensations. 
@@ -123,7 +124,9 @@ Remember, it is a gentle touch. There's no fighting or engaging with the thought
  + Let's practice
 Ok, practice this for 4 to 6 deep breaths. I'll wait for you here. // engineering - can we add an image of the bot breathing? Or a visual queu of breathing in and out for 4 to 6 long breathes?
   - + Done
- //engineering: I'm trying to add here another menu option that goes with done, saying +"Thoughts overwhelmed me" that could lead to -> overwhelmingthoughts. It's not allowing me do it. If you could please add it. 
+  + Thoughts overwhelmed me
+  // Warning this sentence exceeds 20 characters (DM)
+   -> second_visit_overwhelmingthoughts 
     - Wonderful! The great thing about these mindfulness exercises is that the more time we spend sitting with our minds, the more at ease we feel within ourselves. 
     Would you like me to help you set a reminder for practicing? 
     - + Yes
@@ -133,7 +136,25 @@ Ok, practice this for 4 to 6 deep breaths. I'll wait for you here. // engineerin
       Hope to see you again soon.&nbsp;
         - + Thanks!
             -> END
+            
+            
 
+ =second_visit_overwhelmingthoughts
+Sometimes these naming techniques can feel overwhelming. Specially when strong negative thoughts come. 
+
+When this happens you can redirect your attention to external sensations. 
+
+You can also practice the exercise with your eyes open rather than closed.  
+
+Or you can say to yourself “I am safe where I am right now.”  Saying words like this will remind your brain that it is okay to relax and watch thoughts as they go. 
+
+And remember, as we continue to practice, we learn to witness our thoughts without getting caught up in them, allowing us to feel more centered and grounded.
+
++ Thanks.
+
+Hope to see you again soon.
+
+    -> END
 //**********************************************//    
 //**********************************************//    
     

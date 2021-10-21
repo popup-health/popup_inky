@@ -45,18 +45,19 @@ Active listening is a great tool that helps both parties, the person speaking fe
 # IMAGE 
 .
 ~ visit = 2
-Hi {userName}, last time we chatted, you practiced active listening as I explained a challenge I was going through, and we practice the three steps: 
+Hi {userName}, last time we chatted, you practiced active listening as I explained a challenge I was going through, and we practiced the three steps: 
 1) being ready to listen, 
 2) listen and clarify, 
 3) acknowlegement of the person's feelings and abilities to deal with the issue
-//PP: Tchiki check this section below, edit as you see fit.
+//PP: Tchiki check this section below, edit as you see fit. 
+//TD: looks good to me.
 + Sounds good 
   - But before we move on, can you share if you had the chance to practice what you learned last session in real life?
     + I didn't practice
       No problem, you will have time to practice now with me.
     + Didn't have a chance
       No problem, you will have a chance to practice again with me.
-    + I practiced a lot
+    + I practiced
       Great, practice makes perfect!. let's try a new scenario today.
       - + Ok
          So, are you in a mental space to be able to listen some more?
@@ -434,3 +435,38 @@ Okay, no worries. Do you want to chat to one of my friends?
 ~ stressCategory = "family" // this value is picked at random from (family, work, relationships, school, health)     
 This time we will revise a case related to {stressCategory}. In the future we will revise other scenarios such as relationships, work, school, or health. // these words need to be populated base on the remaining categories from (work, relationships, family, health, school)
     -> family.continue //this is just an exmple, we need to redirect to the topic selecte at random   
+
+
+
+//Endings new 10/19/21
+=if they picked all the answers
+
+Great job! You followed the key steps: 
+1) you got yourself ready to listen,
+2) you listened and clarified, and 
+3) you acknowledged my feelings.
+
+Keep building your skills by practicing active listening with people in your real life.
+
+=if they failed in one
+
+You're getting the hang if it. Just be sure to practice
+
+=if be ready to listen THEN "being ready to listen."
+=if clarify THEN "clarifying the issue."
+=if acknowledge THEN "acknowledging where the other person is coming from."
+
+You can also k building your skills by practicing active listening with people in your real life.
+
+=if they are wrong in two or more
+This was a good first practice, but you'll get better at active listeneing if you keep practicing. 
+
+Remember, active listening invovles:
+1) getting yourself ready to listen,
+2) listening and clarifying, and 
+3) acknowledging others' feelings.
+
+
+Come back and practice with me anytime or practice active listening with people in your real life.
+
+
