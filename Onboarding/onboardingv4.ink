@@ -1,32 +1,32 @@
 ===StartOnboarding
-+Tell me about you
-    <strong>Flecta: My friends and I are quite special virtual creatures. We are here to help you cope with stressful moments.
-    Tianco: Can I talk about the others now, Flecta? Please?
-    <strong>Flecta: Forgive my young friend here. Very eager to introduce us to you.
-
-    ++Just explain please
-        <strong>Flecta: We are <>->WhatweDo
-
-    ++The others?
-        <strong>Flecta: Oh well. Go ahead then, Tianco. But try to be clear!
-        ->WeAreABotWorld
-
++So who are you?
+    <strong>Flecta: We're <>->WhatweDo 
+    
 +Interesting names...
     <strong>Flecta: Oh yes... We've got names that kind of reflect why we are here.
     Tianco: If you're a bit of a puzzle person it can be fun to make them out!
     ++Please just explain
-        <strong>Flecta: Of course. Tianco, I'll take it from here.
-        <strong>In a nutshell, we are <> ->WhatweDo
+        <strong>Flecta: Of course. In a nutshell, we are<> ->WhatweDo
     ++Very intriguing!
         ->WeAreABotWorld
 
 ===WeAreABotWorld
-Tianco: It's going to be such fun helping you. There's many of us and we all want to make you feel better about stressy stuff.
-<strong>Flecta: (sigh) What he means is that we're <>->WhatweDo
+Tianco: It's not just the two of us! We have so many friends and they all want to make you feel better about stressy stuff.
+<strong>Flecta: (sigh) Thanks, Tianco. He means that we'll introduce you to fellow Inklings who explain techniques that help with everyday challenges.
+    +Challenges? Such as?
+    ->ReflectAndAct
 
 ===WhatweDo
-specialised in techniques to help humans like you cope with different kinds of stress.
-->ReflectAndAct
+a group of unique virtual creatures who try to help humans cope with stressful moments.
+Tianco: Can I explain about the others, Flecta? Please?
+    <strong>Flecta: Forgive my young friend here. Sometimes a bit too eager.
+     ++What kinds of stress?
+        ->ReflectAndAct
+
+    ++Who are the others?
+        <strong>Flecta: Oh well. Go ahead, Tianco. But try to be clear!
+        ->WeAreABotWorld
+
 
 {WeAreABotWorld:
     Tianco: Isn't that what I said? But in easy words?
@@ -42,13 +42,9 @@ specialised in techniques to help humans like you cope with different kinds of s
 
 ===ReflectAndAct
    
-    + Stress? Challenges?
-        <strong>Flecta: Things like work or school deadlines, feeling overwhelmed, worries about relations for example.
-        ++How can you help?
-            <strong>Flecta: Our history of interacting with humans has given us some insights in your minds. There are ways to help you think about what is going on that help you to feel better. 
-            ->warning
-    + How can you help?
-            Our history of interacting with humans has given us some insights in your minds. There are ways to help you think about what is going on that help you to feel better. 
+    <strong>Flecta: Things like work or school deadlines, feeling overwhelmed, worries about relations for example.
+    + How do you help?
+            <strong>Flecta: We help you with techniques to think about what is going on, or simply ways to help you relax a bit.rf
 
     - <strong>Flecta: Tianco and I are here to explain everything to you and listen to what's happening in your life . Then, we introduce you to a friend who will help you reflect on every day challenges and take actions to sort them out. 
     ->warning

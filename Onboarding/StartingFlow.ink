@@ -2,7 +2,7 @@ INCLUDE onboardingv4.ink
 INCLUDE StressID
 INCLUDE farewell.ink
 
-//BLOCKED MIRANDA
+
 
 VAR username = "Miranda"
 VAR stressLevel = 0
@@ -15,35 +15,35 @@ VAR userStressInput = "I have started too late on my assignment and I'm scared I
 ===UserVisitNumber
 //for testing of flow
 
-+user visit 1
++user visit 1 (onboarding sequence)
 ->greeting1
-+user visit 2
++user visit 2 (1st session after onboarding session)
 ->greeting2
-+user visit 3
++user visit 3 (2nd session after onboarding session)
 ->greeting3
 
 
 
 ===greeting1
-<strong>Flecta: Hi! Great to meet you. My name is Flecta. Part of the welcoming committee. How's your day been so far?
+<strong>Flecta: Hi! My name is Flecta. Good to meet you. How's your day been so far?
  +Good, thanks. You?
-    <strong>Flecta: Couldn't be better! Now, let me introduce Tianco to you.
+    <strong>Flecta: Couldn't be better! Let me introduce Tianco to you.
  +Kind of OK, I guess
-    <strong>Flecta: Ow, that doesn't sound convincing. Let's chat about it later. First, let me introduce Tianco to you.
+    <strong>Flecta: Ow, that doesn't sound convincing. Let's chat about it. First, let me introduce my friend Tianco.
  +Don't get me started
-    <strong>Flecta: Sorry to hear that. Let's talk about it, yeah? First, I'll introduce Tianco to you.
+    <strong>Flecta: Sorry to hear that. Let's talk about it some more? By the way, this is my friend Tianco.
 - ->TiancoIntro    
 
 ==TiancoIntro
 Tianco: Hi. I'm so happy to meet you. Can't wait to tell you all about us!
-<strong>Flecta: All in good time, Tianco. I'm sure our visitor has questions for us.
+<strong>Flecta: All in good time, Tianco. 
 ->StartOnboarding
 
 
 ===greeting2
 
 +User back after hours or next day
-<strong>Flecta: {~Delighted to see you again so soon!|You're back! Great to see you.}
+<strong>Flecta: Welcome back {username}! {~Delighted|Great|Wonderful} to see you again so soon!
 
 Flecta: More importantly, did your session help? I wonder because you're back so soon.
 ->DiscussBotSession
@@ -52,12 +52,12 @@ Flecta: More importantly, did your session help? I wonder because you're back so
 +User back after few days
 <strong>Flecta: Good to see you again.{~ It's been a few days|Happy you're back.|}
 +User back after more than week
-<strong>Flecta: So glad you made it back to us!{~ We were worried.|Everyone was asking about you}  
+<strong>Flecta: So glad you made it back to us!{~ Tianco|Everyone} was asking about you.  
 - ->END
 
 ==DiscussBotSession
 + User gave bot session positive feedback
-Tianco: You really liked XYZ, you said. I get that - they're so cool!
+Tianco: You really liked XYZ, right? I get that - they're so cool!
 Flecta: When you were here last, you said you were stressed about CATEGORY. Are you still stressed about this?
     ++Yes
         Flecta: I'm so sorry. Shall we introduce you to someone else to try and work things through?
@@ -83,6 +83,5 @@ Tianco: They have offered to try again! what do you think?
 
 ===greeting3
 
-+User back after hours
-<strong>Flecta: {~Delighted to see you again so soon!|You're back! I'm very pleased} 
+{username}!! Back for more - can't miss us? We love to have you around too. 
 ->END
