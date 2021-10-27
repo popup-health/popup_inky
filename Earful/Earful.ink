@@ -6,8 +6,12 @@
 
 
 VAR userName = "Pablo"
-VAR stressCategory = "Work"
+VAR stressCategory = "work"
 VAR visit = 1
+VAR q1=0
+VAR q2=0
+VAR q3=0
+VAR total=0
 
 -> System_Check
 
@@ -106,7 +110,10 @@ Hi {userName}. It’s lovely seeing you again. You are now an expert at listenin
   -> health
 +stress category was school
   ~ stressCategory = "school"
-  -> school
+  -> schoolwork
++stress category was work
+  ~ stressCategory = "work"
+  -> schoolwork
 +stress category was relationships
   ~ stressCategory = "relationships"
   -> relationships
@@ -159,6 +166,7 @@ Okay, no worries. Do you want to chat to one of my friends?
           + 2
              It's best not to give advice unless it's explicitly asked for. Your goal here is to make me feel heard and understood. You could say, "I hear you." or "That's got to be hard for you."
            + 3
+             ~q1=1
              Great job! You nailed the first step of being ready to listen, and  made me feel understood and that you are eager to understand me better.
         -  + Got it
         -  Let’s continue. 
@@ -171,6 +179,7 @@ Okay, no worries. Do you want to chat to one of my friends?
                     + 1
                         A common mistake when listening is to downplay the other person's experience or talk about ourselves. A better way to make the other person feel heard is to acknowledge and accept their feelings.
                     + 2
+                        ~q2=1
                         What a helpful response! You're making me feel very comfortable talking to you. You clearly show a desire to listen and clarify.
                     + 3
                         It's not always easy to understand where the other person is coming from. But when we dismiss their emotions we can hurt our relationship with them. Even if it's difficult, try to see the situation from their point of view and listen compassionately.
@@ -186,15 +195,12 @@ Okay, no worries. Do you want to chat to one of my friends?
                             + 1
                             This might be good advice for one person and not for another. So rather than giving advice, it's usually best to help the speaker think through which actions that are best for them.
                             + 2
+                             ~q3=1
                              Great. You nailed the third step: acknowledging my position. This response helps me feel confident in my ability to do what's best for me.  
                             + 3
                             You might not know, and that's fine. But you can still show me that you care by telling me you're confident in my ability to do what's best for me.
                             -   + Sure thing!
-                                - Thank you for listening and helping me think through this challenge. I really felt heard and understood. //PP: Tchiki, we need different endings for all the different scenarios I mentioned in my note on slack: 1) great job, 2) one miss, 3) two or more misses. Don't worry about the logic, just mark them, and I will write the logic later.
-                                - + You're welcome
-                                    Finally, think how you would use this in your life, practice what you learned with others throughout the day.//PP: Tchiki, see if this goes well here, or perhaps blended with the last sentence.
-                                //go to Farewell module
-                                -> END
+                                --> ending
 
 //****************************************************//
 //****************************************************//
@@ -228,6 +234,7 @@ Okay, no worries. Do you want to chat to one of my friends?
           This is a good start. You've showed me empathy. To show even more interest, consider including a question that shows you want to keep listening as I work this out.
              
            + 3
+             ~q1=1
              Good choice! You understand where I am coming from and have shown that you're ready and willing to help me figure this out.
         -  + Got it
         -
@@ -241,6 +248,7 @@ Okay, no worries. Do you want to chat to one of my friends?
                 2) Don't fight. Just focus on loving each other.
                 3) No. You should never compromise. Besides, your partner is awful.
                     + 1
+                        ~q2=1
                         Fantastic response! You're showing that you're paying attention to what I'm saying and helping me figure out the answers that are best for me. 
                     + 2
                          I've just been vulnerable by sharing something difficult with you and this response can make me feel like you're not on my side. So be careful not to tell me that my thoughts, emotions, or actions are bad.
@@ -256,6 +264,7 @@ Okay, no worries. Do you want to chat to one of my friends?
                         2) Your partner might not like that.
                         3) Can we talk about me yet? //PP: Tchiki let's make this more subtle, so people think more about it.
                             + 1
+                            ~q3=1
                             This response makes me feel good about my decision and happy that you care so much about me that you want to hear more later.
                             
                             + 2
@@ -263,10 +272,7 @@ Okay, no worries. Do you want to chat to one of my friends?
                             + 3
                             Try to transition smoothly to talking about other things, possibly by asking, "Do you feel like you got what you needed from this conversation?"
                             -   + Got it.
-                                - I really appreciate you listening. It's great to have such a good listener to help me figure out how I want to deal with challenges.
-                                - + Sure thing!
-                                // go to farewell module
-                                    -> END
+                                    --> ending
 
 //****************************************************//
 //****************************************************//
@@ -278,7 +284,8 @@ Okay, no worries. Do you want to chat to one of my friends?
     -> otherTimes
     
 = firstTime
-    Since your stressor was related to health, fatigue or physical pain issues, we will start with an example related to that. In the future we will revise conversations related to work, relationships, school, or family issues. // these words need to be populated base on the remaining categories from (work, relationships, family, health, school)
+    Since your stressor was related to health, fatigue or physical pain issues, we will start with an example related to that. 
+    In the future we will revise conversations related to work, relationships, school, or family issues. // these words need to be populated base on the remaining categories from (work, relationships, family, health, school)
     -> continue
 = otherTimes    
     This time we will revise a case related to health.
@@ -294,7 +301,7 @@ Okay, no worries. Do you want to chat to one of my friends?
         2) I'm sure you'll be fine.
         3) I heard that juice cleanses are good for health. You should do a juice cleanse.
           + 1
-            
+             ~q1=1
              Good choice! You've nailed the first step of being ready to listen, and you have shown me that you care about me and my feelings.
              
           + 2
@@ -316,38 +323,36 @@ Okay, no worries. Do you want to chat to one of my friends?
                     + 1
                         Make sure you don't tell others not to have their emotions. All emotions are valid and suppressing them is actually bad for health. But it's good that you're trying to help me think positive during this difficult time.
                     + 2
+                         ~q2=1
                          Fantastic response! In addition to showing me that you understand me, I appreciate your offer to help me further and learn more about my problem.
                     + 3
                         This is a good start. You're helping me see that my situation is something that you've experienced too. Just be sure to show me empathy by ackowledgin my emotions.
-                    -   + I see
+                    -   + Cool!
                         - Good listeners let the speaker experience their negative emotions without trying to quash them. Ackowledging and working through those negative emotions is key to resolving them. 
                         // we are teaching:
                         + That makes sense
                         - Let’s continue. 
                         "I guess I just have to keep moving forward. I'll probably be pretty stressed and sitracted until I figure this out." 
-                        
-                        + Next
                         - How would you respond?
                         1) That makes sense. Know that you can always talk to me.
                         2) Just be positive. Only good vibes.
                         3) Ugh. I'm just not sure how much more of your complaining I can handle.
                             + 1
+                            ~q3=1
                             Great job. You've assured me that you did understand my perspective and that you're here to support me. 
                             
                             + 2
                             Telling me to be positive or only have good vibes is actually a form of toxic positivity. It can lead to supressed negative feelings, which is bad for health in the longer run. If you want to add something postive, you could say something about your own positve feelings like, "I'll be thinking positive thoughts about your recovery."
                             + 3
                             This would really hurt my feelings. If you feel this way, a better way to tell me is to say that you won't always be in the right headspace to be a good listener.
-                            -   + Got it.
-                                - Thanks for listening to me. You have been super helpful.
-                                - + No problem!
-                                    // go to Farewell module
-                                    -> END
+                            -   
+                              + Got it.
+                                    --> ending
     
 //****************************************************//
 //****************************************************//
 
-==== school ====
+==== schoolwork ====
   + {visit == 1} 
     -> firstTime
   + {visit > 1}
@@ -362,19 +367,18 @@ Okay, no worries. Do you want to chat to one of my friends?
 
 = continue
     + Sure thing.
-    - "At the moment, I'm freaking out about an upcoming assignment I have to do. The subject matter is really hard for me and I'm afraid I'm going to mess it up." 
+    - "At the moment, I'm freaking out about an upcoming {stressCategory == "school": assignment I have to do.} {stressCategory == "work": deadline.} The {stressCategory == "school": subject matter} {stressCategory == "work": task} is really hard for me and I'm afraid I'm going to mess it up." 
     
-    + Next
         - What would your response be?
         1) I'm sure you'll do fine. 
         2) That's tough. Can you say more about how I can support you?
-        3) Whatever. One assignment doesn't matter.
+        3) Whatever. One {stressCategory == "school": assignment} {stressCategory == "work": task} doesn't matter.
           + 1
-            
              Even if you do think I'll do fine, it's important not to ignore my feelings. It's best to start by acknowledging my feelings before sharing you're point of view.
              
           + 2
-          Good job! You've shown me that you are open to hear more, that you understand my feelings and want to help me move past them.
+            ~q1=1
+            Good job! You've shown me that you are open to hear more, that you understand my feelings and want to help me move past them.
              
            + 3
               Be careful not to dismiss my feelings. You may have a good point, but be sure that you empathize with my experience.
@@ -382,14 +386,13 @@ Okay, no worries. Do you want to chat to one of my friends?
         -
             Let’s continue. 
             
-            "I feel kind of stuck. I keep procrastinating. I just can't get started on the assignment because I'm afriad I'll do it badly."
-            
-                + Next
+            "I feel kind of stuck. I keep procrastinating. I just can't get started on the {stressCategory == "school": assignment} {stressCategory == "work": task} because I'm afriad I'll do it badly."
                 - What would you say?️ //we are teaching
                 1) That's understandable. I bet it's hard to get started. Can you tell me more how are your feelings right now?   
                 2) Just do it. It'll get done faster.
-                3) I know. That assignment is the worst.
+                3) I know. That {stressCategory == "school": assignment} {stressCategory == "work": task} is the worst.
                     + 1
+                        ~q2=1
                         Good job. You're letting me know you get how I feel and have heard what I said. Furthermore you want to clarify how my feelings are to better support me.
                     + 2
                          This may indeed be good advice. Just be careful to acknowledge the fact that I'm having a hard time getting started before giving advice.
@@ -400,9 +403,8 @@ Okay, no worries. Do you want to chat to one of my friends?
                         // we are teaching:
                         + That makes sense
                         - Let’s continue. 
-                        "I better go. I think the only way I'll overcome this anxiety is to get started on the assignment." 
+                        "I better go. I think the only way I'll overcome this anxiety is to get started on the {stressCategory == "school": assignment} {stressCategory == "work": task}." 
                         
-                        + Next
                         - How would you respond?
                         1) No, hang out with me.
                         2) Okay.
@@ -413,12 +415,10 @@ Okay, no worries. Do you want to chat to one of my friends?
                             + 2
                             This is a good start. See if you can add something else that shows you've heard me and care about me.
                             + 3
+                            ~q3=1
                             Great job. You've let me know that you empathize and acknowlege my feelings, and you also want to cheer me up.
                             -   + Got it.
-                                - Your listening has really helped. Thank you!
-                                - + Happy to help!
-                                // go to Farewell module
-                                -> END
+                                --> ending
     
 
 ==== other ====
@@ -437,36 +437,41 @@ This time we will revise a case related to {stressCategory}. In the future we wi
     -> family.continue //this is just an exmple, we need to redirect to the topic selecte at random   
 
 
-
+==== ending ====
 //Endings new 10/19/21
-=if they picked all the answers
-
-Great job! You followed the key steps: 
-1) you got yourself ready to listen,
-2) you listened and clarified, and 
-3) you acknowledged my feelings.
-
-Keep building your skills by practicing active listening with people in your real life.
-
-=if they failed in one
-
-You're getting the hang if it. Just be sure to practice
-
-=if be ready to listen THEN "being ready to listen."
-=if clarify THEN "clarifying the issue."
-=if acknowledge THEN "acknowledging where the other person is coming from."
-
-You can also k building your skills by practicing active listening with people in your real life.
-
-=if they are wrong in two or more
-This was a good first practice, but you'll get better at active listeneing if you keep practicing. 
-
-Remember, active listening invovles:
-1) getting yourself ready to listen,
-2) listening and clarifying, and 
-3) acknowledging others' feelings.
-
-
-Come back and practice with me anytime or practice active listening with people in your real life.
-
+~total = q1+q2+q3
+{total==3:
+  Great job! You followed the key steps: 
+  1) you got yourself ready to listen,
+  2) you listened and clarified, and 
+  3) you acknowledged my feelings.
+  Keep building your skills by practicing active listening with people in your real life.
+  -> practice
+  }
+{total>0 && total<3: 
+  You're getting the hang if it. Just be sure to practice<>
+  {q1 == 0: 
+  <EM> "being ready to listen."</EM>
+  {total==1: <> and <>}
+  }
+  {q2 == 0: 
+  <EM> "clarifying the issue."</EM>
+  {total==1: <> and <>}
+  }
+  {q3 == 0: <EM> "acknowledging where the other person is coming from."}
+  -> practice
+  }
+{total==0:
+  This was a good first practice, but you'll get better at active listeneing if you keep practicing. 
+  Remember, active listening invovles:
+  1) getting yourself ready to listen,
+  2) listening and clarifying, and 
+  3) acknowledging others' feelings.
+  -> practice
+  }
+  
+= practice
+  {Come back and practice with me anytime or practice what you learned with others throughout the day.|  You can also continue building your skills by practicing active listening with people in your real life.}
+    //go to farewell module
+    -> END
 
