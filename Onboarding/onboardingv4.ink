@@ -17,7 +17,7 @@ Tianco: It's not just the two of us! We have so many friends and they all want t
     ->ReflectAndAct
 
 ===WhatweDo
-a group of unique virtual creatures who try to help humans cope with stressful moments.
+a group of unique virtual creatures who try to help humans handle stressful moments.
 Tianco: Can I explain about the others, Flecta? Please?
     <strong>Flecta: Forgive my young friend here. Sometimes a bit too eager.
      ++What kinds of stress?
