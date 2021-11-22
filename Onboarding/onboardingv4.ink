@@ -18,23 +18,26 @@ Tianco: It's not just the two of us! We have so many friends and they all want t
 
 ===WhatweDo
 a group of unique virtual creatures who try to help humans handle stressful moments.
-Tianco: Can I explain about the others, Flecta? Please?
-    <strong>Flecta: Forgive my young friend here. Sometimes a bit too eager.
+{userNoBanter ==0: 
+    Tianco: Can I explain about the others, Flecta? Please? <strong>Flecta: Forgive my young friend here. Sometimes a bit too eager.
+    +Who are the others?
+        <strong>Flecta: Oh well. Go ahead, Tianco. But try to be clear!
+        ->WeAreABotWorld
+}
      ++What kinds of stress?
         ->ReflectAndAct
 
-    ++Who are the others?
-        <strong>Flecta: Oh well. Go ahead, Tianco. But try to be clear!
-        ->WeAreABotWorld
+    
 
 
-{WeAreABotWorld:
+{userNoBanter==0:
     Tianco: Isn't that what I said? But in easy words?
         <strong>Flecta: Kind of, yes.
-        +(banter)Love the two of you
+        +Love the two of you
             Tianco: Thanks pal! Right back at ya.
             ->ReflectAndAct
-        +(nomorebanter)Please just explain
+        +Please just explain
+            ~userNoBanter = 1
             <Strong> Flecta: I'll continue alone for now, Tianco.
             ->ReflectAndAct
 }
@@ -42,43 +45,53 @@ Tianco: Can I explain about the others, Flecta? Please?
 
 ===ReflectAndAct
    
-    <strong>Flecta: Things like work or school deadlines, feeling overwhelmed, worries about relations for example.
+    <strong>Flecta: Work or school deadlines, feeling overwhelmed, worries about relations,.. those kinds of things.
     + How do you help?
-            <strong>Flecta: We help you with techniques to think about what is going on, or simply ways to help you relax a bit.rf
-
-    - <strong>Flecta: Tianco and I are here to explain everything to you and listen to what's happening in your life . Then, we introduce you to a friend who will help you reflect on every day challenges and take actions to sort them out. 
+            
+    - <strong>Flecta: Tianco and I listen to what's happening in your life.
+        <strong>Flecta: We then introduce you to a friend who we think can help you best. 
     ->warning
 
 
 ===warning
-    +You solve my problems?
-        <strong>Flecta: In a sense. But before we continue, let me clarify a very important thing.
-        <strong>We're not trained to support you through serious mental health challenges or situations.
+    +They solve my problems?
+        <strong>Flecta: Kinda. They help you with techniques to reflect on every day challenges and suggest actions to sort them out.
+        <string>Flecta: Now, before we continue, let me clarify a very important thing.
+        <strong>For really serious mental health challenges or situations - please do talk to a human therapist.
         ++Got that
-            {WeAreABotWorld || WhatweDo.banter:
+            {userNoBanter == 0:
                 Tianco:<>
             -else: <strong>Flecta: <>
-            } And for emergencies, please call 911.
+            } And for emergencies, please call 911!
             -> AboveOurPayGrade
 
 ===AboveOurPayGrade
-    <strong> Flecta: {WeAreABotWorld ||WhatweDo.banter: Exactly, Tianco, well said.} These situations are ... let's call it "above our paygrade"
-    {WeAreABotWorld ||WhatweDo.banter: Tianco: And we don't even get paid!}
-    ++I understand
-    -- <strong>Flecta: Great. Glad we are on the same page.
+    <strong> Flecta:<>
+    {userNoBanter ==0: 
+    Exactly, Tianco, well said. These situations are ... let's call it "above our paygrade"
+    Tianco: And we don't even get paid!
+    }
+    +I understand
+    - <strong>Flecta: Great. Glad we are on the same page.
     ->ChoosingBots
 
 ===ChoosingBots
 +I work with you two?
     <strong>Flecta: Not exactly. We will always be here to greet you, but our group of real specialists work on your stress.
-     {WeAreABotWorld ||WhatweDo.banter: Tianco: Yes! So there's my friend Puffy who does awesome breathing things with you, and also Hero can help find your strengths and ...}
-     <strong>Flecta: <> {WeAreABotWorld ||WhatweDo.banter:  Tianco! Control yourself, you are making little sense.}
+     {userNoBanter==0:
+     Tianco: Yes! So there's Puffy who does awesome breathing things with you, and Hero can help find your strengths and ...
+     <strong>Flecta: Tianco! Control yourself, you are making little sense.
+     }
+     
     
     
     <strong>You may like to work with some and not with others. Finding that out is part of what we do.
         ++ Can I choose?
-            {WeAreABotWorld ||WhatweDo.banter: Tianco: You can tell us honestly what you think after a session. We won't be offended, right Flecta?}
-            <strong>Flecta: Your feedback will help us to introduce you to someone else next time or revisit an old friend! We select who talks to you, but choose with your help.
+            {userNoBanter==0:
+            Tianco: You can tell us honestly what you think after a session. We won't be offended, right Flecta?
+            }
+            <strong>Flecta: Your feedback will help us to introduce you to someone else next time or revisit an old friend! 
+            <strong>Flecta: We select who talks to you, but choose with your help.
         ++ Let's start!
         --->LearnMoreAboutYou
 

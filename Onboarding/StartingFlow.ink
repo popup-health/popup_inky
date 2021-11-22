@@ -10,6 +10,7 @@ VAR stressLevel = 0
 VAR stressOngoing = 0
 VAR stressLength = 0
 VAR userStressInput = "I have started too late on my assignment and I'm scared I will fail."
+VAR userNoBanter = 0
 
 ->UserVisitNumber
 
@@ -30,12 +31,21 @@ VAR userStressInput = "I have started too late on my assignment and I'm scared I
  +Good, thanks. You?
     <strong>Flecta: Couldn't be better! Let me introduce Tianco to you.
  +Kind of OK, I guess
-    <strong>Flecta: Ow, that doesn't sound convincing. Let's chat about it. First, let me introduce my friend Tianco.
+    <strong>Flecta: Ow, that doesn't sound convincing. Let's chat about it soon.
+    ++Thanks
+    <strong>Flecta: My friend Tianco is here too.
  +Don't get me started
-    <strong>Flecta: Sorry to hear that. Let's talk about it some more? By the way, this is my friend Tianco.
-- ->TiancoIntro    
+    <strong>Flecta: Sorry to hear that. Let's try to help you today, right?
+    ++Sounds Good
+    <strong>My friend Tianco is here too.
+    
+    - ->TiancoIntro    
 
 ==TiancoIntro
+++Just tell me what you do
+    ~userNoBanter = 1
+        <strong>Flecta: Of course. In a nutshell, we are<> ->WhatweDo
+++Hi Tianco!
 Tianco: Hi. I'm so happy to meet you. Can't wait to tell you all about us!
 <strong>Flecta: All in good time, Tianco. 
 ->StartOnboarding

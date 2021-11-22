@@ -1,7 +1,9 @@
 ===LearnMoreAboutYou
 <strong>Flecta: Of course! First, we'd like to learn a bit more about why you are here.
-{WeAreABotWorld ||WhatweDo.banter: Tianco: Yes! and I want to be your friend!}
-<strong>Flecta:  {WeAreABotWorld ||WhatweDo.banter: Quiet now Tianco, this is important.} <>
+{userNoBanter==0: 
+Tianco: Yes! and I want to be your friend!
+<strong>Flecta: Quiet now Tianco, this is important.
+} <>
 <strong> When we learn more about you, it is easier to decide who would be most beneficial for you to talk to.
 And rest assured, we protect your privacy at all times.
 ->HowStressed
