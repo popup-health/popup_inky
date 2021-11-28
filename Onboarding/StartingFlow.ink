@@ -42,9 +42,9 @@ VAR userNoBanter = 0
     - ->TiancoIntro    
 
 ==TiancoIntro
-++Just tell me what you do
+++Just explain please
     ~userNoBanter = 1
-        <strong>Flecta: Of course. In a nutshell, we are<> ->WhatweDo
+        <strong>Flecta: Of course. In short, we are<> ->WhatweDo
 ++Hi Tianco!
 Tianco: Hi. I'm so happy to meet you. Can't wait to tell you all about us!
 <strong>Flecta: All in good time, Tianco. 
@@ -64,10 +64,10 @@ Flecta: More importantly, did your session help? I wonder because you're back so
 <strong>Flecta: Good to see you again.{~ It's been a few days|Happy you're back.|}
 +User back after more than week
 <strong>Flecta: So glad you made it back to us!{~ Tianco|Everyone} was asking about you.  
-- ->END
+- ->DiscussBotSession
 
 ==DiscussBotSession
-+ User gave bot session positive feedback
++ User gave previous bot session positive feedback
 Tianco: You really liked XYZ, right? I get that - they're so cool!
 Flecta: When you were here last, you said you were stressed about CATEGORY. Are you still stressed about this?
     ++Yes
