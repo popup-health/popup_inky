@@ -87,7 +87,3 @@ unique virtual creatures who try to help humans handle stressful moments.
                 ++ Let's start!
         --->LearnMoreAboutYou
     
-   
-
-
-->END
