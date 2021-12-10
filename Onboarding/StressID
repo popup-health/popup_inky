@@ -19,9 +19,10 @@ Tianco: I want to be your friend!
         ->OngoingOrNot
     + Not at all
         <strong>Flecter: Good to hear!
-        ->LeaveOrStay
+        ->AssignBot
 
 ===OngoingOrNot
+// take out
 <strong>Flecta: And is this stress ongoing? Or linked to a specific situation?
     +It's ongoing
         <strong>Flecter: I see.
@@ -54,6 +55,7 @@ Would you mind sharing - tell me a bit more about your stress?
     - ->END
     
 ===paraphrase
+//this rephrasing is important - ask Federica
 Flecta: Let me see if I get this right. You are feeling {stressLevel==2:very}{stressLevel==1:a bit} stressed right now and {stressOngoing==0:that's been going on for {stressLength==1: a few months}{stressLength==2: a few weeks}{stressLength==3: a few days}}?{stressOngoing==1: And you're stressed because of something specific that happened or is still happening.}
 
 ->ExplainStress
