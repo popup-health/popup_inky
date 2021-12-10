@@ -7,11 +7,8 @@ h1 {
   text-align: center;
 }
 
-p {
-  font-family: verdana;
-  font-size: 20px;
+p.botlink {
+  font-family: arial;
+  font-size: 30px;
 }
 
-botlink {
-   font-sze: 30px;
-}
