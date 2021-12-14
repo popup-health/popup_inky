@@ -153,8 +153,7 @@ Place your hand in your belly and take 3 deep breaths, feeling the motion of you
     - 
         + Felt it
             -> End_Path_A
-        + Strong sensations are here
-            -> End_Path_A
+       
         + Not feeling it
             Sometimes it can be hard to find where these emotions are expressing in our bodies. You may find it helpful to close your eyes. 
             Try asking your body, ‘Where does my x emotion live, and how does it feel within me?’ 
@@ -164,23 +163,22 @@ Place your hand in your belly and take 3 deep breaths, feeling the motion of you
             - 
                  + Felt it
                      -> End_Path_A
-             
-             // Should there be an option to not feel it again here?
-             // + Still didn't feel it
-
+              + Still didn't feel it
+                It's ok, learning this skill takes time. But even including this step and thinking about it helps. 
+                    -> End_Path_A
     
     -> END
 
 
 === End_Path_A ===
     
-    Good job.  By focusing on the body, you’re not-focusing on the stories in your mind, which tend to exacerbate the challenging emotions.
+    By focusing on the body, you’re not-focusing on the stories in your mind, which tend to exacerbate the challenging emotions.
     
-    Now let’s do some deep abdominal breathing while focussing on the body sensations.  
+    Now let’s do some deep abdominal breathing while focusing on the body sensations.  
     
     Breath in through your nose, breathe out through your mouth. 
     
-    And softly to yourself "It's okay for me to feel this.  I can handle this" as you breathe deeply in and out.
+    And softly say to yourself "It's okay for me to feel this.  I can handle this" as you breathe deeply in and out.
     
     Try it now, I’ll wait for you here. 
         + Done
@@ -207,7 +205,7 @@ Place your hand in your belly and take 3 deep breaths, feeling the motion of you
                 + Same  
                     This can happen when we are learning to use this tool.  
                     
-                    The good news is the more we practice the easier it gets, and the more we can understand that emotions are like waves, following them back into calmness.
+                    The good news is the more we practice the easier it gets, and the more we can understand that emotions are like waves, and follow them back into calmness.
                     -> Closing_Message_Path_A
                 
                 + It intensified
@@ -220,7 +218,7 @@ Place your hand in your belly and take 3 deep breaths, feeling the motion of you
 === Intensified_Emotions_Path_A ===
     This can happen when we are learning to use this tool.  
     Learning this kind of skill requires us to look at intense emotions more closely, and that can make us feel worse at first sometimes.  
-    The good news is the more we practice the easier it gets, and the more we can understand that emotions are like waves, following them back into calmness. 
+    The good news is the more we practice the easier it gets, and the more we can understand that emotions are like waves, and follow them back into calmness. 
     
         Would you like to try the exercise again with this idea in mind?
         + Yes 
@@ -308,8 +306,6 @@ Place your hand in your belly and take 3 deep breaths, feeling the motion of you
         // In this demo, since first_session_emotion is "Joy", we go directly to Choose_joy_intensity
         -> Choose_joy_intensity
     + New emotion
-
-        Ok, now we will go deeper into that emotion. 
 
         -> Choose_emotion
 -> END
@@ -606,17 +602,35 @@ Or do you want to identify what you are feeling today?
         
 
 === Triggers_Exercise ===
-    Identifying this timeline allows us to understand its not the event itself what is triggering our emotions. It's more our interpretation of the event based on our precondition and worldview. 
     
-    This opens up the possibility of new ways of understanding or framing the event that happened and the emotions that get triggered. 
+    Now that you know your emotion and its intensity, let's first identify the event that triggered it:
+
+        + Insert text 
+
+Next let’s analyze what we can gather from the context in which it was triggered. 
+
+Which were your preconditions? What were you doing? What were you feeling like before these emotions got triggered? 
+
+	- + Insert tex
+
+
+Have you had prior experiences with events like this? How do you tend to behave when events like this happen? 
+
+	- + Insert text. 
+
+
+    Identifying this timeline allows us to understand its not the event itself what is triggering our emotions. Its more our interpretation of the event based on our precondition and worldview. 
+
+This opens up the possibility to new ways of understanding or framing the event that happened and the emotions that get triggered. 
+
     
-            //Some options
+           - + Sounds good
     
     Although sometimes it's hard to feel in control of our responses, we have a choice in how we respond. Some responses are more constructive than others.
     
     Think about different ways you can respond to this event? 
     
-        + User input
+        - + User input
 
 With awareness we can pause before we respond and choose a response that best serves our goals.
 
