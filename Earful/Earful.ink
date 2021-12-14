@@ -118,20 +118,9 @@ Are you in a good mental space for listening today? Or, are you focused on your 
 ==== Timetoprocess ==== 
 Ok, that happens and it's great that you identified it. I will send you now to a micro coach friend that can help you with that. 
      -> END
- //Send to bot Let Go. And then return to this bot? 
- //reconcile this with what is in "exit" 
+ //Send to bot Let Go. 
  
-==== exit ===
-Okay, no worries. Do you want to chat to one of my friends?
-    + Okay
-    Sure, I will call one now. 
-    Don't forget that learning to listen to others not only improves your social skills, but it could be a good resource to calm your own worries.
-        //call a bot now
-        -> END
-    + No
-    No problem. I hear you! :)
-    I'd still love you to come back when you're in a different headspace. Bye!
-        -> END
+
  
 ==== topicMatch ====
 //system check if the topic of the main stressor (from Stress_Detect) is either: Work, Health, School, Family, other.
@@ -505,4 +494,18 @@ This time we will revise a case related to {stressCategory}. In the future we wi
   {Come back and practice with me anytime or practice what you learned with others throughout the day.|  You can also continue building your skills by practicing active listening with people in your real life.}
     //go to farewell module
     -> END
+    
+    
+    
+    ==== exit ===
+Okay, no worries. Do you want to chat to one of my friends?
+    + Okay
+    Sure, I will call one now. 
+    Don't forget that learning to listen to others not only improves your social skills, but it could be a good resource to calm your own worries.
+        //call a bot now
+        -> END
+    + No
+    No problem. I hear you! :)
+    I'd still love you to come back when you're in a different headspace. Bye!
+        -> END
 
