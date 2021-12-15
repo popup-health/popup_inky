@@ -285,10 +285,6 @@ Place your hand in your belly and take 3 deep breaths, feeling the motion of you
     Just remember, the more emotional awareness we can bring to our lives, the more we’ll understand what we need and want, the better we will get at resolving conflicts and the easier it will be to move past difficult feelings. 
     
     Come back and visit me some other time, we can practice emotional awareness techniques together.
-    
-        Do you have any feedback so that I can improve?
-        
-    FEEDBACK __________
         
     [Find a new inky for user.]
 
@@ -611,12 +607,12 @@ Next let’s analyze what we can gather from the context in which it was trigger
 
 Which were your preconditions? What were you doing? What were you feeling like before these emotions got triggered? 
 
-	- + Insert tex
+	- + Insert text
 
 
 Have you had prior experiences with events like this? How do you tend to behave when events like this happen? 
 
-	- + Insert text. 
+	- + Insert text
 
 
     Identifying this timeline allows us to understand its not the event itself what is triggering our emotions. Its more our interpretation of the event based on our precondition and worldview. 
