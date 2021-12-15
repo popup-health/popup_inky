@@ -21,11 +21,11 @@ VAR total=0
 + First visit
     -> First_visit
 + Second visit
-    -> Second_visit
+    -> Second_visit_check
 + Third visit
-    -> Third_visit
+    -> Third_visit_check
 + Fourth visit
-    -> Fourth_visit
+    -> Fourth_visit_check
 
 ==== First_visit ====
 //we are teaching: active listening
@@ -49,14 +49,28 @@ Active listening is a great tool that helps both parties: the person speaking fe
       
 //****************************************************//
 
+==== Skipped_last_visit ====
+Hi {userName}. Last time we chatted, you said you were focused on your thoughts and needed time to process them before trying to practice active listening. Are you now in a mental space to listen or are you still focused on your thoughts and need more time to process them? 
+    + I'm ready to listen
+        -> listening
+    + Need to process 
+        -> Timetoprocess
 
-==== Second_visit ====
+
+-> END
+
+==== Second_visit_check ====
 //Session 2
-
+    + Skipped last visit
+        -> Skipped_last_visit
+    + Completed last visit
+        -> Second_visit
+    
+==== Second_visit ====
 # IMAGE 
 .
 ~ visit = 2
-Hi {userName}, last time we chatted, you practiced active listening as I explained a challenge I was going through, and we practiced the three steps: 
+Hi {userName}. Last time we chatted, you practiced active listening as I explained a challenge I was going through, and we practiced the three steps: 
 1) being ready to listen, 
 2) listening and clarifying,
 3) acknowledging the person's feelings and abilities to deal with the issue.
@@ -79,6 +93,13 @@ Hi {userName}, last time we chatted, you practiced active listening as I explain
 
 //****************************************************//
 
+==== Third_visit_check ====
+//Session 3
+    + Skipped last visit
+        -> Skipped_last_visit
+    + Completed last visit
+        -> Third_visit
+        
 ==== Third_visit ====
 //Session 3
 
@@ -94,7 +115,13 @@ Are you up for some active listening today? Or, are you focused on your own thou
       
 
 //****************************************************//
-
+==== Fourth_visit_check ====
+//Session 4
+    + Skipped last visit
+        -> Skipped_last_visit
+    + Completed last visit
+        -> Fourth_visit
+        
 ==== Fourth_visit ====
 //Session 4
 
