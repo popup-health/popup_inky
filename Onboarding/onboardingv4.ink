@@ -12,12 +12,20 @@
 
 ===WeAreABotWorld
 Tianco: It's not just the two of us! We have so many friends and they all want to make you feel better about stressy stuff.
+<<<<<<< Updated upstream
 <strong>Flecta: (sigh) Thanks, Tianco. He means that we'll introduce you to fellow micro-coaches who explain techniques that help with everyday challenges.
+=======
+<strong>Flecta: (sigh) Thanks, Tianco. They are micro-coaches who explain techniques that help with everyday challenges.
+>>>>>>> Stashed changes
     +Challenges? Such as?
     ->ReflectAndAct
 
 ===WhatweDo
+<<<<<<< Updated upstream
 unique micro-coaches who try to help humans handle stressful moments.
+=======
+here to try to help humans handle stressful moments.
+>>>>>>> Stashed changes
 {userNoBanter ==0: 
     Tianco: Can I talk about the others, Flecta? Please? 
     <strong>Flecta: Forgive my young friend here. Sometimes a bit too eager.
@@ -25,10 +33,8 @@ unique micro-coaches who try to help humans handle stressful moments.
         <strong>Flecta: Oh well. Go ahead, Tianco. But try to be clear!
         ->WeAreABotWorld
 }
-        ++ (kindsofstress)What kinds of stress?
-            <strong>Flecta: Work or school deadlines, feeling overwhelmed, worries about relations,.. those kinds of things.
-            
-        ++ How do you help?   
+        ++ (kindsofstress)Stressful moments?
+            <strong>Flecta: Deadlines, feeling overwhelmed, worries about relationships, finances, health ... those kinds of things.
 
         -- ->ReflectAndAct
 
@@ -48,9 +54,13 @@ unique micro-coaches who try to help humans handle stressful moments.
 
 ===ReflectAndAct
    <strong>Flecta: Tianco and I listen to what's happening in your life.
+<<<<<<< Updated upstream
    <strong>Flecta: Then we introduce you to the micro-coach who we think can help you best. 
+=======
+   <strong>Flecta: Then we introduce you to a micro-coach who we think can help you best with stress. 
+>>>>>>> Stashed changes
     {not WhatweDo.kindsofstress: 
-        <strong>Flecta: ...with stress like work or school deadlines, feeling overwhelmed, worries about relations,.. those kinds of things.
+        <strong>Flecta: As in  deadlines, feeling overwhelmed, worries about relationships, finances, health ... those kinds of things.
     }
     ->warning
 
@@ -78,7 +88,11 @@ unique micro-coaches who try to help humans handle stressful moments.
 
 ===ChoosingBots
 +I'm ready
+<<<<<<< Updated upstream
     <strong>Flecta: So there are a lot of micro-coaches.
+=======
+    <strong>Flecta: We suggest the micro-coaches that we think are best suited. <>
+>>>>>>> Stashed changes
      {userNoBanter==0:
      Tianco: Yes! There's Puffy who does awesome breathing things with you! And Hero can help find your strengths and ...
      <strong>Flecta: Tianco! Control yourself, you are making little sense.
