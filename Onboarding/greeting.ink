@@ -3,13 +3,14 @@
 ===greeting1
 <strong>Flecta: Hi! My name is Flecta. Good to meet you. How's your day been so far?
  +Good, thanks. You?
-    <strong>Flecta: Couldn't be better! Let me introduce Tianco to you.
+    <strong>Flecta: Couldn't be better! My micro-coach friends and I are so happy you're here.
+    <strong>Flecta: My friend Tianco is here too.
  +Kind of OK, I guess
-    <strong>Flecta: Ow, that doesn't sound convincing. Let's come back to that.
+    <strong>Flecta: Ow, that doesn't sound convincing. I have some micro-coach friends who could help you with that.
     ++Thanks
     <strong>Flecta: My friend Tianco is here too.
  +Don't get me started
-    <strong>Flecta: That bad huh? Let's try to help you today.
+    <strong>Flecta: That bad huh? I have some micro-coach friends who could help you with that.
     ++Sounds Good
     <strong>My friend Tianco is here too.
     
