@@ -48,10 +48,11 @@ Tianco: So, what's happening?
 ->NegativeXP
         
 ===PositiveXP
-Tianco: You really liked BOTNAME, right? Totally get that!
-Flecta: When you were here last, you said you were stressed about CATEGORY. Are you still stressed about this?
+Tianco: You really liked BOTNAME last time, right? Totally get that!
+Flecta: When you were here before, you said you were stressed about CATEGORY. Are you still stressed about that?
     +Yes
-        Flecta: I'm so sorry. Now, let's see, who would be good to talk to today t today... Tianco?
+        <strong>Flecta: Oh no, still? Let's get you some help quick.
+        <strong>Flecta: Now, let's see, who would be good to talk to today... Tianco?
         Tianco: Oh, you're asking me? I know just the one! BOTNAME!
             ++Sounds good
             USER IS SENT OFF TO BOT.
@@ -65,8 +66,8 @@ Flecta: When you were here last, you said you were stressed about CATEGORY. Are 
         <strong>Flecta: That really makes me happy.
         Tianco: Yet you are here.
         <strong> Flecta: Good point, Tianco. 
-        DO WE NEED EXTRA STRESS ID HERE??
-        Tianco: We can connect you with one of our friends again! 
+        WE NEED FOLLOW UP QUESTIONS HERE? NEW USER INPUT MAYBE?
+        Tianco: We can connect you with a micro-coach again! 
         
         ++That would be great
             Tianco: Let's do it!

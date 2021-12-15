@@ -2,9 +2,9 @@
 
 ===AssignFirstBot
 
-<strong>Flecta: Now ... the exciting moment. Your first chat to one of special friends! Tianco, help me out.
-Tianco: Wel, I'm thinking BOTNAME.
-<strong>Flecta: Excellent choice! Well, there you go.
+<strong>Flecta: Now ... the exciting moment. Let's choose one of our special micro-coaches! Tianco, help me out.
+Tianco: Well, I'm thinking BOTNAME.
+<strong>Flecta: Excellent choice. There you go!
 <strong>Tianco: Can't wait to hear how it went!
 USER IS SENT OFF TO BOT
 

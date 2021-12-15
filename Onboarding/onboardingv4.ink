@@ -12,12 +12,12 @@
 
 ===WeAreABotWorld
 Tianco: It's not just the two of us! We have so many friends and they all want to make you feel better about stressy stuff.
-<strong>Flecta: (sigh) Thanks, Tianco. He means that we'll introduce you to fellow Inklings who explain techniques that help with everyday challenges.
+<strong>Flecta: (sigh) Thanks, Tianco. He means that we'll introduce you to fellow micro-coaches who explain techniques that help with everyday challenges.
     +Challenges? Such as?
     ->ReflectAndAct
 
 ===WhatweDo
-unique virtual creatures who try to help humans handle stressful moments.
+unique micro-coaches who try to help humans handle stressful moments.
 {userNoBanter ==0: 
     Tianco: Can I talk about the others, Flecta? Please? 
     <strong>Flecta: Forgive my young friend here. Sometimes a bit too eager.
@@ -48,7 +48,7 @@ unique virtual creatures who try to help humans handle stressful moments.
 
 ===ReflectAndAct
    <strong>Flecta: Tianco and I listen to what's happening in your life.
-   <strong>Flecta: Then we introduce you to a friend who we think can help you best. 
+   <strong>Flecta: Then we introduce you to the micro-coach who we think can help you best. 
     {not WhatweDo.kindsofstress: 
         <strong>Flecta: ...with stress like work or school deadlines, feeling overwhelmed, worries about relations,.. those kinds of things.
     }
@@ -69,8 +69,8 @@ unique virtual creatures who try to help humans handle stressful moments.
 ===AboveOurPayGrade
     <strong> Flecta:<>
     {userNoBanter ==0: Exactly, Tianco, well said.}
-    These situations are ... let's call it "above our paygrade"
-    {userNoBanter ==0:And we don't even get paid!}
+    <strong>Flecta: These situations are ... let's call it "above our paygrade"
+    {userNoBanter ==0:Tianco: And we don't even get paid!}
     
     +I understand
     - <strong>Flecta: Great. Glad we are on the same page.
@@ -78,12 +78,14 @@ unique virtual creatures who try to help humans handle stressful moments.
 
 ===ChoosingBots
 +I'm ready
-    <strong>Flecta: We suggest the Inklings that we think are best suited. <>
+    <strong>Flecta: So there are a lot of micro-coaches.
      {userNoBanter==0:
-     Tianco: Yes! So there's Puffy who does awesome breathing things with you, and Hero can help find your strengths and ...
+     Tianco: Yes! There's Puffy who does awesome breathing things with you! And Hero can help find your strengths and ...
      <strong>Flecta: Tianco! Control yourself, you are making little sense.
      }
-      <strong>You may like some more than others. Just tell us.
+     
+     <strong>Flecta: You may like some of them more than others. Tell us, it helps our choices.
+               
                 ++ Let's start!
         --->LearnMoreAboutYou
     

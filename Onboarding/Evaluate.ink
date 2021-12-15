@@ -1,8 +1,9 @@
 //script part where user evaluates the intervention with Flecta and Tianco
 
 ===EvaluateBot
+WHEN USER RETURNS FROM BOT
 
-<strong>Flecta: {~Welcome back | Here you are | All ears}
+<strong>Flecta: {~Welcome back. | Here you are! | All ears!}
 <strong>Flecta: How did you like your session with BOTNAME?
 
     +Extremely helpful
