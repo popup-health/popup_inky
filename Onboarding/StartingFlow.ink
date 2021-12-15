@@ -1,3 +1,6 @@
+//THIS FILE IS THE ROOT OF THE NON-INTERVENTION PIECES
+//WHEN THE USER GOES TO AN INTERVENTION IN BETWEEN, IT IS INDICATED IN CAPITALS
+
 INCLUDE onboardingv4.ink
 INCLUDE StressID.ink
 INCLUDE Evaluate.ink
@@ -16,13 +19,16 @@ VAR userNoBanter = 0
 ->UserVisitNumber
 
 ===UserVisitNumber
-//for testing of flow
+//For testing of the different pieces, we can choose here which user visit it is.
 
-+user visit 1 (onboarding sequence)
++user visit 1 (goes to onboarding)
+//very first visit of a user. After greeting 1 they will go to onboarding
 ->greeting1
 +user visit 2 (1st session after onboarding session)
+//second visit of user. Goes to greeting 2
 ->greeting2
-+user visit 3 (2nd session after onboarding session)
++user visit 3 (2nd and further sessions after onboarding)
+//third and any further visits
 ->greeting3
 
 
