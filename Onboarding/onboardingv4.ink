@@ -13,13 +13,13 @@
 ===WeAreABotWorld
 Tianco: It's not just the two of us! We have so many friends and they all want to make you feel better about stressy stuff.
 
-<strong>Flecta: (sigh) Thanks, Tianco. They are micro-coaches who explain techniques that help with everyday challenges.
+<strong>Flecta: (sigh) Thanks, Tianco. Our friends are micro-coaches who explain techniques that help with everyday challenges.
 
     +Challenges? Such as?
     ->ReflectAndAct
 
 ===WhatweDo
-here to try to help humans handle stressful moments.
+all here to try to help humans handle stressful moments.
 {userNoBanter ==0: 
     Tianco: Can I talk about the others, Flecta? Please? 
     <strong>Flecta: Forgive my young friend here. Sometimes a bit too eager.
@@ -28,7 +28,7 @@ here to try to help humans handle stressful moments.
         ->WeAreABotWorld
 }
         ++ (kindsofstress)Stressful moments?
-            <strong>Flecta: Deadlines, feeling overwhelmed, worries about relationships, finances, health ... those kinds of things.
+            <strong>Flecta: Stress like deadlines, feeling overwhelmed, being worried about relationships, finances, health ... those kinds of things.
 
         -- ->ReflectAndAct
 
@@ -47,17 +47,17 @@ here to try to help humans handle stressful moments.
 
 
 ===ReflectAndAct
-   <strong>Flecta: Tianco and I listen to what's happening in your life.
-   <strong>Flecta: Then we introduce you to a micro-coach who we think can help you best with stress. 
+   <strong>Flecta: {userNoBanter ==0: Tianco and} I listen to what's happening in your life.
+   <strong>Flecta: Then  {userNoBanter ==0: we} {userNoBanter ==1: I} introduce you to a micro-coach who  {userNoBanter ==0: we} {userNoBanter ==1: I} think can help you best with stress. 
     {not WhatweDo.kindsofstress: 
-        <strong>Flecta: As in  deadlines, feeling overwhelmed, worries about relationships, finances, health ... those kinds of things.
+        <strong>Flecta: Stress as in  deadlines, feeling overwhelmed, worried about relationships, finances, health ... those kinds of things.
     }
     ->warning
 
 
 ===warning
-    +They solve things?
-        <strong>Flecta: Kinda. They help you with techniques to reflect on every day challenges and suggest actions to sort them out.
+    +You solve things?
+        <strong>Flecta: Kinda. The micro-coaches teach you techniques to reflect on every day challenges and suggest actions to sort them out.
         <strong>Flecta: BUT... For really serious mental health challenges or situations - please talk to a human therapist.
         ++Got that
             {userNoBanter == 0:
@@ -67,26 +67,29 @@ here to try to help humans handle stressful moments.
             -> AboveOurPayGrade
 
 ===AboveOurPayGrade
-    <strong> Flecta:<>
+    <strong> Flecta: <>
     {userNoBanter ==0: Exactly, Tianco, well said.}
-    <strong>Flecta: These situations are ... let's call it "above our paygrade"
-    {userNoBanter ==0:Tianco: And we don't even get paid!}
+    <strong>These situations are ... let's call it "above our paygrade"
+    {userNoBanter ==0:Tianco: And we don't even get paid - or do we, Flecta?}
     
     +I understand
     - <strong>Flecta: Great. Glad we are on the same page.
     ->ChoosingBots
 
 ===ChoosingBots
-+I'm ready
-    <strong>Flecta: Flecta: So there are a lot of micro-coaches. <>
++I'm ready to start!
+    <strong>Flecta: So there are a lot of micro-coaches... 
 
      {userNoBanter==0:
-     Tianco: Yes! There's Puffy who does awesome breathing things with you! And Hero can help find your strengths and ...
+     Tianco: Yes! There's Puffy who does awesome breathing things with you! And Hero can help you find your strengths and ...
      <strong>Flecta: Tianco! Control yourself, you are making little sense.
      }
      
-     <strong>Flecta: You may like some of them more than others. Tell us, it helps our choices.
-               
-                ++ Let's start!
+     <strong>Flecta: You may like some more than others. And if you tell  {userNoBanter ==0: us} {userNoBanter ==1: me}, it helps us decide who to introduce you to next.
+     {userNoBanter==0:
+     Tianco: They don't mind if you don't really like them, right, Flecta?
+     <strong>Flecta: Indeed Tianco, all the micro-coaches want to do is help. 
+     }          
+                ++ I understand
         --->LearnMoreAboutYou
     

@@ -23,6 +23,7 @@ VAR userNoBanter = 0
 
 +user visit 1 (goes to onboarding)
 //very first visit of a user. After greeting 1 they will go to onboarding
+[FLECTA ALONE]
 ->greeting1
 +user visit 2 (1st session after onboarding session)
 //second visit of user. Goes to greeting 2
