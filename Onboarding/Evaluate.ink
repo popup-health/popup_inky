@@ -8,35 +8,43 @@ WHEN USER RETURNS FROM BOT
 
     +Extremely helpful
         Tianco: {~Fantastic | Excellent | Wonderful} 
-        -> AcknowledgeFeedback
-        
+        <strong>Flecta: Could you say why you liked it?
+        USER INPUT ABOUT BOT EXPERIENCE
+        <Strong>Flecta: Thanks for sharing this with us. We try to learn from every experience.
+
     +A bit helpful
         Tianco: {~That's good | Good to hear | Nice}
-        -> AcknowledgeFeedback
+        <strong>Flecta: Could you say why you liked it? And what could be better?
+        USER INPUT ABOUT BOT EXPERIENCE
+        
+
     +Just OK 
         Tianco: {~I see | All right}
-        ->ExpandOnBadXP
+        <strong>Flecta: Can you tell me a bit more? Why you feel this way?
+        USER INPUT ABOUT BOT EXPERIENCE
+        <Strong>Flecta: Thanks for sharing this with us. We try to learn every time.
+        
+    
     +Not very helpful
         Tianco: {~That's not good |Sorry to hear that}
-        ->ExpandOnBadXP
+        <strong>Flecta: Can you explain? What could be better?
+        USER INPUT ABOUT BOT EXPERIENCE
+        <Strong>Flecta: Thanks for sharing this with us. We try to improve each time!
+
     
     +Not at all
         Tianco: {Oh no, very sorry to hear that | Glad you're so honest}
-        ->ExpandOnBadXP
-    
+        <strong>Flecta: Can you tell me a bit more? What was wrong - and how can we change?
+        USER INPUT ABOUT BOT EXPERIENCE
+        <Strong>Flecta: Thanks for sharing this with us. We try to learn from you to do better.
 
 
-===ExpandOnBadXP
-<strong>Flecta: Can you tell us a bit more?
-+Not my type of action
-+Too hard
-+Uninteresting
+  - -> AcknowledgeFeedback 
 
-- -> AcknowledgeFeedback
 
 ===AcknowledgeFeedback
 
-<strong>Flecta: {~Let me note that. |We'll definitely remember that. |Definitely noted!}
+<strong>Flecta: {~Thanks for sharing this with us. |Let me note that. |We'll definitely remember that. |Definitely noted!}
 <strong>Flecta: We learn from your feedback, so we can help you better each time you visit!
 Tianco: and we want you to come back!
 

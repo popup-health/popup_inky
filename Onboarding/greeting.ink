@@ -49,10 +49,10 @@ Tianco: So, what's happening?
 ->NegativeXP
         
 ===PositiveXP
-Tianco: You really liked BOTNAME last time, right? Totally get that!
-Flecta: When you were here before, you said you were stressed about CATEGORY. Are you still stressed about that?
-    +Yes
-        <strong>Flecta: Oh no, still? Let's get you some help quick.
+Tianco: {~You really liked|Seems like you enjoyed your time with|You had a good experience with} BOTNAME, right? They're one of my favourites.
+<strong>Flecta: Tell me. Last time, you said you were stressed about CATEGORY. Are you feeling better about that?
+    +No
+        <strong>Flecta: Oh no, still not OK? Let's get you some help quick.
         <strong>Flecta: Now, let's see, who would be good to talk to today... Tianco?
         Tianco: Oh, you're asking me? I know just the one! BOTNAME!
             ++Sounds good
@@ -63,11 +63,10 @@ Flecta: When you were here before, you said you were stressed about CATEGORY. Ar
                 Tianco: That happens to everyone sometimes (not often to me, though!)
                 <strong>Flecta: Maybe next time.
             ->HowToReconnect
-    +No
+    +Yes
         <strong>Flecta: That really makes me happy.
         Tianco: Yet you are here.
         <strong> Flecta: Good point, Tianco. 
-        WE NEED FOLLOW UP QUESTIONS HERE? NEW USER INPUT MAYBE?
         Tianco: We can connect you with a micro-coach again! 
         
         ++That would be great
@@ -80,7 +79,7 @@ Flecta: When you were here before, you said you were stressed about CATEGORY. Ar
             
 ===NegativeXP
 Tianco: BOTNAME said it didn't go so well. They were a bit sad, but totally understand. 
-Tianco: They have offered to try again! What do you think?
+<strong>Flecta: They have offered to try again! What do you think?
     +No Thanks
     Flecta: That's all right. Let us discuss who might be a better fit. One moment ...
     Tianco: Always learning to do better!
@@ -91,8 +90,8 @@ Tianco: They have offered to try again! What do you think?
 
 ===greeting3
 
-Tianco: {username}!! Back for more, huh? Can't miss us? We love to have you around too.
-<strong>Flecta: 
+Tianco: {username}!! Back for more. Can't miss us? Likewise! We love to have you around too.
+<strong>Flecta: No matter how long or how short the time in between your visits. {~Always a pleasure to see you.|Welcome back!|Always really nice to see you again.} 
 
+->DiscussBotSession
 
-->END
