@@ -13,6 +13,7 @@
     ++Sounds Good
     
     - <strong>Flecta: And this is Tianco!
+    [TIANCO AND FLECTA ANIMATION]
     ->TiancoIntro    
 
 ==TiancoIntro

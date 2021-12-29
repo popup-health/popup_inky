@@ -1,19 +1,16 @@
 ===LearnMoreAboutYou
-<strong>Flecta: Great. First, let's see why you are here.
-{userNoBanter==0: Tianco: Yes! I really really want to help!}
-<strong>Flecta:  {userNoBanter==0: Quiet now Tianco, this is important.}
-<strong>Flecta: A few questions only, to help us decide who's the best micro-coach for you.
-<strong>Flecta: Rest assured, we protect your privacy at all times.
+<strong>Flecta: Great. First, let's talk about why you are here. Just a few questions, to help {userNoBanter ==0: us} {userNoBanter ==1: me} decide who's the best micro-coach for you.
+<strong>Flecta: Oh, and of course your privacy is guaranteed.
 ->HowStressed
 
 ===HowStressed
-<strong>Flecta: Tell me, are you feeling stressed right now?
+<strong>Flecta: So are you feeling stressed right now?
     + Very
         <strong>Flecta: Sorry to hear that.
         ~stressLevel=2
         ->HowLong
     + A bit
-        <strong>Flecta: Not good.
+        <strong>Flecta: That's not good. <> 
         ~stressLevel=1
         ->HowLong
     + Not at all
@@ -32,19 +29,19 @@
         ->ExplainStress
 
 ===HowLong
-<strong>So for how long have you been stressed?
-    +Few months or so
+And for how long have you been stressed?
+    +A few months or so
     ~stressLength=1
-    +Few Weeks
+    +A few weeks
     ~stressLength=2
-    +Few Days
+    +A few days
     ~stressLength=3
     +Hard to say
     ~stressLength=4
     - ->ExplainStress
 
 ===ExplainStress
-Would you mind sharing? Tell me a bit more about your stress?
+<strong>Flecta: Would you mind sharing a bit more about your stress?
     +Sure!
     FREE USER INPUT THAT TRIGGERS CATEGORISATION
     +Not now
