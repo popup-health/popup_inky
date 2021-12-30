@@ -23,12 +23,8 @@ VAR visit = "first"
         -> First_session
   + if second visit
         -> Second_session
-        ->END
   + if third or later visit
         -> Third_session_and_after
-
--> END
-
 
 
 ==== First_session ====
