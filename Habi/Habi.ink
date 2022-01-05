@@ -13,6 +13,7 @@
 
 VAR username = "Marco"
 VAR visit = "first"
+VAR habit = ""
 
 -> System_Check
 
@@ -209,7 +210,7 @@ Today, we'll revisit that habit and find ways to make it easier to follow.
 
 ==== Habit_check_in ====
 
-This is the habit you wrote down last time: [user stored text]
+This is the habit you wrote down last time: [user stored goal]
 
 Remember, we are trying to get better at habits in general, so don't worry if you didn't follow up on your new habit this time.
 
@@ -248,6 +249,7 @@ Maybe your new habit felt too general and overwhelming, or maybe you thought you
 
     + Too general
         Try to narrow down your habit to a more simple task.
+        [user input: update habit/goal]
         -> habit_check_in_end
     + Too busy
         Make sure your reminder is set or to find a better time to do your habit.

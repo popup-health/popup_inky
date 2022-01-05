@@ -33,7 +33,7 @@ VAR visit = "first"
         -> Third_session
 
 ==== First_session ====
-Hi {username}, I’m Meditator. I teach a special kind of meditation called 'Loving Kindness'.  Some people hear that and think it's not for them because it sounds a bit corny but there's so much great evidence that this kind of practice helps boost mood, increase calm, and helps us to appreciate the small things in life.
+Hi {username}, I’m Meditator. I teach a special kind of meditation called 'Loving Kindness.'  Some people hear that and think it's not for them because it sounds a bit corny but there's so much great evidence that this kind of practice helps boost mood, increase calm, and helps us to appreciate the small things in life.
 
 
     +Sounds good lets start!
