@@ -27,6 +27,17 @@ VAR habit = ""
   + if third or later visit
         -> Third_session_and_after
 
+==== FindNewBot ====
+
+No problem at all. Sometimes it's a bit tricky to figure out who among my pals and I is going to be most helpful. Let me see if I can find someone who can help you right now!
+    
+Can you give a short bit of feedback to me so I can improve first?
+    
+FEEDBACK __________
+    
+[Find a new inky for user.]
+
+-> END
 
 ==== First_session ====
 
@@ -44,6 +55,9 @@ Ready to get started?
 
     + Yes, let's start
         -> start_habit_exercise
+        
+    + Not feeling it
+    -> FindNewBot
 
 
 ==== Habits_extra_info ====
@@ -187,14 +201,17 @@ Good job. Next time we'll check to see if you're following up on your goal.
 
 
 
-
 ==== Second_session ====
 
 Hi {username}, welcome back! Last time, I told you about habits and we set up a new habit together. 
 
 Today, we'll revisit that habit and find ways to make it easier to follow.
 
-    -> Habit_check_in
+    + Let's do it!
+        -> Habit_check_in
+        
+    + Not feeling it
+        -> FindNewBot
 
 -> END
 
@@ -237,8 +254,6 @@ How was trying to do your new habit? Did you do it?
             -> habit_check_in_end
         
 
-
-        
 
 ==== habit_response_B ====
 
@@ -292,7 +307,10 @@ Today we'll see how you're doing with your habit and maybe set another one!
 Sounds good?
 
     + Yes, get started
-    -> Session3_habit_check_in
+        -> Session3_habit_check_in
+    
+    + Not feeling it
+        -> FindNewBot
 
 ==== Session3_habit_check_in ====
 
@@ -303,11 +321,11 @@ Remember, we are trying to get better at habits in general, so don't worry if it
 How was trying to do your new habit? Did you do it?
 
     + I forgot about it completely
-    -> Session3_habit_response_A
+        -> Session3_habit_response_A
     + I remembered but didn't do it
-    -> Session3_habit_response_B
+        -> Session3_habit_response_B
     + I did it
-    -> Session3_habit_response_C
+        -> Session3_habit_response_C
 
 
 ==== Session3_habit_response_A ====
