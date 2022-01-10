@@ -54,7 +54,7 @@ Some people hear that and think it's not for them because it sounds a bit 'touch
 
     Here is a good article outlining a summary of some of the research findings.  As you can see there are a lot of great benefits from this practice.
         
-    https://www.psychologytoday.com/ca/blog/feeling-it/201409/18-science-backed-reasons-try-loving-kindness-meditation
+    [https://www.psychologytoday.com/ca/blog/feeling-it/201409/18-science-backed-reasons-try-loving-kindness-meditation]
         
     +Okay let's get started then!
         -> Session1_LovingKindness
@@ -71,19 +71,20 @@ Some people hear that and think it's not for them because it sounds a bit 'touch
     
     Let me describe the structure first and then I'll guide you through it.
     
-    +Sounds good!
+    + Sounds good!
     
         ->Session1_LovingKindnessOutline
         
-    
-    
-    +Not so sure about this
-        I get it - many people are hesitant about this practice.  Let's jump in and try it first and then if you don't like it we can problem solve after!
-        
-        ->Session1_LovingKindnessOutline
-        
-        //Fv: should we also give the option to exit here? 
-    
+    + Not so sure about this
+        I get it - many people are hesitant about this practice.  How about we try it first and then if you don't like it we can problem solve after!
+        I can also help you find another micro-coach and do this exercise later.
+        - 
+        + Continue with exercise
+            ->Session1_LovingKindnessOutline
+            
+        + Find new coach
+            -> FindNewBot
+            
 ->END
 
 
@@ -105,8 +106,10 @@ Some people hear that and think it's not for them because it sounds a bit 'touch
     And then you'll repeat this process three times. 
     
     Are you ready to try it out?
-        //Fv: what are the options of answers here? +yes +I'm ready 
-    ->Session1_LovingKindnessForSelfStart
+    
+        + Yes, I'm ready
+        
+            ->Session1_LovingKindnessForSelfStart
 
 ->END
 
@@ -201,14 +204,19 @@ Do you want to try it out?
     +Sounds good!
     
         ->Session2_LovingKindnessOutline
-        
     
+    + Not so sure about this
     
-    +Not so sure about this
-        It's okay to feel like this. Thinking about being kind to someone you don't even know can be hard. Let's jump in and try it first and then if you don't like it we can problem solve after!
+        It's okay to feel like this. Thinking about being kind to someone you don't even know can be hard. We can try it first and then if you don't like it we can problem solve after!
         
-        ->Session2_LovingKindnessOutline
-    //FV: I would provide an option to exit here. 
+        I can also help you find another micro-coach and do this exercise later.
+        - 
+        + Let's continue
+            ->Session2_LovingKindnessOutline
+
+        + Find new coach 
+            -> FindNewBot
+
     
 ->END
 
@@ -314,13 +322,20 @@ Hi again, {username}. I hope you are well and that you had a chance to practice 
 
 Today's exercise will be about redirecting those positive thoughts to someone in your life that might be difficult to deal with. This can be hard to tackle, but we can try together. 
 
-Are you ready to try it out?
+You can also choose to practice the other exercises again if this version is too difficult.
 
-    +Sounds good lets start!
-
+    Who would you like to focus on?
+    
+    + Myself
+        -> Session1_LovingKindness
+    
+    + Stranger
+        -> Session2_LovingKindness
+        
+    + Difficult person
         -> Session3_LovingKindness
         
-//Fv: you could give here the option to try the previous two exercises again, because maybe they are not ready yet to go this extra step towards someone that is difficult to deal with.     
+
 
 -> END
 
@@ -332,13 +347,11 @@ Are you ready to try it out?
     
     Let me remind you of the structure of the exercise first and then I'll guide you through it.
     
-    +Sounds good!
+    + Sounds good!
     
         ->Session3_LovingKindnessOutline
-        
     
-    
-    +Not so sure about this
+    + Not so sure about this
         It's okay to feel like this. This is a hard exercise, and it can be hard to love others that don't seem to think the same way of us. Let's take it one step at a time and hopefully by the end of the exercise you'll see the value of it.
         
         ->Session3_LovingKindnessOutline
@@ -414,7 +427,9 @@ Are you ready to try it out?
         Take care!
         
         ->END
+        
     +I feel happier
+    
        That's great news! Sending love to those that are difficult is a huge step and I am glad that you did it. 
         You can remember to do this exercise regularly. 
         By now I think you've mastered this exercise and can use any version of it to practice loving kindness towards yourself and others. 
@@ -426,6 +441,7 @@ Are you ready to try it out?
         ->END
         
     +I feel the same
+    
         No problem. Sending love to those that are difficult is a huge step and it might take more than once to get used to it.Try practicing this exercise over the course of the week and see if you start feeling more kindness towards others. 
         
         Remember that how we feel towards others will reflect back to ourselves.
