@@ -34,8 +34,6 @@ Hello, {username}. My name is Habi and I'll be your micro-coach to help you form
 
 Habits are learned behaviors that become automatic over time. We can form new habits if we practice them over long enough, usually a couple of weeks. 
 
-//FV: I would delete this, it's repetitive and not needed. "While habits can be good or bad, we'll focus on intentionally creating and practicing good habits to improve your life." 
-
 Ready to get started?
 
     + Tell me more about habits
@@ -116,15 +114,15 @@ A habit is usually tied to a goal that we want to achieve.
 
 Think about a positive goal that you want to achieve. It can be anything like eating healthier, writing more, or being more grateful. It can be something general. We'll focus on making it a SMART goal in the next step.
 
-    + Got my goal
-    -> continue_habit_exercise_part1
-
-    //Fv: give them the option to write it down here. 
-    
     + Examples of goals
     -> Examples_of_goals
+    
+    + Got my goal
+        - 
+            Studies have shown that writing down our goals make us more likely to complete them. Write down your goal here:
+                +  [User input: Write down goal]
+                -> continue_habit_exercise_part1
 
--> END
 
 ==== continue_habit_exercise_part1 ====
 
@@ -141,29 +139,13 @@ SMART stands for Specific, Measurable, Attainable, Realistic and Time sensitive.
     
 ==== continue_habit_exercise_part2 ====
 
-Think about your goal. 
-Now, narrow it down and focus on a single action or habit that will take you closer to your goal. 
-//FV: I would change this to: With your goal in mind, narrow it down and focus on a single action or habit that will take you closer to your goal. 
+Think about your goal.
 
-//FV: then ask them to write down their habit or single action they chose. 
+Now, with your goal in mind, narrow it down and focus on a single action or habit that will take you closer to your goal. Think about how you will measure if you're successful, and think about when you'll do it.
 
-Think about how you will know if you're successful, and think about when you'll do it.
-
-Let me know when you've figured it out.
-
-//Fv: Ask them to write these answers here with what you have below: "Studies have shown that writing down the actions we wish to take make us more likely to complete them." 
-
-    + Done
-    - 
-        That's awesome.
-        
-        //Fv: then you can delete it here, since they have already wrtitten down their goal before and now they have already written down their action they will take. 
-        Studies have shown that writing down our goals make us more likely to complete them. Write down your goal here:
-         +  [User input: Write down goal]
-            -> end_habit_exercise
-    
-
--> END
+    Write it down so you're more likely to complete it:
+     +  [User input: Write down action or habit]
+        -> end_habit_exercise
     
     
 ==== end_habit_exercise ====
@@ -218,7 +200,7 @@ Today, we'll revisit that habit and find ways to make it easier to follow.
 
 ==== Habit_check_in ====
 
-This is the habit you wrote down last time: [user stored goal]
+This is the habit you wrote down last time: [user stored goal variable]
 
 Remember, we are trying to get better at habits in general, so don't worry if you didn't follow up on your new habit this time.
 
@@ -242,16 +224,20 @@ How was trying to do your new habit? Did you do it?
         [Change time in calendar reminder process]
         
         -> habit_check_in_end
+
+    + Try another habit
+        -> Session3_start_habit_exercise
         
     + No accountability
-        You can either find a person or two that will check in on your new habit, or you can be more transparent with yourself by setting a metric that will show you if you are successful (for example, if you want to lose weight, using a scale could help).
-        //FV: I would only give them one option. I would stay with the "find a person or two that will check in on your new habit" and ask them to write down the names of those persons and how they can ask them to help them be accountable. 
+        You could find a person or two that will check in on your new habit.
         
-        -> habit_check_in_end
+        Write down the names of the persons and you might ask them to hold you accountable.
+        - 
+        +  [User input: Write down goal]
+            -> habit_check_in_end
         
-    + Try another habit
-        -> habit_check_in_end
-    //FV: this should not take to "habit check in end", but instead to the process of establishing a new habit. 
+
+
         
 
 ==== habit_response_B ====
@@ -259,7 +245,6 @@ How was trying to do your new habit? Did you do it?
 Well, at least you remembered! Sometimes we postpone things because they are too hard to do or we are busy. 
 
 Maybe your new habit felt too general and overwhelming, or maybe you thought you could do it later. Let's explore why this happened. 
-
 
     + Too general
         Try to narrow down your habit to a more simple task that you can actually do. 
@@ -337,15 +322,15 @@ How was trying to do your new habit? Did you do it?
          -> Session3_habit_check_in_end
         
     + No accountability
-        You can either find a person or two that will check in on your new habit, or you can be more transparent with yourself by setting a metric that will show you if you are successful (for example, if you want to lose weight, using a scale could help).
-        //FV: I would only give them one option. I would stay with the "find a person or two that will check in on your new habit" and ask them to write down the names of those persons and how they can ask them to help them be accountable. 
+        You could find a person or two that will check in on your new habit.
         
-         -> Session3_habit_check_in_end
-        
+        Write down the names of the persons and you might ask them to hold you accountable.
+        - 
+        +  [User input: Write down goal]
+            -> Session3_habit_check_in_end        
+            
     + Try another habit
-     -> Session3_habit_check_in_end
-    //FV: this should not take to "habit check in end", but instead to the process of establishing a new habit. 
- 
+     -> Session3_start_habit_exercise
        
         
 
@@ -354,7 +339,6 @@ How was trying to do your new habit? Did you do it?
 Well, at least you remembered! Sometimes we postpone things because they are too hard to do or we are busy. 
 
 Maybe your new habit felt too general and overwhelming, or maybe you thought you could do it later. Let's explore why this happened. 
-
 
     + Too general
         Try to narrow down your habit to a more simple task that you can actually do. 
@@ -371,16 +355,22 @@ Maybe your new habit felt too general and overwhelming, or maybe you thought you
 
     Congrats!
     
-    Now that some time has passed, do you want to continue trying to improve on this habit or do you want to set up a new one?
-    + Continue Improving
-        -> Session3_habit_check_in_end
-    //Fv: this should take them to an exercise to improve their habit, not to the ending. You could see if it makes sense to go back to the questions on session 2 about: Schedule a different time, No accountability, too general or too busy. 
+    Now that some time has passed, do you want to continue with this habit or do you want to set up a new one?
+    + Continue with this habit
+        -> Session3_habit_improve
+        
     + Set up new habit
         -> Session3_start_habit_exercise
         
         
+        
+==== Session3_habit_improve
+    Great. I think you've got the hang of creating and following up with new habits. Next time we'll check in to see how you're doing with your new habit and if you want to create another one.
 
-//Fv: Add to this part the same comments from session 1 since they follow the same path. 
+Good luck! See you then!
+    -> END
+    
+
 ==== Session3_start_habit_exercise ====
 
 Great!
@@ -391,11 +381,14 @@ A habit is usually tied to a goal that we want to achieve.
 
 Think about a positive goal that you want to achieve. It can be anything like eating healthier, writing more, or being more grateful. It can be something general. We'll focus on making it a SMART goal in the next step.
 
-    + Got my goal
-    -> Session3_continue_habit_exercise_part1
-    
     + Examples of goals
     -> Session3_examples_of_goals
+    
+    + Got my goal
+        - 
+            Studies have shown that writing down our goals make us more likely to complete them. Write down your goal here:
+                +  [User input: Write down goal]
+                -> Session3_continue_habit_exercise_part1
 
 -> END
 
@@ -463,17 +456,10 @@ Now, narrow it down and focus on a single action or habit that will take you clo
 
 Think about how you will know if you're successful, and think about when you'll do it.
 
-Let me know when you've figured it out.
+Write it down so you're more likely to complete it:
+     +  [User input: Write down action or habit]
+        -> Session3_end_habit_exercise
 
-    + Done
-    - 
-        That's awesome. 
-        Studies have shown that writing down our goals make us more likely to complete them. Write down your goal here:
-         +  [User input: Write down goal]
-            -> Session3_end_habit_exercise
-    
-
--> END
     
     
 ==== Session3_end_habit_exercise ====
