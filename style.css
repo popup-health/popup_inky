@@ -12,11 +12,11 @@ p.botlink {
   font-size: 15px;
 }
 
-linktable {
+.linktable {
   width: 100%;
 }
 
-ColHeader {
+.ColHeader {
   width: 50%;
 }
 
