@@ -14,9 +14,10 @@ p.botlink {
 
 .linktable {
   width: 100%;
+  padding-left: 10%;
 }
 
 .ColHeader {
-  width: 50%;
+  width: 25%;
 }
 
