@@ -14,12 +14,22 @@
 Tianco: It's not just the two of us! We have so many friends and they all want to make you feel better about stressy stuff.
 
 <strong>Flecta: (sigh) Thanks, Tianco. Our friends are micro-coaches who explain techniques that help with everyday challenges.
-
+{userNoBanter==0:
+    Tianco: Isn't that what I said? But in easy words?
+        <strong>Flecta: Kind of, yes.
+        +Love the two of you
+            Tianco: Thanks pal! Right back at ya.
+            ->ReflectAndAct
+        +Please just explain
+            ~userNoBanter = 1
+            <Strong> Flecta: I'll continue alone for now, Tianco.
+            ->ReflectAndAct
+}
     +Challenges? Such as?
     ->ReflectAndAct
 
 ===WhatweDo
-all here to try to help humans handle stressful moments.
+micro-coaches who try to help humans handle stressful moments.
 {userNoBanter ==0: 
     Tianco: Can I talk about the others, Flecta? Please? 
     <strong>Flecta: Forgive my young friend here. Sometimes a bit too eager.
@@ -33,24 +43,14 @@ all here to try to help humans handle stressful moments.
         -- ->ReflectAndAct
 
 
-{userNoBanter==0:
-    Tianco: Isn't that what I said? But in easy words?
-        <strong>Flecta: Kind of, yes.
-        +Love the two of you
-            Tianco: Thanks pal! Right back at ya.
-            ->ReflectAndAct
-        +Please just explain
-            ~userNoBanter = 1
-            <Strong> Flecta: I'll continue alone for now, Tianco.
-            ->ReflectAndAct
-}
+
 
 
 ===ReflectAndAct
    <strong>Flecta: {userNoBanter ==0: Tianco and} I listen to what's happening in your life.
    <strong>Flecta: Then  {userNoBanter ==0: we} {userNoBanter ==1: I} introduce you to a micro-coach who  {userNoBanter ==0: we} {userNoBanter ==1: I} think can help you best with stress. 
     {not WhatweDo.kindsofstress: 
-        <strong>Flecta: Stress as in  deadlines, feeling overwhelmed, worried about relationships, finances, health ... those kinds of things.
+        <strong>Flecta: Stress as in deadlines, feeling overwhelmed, worried about relationships, finances, health ... those kinds of things.
     }
     ->warning
 

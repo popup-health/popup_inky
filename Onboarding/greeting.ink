@@ -1,27 +1,27 @@
 //different greetings based on previous visits of user
 
 ===greeting1
-<strong>Flecta: Hi! My name is Flecta. Good to meet you. How's your day been so far?
- +Good, thanks. You?
-    <strong>Flecta: Couldn't be better! My micro-coach friends and I are so happy you're here.
+<strong>Flecta: Hi! I'm Flecta. How's your day been so far?
+ +Great! You?
+    <strong>Flecta: Couldn't be better! We're happy you're here.
     
- +Kind of OK, I guess
-    <strong>Flecta: Ow, that doesn't sound convincing. I have some micro-coach friends who could help you with that.
+ +Kind of OK
+    <strong>Flecta: That doesn't sound convincing. Hope we can help you today.
     ++Thanks
- +Don't get me started
-    <strong>Flecta: That bad huh? I have some micro-coach friends who could help you with that.
+ +Ugh
+    <strong>Flecta: That bad huh? Hope we can help you today.
     ++Sounds Good
     
-    - <strong>Flecta: And this is Tianco!
+    - <strong>Flecta: And here's my co-host Tianco.
     [TIANCO AND FLECTA ANIMATION]
     ->TiancoIntro    
 
 ==TiancoIntro
-++Just explain please
+++What do you do?
     ~userNoBanter = 1
-        <strong>Flecta: Of course. In short, we are<> ->WhatweDo
+        <strong>Flecta: In short, we are<> ->WhatweDo
 ++Hi Tianco!
-Tianco: Hi. I'm so happy to meet you. Can't wait to tell you all about us!
+Tianco: Hi there! Can't wait to tell you all about us!
 <strong>Flecta: All in good time, Tianco. 
 ->StartOnboarding
 
