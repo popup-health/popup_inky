@@ -316,7 +316,7 @@ Here are your latest strategies. Choose one or enter a new one.
 ==== Third_session_positive ====
 [Happy GIF]
 
-Hi, am ready for a new case! Let's get you doing more problem solving!
+Hi, I am ready for a new case! Let's get you doing more problem solving!
 
 Do you want analyze your problem and solution by yourself, or do you want a refresher?
 
