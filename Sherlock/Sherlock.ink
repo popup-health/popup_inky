@@ -152,7 +152,7 @@ Of course! When would you want to be reminded?
         
 ==== Path_B_branch_0 ====
     
-    Perhaps breaking down the problem would be helpful here. Think of a piec of a problem and if you want write it down in one line.
+    Perhaps breaking down the problem would be helpful here. Think of a piece of a problem and if you want write it down in one line.
     
     + User input saved as "smallProblem"
     
