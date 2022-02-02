@@ -458,7 +458,7 @@ As before, sit up straight but be comfortable. Let's prepare by slowly exhaling 
     + I am ready
         Box breathing means to count every time you inhale, exhale and hold your breath in between.   I will give you instructions and help you with counting. 
         
-            First, inhale slowly and deeply through your nose as we count to {count1}. Feel the air filling your lungs, and into your abdomen. Then, hold counting to {count2}. Exhale being concious of the air leaving your lungs, again counting to {count3}, and finally, hold again for {count4}.
+            First, inhale slowly and deeply through your nose as we count to {count1}. Feel the air filling your lungs, and into your abdomen. Then, hold counting to {count2}. Exhale being conscious of the air leaving your lungs, again counting to {count3}, and finally, hold again for {count4}.
             
             -
             
