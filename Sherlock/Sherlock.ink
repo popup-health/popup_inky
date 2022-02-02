@@ -265,7 +265,7 @@ Should we save your idea in our problem-solving detective's log?
 
 [happy GIF]
 
-Welcome back partner! Let's get our magnifying glass out and loook at the problem in detail.
+Welcome back partner! Let's get our magnifying glass out and look at the problem in detail.
     -> Path_C
 
 ==== Path_C ====
