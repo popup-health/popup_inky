@@ -10,8 +10,7 @@ WHEN USER RETURNS FROM BOT
         Tianco: {~Fantastic | Excellent | Wonderful} 
         <strong>Flecta: Could you say why you liked it? Type your answer.
         USER INPUT ABOUT BOT EXPERIENCE
-        <Strong>Flecta: Thanks for sharing this with us. We try to learn from every experience.
-
+        
     +A bit helpful
         Tianco: {~That's good | Good to hear | Nice}
         <strong>Flecta: Could you say why you liked it? And what could be better? Type your answer.
