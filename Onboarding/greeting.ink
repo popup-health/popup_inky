@@ -1,7 +1,7 @@
 //different greetings based on previous visits of user
 
 ===greeting1
-<strong>Flecta: Hi! I'm Flecta. How's your day been so far?
+<strong>Flecta: Hi! I'm Flecta. How are you?
  +Great! You?
     <strong>Flecta: Couldn't be better! We're happy you're here.
     
@@ -12,12 +12,13 @@
     <strong>Flecta: That bad huh? Hope we can help you today.
     ++Sounds Good
     
-    - <strong>Flecta: And here's my co-host Tianco.
+    - <strong>Flecta: Meet my co-host Tianco.
     [TIANCO AND FLECTA ANIMATION]
     ->TiancoIntro    
 
 ==TiancoIntro
-++What do you do?
+++Tell me what you do
+//Goes to onboarding
     ~userNoBanter = 1
         <strong>Flecta: In short, we are<> ->WhatweDo
 ++Hi Tianco!
@@ -38,7 +39,7 @@ Tianco: So, what's happening?
 <strong>Flecta: Hey {username}! <>
 <>{~ It's been a few days.| Happy you're back.|}
 +User back after more than week
-<strong>Flecta: So glad you made it back to us!{~ Tianco|Everyone} was asking about you.  
+<strong>Flecta: So glad you're back!{~ Tianco|Everyone} was asking about you.  
 - ->DiscussBotSession
 
 ==DiscussBotSession
@@ -90,7 +91,7 @@ Tianco: BOTNAME said it didn't go so well. They were a bit sad, but totally unde
 
 ===greeting3
 
-Tianco: {username}!! Back for more. Can't miss us? Likewise! We love to have you around too.
+Tianco: {username}!! Back for more! Did you miss us? We love to have you around.
 <strong>Flecta: No matter how long or how short the time in between your visits. {~Always a pleasure to see you.|Welcome back!|Always really nice to see you again.} 
 
 ->DiscussBotSession

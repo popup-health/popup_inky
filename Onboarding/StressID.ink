@@ -1,6 +1,6 @@
 ===LearnMoreAboutYou
 <strong>Flecta: Great. First, let's talk about why you are here. Just a few questions, to help {userNoBanter ==0: us} {userNoBanter ==1: me} decide who's the best micro-coach for you.
-<strong>Flecta: Oh, and of course your privacy is guaranteed.
+
 ->HowStressed
 
 ===HowStressed
@@ -43,14 +43,14 @@ And for how long have you been stressed?
 ===ExplainStress
 <strong>Flecta: Would you mind sharing a bit more about your stress?
     +Sure!
-    FREE USER INPUT THAT TRIGGERS CATEGORISATION
+    <strong>Flecta: Just type your answer
     +Not now
     <strong>Flecta: That's OK.
     - ->paraphrase
     
     
 ===paraphrase
-<strong>Flecta: Let me see if I get this right. You are feeling {stressLevel==2:very}{stressLevel==1:a bit} stressed right now and {stressOngoing==0:that's been going on for {stressLength==1: a few months}{stressLength==2: a few weeks}{stressLength==3: a few days}}? And you're stressed because of CATEGORY.
+<strong>Flecta: Thanks! Let me see if I get this right. You are feeling {stressLevel==2:very}{stressLevel==1:a bit} stressed right now and {stressOngoing==0:that's been going on for {stressLength==1: a few months}{stressLength==2: a few weeks}{stressLength==3: a few days}}? And you're stressed because of CATEGORY.
 
     +Sounds about right
         Tianco: Fantastic!
