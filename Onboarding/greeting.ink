@@ -70,7 +70,7 @@ Tianco: {~You really liked|Seems like you enjoyed your time with|You had a good 
         <strong> Flecta: Good point, Tianco. 
         Tianco: We can connect you with a micro-coach again! 
         
-        ++That would be great
+        ++Great idea
             Tianco: Let's do it!
         ->AssignNextBot
         
