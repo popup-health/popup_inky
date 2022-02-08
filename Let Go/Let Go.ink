@@ -110,6 +110,11 @@ Hope to see you again soon.
     Would you like to talk to one of my pals instead?
      - + Yes, please.
         -> Send_to_other_bot 
+        + Not right now.
+            Ok, no problem. Come back and visit me some other time. We can practice more mindfulness techniques together then.
+            
+        [Exit to farewell module]
+        -> END
 
 ==== Feather ====
 Read this explanation first and then begin. 
