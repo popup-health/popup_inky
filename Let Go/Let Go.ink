@@ -40,8 +40,8 @@ We can use this technique to reduce your repetitive thoughts about: "{stressor}"
          - + Sounds useful.
         The good thing is that you'll get a sense of having dealt with them, making it easier to let go and gently return to your breath or to this moment. 
         Remember, it's a very gentle acknowledgment, you're not fighting or resisting thoughts, just naming and noticing them.
-        Do you want to try it out? 
-          - + Yes, I'm ready.
+        Let's try it out! Tell me when you're ready. 
+          - + I'm ready.
                 -> leaves   
 
 
