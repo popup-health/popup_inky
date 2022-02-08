@@ -40,9 +40,8 @@ WHEN USER RETURNS FROM BOT
 
 ===AcknowledgeFeedback
 
-<strong>Flecta: {~Thanks for sharing this with us. |Let me note that. |We'll definitely remember that. |Definitely noted!}
+<strong>Flecta: {~Thanks for sharing this with us. |Let me note that. |We'll definitely remember that. |Noted!}
 <strong>Flecta: We learn from your feedback, so we can help you better each time you visit!
-Tianco: and we want you to come back!
 
 ->HowToReconnect
 

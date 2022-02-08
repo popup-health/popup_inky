@@ -44,13 +44,14 @@ And for how long have you been stressed?
 <strong>Flecta: Would you mind sharing a bit more about your stress?
     +Sure!
     <strong>Flecta: Just type your answer
-    +Not now
+    USER TYPES IN ANSWER
+    +(nostresshare)Not now
     <strong>Flecta: That's OK.
     - ->paraphrase
     
     
 ===paraphrase
-<strong>Flecta: Thanks! Let me see if I get this right. You are feeling {stressLevel==2:very}{stressLevel==1:a bit} stressed right now and {stressOngoing==0:that's been going on for {stressLength==1: a few months}{stressLength==2: a few weeks}{stressLength==3: a few days}}? And you're stressed because of CATEGORY.
+<strong>Flecta: Thanks! Let me see if I get this right. You are feeling {stressLevel==2:very}{stressLevel==1:a bit} stressed right now and {stressOngoing==0:that's been going on for {stressLength==1: a few months}{stressLength==2: a few weeks}{stressLength==3: a few days}}? {not ExplainStress.nostresshare: And you're stressed because of CATEGORY.}
 
     +Sounds about right
         Tianco: Fantastic!

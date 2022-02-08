@@ -4,7 +4,7 @@
 
 +Interesting names!
     <strong>Flecta: Our names kind of reflect why we are here.
-    Tianco: If you're a bit of a puzzle person it can be fun to make them out!
+    Tianco: If you're a puzzle person it can be fun to make them out!
     ++Enough banter!
         <strong>Flecta: Of course. In a nutshell, we are<> ->WhatweDo
     ++Very intriguing!
@@ -45,7 +45,8 @@ micro-coaches who try to help humans handle stressful moments like deadlines, wo
 
 ===warning
     +How?
-        <strong>Flecta: We teach you techniques to reflect on every day challenges and suggest actions to sort them out.
+        <strong>Flecta: We teach you techniques to reflect on everyday challenges. 
+        <strong>Flecta: Basically we suggest actions to help you to think differently and find ways to sort out some challenges.
         <strong>Flecta: BUT... For really serious mental health challenges or situations we do want you to talk to a human therapist.
         ++Got that
             {userNoBanter == 0:
@@ -61,23 +62,10 @@ micro-coaches who try to help humans handle stressful moments like deadlines, wo
     {userNoBanter ==0:Tianco: And we don't even get paid - or do we, Flecta?}
 
     +I understand
-    - <strong>Flecta: Great. Glad we are on the same page.
-    <strong>Flecta: Oh, and of course your privacy is guaranteed at all times.
+    - <strong>Flecta: Glad we are on the same page. One last thing: of course your privacy is guaranteed at all times.
     ->ChoosingBots
 
 ===ChoosingBots
-+I'm ready to start!
-    <strong>Flecta: So there are a lot of micro-coaches...
-
-     {userNoBanter==0:
-     Tianco: Yes! There's Puffy who does awesome breathing things with you! And Hero can help you find your strengths and ...
-     <strong>Flecta: Tianco! Control yourself, you are making little sense.
-     }
-
-     <strong>Flecta: You may like some more than others. And if you tell  {userNoBanter ==0: us} {userNoBanter ==1: me}, it helps us decide who to introduce you to next.
-     {userNoBanter==0:
-     Tianco: They don't mind if you don't really like them, right, Flecta?
-     <strong>Flecta: Indeed Tianco, all the micro-coaches want to do is help.
-     }
-                ++ I understand
++OK. Let's start!
+    
         --->LearnMoreAboutYou

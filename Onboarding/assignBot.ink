@@ -4,8 +4,12 @@
 
 <strong>Flecta: Now ... the exciting moment. Which micro-coach do we assign to you? Tianco, help me out.
 Tianco: I'm thinking BOTNAME.
-<strong>Flecta: Excellent choice. There you go!
-<strong>Tianco: Can't wait to hear how it went!
+<strong>Flecta: Excellent choice. So you may like some micro-coaches more than others. Tell  {userNoBanter ==0: us} {userNoBanter ==1: me} when you come back, it helps us decide who to introduce you to next.
+     {userNoBanter==0:
+     Tianco: They don't mind if you don't really like them, right, Flecta?
+     <strong>Flecta: Indeed Tianco, all the micro-coaches want to do is help.
+     }
+                ++ I understand
 USER IS SENT OFF TO BOT
 
 ->EvaluateBot

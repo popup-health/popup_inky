@@ -18,9 +18,9 @@
 
 ==TiancoIntro
 ++Tell me what you do
-//Goes to onboarding
+//Goes to onboarding and we leave Tianco out of conversation
     ~userNoBanter = 1
-        <strong>Flecta: In short, we are<> ->WhatweDo
+        <strong>Flecta: We are<> ->WhatweDo
 ++Hi Tianco!
 Tianco: Hi there! Can't wait to tell you all about us!
 <strong>Flecta: All in good time, Tianco. 
