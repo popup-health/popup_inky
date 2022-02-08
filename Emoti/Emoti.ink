@@ -155,8 +155,7 @@ Place your hand in your belly and take 3 deep breaths, feeling the motion of you
             -> End_Path_A
        
         + Not feeling it
-            Sometimes it can be hard to find where these emotions are expressing in our bodies. You may find it helpful to close your eyes. 
-            Try asking your body, ‘Where does my x emotion live, and how does it feel within me?’ 
+            Sometimes it can be hard to find where these emotions express themselves our bodies. You may find it helpful to close your eyes. Try asking your body, ‘Where does this emotion live, and how does it feel within me?’ 
             You don’t even need to find words to describe what you’re feeling: just feel what you’re feeling. 
             Sense into your body, starting at your head and then moving down through your torso, including your muscles and even your heart, lungs, and guts. 
             Now with these tips in mind. Identify where you feel this emotion in your body. 
