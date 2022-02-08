@@ -29,9 +29,8 @@ Hi {userName}. I’m Let Go. I can help people worry less about the past or the
         + Sounds interesting.
 - It all starts by learning how to let go of repetitive thoughts through a gentle, nurturing lens, and returning to the present moment. 
 I can show you how to do it. 
-Do you want to use this technique to reduce your repetitive thoughts about: "{stressor}"?  // engineering - this line only appears if the stressor is available. If not just ask "Do you want to try it out?"
-  + Yeah! 
-  + Alright, why not!
+We can use this technique to reduce your repetitive thoughts about: "{stressor}"  // engineering - this line only appears if the stressor is available. If not just ask "Do you want to try it out?"
+  + Let's do it
   - Okay, let’s do it. We will start today with a mindfulness technique that teaches you how to identify and name your thoughts so you can let them go.
       + Let's try it out. 
             -> leaves 
