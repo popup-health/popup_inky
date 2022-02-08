@@ -27,12 +27,15 @@ VAR visit = "first"
 //system checks user profile for previous interactions with Bot//
   + if first visit
         -> First_session
-  + if second visit
+  + if second or later visit
         -> Second_session
+/*
   + if third or later visit
         -> Third_session
+*/
 
 -> END
+
 
 ==== First_session ====
 Hi {username}, I’m Treat. I help people learn how to best respond when they have difficult feelings that cause stress.  I'm excited to see if I can be helpful to you!
@@ -370,7 +373,7 @@ Give it a try this week!
 
 ->END
 
-
+/*
 
 ==== Third_session ====
 //system checks if session engagement were positive/neutral *or* negative
@@ -470,3 +473,4 @@ Once you learn the skill the final step is to integrate it with the process we'v
     Good luck!
 
 ->END
+*/
