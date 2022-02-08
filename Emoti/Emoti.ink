@@ -182,7 +182,7 @@ Place your hand in your belly and take 3 deep breaths, feeling the motion of you
     Try it now, I’ll wait for you here. 
         + Done
         - 
-        Great! Before we finish, identify if the intensity of the emotion you were feeling has changed.  
+        Great! Before we finish, identify if the intensity of the emotion you were feeling has changed. Choose the intensity you feel right now.
                 + 1
                 + 2
                 + 3 
