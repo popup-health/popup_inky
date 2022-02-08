@@ -318,7 +318,7 @@ Here are your latest strategies. Choose one or enter a new one.
 
 Hi, I am ready for a new case! Let's get you doing more problem solving!
 
-Do you want analyze your problem and solution by yourself, or do you want a refresher?
+Do you want to analyze your problem and solution by yourself, or do you want a refresher?
 
     + Yes, a refresher 
         Of course!
