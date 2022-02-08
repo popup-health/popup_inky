@@ -36,7 +36,7 @@ VAR counter = 1
 # IMAGE: Goody.png
 //this dot just helps display the image command above the text
     Hi {userName}, I’m Goody. I just love talking about all the good experiences that happen in life. I’m super excited you’ve joined me today!
-    Let's talk about a pleasant experience you've had today.  It doesn't need to be the most fun thing you've ever done but something simple and small. In fact, it can be a teeny tiny thing.
+    Let's talk about a pleasant experience you've had today.  It doesn't need to be the most fun thing you've ever done but something simple and small. In fact, it can be a teeny tiny thing. Choose one of the options or write down below what your pleasant experience.
       + Don't want to share
         No problem!
             -> nowTakeAMomentTo
