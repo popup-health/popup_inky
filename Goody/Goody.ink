@@ -182,7 +182,7 @@ Keep trying to add good things into your daily life and then take notice and sav
         -  -> share3Things
     
     = share3Things
-    Do you want to share one of the good experineces?
+    Do you want to share one of the good experineces? If so, write it down below.
       + No, I don't
         No problem
       + users enters new good thing:
