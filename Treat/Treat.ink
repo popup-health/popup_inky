@@ -49,8 +49,11 @@ Hi {username}, I’m Treat. I help people learn how to best respond when they ha
 
     A good place to start is to figure out what emotions you're feeling right now.  Maybe it's anger, sadness, anxiety, frustration, stress, or something else altogether.
 
-    + I'm feeling: userinput
-        Great - it is actually quite difficult sometimes to know what emotion you're feeling so good job! 
+    + I am feeling...
+        Great - sometimes it is actually quite difficult to know what emotion you're feeling. Type your emotion below.
+        
+        [user input]
+
         ->VisualizeTypicalResponse
     + I'd rather not say
         No problem - this process can still be helpful without sharing the details.  What's important is that you know what emotion you are feeling.
