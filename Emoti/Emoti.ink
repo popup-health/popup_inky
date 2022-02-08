@@ -40,7 +40,7 @@ VAR second_session_emotion = "Anger"
     + Yeah, been there.
     + Sometimes
     - 
-    Well, with these tools you’ll see the power of identifying and naming what you are feeling, while also learning to recognize what triggered your emotions. 
+    Well, with my tools you’ll see the power of identifying and naming what you are feeling, while also learning to recognize what triggered your emotions. 
 
 	+ Sounds interesting
 	- 
