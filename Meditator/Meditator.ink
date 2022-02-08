@@ -38,7 +38,7 @@ Hi {username}, I’m Meditator. I teach a special kind of meditation called 'Lov
 Some people hear that and think it's not for them because it sounds a bit 'touchy feely' but there's so much evidence that this kind of practice helps boost mood, increase calmness, and helps us appreciate the small things in life.
 
 
-    +Sounds good lets start!
+    +Sounds good, let's start!
 
         -> Session1_LovingKindness
     
@@ -186,7 +186,7 @@ Today, I want to show you how to apply this exercise of loving kindness towards 
 
 Do you want to try it out?
 
-    +Sounds good lets start!
+    +Sounds good, let's start!
 
         -> Session2_LovingKindness
     
