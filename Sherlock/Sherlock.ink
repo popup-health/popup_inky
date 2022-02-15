@@ -176,7 +176,7 @@ Nice. Could you use that to solve your current issue?
         
     + No  
     
-        It's OK... It may come to you later. For now just try breathe slowly, and focus your attention just on one task.
+        It's OK... It may come to you later. For now just try to breathe slowly, and focus your attention just on one task.
         
         -> Farewell_module
 
