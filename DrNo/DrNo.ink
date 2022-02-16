@@ -27,7 +27,7 @@ VAR otherReason = "Liked the opportunity, I felt I owed them a favor"
         -> Third_Session 
         
 ==== First_Session ====
-Hello {userName}. I’m No. 
+Hello {userName}. I’m Dr No. 
 No kidding! I realise it sounds kind of negative, but I'd love to share some ways to set boundaries in your life. It really helps reduce feelings of stress and being overwhelmed. 
 It’s not always easy to do, so we’ll work on it bit by bit. Sound good?
     + Sounds like a plan!
