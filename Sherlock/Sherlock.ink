@@ -152,12 +152,12 @@ Of course! When would you want to be reminded?
         
 ==== Path_B_branch_0 ====
     
-    Perhaps breaking down the problem would be helpful here. Think of a piece of a problem and if you want write it down in one line.
+    Perhaps breaking down the problem would be helpful here. Think of a piece of a problem and write it down in one line.
     
     + User input saved as "smallProblem"
     
     - 
-    Think of a simple strategy or technique to solve only this piece of the problem. Again, go ahead and take note of it if you feel like it.
+    Think of a simple strategy or technique to solve only this piece of the problem. Again, go ahead and take note of it.
     
      + User input saved as "strategy"
     
