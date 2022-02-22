@@ -36,7 +36,7 @@ VAR counter = 1
 # IMAGE: Goody.png
 //this dot just helps display the image command above the text
     Hi {userName}, I’m Goody. I just love talking about all the good experiences that happen in life. I’m super excited you’ve joined me today!
-    Let's talk about a pleasant experience you've had today.  It doesn't need to be the most fun thing you've ever done but something simple and small. In fact, it can be a teeny tiny thing. Choose one of the options or write down below what your pleasant experience.
+    Let's talk about a pleasant experience you've had today.  It doesn't need to be the most fun thing you've ever done but something simple and small. In fact, it can be a teeny tiny thing. Choose one of the options or write down below what your pleasant experience. 
       + Don't want to share
         No problem!
             -> nowTakeAMomentTo
@@ -81,11 +81,11 @@ VAR counter = 1
             -> sharing
       
     = sharing
-    "That is all I have. Do you want to share?" 
+    "That is all I have. Do you want to share? If so, write it down below." 
     + No, thanks
-    That is ok.
+        That is ok.
             -> nowTakeAMomentTo
-      + user enters their experience directly here:
+    + user enters their experience directly here:
             -> userWritesGoodTh
 
     = userWritesGoodTh 
