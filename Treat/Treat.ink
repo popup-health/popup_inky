@@ -167,22 +167,26 @@ FEEDBACK __________
     Now the final step is to look at how you would typically respond to yourself and compare it to how you would respond to a good friend.
 
     Is there a difference?  
+    
+        +No difference
+            ->NoDifference
 
         + I'm harder on myself
-            Nice job noticing that difference! It can be helpful to think about why that might be.  We often hold ourselves to higher standards than we do others.  
+            Nice job noticing that difference! It can be helpful to think about why that might be.  We often hold ourselves to higher standards than we do others.
             
-        -
-        
-        + Okay - now what?
+            -
+            
+            + Okay - now what?
             Good question.  It isn't always easy but you can now practice telling yourself those same things you would tell your friend. We can learn to treat ourselves more kindly and with more comprehension. 
             
             ->EndSessionOne
             
-        -> END
+
+          
+
         
         
-        +No there isn't a difference
-            ->NoDifference
+
        
 -> END
 
