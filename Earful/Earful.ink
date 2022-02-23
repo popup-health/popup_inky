@@ -35,7 +35,7 @@ VAR total=0
 Hi {userName}, my name is Earful. I help people become active listeners. Today I'm going to show you how it goes with a role playing activity. 
 Active listening is a great tool that helps both parties: the person speaking feels understood and cared for, while the person listening and providing empathetic feedback feels more connected and present. 
     + Alright.
-- I'll tell you about a challenge I have and you're job will be to listen actively. Through the exercise you'll learn about the three parts of active listening: 
+- I'll tell you about a challenge I have and your job will be to listen actively. Through the exercise you'll learn about the three parts of active listening: 
 1) being ready to listen, 
 2) listening and clarifying, and 
 3) acknowledging the person's feelings and abilities to deal with the issue.
