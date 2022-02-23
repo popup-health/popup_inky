@@ -78,7 +78,7 @@ Or it might be something else altogether.
 =recentCommitmentReason
 //MV - suggest rerouting the flow a bit. If you choose to write it, you get way less info currently. Idea: rerouting through the same flow as people not writing it down, but changing the wording a bit so it's not too obvious that the machine can not interpret what they have written.
 Can you write here in a few words why you said yes to the committment? Also add why it now seems to be causing some regret or stress.
-    + Yes
+    + [User enters input]
         -> userReasonforSayingYes
         
     + Maybe later
@@ -151,8 +151,9 @@ The answer will likely become clear as you experiment with saying no more often.
 
 = userReasonforSayingYes
 //MV - Adapted to a little wider acknowledgement than Okay
-{userKnowsReasonWhy}
-    + Thanks for sharing. 
+//{userKnowsReasonWhy}
+
+    Thanks for sharing. 
     Formulating the reason is a tiny step.
         -> recap
     
@@ -367,8 +368,9 @@ Good. Do you want to jot it down here?
         -> userReasonforSayingYes
         
 = userReasonforSayingYes
-{userKnowsReasonWhy}
-    + Let's continue
+//{userKnowsReasonWhy}
+    Thanks for sharing.
+    
         -> practiceWaiting
 
 = practiceWaiting
