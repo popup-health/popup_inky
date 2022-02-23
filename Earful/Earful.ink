@@ -41,10 +41,10 @@ Active listening is a great tool that helps both parties: the person speaking fe
 3) acknowledging the person's feelings and abilities to deal with the issue.
     + Okay
     + Sounds good. 
-    - Before we get started, ask yourself, are you ready to listen deeply? Or, are you focused on your own thoughts and need time to process them before actively listening to someone else?
+    - Before we get started, ask yourself: are you ready to listen deeply? Or do you need some time to process your thoughts before trying to engage in active listening?
     + Ready to listen 
       -> listening
-     + Need to process 
+     + Need some time
       -> Timetoprocess 
       
 //****************************************************//
