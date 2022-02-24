@@ -225,7 +225,7 @@ I use them to help people realize that what they worry about may not be as bad a
             -> User_does_technique_alone 
 
     = User_does_technique_alone
-    Cool. Remember, state the wors-case scenario for "{stressor}" stay in the present, evaluate the likelihood of the event, and try to find a simple solution you can do in the present.
+    Cool. Remember, state the worst-case scenario for "{stressor}". Then, stay in the present, evaluate the likelihood of the event, and try to find a simple solution you can do in the present.
     I will leave you to it. Let me know when you are done.
       + Done
         - Great, do you want to share what was your fear?
