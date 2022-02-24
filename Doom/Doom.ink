@@ -122,7 +122,7 @@ I use them to help people realize that what they worry about may not be as bad a
         - -> Reassurance
 
     = Fear_solution
-    In cases like this worrying, is a signal that we need to prepare ourselves for what could come.
+    In cases like this, worrying is a signal that we need to prepare ourselves for what could come.
     Let's look at it together and try something out.
         + Great
         + I'll try
