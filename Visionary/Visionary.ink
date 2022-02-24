@@ -39,7 +39,7 @@ I know it sounds a bit counter-intuitive, but it can really work if you commit t
         ~ vividThreshold = 3
         -> Imagery 
   + Already too stressed
-    - Ok. Take a minute to recount or imagine the possible consequences of this stressful situation with as enough detail. Let me know when you are done.
+    - Ok. Take a minute to recount or imagine the possible consequences of this stressful situation with enough detail. Let me know when you are done.
     + Done
         - How vividly did you imagine this situation? - Use 0 for not vivid at all, and 10 for extremely vivid
           ~ vividThreshold = 3
