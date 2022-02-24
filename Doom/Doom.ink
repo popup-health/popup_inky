@@ -238,7 +238,7 @@ I use them to help people realize that what they worry about may not be as bad a
             - -> oKDoYouWantToSha
 
     = oKDoYouWantToSha
-    OK. Do you want to share solution in case you want me to remind you in the future?
+    OK. Do you want to share a possible solution to this fear so that I can remind you of it in the future?
       + Don't want to share
         No problem. Remember...
       + User enters solution here
