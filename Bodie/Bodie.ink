@@ -223,9 +223,11 @@ What words would you use to describe this tension?
 
     + User input
     
-    Recognizing your tension is the first step in reducing your tension. Now you are more aware of the tension, try to pinpoint which muscles in particular are tense. Take a few seconds to breathe deeply. Follow me!
+    Recognizing your tension is the first step in reducing your tension. Now that you are more aware of the tension, try to pinpoint which muscles in particular are tense. Take a few seconds to breathe deeply. 
     
-    [Animation of bot breathing in and out]
+    //Follow me!
+    
+    //[Animation of bot breathing in and out]
     
     Did you notice a reduction of tension on those muscles?
     - 
